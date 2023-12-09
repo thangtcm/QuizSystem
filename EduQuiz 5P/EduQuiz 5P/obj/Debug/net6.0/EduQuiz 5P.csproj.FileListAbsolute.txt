@@ -1,0 +1,77 @@
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\appsettings.Development.json
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\appsettings.json
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\EduQuiz 5P.staticwebassets.runtime.json
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\EduQuiz 5P.exe
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\EduQuiz 5P.deps.json
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\EduQuiz 5P.runtimeconfig.json
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\EduQuiz 5P.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\EduQuiz 5P.pdb
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\Humanizer.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.UI.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Embedded.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\System.Drawing.Common.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\System.Runtime.Caching.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\System.Security.Permissions.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\System.Windows.Extensions.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Debug\net6.0\EduQuiz 5P.csproj.AssemblyReference.cache
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Debug\net6.0\EduQuiz 5P.GeneratedMSBuildEditorConfig.editorconfig
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Debug\net6.0\EduQuiz 5P.AssemblyInfoInputs.cache
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Debug\net6.0\EduQuiz 5P.AssemblyInfo.cs
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Debug\net6.0\EduQuiz 5P.csproj.CoreCompileInputs.cache
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Debug\net6.0\EduQuiz 5P.MvcApplicationPartsAssemblyInfo.cs
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Debug\net6.0\EduQuiz 5P.MvcApplicationPartsAssemblyInfo.cache
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Debug\net6.0\EduQuiz 5P.RazorAssemblyInfo.cache
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Debug\net6.0\EduQuiz 5P.RazorAssemblyInfo.cs
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Debug\net6.0\staticwebassets\msbuild.EduQuiz 5P.Microsoft.AspNetCore.StaticWebAssets.props
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Debug\net6.0\staticwebassets\msbuild.build.EduQuiz 5P.props
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.EduQuiz 5P.props
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.EduQuiz 5P.props
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Debug\net6.0\staticwebassets.pack.json
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Debug\net6.0\staticwebassets.build.json
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Debug\net6.0\staticwebassets.development.json
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Debug\net6.0\scopedcss\bundle\EduQuiz 5P.styles.css
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Debug\net6.0\scopedcss\projectbundle\EduQuiz 5P.bundle.scp.css
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Debug\net6.0\EduQuiz 5P.csproj.CopyComplete
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Debug\net6.0\EduQuiz 5P.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Debug\net6.0\refint\EduQuiz 5P.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Debug\net6.0\EduQuiz 5P.pdb
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Debug\net6.0\EduQuiz 5P.genruntimeconfig.cache
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Debug\net6.0\ref\EduQuiz 5P.dll
