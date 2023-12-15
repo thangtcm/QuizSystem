@@ -2,6 +2,7 @@
 {
     public class Constants
     {
+        public static string CodeSession = "CodeSession";
         public static class Roles
         {
             public const string Admin = "Administrator";

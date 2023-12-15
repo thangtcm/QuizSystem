@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using EduQuiz_5P.Services.Interface;
 using EduQuiz_5P.Services;
+using EduQuiz_5P.Models;
+using Microsoft.AspNetCore.Identity.UI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -37,17 +39,33 @@ builder.Services.Configure<IdentityOptions>(options => {
 
 });
 
-
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IRoleRepository, RoleRepository>();
 builder.Services.AddScoped<IUserRoleRepository, UserRoleRepository>();
-
 builder.Services.AddTransient(typeof(IUserService), typeof(UserService));
 builder.Services.AddTransient(typeof(IRoleService), typeof(RoleService));
-
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<UserManager<ApplicationUser>>();
+
+//Mail
+builder.Services.AddOptions();
+var mailsettings = builder.Configuration.GetSection("MailSettings");
+builder.Services.Configure<MailSettings>(mailsettings);
+builder.Services.AddTransient<IEmailSender, SendMailService>();
+//Role
 AddAuthorizationPolicies();
+
+
+builder.Services.AddMemoryCache();
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options =>
+{
+    options.Cookie.Name = ".EdiuQuiz5P.Session";
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.Cookie.IsEssential = true;
+    options.Cookie.HttpOnly = true;
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -74,7 +92,7 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 app.MapRazorPages();
-
+app.UseSession();
 app.Run();
 void AddAuthorizationPolicies()
 {

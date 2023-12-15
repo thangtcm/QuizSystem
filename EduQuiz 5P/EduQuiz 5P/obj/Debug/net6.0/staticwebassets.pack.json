@@ -9,8 +9,384 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\css\\theme.css",
+      "PackagePath": "staticwebassets\\css\\theme.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\css\\theme.min.css",
+      "PackagePath": "staticwebassets\\css\\theme.min.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\css\\themelogin.css",
+      "PackagePath": "staticwebassets\\css\\themelogin.css"
+    },
+    {
       "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\.gitkeep",
+      "PackagePath": "staticwebassets\\img\\.gitkeep"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\favicons\\android-chrome-192x192.png",
+      "PackagePath": "staticwebassets\\img\\favicons\\android-chrome-192x192.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\favicons\\android-chrome-512x512.png",
+      "PackagePath": "staticwebassets\\img\\favicons\\android-chrome-512x512.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\favicons\\apple-touch-icon.png",
+      "PackagePath": "staticwebassets\\img\\favicons\\apple-touch-icon.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\favicons\\browserconfig.xml",
+      "PackagePath": "staticwebassets\\img\\favicons\\browserconfig.xml"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\favicons\\favicon-16x16.png",
+      "PackagePath": "staticwebassets\\img\\favicons\\favicon-16x16.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\favicons\\favicon-32x32.png",
+      "PackagePath": "staticwebassets\\img\\favicons\\favicon-32x32.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\favicons\\favicon.ico",
+      "PackagePath": "staticwebassets\\img\\favicons\\favicon.ico"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\favicons\\manifest.json",
+      "PackagePath": "staticwebassets\\img\\favicons\\manifest.json"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\favicons\\mstile-150x150.png",
+      "PackagePath": "staticwebassets\\img\\favicons\\mstile-150x150.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\favicons\\site.webmanifest",
+      "PackagePath": "staticwebassets\\img\\favicons\\site.webmanifest"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\austin.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\austin.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\author-1.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\author-1.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\author-2.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\author-2.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\author-3.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\author-3.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\carrey.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\carrey.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\contact-bg.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\contact-bg.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\dedicate.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\dedicate.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\dgnl.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\dgnl.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\document-icon.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\document-icon.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\document.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\document.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\feature-1.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\feature-1.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\feature-2.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\feature-2.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\feature-3.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\feature-3.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\feature-4.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\feature-4.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\feature-girl.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\feature-girl.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\google.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\google.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\hero.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\hero.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\john.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\john.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\logo.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\logo.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\lop-10.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\lop-10.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\lop-11.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\lop-11.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\lop-12.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\lop-12.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\lop-6.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\lop-6.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\lop-7.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\lop-7.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\lop-8.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\lop-8.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\lop-9.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\lop-9.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\mailbluster.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\mailbluster.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\microsoft.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\microsoft.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\netflix.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\netflix.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\product.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\product.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\project-1.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\project-1.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\project-2.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\project-2.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\project-3.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\project-3.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\project-4.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\project-4.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\project-5.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\project-5.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\project-6.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\project-6.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\quotation.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\quotation.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\ray.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\ray.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\testimonial.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\testimonial.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\theme-wagon.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\theme-wagon.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\thpt.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\thpt.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\hocAZ.jpg",
+      "PackagePath": "staticwebassets\\img\\hocAZ.jpg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\icons\\app.png",
+      "PackagePath": "staticwebassets\\img\\icons\\app.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\icons\\facebook.svg",
+      "PackagePath": "staticwebassets\\img\\icons\\facebook.svg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\icons\\linkdin.svg",
+      "PackagePath": "staticwebassets\\img\\icons\\linkdin.svg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\icons\\log-book.png",
+      "PackagePath": "staticwebassets\\img\\icons\\log-book.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\icons\\mail-1.png",
+      "PackagePath": "staticwebassets\\img\\icons\\mail-1.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\icons\\organized.png",
+      "PackagePath": "staticwebassets\\img\\icons\\organized.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\icons\\printing.png",
+      "PackagePath": "staticwebassets\\img\\icons\\printing.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\icons\\right-arrow.svg",
+      "PackagePath": "staticwebassets\\img\\icons\\right-arrow.svg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\icons\\screen.png",
+      "PackagePath": "staticwebassets\\img\\icons\\screen.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\icons\\sketch.png",
+      "PackagePath": "staticwebassets\\img\\icons\\sketch.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\icons\\statistics.png",
+      "PackagePath": "staticwebassets\\img\\icons\\statistics.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\icons\\text.png",
+      "PackagePath": "staticwebassets\\img\\icons\\text.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\icons\\thumbs-up.svg",
+      "PackagePath": "staticwebassets\\img\\icons\\thumbs-up.svg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\icons\\twitter.svg",
+      "PackagePath": "staticwebassets\\img\\icons\\twitter.svg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\icons\\youtube.svg",
+      "PackagePath": "staticwebassets\\img\\icons\\youtube.svg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\illustrations\\blog-bg-1.png",
+      "PackagePath": "staticwebassets\\img\\illustrations\\blog-bg-1.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\illustrations\\blog-bg.png",
+      "PackagePath": "staticwebassets\\img\\illustrations\\blog-bg.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\illustrations\\brand-bg.png",
+      "PackagePath": "staticwebassets\\img\\illustrations\\brand-bg.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\illustrations\\contact-us-bg.png",
+      "PackagePath": "staticwebassets\\img\\illustrations\\contact-us-bg.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\illustrations\\cta-bg-1.png",
+      "PackagePath": "staticwebassets\\img\\illustrations\\cta-bg-1.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\illustrations\\cta-bg-2.png",
+      "PackagePath": "staticwebassets\\img\\illustrations\\cta-bg-2.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\illustrations\\cta-bg.png",
+      "PackagePath": "staticwebassets\\img\\illustrations\\cta-bg.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\illustrations\\feature-bg.png",
+      "PackagePath": "staticwebassets\\img\\illustrations\\feature-bg.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\illustrations\\footer-bg.png",
+      "PackagePath": "staticwebassets\\img\\illustrations\\footer-bg.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\illustrations\\hero-bg.png",
+      "PackagePath": "staticwebassets\\img\\illustrations\\hero-bg.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\illustrations\\hero.png",
+      "PackagePath": "staticwebassets\\img\\illustrations\\hero.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\illustrations\\heroheader-bg.png",
+      "PackagePath": "staticwebassets\\img\\illustrations\\heroheader-bg.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\illustrations\\product-bg-1.png",
+      "PackagePath": "staticwebassets\\img\\illustrations\\product-bg-1.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\illustrations\\product-bg-2.png",
+      "PackagePath": "staticwebassets\\img\\illustrations\\product-bg-2.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\illustrations\\project-bg.png",
+      "PackagePath": "staticwebassets\\img\\illustrations\\project-bg.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\illustrations\\service-bg.png",
+      "PackagePath": "staticwebassets\\img\\illustrations\\service-bg.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\illustrations\\service.png",
+      "PackagePath": "staticwebassets\\img\\illustrations\\service.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\illustrations\\team-bg.png",
+      "PackagePath": "staticwebassets\\img\\illustrations\\team-bg.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\illustrations\\testimonial-bg-1.png",
+      "PackagePath": "staticwebassets\\img\\illustrations\\testimonial-bg-1.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\illustrations\\testimonial-bg.png",
+      "PackagePath": "staticwebassets\\img\\illustrations\\testimonial-bg.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\logo.png",
+      "PackagePath": "staticwebassets\\img\\logo.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\profile\\bottom-layout.png",
+      "PackagePath": "staticwebassets\\img\\profile\\bottom-layout.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\profile\\imageleft.png",
+      "PackagePath": "staticwebassets\\img\\profile\\imageleft.png"
     },
     {
       "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\js\\site.js",
@@ -243,6 +619,22 @@
     {
       "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\video\\.gitkeep",
+      "PackagePath": "staticwebassets\\video\\.gitkeep"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\video\\beach.jpg",
+      "PackagePath": "staticwebassets\\video\\beach.jpg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\video\\beach.mp4",
+      "PackagePath": "staticwebassets\\video\\beach.mp4"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\video\\beach.webm",
+      "PackagePath": "staticwebassets\\video\\beach.webm"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.EduQuiz 5P.Microsoft.AspNetCore.StaticWebAssets.props",

@@ -8,21 +8,25 @@ namespace EduQuiz_5P.ViewModel
     public class UserInfoVM
     {
         public long? UserId { get; set; }
-        [Phone]
-        public string NumberPhone { get; set; }
+        public string? UserName { get; set; }
+        public string? Email { get; set; }
         public string? FullName { get; set; }
+        [DataType(DataType.Password)]
         public string? Password { get; set; }
+        [DataType(DataType.Password)]
         public string? PasswordOld { get; set; }
         public Gender? Gender { get; set; }
-        public string? Birthday { get; set; }
+        public DateTime? Birthday { get; set; }
+        public bool RememberMe { get; set; }
         public virtual ICollection<string>? Roles { get; set; }
         public virtual ICollection<string>? Tokens { get; set; }
-        public UserInfoVM() { }
-
+        public UserInfoVM()
+        {
+        }
         public UserInfoVM(ApplicationUser user)
         {
             this.FullName = user.FullName;
-            this.NumberPhone = user.PhoneNumber;
+            this.UserName = user.UserName;
             this.UserId = user.Id;
             this.Gender = user.Gender;
         }
@@ -30,8 +34,8 @@ namespace EduQuiz_5P.ViewModel
         public UserInfoVM(ApplicationUser user, List<string> roles)
         {
             this.FullName = user.FullName;
-            this.NumberPhone = user.PhoneNumber;
-            this.Birthday = user.Birthday.ToString("dd/MM/yyyy");
+            this.UserName = user.UserName;
+            this.Birthday = user.Birthday;
             this.UserId = user.Id;
             this.Roles = roles;
         }
