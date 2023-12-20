@@ -62,7 +62,15 @@ builder.Services.Configure<MailSettings>(mailsettings);
 builder.Services.AddTransient<IEmailSender, SendMailService>();
 //Role
 AddAuthorizationPolicies();
-
+//Set up Google API
+builder.Services.AddAuthentication()
+    .AddGoogle(googleOptions =>
+    {
+        IConfigurationSection googleAuthNSection = builder.Configuration.GetSection("Authentication:Google");
+        googleOptions.ClientId = builder.Configuration["Authentication:Google:ClientId"];
+        googleOptions.ClientSecret = builder.Configuration["Authentication:Google:ClientSecret"];
+    }
+);
 
 builder.Services.AddMemoryCache();
 builder.Services.AddDistributedMemoryCache();

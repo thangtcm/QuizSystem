@@ -19,7 +19,7 @@ namespace EduQuiz_5P.ViewModel
         public Gender? Gender { get; set; }
         public DateTime? Birthday { get; set; }
         public bool RememberMe { get; set; }
-        public IList<AuthenticationScheme> ExternalLogins { get; set; }
+        public IList<AuthenticationScheme>? ExternalLogins { get; set; }
         public virtual ICollection<string>? Roles { get; set; }
         public virtual ICollection<string>? Tokens { get; set; }
         public UserInfoVM()

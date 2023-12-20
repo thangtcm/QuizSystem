@@ -547,3 +547,4 @@ D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Release\net6.0\refs\WindowsBase.dll
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Release\net6.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Release\net6.0\Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Release\net6.0\Microsoft.Extensions.DependencyModel.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Release\net6.0\Microsoft.AspNetCore.Authentication.Google.dll

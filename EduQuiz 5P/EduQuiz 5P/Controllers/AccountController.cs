@@ -2,10 +2,12 @@
 using EduQuiz_5P.Enums;
 using EduQuiz_5P.Helpers;
 using EduQuiz_5P.ViewModel;
+using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using System.Security.Claims;
 
 namespace EduQuiz_5P.Controllers
 {
@@ -33,17 +35,121 @@ namespace EduQuiz_5P.Controllers
             _emailStore = emailStore;
         }
 
-        public IActionResult Login()
+        public async Task<IActionResult> Login()
         {
-            return View();
+            UserInfoVM model = new ();
+            model.ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
+            return View(model);
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult ExternalLogin(string provider)
+        {
+            var redirectUrl = Url.Action("ExternalLoginCallback", "Account");
+            var properties = _signInManager.ConfigureExternalAuthenticationProperties(provider, redirectUrl);
+            return new ChallengeResult(provider, properties);
+        }
+
+        public async Task<IActionResult> ExternalLoginCallback(string remoteError)
+        {
+            try
+            {
+                if (!string.IsNullOrEmpty(remoteError))
+                {
+                    ModelState.AddModelError(string.Empty, $"Error from external provider: {remoteError}");
+                    return RedirectToAction("Login");
+                }
+
+                var info = await _signInManager.GetExternalLoginInfoAsync();
+                if (info == null)
+                {
+                    ModelState.AddModelError(string.Empty, "Error loading external login information.");
+                    return RedirectToAction("Login");
+                }
+
+                var result = await _signInManager.ExternalLoginSignInAsync(info.LoginProvider, info.ProviderKey, isPersistent: false, bypassTwoFactor: true);
+                if (result.Succeeded)
+                {
+                    _logger.LogInformation("{Name} logged in with {LoginProvider} provider.", info.Principal.Identity!.Name, info.LoginProvider);
+                    return RedirectToAction("Index", "Home");
+                }
+                if (result.IsLockedOut)
+                {
+                    return RedirectToAction("Lockout");
+                }
+                else
+                {
+                    var email = info.Principal.FindFirstValue(ClaimTypes.Email);
+                    return RedirectToAction("ExternalLoginConfirmation", "Account", new { email = email });
+                }
+            }catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message.ToString());
+            }
+            return RedirectToAction("Login");
+        }
+
+        public IActionResult ExternalLoginConfirmation(string email)
+        {
+            UserInfoVM model = new()
+            {
+                Email = email
+            };
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ExternalLoginConfirmation(UserInfoVM model)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    var info = await _signInManager.GetExternalLoginInfoAsync();
+                    if (info == null)
+                    {
+                        ModelState.AddModelError(string.Empty, "Error loading external login information during confirmation.");
+                        return RedirectToAction("Login");
+                    }
+
+                    var user = new ApplicationUser { 
+                        UserName = model.Email, 
+                        Email = model.Email, 
+                        FullName = model.FullName, 
+                        Gender = model.Gender is null ? Gender.Another : model.Gender.Value, EmailConfirmed = true };
+                    var result = await _userManager.CreateAsync(user);
+                    if (result.Succeeded)
+                    {
+                        result = await _userManager.AddLoginAsync(user, info);
+                        if (result.Succeeded)
+                        {
+                            await _signInManager.SignInAsync(user, isPersistent: false, info.LoginProvider);
+                            return RedirectToAction("Index", "Home");
+                        }
+                    }
+                    foreach (var error in result.Errors)
+                    {
+                        ModelState.AddModelError(string.Empty, error.Description);
+                    }
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message.ToString());
+            }
+            return View(model);
+        }    
 
         [HttpPost]
         public async Task<IActionResult> Login(UserInfoVM model)
         {
             try
             {
-                Console.WriteLine($"Data {model.UserName} and m{model.Password}");
+                model.ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
                 if (!ModelState.IsValid)
                 {
                     ModelState.AddModelError(string.Empty, $"Please fill in the information.");
@@ -61,8 +167,7 @@ namespace EduQuiz_5P.Controllers
                 ModelState.AddModelError(string.Empty, "An error occurred during sign-in.");
                 _logger.LogError(ex.Message.ToString());
             }
-            return View();
-
+            return View(model);
         }
 
         public IActionResult Register()

@@ -49,32 +49,35 @@
                                     <span class="span-or">or</span>
                                 </div>
                             </div>
-                            @{
-
-                                if ((Model.ExternalLogins?.Count ?? 0) > 0)
-                                {
-                                <form id="external-account" asp-page="./ExternalLogin" method="post" class="form-horizontal">
-                                    <div>
-                                        <p>
-                                            @foreach (var provider in Model.ExternalLogins!)
-                                            {
-                                                if (String.Equals(@provider.DisplayName, "Google"))
-                                                {
-                                                    <button type="submit" class="btn btn-light w-100 border border-1 border-dark" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">
-                                                            <span class="me-2"><i class="fa-brands fa-google"></i></span>Đăng Nhập Bằng @provider.DisplayName
-                                                    </button>
-                                                }
-                                                else
-                                                {
-                                                    <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
-                                                }
-                                            }
-                                        </p>
-                                    </div>
-                                </form>
-                                }
-                            }
                         </form>
+                        @{
+                            if (Model.ExternalLogins != null)
+                            {
+                                @if (Model.ExternalLogins.Count > 0)
+                                {
+                                    <form id="external-account" asp-action="ExternalLogin" asp-controller="Account" method="post" class="form-horizontal">
+                                        <div>
+                                            <p>
+                                                @foreach (var provider in Model.ExternalLogins!)
+                                                {
+                                                    if (String.Equals(@provider.DisplayName, "Google"))
+                                                    {
+                                                        <button type="submit" class="btn btn-light w-100 border border-1 border-dark" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">
+                                                            <span class="me-2"><i class="fa-brands fa-google"></i></span>Đăng Nhập Bằng @provider.DisplayName
+                                                        </button>
+                                                    }
+                                                    else
+                                                    {
+                                                        <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
+                                                    }
+                                                }
+                                            </p>
+                                        </div>
+                                    </form>
+                                }
+
+                            }
+                        }
                     </div>
                 </div>
             </div>

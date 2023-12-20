@@ -293,6 +293,7 @@ D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\Humanizer.dll
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\MailKit.dll
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\MessagePack.dll
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\MessagePack.Annotations.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\Microsoft.AspNetCore.Authentication.Google.dll
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\Microsoft.AspNetCore.Cryptography.Internal.dll
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
