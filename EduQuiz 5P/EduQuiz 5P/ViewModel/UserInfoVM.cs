@@ -2,6 +2,7 @@
 using EduQuiz_5P.Data;
 using EduQuiz_5P.Enums;
 using EduQuiz_5P.Helpers;
+using Microsoft.AspNetCore.Authentication;
 
 namespace EduQuiz_5P.ViewModel
 {
@@ -18,6 +19,7 @@ namespace EduQuiz_5P.ViewModel
         public Gender? Gender { get; set; }
         public DateTime? Birthday { get; set; }
         public bool RememberMe { get; set; }
+        public IList<AuthenticationScheme> ExternalLogins { get; set; }
         public virtual ICollection<string>? Roles { get; set; }
         public virtual ICollection<string>? Tokens { get; set; }
         public UserInfoVM()

@@ -18,7 +18,7 @@
                         <div class="text-center pb-5">
                             <h4 class="card-title">Sign In</h4>
                             <div class="d-inline-block w-100">
-                                <p class="card-text mt-0 ">Do not have an account?<a href="#" class="ms-2">Sign up</a></p>
+                                <p class="card-text mt-0 ">Do not have an account?<a asp-action="Register" asp-controller="Account" class="ms-2">Sign up</a></p>
                             </div>
                         </div>
                         <form asp-action="Login" asp-controller="Account" asp-area="">
@@ -49,7 +49,31 @@
                                     <span class="span-or">or</span>
                                 </div>
                             </div>
-                            <a class="btn btn-light w-100 border border-1 border-dark"><i class="fa-brands fa-google"></i><span class="ms-2">Sign in with google</span></a>
+                            @{
+
+                                if ((Model.ExternalLogins?.Count ?? 0) > 0)
+                                {
+                                <form id="external-account" asp-page="./ExternalLogin" method="post" class="form-horizontal">
+                                    <div>
+                                        <p>
+                                            @foreach (var provider in Model.ExternalLogins!)
+                                            {
+                                                if (String.Equals(@provider.DisplayName, "Google"))
+                                                {
+                                                    <button type="submit" class="btn btn-light w-100 border border-1 border-dark" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">
+                                                            <span class="me-2"><i class="fa-brands fa-google"></i></span>Đăng Nhập Bằng @provider.DisplayName
+                                                    </button>
+                                                }
+                                                else
+                                                {
+                                                    <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
+                                                }
+                                            }
+                                        </p>
+                                    </div>
+                                </form>
+                                }
+                            }
                         </form>
                     </div>
                 </div>

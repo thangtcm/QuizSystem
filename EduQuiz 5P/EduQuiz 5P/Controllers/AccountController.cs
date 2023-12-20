@@ -114,45 +114,43 @@ namespace EduQuiz_5P.Controllers
                     DateSend = DateTime.UtcNow.AddMinutes(5).ToTimeZone()
                 };
                 await _emailSender.SendEmailAsync(model.Email, "[LuyenToan.Online] Xác nhận email", CallBack.GetMailHtml(model.Email, model.FullName, code));
-                HttpContext.Session.SetString(Constants.CodeSession, JsonConvert.SerializeObject(userCode));
-                if (_userManager.Options.SignIn.RequireConfirmedAccount)
-                {
-                    return RedirectToAction("EmailConfirmation", "Account", new { returnUrl = "/Account/Register" });
-                }
+                var data = JsonConvert.SerializeObject(userCode);
+                Console.WriteLine($"Data là {data}");
+                HttpContext.Session.SetString(Constants.CodeSession, data);
+                return RedirectToAction("EmailConfirmation", "Account");
             }
             catch (Exception ex)
             {
                 ModelState.AddModelError(string.Empty, "An error occurred during registration.");
                 _logger.LogInformation(ex.Message.ToString());
             }
-            return View();
+            return View(model);
         }
 
-        public IActionResult EmailConfirmation(string? returnUrl = null)
+        public IActionResult EmailConfirmation()
         {
             var model = HttpContext.Session.GetString(Constants.CodeSession);
             if (model == null)
             {
-                return LocalRedirect(returnUrl ?? "");
+                return View();
             }
             return View();
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> EmailConfirmation(string? returnUrl, int code)
+        public async Task<IActionResult> EmailConfirmation(int code)
         {
             try
             {
                 var model = HttpContext.Session.GetString(Constants.CodeSession);
                 if (model == null)
                 {
-                    return LocalRedirect(returnUrl ?? "");
+                    return RedirectToAction("Login", "Account");
                 }
                 var userCode = JsonConvert.DeserializeObject<UserCode>(model);
                 if(userCode == null)
                 {
-                    return LocalRedirect(returnUrl ?? "");
+                    return RedirectToAction("Login", "Account");
                 }
                 if(userCode.DateSend <= DateTime.UtcNow.ToTimeZone() || userCode.Code != code)
                 {

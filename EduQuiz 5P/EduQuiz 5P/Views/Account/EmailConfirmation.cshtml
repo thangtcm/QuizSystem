@@ -1,0 +1,42 @@
+﻿@model string
+
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Account/_LayoutAccount.cshtml";
+}
+
+<div class="custom-shape"></div>
+<div class="min-vh-100 main-login container d-flex justify-content-center align-items-center">
+    <div class="card p-lg-5 my-5 shadow shadow-lg rounded" style="max-width: 100vh;">
+        <div class="row g-0">
+            <div class="col-md-6">
+                <img src="~/img/profile/imageleft.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-6">
+                <div class="card-body">
+                    <div class="container">
+                        <div class="text-center pb-5">
+                            <h4 class="card-title">Sign In</h4>
+                            <div class="d-inline-block w-100">
+                                <p class="card-text mt-0 ">Do not have an account?<a href="#" class="ms-2">Sign up</a></p>
+                            </div>
+                        </div>
+                        <form asp-action="EmailConfirmation" asp-controller="Account" asp-area="">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <input name="returnUrl" value="@Model" />
+                            <div class="mb-3">
+                                <label class="form-label">Code:</label>
+                                <input type="text" name="code" class="form-control" placeholder="Enter your code number">
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Confirm</button>
+                            
+                            <div class="text-center mt-3">
+                                <a href="#" class="text-primary">Send mail again</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

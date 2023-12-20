@@ -9,9 +9,14 @@ using EduQuiz_5P.Services.Interface;
 using EduQuiz_5P.Services;
 using EduQuiz_5P.Models;
 using Microsoft.AspNetCore.Identity.UI.Services;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
-
+if (builder.Environment.IsDevelopment())
+{
+    builder.Services.AddRazorPages()
+    .AddRazorRuntimeCompilation();
+}
 // Add services to the container.
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
@@ -46,6 +51,8 @@ builder.Services.AddScoped<IUserRoleRepository, UserRoleRepository>();
 builder.Services.AddTransient(typeof(IUserService), typeof(UserService));
 builder.Services.AddTransient(typeof(IRoleService), typeof(RoleService));
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<IUserEmailStore<ApplicationUser>, UserStore<ApplicationUser, ApplicationRole, ApplicationDbContext, long>>();
+builder.Services.AddScoped<IUserRoleStore<ApplicationUser>, UserStore<ApplicationUser, ApplicationRole, ApplicationDbContext, long>>();
 builder.Services.AddScoped<UserManager<ApplicationUser>>();
 
 //Mail
@@ -61,10 +68,21 @@ builder.Services.AddMemoryCache();
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession(options =>
 {
-    options.Cookie.Name = ".EdiuQuiz5P.Session";
+    options.Cookie.Name = ".EduQuiz5P.Session";
     options.IdleTimeout = TimeSpan.FromMinutes(30);
     options.Cookie.IsEssential = true;
     options.Cookie.HttpOnly = true;
+});
+
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    // Cookie settings
+    options.Cookie.HttpOnly = true;
+    options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
+    options.Cookie.SameSite = SameSiteMode.None;
+    options.LoginPath = "/Account/Login";
+    options.AccessDeniedPath = "/Identity/Account/AccessDenied";
+    options.SlidingExpiration = true;
 });
 var app = builder.Build();
 
@@ -87,12 +105,12 @@ app.UseRouting();
 
 app.UseAuthentication();
 app.UseAuthorization();
+app.UseSession();
 
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 app.MapRazorPages();
-app.UseSession();
 app.Run();
 void AddAuthorizationPolicies()
 {
