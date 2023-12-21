@@ -38,6 +38,7 @@ namespace EduQuiz_5P.ViewModel
             this.FullName = user.FullName;
             this.UserName = user.UserName;
             this.Birthday = user.Birthday;
+            this.Email = user.Email;
             this.UserId = user.Id;
             this.Roles = roles;
         }

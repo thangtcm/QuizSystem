@@ -7,6 +7,11 @@ namespace EduQuiz_5P.Repository.UnitOfWork
         IUserRepository UserRepository { get; }
         IRoleRepository RoleRepository { get; }
         IUserRoleRepository UserRoleRepository { get; }
+        IClassRepository ClassRepository { get; }
+        IChapterRepository ChapterRepository { get; }
+        IQuestionRepository QuestionRepository { get; }
+        ISubjectRepository SubjectRepository { get; }
+        IAnswerRepository AnswerRepository { get; }
         void Commit();
         void Rollback();
         Task CommitAsync();

@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>[TiemKiet.Vn] - @ViewData["Title"]</title>
+
+    @{
+        await Html.RenderPartialAsync("_Meta");
+        await Html.RenderPartialAsync("_Style");
+    }
+</head>
+<body>
+    <span id="message" class="d-none">@TempData["ToastrMessage"]</span>
+    <span id="status" class="d-none">@TempData["ToastrMessageType"]</span>
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <div class="main-wrapper">
+        @{
+            await Html.RenderPartialAsync("_Header");
+            await Html.RenderPartialAsync("_SlideBar");
+        }
+        <div class="page-wrapper">
+            @RenderBody()
+
+        </div>
+        @{
+            await Html.RenderPartialAsync("_Footer");
+        }
+    </div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

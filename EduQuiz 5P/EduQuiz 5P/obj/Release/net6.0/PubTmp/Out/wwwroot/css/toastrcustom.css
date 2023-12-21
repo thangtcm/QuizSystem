@@ -1,0 +1,31 @@
+﻿.toast-success {
+    background-color: #00d39e;
+    opacity: 1;
+}
+
+.toast-progress {
+    background-color: red;
+    opacity: 0.8;
+    border-radius: 5px;
+    bottom: -3px;
+    height: 3px;
+}
+
+.toast-info {
+    background-color: #03a9f3;
+    opacity: 1;
+}
+
+.toast-warning {
+    background-color: #fec107;
+    opacity: 1;
+}
+
+.toast-error {
+    background-color: #fd4b5d;
+    opacity: 1;
+}
+
+#toast-container > div {
+    overflow: visible;
+}

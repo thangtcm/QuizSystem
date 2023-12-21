@@ -1,0 +1,81 @@
+﻿@model ICollection<EduQuiz_5P.ViewModel.UserInfoVM>
+@using EduQuiz_5P.Helpers
+@{
+    ViewData["Title"] = "Quản Lý User";
+}
+
+<div class="content container-fluid">
+    <div class="page-header">
+        <div class="row align-items-center">
+            <div class="col">
+                <h3 class="page-title">@ViewData["Title"]</h3>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Home" asp-area="Admin">Dashboard</a></li>
+                    <li class="breadcrumb-item active">@ViewData["Title"]</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card card-table">
+                <div class="card-body">
+                    <div class="page-header">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <h3 class="page-title">@ViewData["Title"]</h3>
+                            </div>
+                            <div class="col-auto text-end float-end ms-auto download-grp">
+                                <a href="#" class="btn btn-outline-primary me-2">
+                                    <i class="fas fa-download"></i> Download
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table border-0 star-student table-hover table-center mb-0 datatable table-striped" style="width:100%">
+                            <thead>
+                                <tr role="row">
+                                    <th>ID</th>
+                                    <th>Họ Và Tên</th>
+                                    <th>Email</th>
+                                    <th>Chức Vụ</th>
+                                    <th class="text-end">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr role="row">
+                                        <td>
+                                            @item.UserId
+                                        </td>
+                                        <td>
+                                            @(String.IsNullOrEmpty(item.FullName) ? "" : item.FullName)
+                                        </td>
+                                        <td>
+                                            @item.Email
+                                        </td>
+                                        <td>
+                                            @(item.Roles is null ? "" : string.Join(" , ", item.Roles.ToList()))
+                                        </td>
+                                        <td class="text-end">
+                                            <div class="actions">
+                                                <a asp-action="Details" asp-route-id="@item.UserId" class="btn btn-sm bg-success-light me-2">
+                                                    <i class="far fa-eye"></i>
+                                                </a>
+                                                <a asp-action="Edit" asp-route-userId="@item.UserId" class="btn btn-sm bg-danger-light">
+                                                    <i class="far fa-edit"></i>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

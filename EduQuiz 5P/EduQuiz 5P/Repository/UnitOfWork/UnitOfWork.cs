@@ -9,6 +9,11 @@ namespace EduQuiz_5P.Repository.UnitOfWork
         private IUserRepository _userRepository;
         private IRoleRepository _roleRepository;
         private IUserRoleRepository _userRoleRepository;
+        private IClassRepository _classRepository;
+        private IChapterRepository _chapterRepository;
+        private IQuestionRepository _questionRepository;
+        private ISubjectRepository _subjectRepository;
+        private IAnswerRepository _answerRepository;
         public UnitOfWork(ApplicationDbContext context)
         {
             _context = context;
@@ -34,6 +39,42 @@ namespace EduQuiz_5P.Repository.UnitOfWork
             get
             {
                 return _userRoleRepository ??= new UserRoleRepository(_context);
+            }
+        }
+        public IClassRepository ClassRepository
+        {
+            get
+            {
+                return _classRepository ??= new ClassRepository(_context);
+            }
+        }
+        public IChapterRepository ChapterRepository
+        {
+            get
+            {
+                return _chapterRepository ??= new ChapterRepository(_context);
+            }
+        }
+
+        public IQuestionRepository QuestionRepository
+        {
+            get
+            {
+                return _questionRepository ??= new QuestionRepository(_context);
+            }
+        }
+        public IAnswerRepository AnswerRepository
+        {
+            get
+            {
+                return _answerRepository ??= new AnswerRepository(_context);
+            }
+        }
+        public ISubjectRepository SubjectRepository
+        {
+            get
+            {
+                return _subjectRepository ??= new SubjectRepository(_context);
             }
         }
         public void Commit()

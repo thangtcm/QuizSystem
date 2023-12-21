@@ -1,4 +1,5 @@
 ﻿using EduQuiz_5P.Helpers;
+using EduQuiz_5P.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -12,6 +13,12 @@ namespace EduQuiz_5P.Data
             : base(options)
         {
         }
+
+        public DbSet<Classes>? Class { get; set; }
+        public DbSet<Chapter>? Chapter { get; set; }
+        public DbSet<Subject>? Subject { get; set; }
+        public DbSet<Question>? Question { get; set; }
+        public DbSet<Answer>? Answer { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

@@ -1,0 +1,1050 @@
+/*-----------------
+29. Responsive
+-----------------------*/
+
+@media only screen and (min-width: 1199.5px) and (max-width: 1620px) {
+	.sm-box p {
+		color: #fff;
+		font-size: 12px;
+	}
+	.fa-twitter {
+		bottom: -6px !important;
+	}
+	.fa-instagram {
+		bottom: -4px !important;
+	}
+	.fa-linkedin-in {
+		bottom: -9px !important;
+	}
+}
+
+@media (min-width:768px) {
+	.avatar-xxl {
+		width: 8rem;
+		height: 8rem;
+	}
+	.avatar-xxl .border {
+		border-width: 4px !important;
+	}
+	.avatar-xxl .rounded {
+		border-radius: 12px !important;
+	}
+	.avatar-xxl .avatar-title {
+		font-size: 42px;
+	}
+	.avatar-xxl.avatar-away:before,
+	.avatar-xxl.avatar-offline:before,
+	.avatar-xxl.avatar-online:before {
+		border-width: 4px;
+	}
+
+}
+
+@media (max-width: 768px)
+{
+	.invoice-item .invoice-details {
+		text-align: left;
+		margin-bottom: 10px;
+	}
+}
+
+@media (min-width: 992px) {
+	#toggle_btn {
+		align-items: center;
+		color: #fff;
+		display: inline-flex;
+		float: left;
+		font-size: 18px;
+		height: 40px;
+		width: 40px;
+		background: #3D5EE1;
+		justify-content: center;
+		padding: 0 12px;
+		border-radius: 10px;
+		position: absolute;
+		left: -22px;
+		z-index: 99;
+		top: 10px;
+		box-shadow: 0px 0px 35px rgba(61, 47, 146, 0.1);
+	}
+	.mini-sidebar .menu-toggle #toggle_btn {
+		left: 5px;
+	}
+	.menu-toggle  {
+		position: relative;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+	}
+	.mini-sidebar .header-left .logo img {
+		height: auto;
+		max-height: 40px;
+		width: auto;
+	}
+	.mini-sidebar .header .header-left .logo {
+		display: none;
+	}
+	.mini-sidebar .header-left .logo.logo-small {
+		display: block;
+	}
+	.mini-sidebar .header .header-left {
+		padding: 0 5px;
+		width: 78px;
+	}
+	.mini-sidebar .sidebar {
+		width: 78px;
+	}
+	.mini-sidebar.expand-menu .sidebar {
+		width: 240px;
+	}
+	.mini-sidebar .menu-title {
+		visibility: hidden;
+		white-space: nowrap;
+	}
+	.mini-sidebar.expand-menu .menu-title {
+		visibility: visible;
+	}
+	.mini-sidebar .menu-title a {
+		visibility: hidden;
+	}
+	.mini-sidebar.expand-menu .menu-title a {
+		visibility: visible;
+	}
+	.modal-open.mini-sidebar .sidebar {
+		z-index: 1051;
+	}
+	.mini-sidebar .sidebar .sidebar-menu ul > li > a span {
+		display: none;
+		transition: all 0.2s ease-in-out;
+		opacity: 0;
+	}
+	.mini-sidebar.expand-menu .sidebar .sidebar-menu ul > li > a span {
+		display: inline;
+		opacity: 1;
+	}
+	.mini-sidebar.expand-menu .sidebar .sidebar-menu > ul > li > a i {
+		width: 20px;
+	}
+	.mini-sidebar .page-wrapper {
+		margin-left: 78px;
+	}
+}
+
+@media (max-width: 1399px) {
+	.award-list-outs {
+		max-width: 300px;
+	}
+	.skip-group .btn-info {
+		min-width: 130px;
+		padding: 6px 15px;
+		font-size: 15px;
+	}
+	.views-lesson h4 {
+		font-size: 15px;
+	}
+	.login-wrapper .loginbox .login-right h1 {
+		font-size: 22px;
+	}
+	.account-subtitle {
+		font-size: 14px;
+	}
+	.login-wrapper .loginbox .login-right h2 {
+		font-size: 20px;
+	}
+	.login-wrapper .loginbox .login-right .forgotpass a {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 1199.5px) {
+	.sm-box h6 {
+		font-size: 30px;
+	}
+	.sm-box p {
+		font-size: 22px;
+	}
+	.sm-box .fab {
+		font-size: 100px;
+	}
+	.dash-widget3 {
+		padding-right: 15px;
+	}
+	.dash-widget4 {
+		padding-left: 15px;
+	}
+	.app-listing {
+		display: inline-block;
+	}
+	.app-listing li {
+		width: 49%;
+		display: inline-block;
+	}
+	.report-btn .btn {
+		width: 200px;
+	}
+	.sm-box p {
+		font-size: 16px;
+	}
+	.sm-box h6 {
+		font-size: 20px;
+	}
+	.social-boxs {
+		background: #fff;
+		width: 50px;
+		height: 46px;
+	}
+	.profile-user-img img {
+		border: 4px solid #fff;
+		width: 75px;
+	}
+	.names-profiles h4 {
+		font-size: 16px;
+	}
+	.names-profiles h5 {
+		font-size: 13px;
+	}
+	.follow-group {
+		padding: 0px 10px;
+	}
+	.students-follows h4 {
+		font-size: 18px;
+	}
+	.follow-btn-group {
+		margin: 10px 0px;
+	}
+	.follow-btn-group .btn-info {
+		min-width: 80px;
+		font-size: 14px;
+		padding: 5px 15px;
+	}
+	.profile-edit-icon {
+		width: 26px;
+		height: 26px;
+	}
+	.profile-edit-icon i {
+		font-size: 12px;
+	}
+	.search-student-btn .btn-primary {
+		min-width: 95px;
+	}
+}
+
+@media (max-width: 991.98px) {
+	.header .header-left {
+		position: absolute;
+		width: 100%;
+		padding: 0px 50px;
+	}
+	.mobile_btn {
+		color: #18aefa !important;
+		cursor: pointer;
+		display: block;
+		font-size: 24px;
+		height: 60px;
+		left: 0;
+		line-height: 60px;
+		padding: 0 15px;
+		position: absolute;
+		text-align: center;
+		top: 0;
+		z-index: 10;
+	}
+	#toggle_btn {
+		display: none;
+	}
+	.top-nav-search {
+		display: none;
+	}
+	.login-wrapper .loginbox .login-left {
+		padding: 80px 50px;
+		width: 50%;
+	}
+	.login-wrapper .loginbox .login-right {
+		padding: 50px;
+		width: 50%;
+	}
+	.sidebar {
+		margin-left: -225px;
+		width: 225px;
+		-webkit-transition: all 0.4s ease;
+		-moz-transition: all 0.4s ease;
+		transition: all 0.4s ease;
+		z-index: 1041;
+	}
+	.page-wrapper {
+		margin-left: 0;
+		padding-left: 0;
+		padding-right: 0;
+		-webkit-transition: all 0.4s ease;
+		-moz-transition: all 0.4s ease;
+		transition: all 0.4s ease;
+	}
+	.user-menu.nav > li > a {
+		color: #18aefa;
+	}
+	.user-menu.nav > li > a .badge {
+		background-color: #3d5ee1;
+		color: #fff;
+	}
+	.user-menu.nav > li > a:hover i, .user-menu.nav > li > a:focus i {
+		color: #fff;
+	}
+	.sm-box h6 {
+		font-size: 25px;
+	}
+	.sm-box p {
+		font-size: 20px;
+	}
+	.sm-box .fab {
+		font-size: 100px;
+	}
+	footer { 
+		text-align: center;
+	}
+	.dash-circle {
+		display: block;
+	}
+	.dash-circle .col-12 {
+		display: flex;
+	}
+	.dash-widget1 {
+		border-right: none;
+	}
+	.dash-widget1 ul li {
+		width: 40%;
+	}
+	.page-header .breadcrumb {
+		font-size: 15px;
+	}
+	.multipleSelection #checkBoxes, .SortBy #checkBox {
+		width: 100%;
+	}
+	.invoice-item-bg .invoice-info {
+		border-right: 0;
+		padding: 0;
+		margin-top: 0px;
+	}
+	.invoice-payment-box .payment-details p {
+		font-size: 15px;
+	}
+	.invoice-head p {
+		font-size: 16px;
+	}
+	.invoice-item-bg {
+		padding: 20px;
+		padding-bottom: 0;
+	}
+	.invoice-terms h6 {
+		font-size: 18px;
+	}
+	.invoice-terms h6 {
+		font-size: 18px;
+	}
+    .invoice-head h2 {
+        font-size: 18px;
+    }
+    .invoice-head p {
+        font-size: 16px;
+    }
+    .invoice-item-bg .invoice-info {
+        border-right: 0;
+        padding: 0;
+        margin-top: 0px;
+    }
+    .invoice-item-bg {
+        padding: 20px;
+        padding-bottom: 0;
+    }
+    .invoice-total-footer h4 {
+        font-size: 15px;
+    }
+    .settings-form .social-icon {
+        width: 45px;
+        font-size: 20px;
+    }
+    .settings-form .trash {
+        width: 40px;
+    }
+    .links-cont .form-control {
+        width: calc(100% - 93px);
+    }
+	.sm-box p {
+		font-size: 16px;
+	}
+	.sm-box h6 {
+		font-size: 20px;
+	}
+	.social-boxs {
+		background: #fff;
+		width: 50px;
+		height: 46px;
+	}
+	.activity-feed .feed-item .feed-text1 a {
+		font-size: 16px;
+	}
+	.lesson-activity {
+		padding-left: 15px;
+	}
+	.profile-user-img img {
+		border: 4px solid #fff;
+		width: 75px;
+	}
+	.names-profiles h4 {
+		font-size: 16px;
+	}
+	.names-profiles h5 {
+		font-size: 13px;
+	}
+	.follow-group {
+		padding: 0px 10px;
+	}
+	.students-follows h4 {
+		font-size: 18px;
+	}
+	.follow-btn-group {
+		margin: 10px 0px;
+	}
+	.follow-btn-group .btn-info {
+		min-width: 80px;
+		font-size: 14px;
+		padding: 5px 15px;
+	}
+	.profile-edit-icon {
+		width: 26px;
+		height: 26px;
+	}
+	.profile-edit-icon i {
+		font-size: 12px;
+	}
+	.search-student-btn {
+		margin-bottom: 20px;
+	}
+}
+
+@media (max-width: 767.98px) {
+	body {
+		font-size: 0.9375rem;
+	}
+	h1, .h1 {
+		font-size: 2rem;
+	}
+	h2, .h2 {
+		font-size: 1.75rem;
+	}
+	h3, .h3 {
+		font-size: 1.5rem;
+	}
+	h4, .h4 {
+		font-size: 1.125rem;
+	}
+	h5, .h5 {
+		font-size: 1rem;
+	}
+	h6, .h6 {
+		font-size: 0.875rem;
+	}
+	.header .has-arrow .dropdown-toggle:after {
+		display: none;
+	}
+	.user-menu.nav > li > a > span:not(.user-img) {
+		display: none;
+	}
+	.navbar-nav .open .dropdown-menu {
+		float: left;
+		position: absolute;
+	}
+	.navbar-nav.user-menu .open .dropdown-menu {
+		left: auto;
+		right: 0;
+	}
+	.header .header-left {
+		padding: 0 15px;
+	}
+	.header .header-left .logo {
+		display: none;
+	}
+	.header-left .logo.logo-small {
+		display: inline-block;
+		left: 50%;
+		position: relative;
+		transform: translateX(-50%);
+		-webkit-transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+	}
+	.login-wrapper .loginbox .login-left {
+		display: none;
+	}
+	.login-wrapper .loginbox {
+		max-width: 450px;
+		min-height: unset;
+	}
+	.login-wrapper .loginbox .login-right {
+		float: none;
+		padding: 1.875rem;
+		width: 100%;
+	}
+	.left-action {
+		text-align: center;
+		margin-bottom: 15px;
+	}
+	.right-action {
+		text-align: center;
+	}
+	.top-action-left .float-left {
+		float: none !important;
+	}
+	.top-action-left .btn-group {
+		margin-bottom: 15px;
+	}
+	.top-action-right {
+		text-align: center;
+	}
+	.top-action-right a.btn.btn-white {
+		margin-bottom: 15px;
+	}
+	.mail-sent-time {
+		float: left;
+		margin-top: 10px;
+		width: 100%;
+	}
+	.profile-btn {
+		flex: 0 0 100%;
+		margin-top: 20px;
+	}
+	.edit-link {
+		font-size: 0.875rem;
+		margin-top: 0;
+	}
+	.product_price {
+		font-size: 1.5rem;
+	}
+	.login-wrapper .loginbox .login-right h1 {
+		font-size: 22px;
+	}
+	.error-box h1 {
+		font-size: 6em;
+	}
+	.error-box .btn {
+		font-size: 15px;
+		min-width: 150px;
+		padding: 8px 20px;
+	}
+	.user-menu {
+		padding-right: 0px;
+	}
+	.page-title {
+		font-size: 22px;
+	}
+	.db-info h3 {
+		font-size: 22px;
+	}
+	.app-listing li {
+		width: 100%;
+	}
+	.invoices-tabs ul li {
+		margin-right: 0;
+		display: block;
+		margin-bottom: 14px;
+	}
+	.invoices-tabs ul li a {
+		padding-bottom: 6px;
+	}
+	.selectBox p {
+		font-size: 12px;
+	}
+	.report-btn .btn {
+		font-size: 14px;
+		padding: 10px 0;
+	}
+	.invoices-tabs ul li a {
+		font-size: 15px;
+	}
+	.inovices-widget-header .inovices-amount {
+		font-size: 20px;
+	}
+	.invoices-settings-btn .btn {
+		min-width: 140px;
+		padding: 8px 0;
+		font-size: 14px;
+	}
+	.invoices-settings-btn {
+		margin-top: 20px;
+		justify-content: start;
+	}
+	.invoices-grid-card .card-header, .card-middle, .invoices-grid-card .card-body, .invoices-grid-card .card-footer {
+		padding: 15px;
+	}
+	.invoice-inner-head {
+		padding: 15px;
+	}
+	.invoice-inner-datepic {
+		padding-left: 15px;
+		padding-top: 10px;
+		padding-bottom: 15px;
+	}
+	.invoice-details-title {
+		font-size: 16px;
+	}
+	.field-box .btn {
+		min-width: 160px;
+		padding: 8px 0;
+		font-size: 14px;
+	}
+	.upload-sign .btn {
+		min-width: 140px;
+		padding: 8px 0;
+		font-size: 14px;
+	}
+	.upload-sign {
+		width: 100%;
+	}
+	.service-upload {
+		width: 100%;
+	}
+	.add-links {
+		font-size: 14px;
+	}
+	.invoice-total-footer h4 {
+		font-size: 14px;
+	}
+	.invoice-add-table th {
+		font-size: 14px;
+	}
+	.invoice-item .customer-text {
+		font-size: 16px;
+	}
+	.invoice-add-table h4 {
+		font-size: 16px;
+		margin-bottom: 20px;
+	}
+	.invoices-page-header .invoices-breadcrumb-item a {
+		font-size: 14px;
+	}
+	.invoices-create-btn .invoices-preview-link {
+		margin-right: 0;
+	}
+	.customer-text-one {
+		font-size: 16px;
+	}
+	.invoices-create-btn .delete-invoice-btn {
+		display: none;
+	}
+	.invoices-create-btn .save-invoice-btn {
+		display: none;
+	}
+	.invoice-name {
+		font-size: 14px;
+	}
+	.invoice-head h2 {
+		font-size: 16px;
+	}
+	.form-header h4 {
+		font-size: 18px;
+	}
+	.bank-details-btn .btn {
+		min-width: 120px;
+		padding: 7px 0;
+		font-size: 14px;
+	}
+	.bank-details .modal-footer {
+		padding: 15px;
+	}
+	.invoice-payment-box .payment-details p {
+		font-size: 14px;
+	}
+	.invoice-head p {
+		font-size: 14px;
+	}
+	.invoice-item-one .invoice-info {
+		text-align: left;
+	}
+	.invoice-payment-box h4 {
+		font-size: 15px;
+	}
+	.invoice-payment-box .payment-details {
+		margin-bottom: 20px;
+		width: 100%;
+	}
+	.invoice-payment-box .payment-details p {
+		font-size: 14px;
+	}
+	.invoice-payment-box h4 {
+		font-size: 15px;
+	}
+	.invoice-item .invoice-details-two {
+		margin-bottom: 20px;
+		font-size: 14px;
+	}
+	.invoice-terms p {
+		font-size: 14px;
+	}
+    .nav-tabs.menu-tabs .nav-link {
+        display: block;
+        text-align: center;
+    }
+    .nav-tabs.menu-tabs .nav-item {
+        display: block;
+    }
+    .card .card-header .card-title {
+        font-size: 16px;
+    }
+    .links-cont .form-group {
+        margin-bottom: 10px;
+    }
+    .settings-form .trash {
+        margin-bottom: 10px;
+    }
+    .settings-menu-links .nav {
+        display: block;
+    }
+    .invoices-tabs ul li a {
+        padding-bottom: 6px;
+    }
+    .app-listing li {
+        width: 100%;
+    }
+    .report-btn .btn {
+        font-size: 14px;
+        padding: 10px 0;
+    }
+    .invoices-tabs ul li a {
+        font-size: 15px;
+    }
+    .invoices-tabs ul li {
+        margin-right: 0;
+        display: block;
+        margin-bottom: 14px;
+    }
+    .invoices-settings-btn {
+        margin-top: 20px;
+        justify-content: start;
+    }
+    .invoice-head h2 {
+        font-size: 16px;
+    }
+    .invoice-head p {
+        font-size: 14px;
+    }
+    .invoice-item-one .invoice-info {
+        text-align: left;
+    }
+    .invoice-payment-box .payment-details {
+        margin-bottom: 20px;
+    }
+    .invoice-item .invoice-details-two {
+        margin-bottom: 20px;
+        font-size: 14px;
+    }
+    .invoices-create-btn .invoices-preview-link {
+        margin-right: 0;
+    }
+    .invoices-create-btn .btn {
+        display: none;
+    }
+    .invoices-create-btn .btn {
+        display: none;
+    }
+    .invoice-inner-head {
+        padding: 15px;
+    }
+    .invoice-inner-date {
+        padding: 15px;
+        padding-bottom: 0;
+    }
+    .invoice-inner-datepic {
+        padding-left: 15px;
+        padding-top: 10px;
+        padding-bottom: 15px;
+    }
+    .field-box .btn {
+        min-width: 160px;
+        padding: 8px 0;
+        font-size: 14px;
+    }
+    .invoice-total-footer h4 {
+        font-size: 14px;
+    }
+    .service-upload {
+        width: 100%;
+    }
+    .upload-sign {
+        width: 100%;
+    }
+    .invoice-item-one .invoice-details {
+        text-align: left;
+    }
+    .invoice-item-two .invoice-info2 {
+        text-align: left;
+    }
+    .invoice-item-two .invoice-details {
+        text-align: left;
+    }
+    .invoice-item-box {
+        width: 100%;
+        float: left;
+    }
+    .invoice-issues-date {
+        padding-top: 10px;
+        padding-bottom: 0;
+    }
+    .invoices-settings-btn .btn {
+        min-width: 140px;
+        padding: 8px 0;
+        font-size: 14px;
+    }
+    .invoices-settings-btn-one {
+        margin-top: 0;
+    }
+    .payment-details {
+        width: auto;
+    }
+    .invoice-item .customer-text {
+        font-size: 16px;
+    }
+    .invoice-setting-btn .btn {
+        min-width: 118px;
+        padding: 7px 0;
+        font-size: 14px;
+    }
+    .invoice-faq {
+        margin-bottom: 20px;
+    }
+	.language-drop,
+	.zoom-screen {
+		display: none;
+	}
+	.activity-awards {
+		display: block;
+		margin-bottom: 20px;
+	}
+	.award-list-outs {
+		margin: 10px 0px;
+	}
+	.sm-box p {
+		font-size: 16px;
+	}
+	.sm-box h6 {
+		font-size: 20px;
+	}
+	.social-boxs {
+		background: #fff;
+		width: 40px;
+		height: 40px;
+	}
+	.lesson .btn-info {
+		padding: 2px 7px;
+		font-size: 13px;
+	}
+	.circle-bar > div canvas {
+		width: 130px !important;
+		height: 130px !important;
+	}
+	.circle-bar > div b {
+		font-size: 20px;
+	}
+	.activity-feed .feed-item ,
+	.teacher-date-list {
+		display: block !important;
+	}
+	.teacher-date-list li:last-child {
+		margin-left: 0;
+	}
+	.skip-group .skip-btn {
+		margin-bottom: 0;
+	}
+	.skip-group {
+		margin-bottom: 10px;
+	}
+	.profile-user-img img {
+		border: 4px solid #fff;
+		width: 90px;
+	}
+	.names-profiles h4 {
+		font-size: 16px;
+	}
+	.names-profiles h5 {
+		font-size: 13px;
+	}
+	.follow-group {
+		padding: 0px 10px;
+	}
+	.students-follows h4 {
+		font-size: 18px;
+	}
+	.follow-btn-group {
+		margin: 10px 0px;
+	}
+	.follow-btn-group .btn-info {
+		min-width: 100px;
+		font-size: 14px;
+		padding: 5px 15px;
+	}
+	.profile-edit-icon {
+		width: 26px;
+		height: 26px;
+	}
+	.profile-edit-icon i {
+		font-size: 12px;
+	}
+	.user-img .user-text {
+		display: none;
+	}
+	.star-student.table-striped tbody tr td, 
+	.star-student.table-striped tbody tr td a {
+		font-size: 14px;
+	}
+	.social-boxs img {
+		max-width: 25px;
+	}
+	.teacher-date-list li:nth-child(2) {
+		display: none;
+	}
+	.activity-btns .btn-info {
+		min-width: 125px;
+	}
+	.teacher-date-list {
+		margin: 10px 0px;
+	}
+	.chart-list-out span {
+		width: 5px;
+		height: 5px;
+	}
+	.lesson-view-all a {
+		font-size: 12px;
+	}
+	.chart-list-out li {
+		margin-right: 5px;
+	}
+	.search-student-btn .btn-primary {
+		min-width: 120px;
+		padding: 6px 15px;
+	}
+	.search-student-btn {
+		margin-bottom: 20px;
+	}
+	.btn-outline-gray {
+		width: 30px;
+		height: 30px;
+	}
+	.download-grp .btn-outline-primary {
+		font-size: 14px;
+		padding: 3px 9px;
+	}
+	.download-grp .btn-primary {
+		padding: 2px 7px;
+	}
+	.download-grp .btn-primary i {
+		font-size: 13px;
+	}
+}
+
+@media (max-width: 575.98px) {
+	.card {
+		margin-bottom: 0.9375rem;
+	}
+	.page-wrapper > .content {
+		padding: 0.9375rem 0.9375rem 0;
+	}
+	.card-body {
+		padding: 1.25rem;
+	}
+	.card-header {
+		padding: .75rem 1.25rem;
+	}
+	.card-footer {
+		padding: .75rem 1.25rem;
+	}
+	.card-chart .card-body {
+		padding: 5px;
+	}
+	.page-header {
+		margin-bottom: 0.9375rem;
+	}
+	.account-wrapper {
+		padding: 0.9375rem;
+	}
+	.profile-image {
+		flex: 0 0 100%;
+		margin-bottom: 20px;
+		text-align: center;
+	}
+	.profile-user-info {
+		text-align: center;
+	}
+	.profile-btn {
+		text-align: center;
+	}
+	.fc-toolbar .fc-right {
+		display: inline-block;
+		float: none;
+		margin: 10px auto 0;
+		width: auto;
+		clear: both;
+	}
+	.fc-toolbar .fc-left {
+		float: none;
+		margin: 0 auto;
+		width: 200px;
+	}
+	.fc-toolbar .fc-center {
+		display: inline-block;
+		width: 100%;
+		text-align: center;
+	}
+	.fc-toolbar .fc-center h2 {
+		width: 100%;
+	}
+	.profile-tab-cont {
+		padding-top: 1.25rem;
+	}
+	.about-info .media {
+		flex-direction: column;
+	}
+	.title-span {
+		width: 100px;
+	}
+	.about-info ul li {
+		font-size: 13px;
+	}
+	.dash-widget1 {
+	    display: block;
+	}
+	.dash-widget2 {
+		border: none;
+	}
+	.dash-widget1 .circle-bar {
+	    width: auto;
+	    padding-right: 0px;
+	    text-align: center;
+	}
+	.dash-details {
+	    padding-top: 20px;
+	    text-align: left;
+	}
+	.dash-widget1 ul {
+		margin: 0 0px;
+	}
+	.dash-widget1 ul li {
+	    width: auto;
+	    display: inline-block;
+	}
+	.view-link {
+	    font-size: 13px;
+	}
+    .page-header .breadcrumb {
+        display: none;
+    }
+}
+
+@media (max-width: 479px) {
+	.dropdown-menu.notifications.show {
+		transform: translate3d(-190px, 60px, 0px) !important;
+	}
+	.user-menu .dropdown-menu {
+		width: 310px;
+	}
+	.notifications .noti-content {
+		width: 310px;
+		height: 355px;
+	}
+}

@@ -548,3 +548,4 @@ D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Ra
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.Google.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Debug\net6.0\scopedcss\Areas\Admin\Views\Shared\_LayoutAdmin.cshtml.rz.scp.css

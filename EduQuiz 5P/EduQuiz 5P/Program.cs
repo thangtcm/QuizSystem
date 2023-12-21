@@ -48,8 +48,18 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IRoleRepository, RoleRepository>();
 builder.Services.AddScoped<IUserRoleRepository, UserRoleRepository>();
+builder.Services.AddScoped<IClassRepository, ClassRepository>();
+builder.Services.AddScoped<IChapterRepository, ChapterRepository>();
+builder.Services.AddScoped<ISubjectRepository, SubjectRepository>();
+builder.Services.AddScoped<IQuestionRepository, QuestionRepository>();
+builder.Services.AddScoped<IAnswerRepository, AnswerRepository>();
+
+//
 builder.Services.AddTransient(typeof(IUserService), typeof(UserService));
 builder.Services.AddTransient(typeof(IRoleService), typeof(RoleService));
+builder.Services.AddTransient(typeof(IClassService), typeof(ClassService));
+builder.Services.AddTransient(typeof(IChapterService), typeof(ChapterService));
+builder.Services.AddTransient(typeof(IQuestionService), typeof(QuestionService));
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IUserEmailStore<ApplicationUser>, UserStore<ApplicationUser, ApplicationRole, ApplicationDbContext, long>>();
 builder.Services.AddScoped<IUserRoleStore<ApplicationUser>, UserStore<ApplicationUser, ApplicationRole, ApplicationDbContext, long>>();
@@ -114,6 +124,11 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 app.UseSession();
+
+app.MapAreaControllerRoute(
+    name: "admin_default",
+    areaName: "Admin",
+    pattern: "Admin/{controller=Home}/{action=Index}/{id?}");
 
 app.MapControllerRoute(
     name: "default",

@@ -162,6 +162,237 @@ namespace EduQuiz_5P.Migrations
                         });
                 });
 
+            modelBuilder.Entity("EduQuiz_5P.Models.Answer", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("AnswerName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("DateRemove")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DateUpdate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsCorrect")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsRemoved")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("QuestionId")
+                        .HasColumnType("int");
+
+                    b.Property<long?>("UserIdRemove")
+                        .HasColumnType("bigint");
+
+                    b.Property<long?>("UserIdUpdate")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("QuestionId");
+
+                    b.HasIndex("UserIdRemove");
+
+                    b.HasIndex("UserIdUpdate");
+
+                    b.ToTable("Answer");
+                });
+
+            modelBuilder.Entity("EduQuiz_5P.Models.Chapter", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("ChapterDescription")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ChapterName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("DateRemove")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DateUpdate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsRemoved")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("SubjectId")
+                        .HasColumnType("int");
+
+                    b.Property<long?>("UserIdRemove")
+                        .HasColumnType("bigint");
+
+                    b.Property<long?>("UserIdUpdate")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SubjectId");
+
+                    b.HasIndex("UserIdRemove");
+
+                    b.HasIndex("UserIdUpdate");
+
+                    b.ToTable("Chapter");
+                });
+
+            modelBuilder.Entity("EduQuiz_5P.Models.Classes", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("ClassName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("DateRemove")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DateUpdate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsRemoved")
+                        .HasColumnType("bit");
+
+                    b.Property<long?>("UserIdRemove")
+                        .HasColumnType("bigint");
+
+                    b.Property<long?>("UserIdUpdate")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserIdRemove");
+
+                    b.HasIndex("UserIdUpdate");
+
+                    b.ToTable("Class");
+                });
+
+            modelBuilder.Entity("EduQuiz_5P.Models.Question", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("ChappterId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("DateRemove")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DateUpdate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("DifficultyLevel")
+                        .HasColumnType("int");
+
+                    b.Property<string>("IsImage")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("IsImageSolution")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsRemoved")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("LevelType")
+                        .HasColumnType("int");
+
+                    b.Property<int>("NumberCorrect")
+                        .HasColumnType("int");
+
+                    b.Property<int>("NumberTimes")
+                        .HasColumnType("int");
+
+                    b.Property<string>("QuestionHints")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("QuestionName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("QuestionSolution")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long?>("UserIdRemove")
+                        .HasColumnType("bigint");
+
+                    b.Property<long?>("UserIdUpdate")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ChappterId");
+
+                    b.HasIndex("UserIdRemove");
+
+                    b.HasIndex("UserIdUpdate");
+
+                    b.ToTable("Question");
+                });
+
+            modelBuilder.Entity("EduQuiz_5P.Models.Subject", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("ClassesId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("DateRemove")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DateUpdate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsRemoved")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("SubjectDescription")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SubjectName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long?>("UserIdRemove")
+                        .HasColumnType("bigint");
+
+                    b.Property<long?>("UserIdUpdate")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ClassesId");
+
+                    b.HasIndex("UserIdRemove");
+
+                    b.HasIndex("UserIdUpdate");
+
+                    b.ToTable("Subject");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<long>", b =>
                 {
                     b.Property<int>("Id")
@@ -276,6 +507,113 @@ namespace EduQuiz_5P.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("EduQuiz_5P.Models.Answer", b =>
+                {
+                    b.HasOne("EduQuiz_5P.Models.Question", "Question")
+                        .WithMany("Answers")
+                        .HasForeignKey("QuestionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("EduQuiz_5P.Data.ApplicationUser", "UserRemove")
+                        .WithMany()
+                        .HasForeignKey("UserIdRemove");
+
+                    b.HasOne("EduQuiz_5P.Data.ApplicationUser", "UserUpdate")
+                        .WithMany()
+                        .HasForeignKey("UserIdUpdate");
+
+                    b.Navigation("Question");
+
+                    b.Navigation("UserRemove");
+
+                    b.Navigation("UserUpdate");
+                });
+
+            modelBuilder.Entity("EduQuiz_5P.Models.Chapter", b =>
+                {
+                    b.HasOne("EduQuiz_5P.Models.Subject", "Subject")
+                        .WithMany("Chapters")
+                        .HasForeignKey("SubjectId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("EduQuiz_5P.Data.ApplicationUser", "UserRemove")
+                        .WithMany()
+                        .HasForeignKey("UserIdRemove");
+
+                    b.HasOne("EduQuiz_5P.Data.ApplicationUser", "UserUpdate")
+                        .WithMany()
+                        .HasForeignKey("UserIdUpdate");
+
+                    b.Navigation("Subject");
+
+                    b.Navigation("UserRemove");
+
+                    b.Navigation("UserUpdate");
+                });
+
+            modelBuilder.Entity("EduQuiz_5P.Models.Classes", b =>
+                {
+                    b.HasOne("EduQuiz_5P.Data.ApplicationUser", "UserRemove")
+                        .WithMany()
+                        .HasForeignKey("UserIdRemove");
+
+                    b.HasOne("EduQuiz_5P.Data.ApplicationUser", "UserUpdate")
+                        .WithMany()
+                        .HasForeignKey("UserIdUpdate");
+
+                    b.Navigation("UserRemove");
+
+                    b.Navigation("UserUpdate");
+                });
+
+            modelBuilder.Entity("EduQuiz_5P.Models.Question", b =>
+                {
+                    b.HasOne("EduQuiz_5P.Models.Chapter", "Chappter")
+                        .WithMany("Questions")
+                        .HasForeignKey("ChappterId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("EduQuiz_5P.Data.ApplicationUser", "UserRemove")
+                        .WithMany()
+                        .HasForeignKey("UserIdRemove");
+
+                    b.HasOne("EduQuiz_5P.Data.ApplicationUser", "UserUpdate")
+                        .WithMany()
+                        .HasForeignKey("UserIdUpdate");
+
+                    b.Navigation("Chappter");
+
+                    b.Navigation("UserRemove");
+
+                    b.Navigation("UserUpdate");
+                });
+
+            modelBuilder.Entity("EduQuiz_5P.Models.Subject", b =>
+                {
+                    b.HasOne("EduQuiz_5P.Models.Classes", "Classes")
+                        .WithMany("Subject")
+                        .HasForeignKey("ClassesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("EduQuiz_5P.Data.ApplicationUser", "UserRemove")
+                        .WithMany()
+                        .HasForeignKey("UserIdRemove");
+
+                    b.HasOne("EduQuiz_5P.Data.ApplicationUser", "UserUpdate")
+                        .WithMany()
+                        .HasForeignKey("UserIdUpdate");
+
+                    b.Navigation("Classes");
+
+                    b.Navigation("UserRemove");
+
+                    b.Navigation("UserUpdate");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<long>", b =>
                 {
                     b.HasOne("EduQuiz_5P.Data.ApplicationRole", null)
@@ -325,6 +663,26 @@ namespace EduQuiz_5P.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("EduQuiz_5P.Models.Chapter", b =>
+                {
+                    b.Navigation("Questions");
+                });
+
+            modelBuilder.Entity("EduQuiz_5P.Models.Classes", b =>
+                {
+                    b.Navigation("Subject");
+                });
+
+            modelBuilder.Entity("EduQuiz_5P.Models.Question", b =>
+                {
+                    b.Navigation("Answers");
+                });
+
+            modelBuilder.Entity("EduQuiz_5P.Models.Subject", b =>
+                {
+                    b.Navigation("Chapters");
                 });
 #pragma warning restore 612, 618
         }
