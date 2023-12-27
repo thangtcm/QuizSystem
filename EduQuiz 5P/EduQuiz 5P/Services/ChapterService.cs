@@ -1,4 +1,5 @@
-﻿using EduQuiz_5P.Models;
+﻿using EduQuiz_5P.Helpers;
+using EduQuiz_5P.Models;
 using EduQuiz_5P.Repository.UnitOfWork;
 using EduQuiz_5P.Services.Interface;
 using Microsoft.EntityFrameworkCore.Query;
@@ -25,6 +26,17 @@ namespace EduQuiz_5P.Services
             _unitOfWork.ChapterRepository.Add(chappter);
             await _unitOfWork.CommitAsync();
         }
+
+        public async Task AddRange(ICollection<Chapter> chapters, long userId)
+        {
+            foreach(var item in chapters)
+            {
+                item.UserIdUpdate = userId;
+                item.DateUpdate = DateTime.UtcNow.ToTimeZone();
+            }    
+            _unitOfWork.ChapterRepository.AddRange(chapters);
+            await _unitOfWork.CommitAsync();
+        }    
 
         public async Task<bool> Delete(int Id)
         {

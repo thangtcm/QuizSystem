@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\EduQuiz 5P.props" />
+</Project>

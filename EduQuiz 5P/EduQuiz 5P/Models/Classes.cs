@@ -30,6 +30,12 @@ namespace EduQuiz_5P.Models
         [Display(Name = "Người xóa")]
         public ApplicationUser? UserRemove { get; set; }
         public virtual ICollection<Subject>? Subject { get; set; }
+        public Classes() { }
 
+        public Classes(Classes model)
+        {
+            ClassName = model.ClassName;
+            Subject = model.Subject;
+        }
     }
 }

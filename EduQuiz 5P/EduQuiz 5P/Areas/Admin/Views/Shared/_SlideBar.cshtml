@@ -28,7 +28,15 @@
                         <li><a asp-area="Admin">Quản lý tài khoản</a></li>
                     </ul>
                 </li>
-
+                <li class="submenu">
+                    <a href="#">
+                        <i class="fas fa-file-invoice-dollar"></i> <span>Ngân hàng đề</span> <span class="menu-arrow"></span>
+                    </a>
+                    <ul>
+                        <li><a asp-area="Admin" asp-controller="Class" asp-action="Index">Quản lý lớp</a></li>
+                        <li><a asp-area="Admin" asp-controller="Subject" asp-action="Index">Quản lý môn học</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>

@@ -2,6 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using System.Xml.Linq;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace EduQuiz_5P.Models
 {
@@ -31,6 +32,16 @@ namespace EduQuiz_5P.Models
         public int ClassesId { get; set; }
         [ForeignKey("ClassesId")]
         public Classes? Classes { get; set; }
+        [NotMapped]
+        public virtual SelectList SelectClass { get; set; }
         public virtual ICollection<Chapter>? Chapters { get; set; }
+
+        public Subject() { }
+        public Subject(Subject model)
+        {
+            this.SubjectName = model.SubjectName;
+            this.SubjectDescription = model.SubjectDescription;
+            this.ClassesId = model.ClassesId;
+        }
     }
 }

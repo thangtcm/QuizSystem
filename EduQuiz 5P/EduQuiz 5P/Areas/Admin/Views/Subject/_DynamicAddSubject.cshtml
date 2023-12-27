@@ -1,0 +1,28 @@
+﻿@model List<Subject>
+@using EduQuiz_5P.Models;
+
+<div class="row create-dynamic">
+    <div class="col-12 col-sm-6">
+        <div class="form-group local-forms">
+            <label>Tên chương học<span class="login-danger">*</span></label>
+            <input asp-for="@Model[0].SubjectName" class="form-control" placeholder="Enter Name">
+            <span asp-validation-for="@Model[0].SubjectName" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="col-12 col-sm-6">
+        <div class="form-group local-forms">
+            <label>Lớp <span class="login-danger">*</span></label>
+            <select asp-for="@Model[0].ClassesId" class="form-control select" asp-items="@Model[0].SelectClass">
+                <option value="">Chọn lớp</option>
+            </select>
+            <span asp-validation-for="@Model[0].ClassesId" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="form-group local-forms">
+            <label>Mô tả môn học <span class="login-danger">*</span></label>
+            <textarea asp-for="@Model[0].SubjectDescription" id="editor" class="editor" cols="30" rows="10"></textarea>
+            <span asp-validation-for="@Model[0].SubjectDescription" class="text-danger"></span>
+        </div>
+    </div>
+</div>

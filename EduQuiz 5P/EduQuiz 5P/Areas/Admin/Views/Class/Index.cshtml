@@ -1,7 +1,7 @@
 ﻿@model ICollection<EduQuiz_5P.Models.Classes>
 
 @{
-    TempData["Title"] = "Quản lý lớp học";
+    ViewData["Title"] = "Quản lý lớp học";
 }
 
 <div class="content container-fluid">
@@ -51,7 +51,7 @@
                                 <a href="#" class="btn btn-outline-primary me-2">
                                     <i class="fas fa-download"></i> Download
                                 </a>
-                                <a class="btn btn-primary">
+                                <a class="btn btn-primary" asp-action="Create">
                                     <i class="fas fa-plus"></i>
                                 </a>
                             </div>
@@ -87,7 +87,7 @@
                                         <td><span class="badge bg-primary-light">Active</span></td>
                                         <td class="text-end">
                                             <div class="actions">
-                                                <a asp-action="Edit" class="btn btn-sm bg-danger-light">
+                                                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm bg-danger-light">
                                                     <i data-feather="edit"></i>
                                                 </a>
                                             </div>

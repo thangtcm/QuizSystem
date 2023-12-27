@@ -24,8 +24,32 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWNjb3VudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/QuizSystem/EduQuiz 5P/EduQuiz 5P/Areas/Admin/Views/Chapter/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2hhcHRlclxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/QuizSystem/EduQuiz 5P/EduQuiz 5P/Areas/Admin/Views/Chapter/DynamicAddChapter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2hhcHRlclxEeW5hbWljQWRkQ2hhcHRlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/QuizSystem/EduQuiz 5P/EduQuiz 5P/Areas/Admin/Views/Chapter/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2hhcHRlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/QuizSystem/EduQuiz 5P/EduQuiz 5P/Areas/Admin/Views/Class/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2xhc3NcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/QuizSystem/EduQuiz 5P/EduQuiz 5P/Areas/Admin/Views/Class/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2xhc3NcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/QuizSystem/EduQuiz 5P/EduQuiz 5P/Areas/Admin/Views/Class/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2xhc3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/QuizSystem/EduQuiz 5P/EduQuiz 5P/Areas/Admin/Views/Class/_DynamicAddClass.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2xhc3NcX0R5bmFtaWNBZGRDbGFzcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/QuizSystem/EduQuiz 5P/EduQuiz 5P/Areas/Admin/Views/Home/Index.cshtml]
@@ -66,6 +90,22 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/QuizSystem/EduQuiz 5P/EduQuiz 5P/Areas/Admin/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/QuizSystem/EduQuiz 5P/EduQuiz 5P/Areas/Admin/Views/Subject/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3ViamVjdFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/QuizSystem/EduQuiz 5P/EduQuiz 5P/Areas/Admin/Views/Subject/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3ViamVjdFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/QuizSystem/EduQuiz 5P/EduQuiz 5P/Areas/Admin/Views/Subject/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3ViamVjdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/QuizSystem/EduQuiz 5P/EduQuiz 5P/Areas/Admin/Views/Subject/_DynamicAddSubject.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3ViamVjdFxfRHluYW1pY0FkZFN1YmplY3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/QuizSystem/EduQuiz 5P/EduQuiz 5P/Areas/Admin/Views/_ViewImports.cshtml]

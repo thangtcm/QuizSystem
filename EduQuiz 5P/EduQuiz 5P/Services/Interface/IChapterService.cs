@@ -9,6 +9,7 @@ namespace EduQuiz_5P.Services.Interface
         public Task<ICollection<Chapter>> GetListAsync();
         public Task<ICollection<Chapter>> GetListAsyncWithIncludes(Func<IQueryable<Chapter>, IIncludableQueryable<Chapter, object>> includes);
         public Task Add(Chapter chappter);
+        public Task AddRange(ICollection<Chapter> chapters, long userId);
         public Task<Chapter?> GetByIdAsync(int? id);
         public Task<Chapter?> GetByIdAsync(int? id, Func<IQueryable<Chapter>, IIncludableQueryable<Chapter, object>> includes);
         public Chapter? Find(int? id);

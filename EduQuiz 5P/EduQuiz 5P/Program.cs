@@ -58,6 +58,7 @@ builder.Services.AddScoped<IAnswerRepository, AnswerRepository>();
 builder.Services.AddTransient(typeof(IUserService), typeof(UserService));
 builder.Services.AddTransient(typeof(IRoleService), typeof(RoleService));
 builder.Services.AddTransient(typeof(IClassService), typeof(ClassService));
+builder.Services.AddTransient(typeof(ISubjectService), typeof(SubjectService));
 builder.Services.AddTransient(typeof(IChapterService), typeof(ChapterService));
 builder.Services.AddTransient(typeof(IQuestionService), typeof(QuestionService));
 builder.Services.AddControllersWithViews();

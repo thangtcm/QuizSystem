@@ -2,13 +2,13 @@
 using EduQuiz_5P.Helpers;
 using EduQuiz_5P.Models;
 using EduQuiz_5P.Services.Interface;
+using EduQuiz_5P.ViewModel;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace EduQuiz_5P.Areas.Admin.Controllers
 {
-    [Authorize]
-    [Authorize(Policy = Constants.Policies.RequireAdmin)]
     [Area("Admin")]
     public class ClassController : Controller
     {
@@ -28,12 +28,16 @@ namespace EduQuiz_5P.Areas.Admin.Controllers
 
         public IActionResult Create()
         {
-            return View();
+            ICollection<Classes> model = new List<Classes>();
+            model.Add(new Classes());
+
+            return View(model.ToList());
         }
 
 
         [HttpPost]
-        public async Task<IActionResult> Create(ICollection<Classes> model)
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create(ICollection<Classes> classes)
         {
             try
             {
@@ -42,7 +46,12 @@ namespace EduQuiz_5P.Areas.Admin.Controllers
                 {
                     return RedirectToAction(nameof(Index));
                 }
-                await _classService.AddRange(model, user.Id);
+                if (!ModelState.IsValid)
+                {
+                    ModelState.AddModelError(string.Empty, "Dữ liệu rỗng.");
+                    return View();
+                }
+                await _classService.AddRange(classes, user.Id);
                 this.AddToastrMessage("Tạo lớp thành công", ToastrMessageType.Success);
                 return RedirectToAction(nameof(Index));
             }catch(Exception ex)
@@ -51,7 +60,40 @@ namespace EduQuiz_5P.Areas.Admin.Controllers
                 this.AddToastrMessage("Đã có lỗi xảy ra", ToastrMessageType.Error);
 
             }
-            return View(model);
+            return View(classes);
+        }
+
+        public async Task<IActionResult> Edit(int? id)
+        {
+            var @class = await _classService.GetByIdAsync(id);
+            if (@class == null)
+            {
+                return NotFound();
+            }
+            return View(@class);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, Classes @class)
+        {
+            try
+            {
+                await _classService.Update(@class);
+                return RedirectToAction(nameof(Index));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Lỗi Khi cập nhật Một Class : \n" + ex.ToString() + "\n\n");
+            }
+            return View(@class);
+        }
+
+        public IActionResult CreatePartial()
+        {
+            ICollection<Classes> model = new List<Classes>();
+            model.Add(new Classes());
+            return PartialView("_DynamicAddClass", model.ToList());
         }
     }
 }

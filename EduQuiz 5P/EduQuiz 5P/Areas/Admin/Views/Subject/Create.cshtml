@@ -1,0 +1,81 @@
+﻿@model List<EduQuiz_5P.Models.Subject>
+@{
+    ViewData["Title"] = "Tạo môn học";
+}
+
+<div class="content container-fluid">
+
+    <div class="page-header">
+        <div class="row align-items-center">
+            <div class="col">
+                <h3 class="page-title">@ViewData["Title"]</h3>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a asp-action="Index" >Danh sách môn học</a></li>
+                    <li class="breadcrumb-item active">@ViewData["Title"]</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-body">
+                    <form asp-action="Create">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="row">
+                            <div class="col-12">
+                                <h5 class="form-title"><span>Basic Details</span></h5>
+                            </div>
+                            <div class="col-12" id="createSubjectContainers">
+                                @for (int i = 0; i < Model.Count; i++)
+                                {
+                                    <div class="row create-dynamic">
+                                        <div class="col-12 col-sm-6">
+                                            <div class="form-group local-forms">
+                                                <label>Tên chương học<span class="login-danger">*</span></label>
+                                                <input asp-for="@Model[i].SubjectName" class="form-control" placeholder="Enter Name">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <div class="form-group local-forms">
+                                                <label>Lớp <span class="login-danger">*</span></label>
+                                                <select asp-for="@Model[i].ClassesId" class="form-control select" asp-items="@Model[i].SelectClass">
+                                                    <option value="">Chọn lớp</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-group local-forms">
+                                                <label>Mô tả môn học <span class="login-danger">*</span></label>
+                                                <textarea asp-for="@Model[i].SubjectDescription" id="editor" class="editor" cols="30" rows="10"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+
+                            <div class="col-12 col-sm-6">
+                                <div class="form-group">
+                                    <input type="button" id="btnAdd" class="btn btn-primary" value="Thêm" style="width: 10rem;">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="student-submit">
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script>
+        $('#btnAdd').on('click', function () {
+            addNewObject('/Admin/Subject/CreatePartial', '#createSubjectContainers');
+        });
+    </script>
+}
