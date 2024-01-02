@@ -1,4 +1,4 @@
-﻿@model ICollection<EduQuiz_5P.Models.Chapter>
+﻿@model List<EduQuiz_5P.Models.Chapter>
 @{
     ViewData["Title"] = "Tạo Chương";
 }
@@ -26,14 +26,15 @@
                             <div class="col-12">
                                 <h5 class="form-title"><span>Basic Details</span></h5>
                             </div>
-                            @foreach(var item in Model)
+                            <div id="createChapterContainers">
+                            @for(var i = 0; i < Model.Count; i++)
                             {
                                 <hr />
                                 <hr />
                                 <div class="col-12 col-sm-6">
                                     <div class="form-group local-forms">
                                         <label>Tên chương học<span class="login-danger">*</span></label>
-                                        <input asp-for="@item.ChapterName" class="form-control" placeholder="Enter Name">
+                                        <input asp-for="@Model[i].ChapterName" class="form-control" placeholder="Enter Name">
                                     </div>
                                 </div>
                                 <div class="col-12 col-sm-6">
@@ -56,11 +57,11 @@
                                 <div class="col-12">
                                     <div class="form-group local-forms">
                                         <label>Mô tả chương học <span class="login-danger">*</span></label>
-                                        <textarea asp-for="@item.ChapterDescription" id="editor1" class="editor" cols="30" rows="10"></textarea>
+                                        <textarea asp-for="@Model[i].ChapterDescription" id="editor1" class="editor" cols="30" rows="10"></textarea>
                                     </div>
                                 </div>
                             }
-                            
+                            </div>
                             <div class="col-12">
                                 <div class="student-submit">
                                     <button type="submit" class="btn btn-primary">Submit</button>
@@ -73,3 +74,10 @@
         </div>
     </div>
 </div>
+@section Scripts{
+    <script>
+        $('#btnAdd').on('click', function () {
+            addNewObject('/Admin/Chapter/CreatePartial', '#createChapterContainers');
+        });
+    </script>
+}

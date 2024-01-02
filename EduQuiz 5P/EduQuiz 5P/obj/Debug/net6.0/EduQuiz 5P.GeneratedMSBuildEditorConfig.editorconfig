@@ -10,6 +10,8 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = EduQuiz_5P
 build_property.RootNamespace = EduQuiz_5P
 build_property.ProjectDir = D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = true
@@ -28,12 +30,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2hhcHRlclxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/QuizSystem/EduQuiz 5P/EduQuiz 5P/Areas/Admin/Views/Chapter/DynamicAddChapter.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2hhcHRlclxEeW5hbWljQWRkQ2hhcHRlci5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/QuizSystem/EduQuiz 5P/EduQuiz 5P/Areas/Admin/Views/Chapter/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2hhcHRlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/QuizSystem/EduQuiz 5P/EduQuiz 5P/Areas/Admin/Views/Chapter/_DynamicAddChapter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2hhcHRlclxfRHluYW1pY0FkZENoYXB0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/QuizSystem/EduQuiz 5P/EduQuiz 5P/Areas/Admin/Views/Class/Create.cshtml]
@@ -54,6 +56,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/QuizSystem/EduQuiz 5P/EduQuiz 5P/Areas/Admin/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/QuizSystem/EduQuiz 5P/EduQuiz 5P/Areas/Admin/Views/Question/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUXVlc3Rpb25cQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/QuizSystem/EduQuiz 5P/EduQuiz 5P/Areas/Admin/Views/Shared/Error.cshtml]

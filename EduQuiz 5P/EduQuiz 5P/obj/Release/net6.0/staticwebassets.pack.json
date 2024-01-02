@@ -2377,6 +2377,10 @@
       "PackagePath": "staticwebassets\\img\\profile\\imageleft.png"
     },
     {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\js\\_func.js",
+      "PackagePath": "staticwebassets\\js\\_func.js"
+    },
+    {
       "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

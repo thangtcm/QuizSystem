@@ -135,7 +135,6 @@ namespace EduQuiz_5P.Controllers
                     }
                 }
 
-
             }
             catch (Exception ex)
             {

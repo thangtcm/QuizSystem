@@ -1,1 +1,117 @@
-﻿
+﻿@model ICollection<EduQuiz_5P.Models.Chapter>
+
+@{
+    ViewData["Title"] = "Quản lý lớp học";
+}
+
+<div class="content container-fluid">
+
+    <div class="page-header">
+        <div class="row align-items-center">
+            <div class="col">
+                <h3 class="page-title">@TempData["Title"]</h3>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Home" asp-area="Admin">Dashboard</a></li>
+                    <li class="breadcrumb-item active">@TempData["Title"]</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="student-group-form">
+        <form asp-action="Index" class="row">
+            <div class="col-lg-3 col-md-6">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search by Name ...">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="form-group">
+                    <select asp-items="@ViewBag.ClassList">
+                        <option value="">Chọn lớp</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="form-group">
+                    <select name="subjectId">
+                        <option value="">Chọn môn học</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="search-student-btn">
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card card-table">
+                <div class="card-body">
+
+                    <div class="page-header">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <h3 class="page-title">Quản lý người dùng</h3>
+                            </div>
+                            <div class="col-auto text-end float-end ms-auto download-grp">
+                                <a href="#" class="btn btn-outline-primary me-2">
+                                    <i class="fas fa-download"></i> Download
+                                </a>
+                                <a class="btn btn-primary" asp-action="Create">
+                                    <i class="fas fa-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="table border-0 star-student table-hover table-center mb-0 datatable table-striped" style="width:100%">
+                            <thead>
+                                <tr role="row">
+                                    <th>ID</th>
+                                    <th>Tên Chương</th>
+                                    <th>Lớp</th>
+                                    <th>Ngày Cập Nhật</th>
+                                    <th>Status</th>
+                                    <th class="text-end">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr role="row">
+                                        <td>@item.Id</td>
+                                        <td>
+                                            <h2>
+                                                @item.ChapterName
+                                            </h2>
+                                        </td>
+                                        <td>
+                                            <h2>@(item.Subject is null ? "" : item.Subject.SubjectName) </h2>
+                                        </td>
+                                        <td>
+                                            <h2>
+                                                @item.DateUpdate.ToString("hh:mm dd/MM/yyyy")
+                                            </h2>
+                                        </td>
+                                        <td><span class="badge bg-primary-light">Active</span></td>
+                                        <td class="text-end">
+                                            <div class="actions">
+                                                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm bg-danger-light">
+                                                    <i data-feather="edit"></i>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

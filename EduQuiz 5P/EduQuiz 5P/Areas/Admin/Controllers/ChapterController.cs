@@ -25,12 +25,12 @@ namespace EduQuiz_5P.Areas.Admin.Controllers
             _classService = classService;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int subjectId)
         {
             ICollection<Chapter> Chapterlst = new List<Chapter>();
             try
             {
-                Chapterlst = await _chapterService.GetListAsync();
+                Chapterlst = await _chapterService.GetListAsync(subjectId);
                 this.AddToastrMessage("Tải dữ liệu thành công.", Enums.ToastrMessageType.Success);
             }
             catch (Exception ex)
@@ -38,14 +38,19 @@ namespace EduQuiz_5P.Areas.Admin.Controllers
                 _logger.LogError(ex.Message.ToString());
                 this.AddToastrMessage("Đã có lỗi xảy ra.", Enums.ToastrMessageType.Error);
             }
+            var classLst = await _classService.GetListAsync();
+            ViewData["ClassList"] = new SelectList(classLst, "Id", "ClassName");
             return View(Chapterlst);
         }
 
         public async Task<IActionResult> Create()
         {
             var classLst = await _classService.GetListAsync();
-            ViewData["ClassList"] = new SelectList(classLst, "Id", "ClassName");
-            return View();
+            ICollection<Chapter> chapters = new List<Chapter>()
+            {
+                new Chapter() {SelectClass = new SelectList(classLst, "Id", "ClassName")}
+            };
+            return View(chapters.ToList());
         }
 
         public async Task<IActionResult> Create(ICollection<Chapter> chapters)
@@ -69,12 +74,14 @@ namespace EduQuiz_5P.Areas.Admin.Controllers
         }
 
 
-        public async Task<IActionResult> CreateDynamicChapter()
+        public async Task<IActionResult> CreatePartial()
         {
-            Chapter model = new ();
             var classLst = await _classService.GetListAsync();
-            ViewData["ClassList"] = new SelectList(classLst, "Id", "ClassName");
-            return PartialView("DynamicAddChapter", model);
+            ICollection<Chapter> chapters = new List<Chapter>()
+            {
+                new Chapter() {SelectClass = new SelectList(classLst, "Id", "ClassName")}
+            };
+            return PartialView("_DynamicAddChapter", chapters.ToList());
         }
     }
 }

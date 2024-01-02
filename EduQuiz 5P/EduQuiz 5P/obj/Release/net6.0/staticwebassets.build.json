@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "P2VJf7XgrasktCZWjU6wOQSOGUSJlkVtTX7bLsubFA8=",
+  "Hash": "LaBtP/JipRPYL+OtjemK5fe1pV42s42CMVQ2TaueSJk=",
   "Source": "EduQuiz 5P",
   "BasePath": "_content/EduQuiz 5P",
   "Mode": "Default",
@@ -11150,6 +11150,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\profile\\imageleft.png"
+    },
+    {
+      "Identity": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\js\\_func.js",
+      "SourceId": "EduQuiz 5P",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\",
+      "BasePath": "_content/EduQuiz 5P",
+      "RelativePath": "js/_func.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\_func.js"
     },
     {
       "Identity": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\js\\site.js",

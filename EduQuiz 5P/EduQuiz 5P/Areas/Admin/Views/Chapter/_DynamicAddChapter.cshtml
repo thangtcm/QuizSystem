@@ -1,0 +1,25 @@
+﻿@model List<Chapter>
+@using EduQuiz_5P.Models;
+
+<div class="row create-dynamic">
+    <div class="col-12 col-sm-6">
+        <div class="form-group local-forms">
+            <label>Tên chương học<span class="login-danger">*</span></label>
+            <input asp-for="@Model[0].ChapterName" class="form-control" placeholder="Enter Name">
+        </div>
+    </div>
+    <div class="col-12 col-sm-6">
+        <div class="form-group local-forms">
+            <label>Lớp <span class="login-danger">*</span></label>
+            <select class="form-control select" asp-items="ViewBag.ClassList">
+                <option value="">Chọn lớp</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="form-group local-forms">
+            <label>Mô tả chương học <span class="login-danger">*</span></label>
+            <textarea asp-for="@Model[0].ChapterDescription" id="editor1" class="editor" cols="30" rows="10"></textarea>
+        </div>
+    </div>
+</div>
