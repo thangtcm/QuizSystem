@@ -549,3 +549,14 @@ D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Release\net6.0\Microsoft.AspNetCore.Mvc.
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Release\net6.0\Microsoft.Extensions.DependencyModel.dll
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Release\net6.0\Microsoft.AspNetCore.Authentication.Google.dll
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\scopedcss\Areas\Admin\Views\Shared\_LayoutAdmin.cshtml.rz.scp.css
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Release\net6.0\libman.json
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Release\net6.0\refs\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Release\net6.0\refs\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Release\net6.0\refs\Microsoft.Extensions.FileProviders.Embedded.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Release\net6.0\refs\Microsoft.Extensions.Identity.Core.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Release\net6.0\refs\Microsoft.Extensions.Identity.Stores.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Release\net6.0\refs\System.Diagnostics.DiagnosticSource.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Release\net6.0\DocumentFormat.OpenXml.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Release\net6.0\DocumentFormat.OpenXml.Framework.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Release\net6.0\System.IO.Packaging.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\EduQuiz 5P.sourcelink.json

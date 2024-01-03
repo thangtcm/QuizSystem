@@ -1,4 +1,5 @@
-﻿using System.Globalization;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace EduQuiz_5P.Helpers
 {
@@ -22,6 +23,21 @@ namespace EduQuiz_5P.Helpers
             return new DateTime();
         }
 
+        public static string GetEnumDisplayName(Enum value)
+        {
+            var fieldInfo = value.GetType().GetField(value.ToString());
+            if (fieldInfo == null)
+                return "";
+            var displayAttribute = (DisplayAttribute?)Attribute.GetCustomAttribute(
+                fieldInfo,
+                typeof(DisplayAttribute)
+            );
+
+            string displayName = displayAttribute?.Name ?? value.ToString();
+
+
+            return displayName;
+        }
         public static string GetMailHtml(string? Email, string? FullName, int code)
         {
             return

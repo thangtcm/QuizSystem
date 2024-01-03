@@ -1,0 +1,99 @@
+﻿@model ICollection<EduQuiz_5P.Models.ExamMatrix>
+
+@{
+    ViewData["Title"] = "Quản lý ma trận đề thi";
+}
+
+<div class="content container-fluid">
+
+    <div class="page-header">
+        <div class="row align-items-center">
+            <div class="col">
+                <h3 class="page-title">@TempData["Title"]</h3>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Home" asp-area="Admin">Dashboard</a></li>
+                    <li class="breadcrumb-item active">@TempData["Title"]</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="student-group-form">
+        <form class="row">
+            <div class="col-lg-3 col-md-6">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Tìm kiếm bằng tên ...">
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="search-student-btn">
+                    <button type="submit" class="btn btn-primary">Tìm kiếm</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card card-table">
+                <div class="card-body">
+
+                    <div class="page-header">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <h3 class="page-title">@ViewData["Title"]</h3>
+                            </div>
+                            <div class="col-auto text-end float-end ms-auto download-grp">
+                                <a href="#" class="btn btn-outline-primary me-2">
+                                    <i class="fas fa-download"></i> Download
+                                </a>
+                                <a class="btn btn-primary" asp-action="Create">
+                                    <i class="fas fa-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="table border-0 star-student table-hover table-center mb-0 datatable table-striped" style="width:100%">
+                            <thead>
+                                <tr role="row">
+                                    <th>ID</th>
+                                    <th>Tên ma trận</th>
+                                    <th>Ngày cập nhật</th>
+                                    <th>Trạng thái</th>
+                                    <th class="text-end">Chức năng</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr role="row">
+                                        <td>@item.Id</td>
+                                        <td>
+                                            <h2>
+                                                @item.ExamMatrixName
+                                            </h2>
+                                        </td>
+                                        <td>
+                                            <h2>
+                                                @item.DateUpdate.ToString("hh:mm dd/MM/yyyy")
+                                            </h2>
+                                        </td>
+                                        <td><span class="badge bg-primary-light">Hoạt động</span></td>
+                                        <td class="text-end">
+                                            <div class="actions">
+                                                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm bg-danger-light">
+                                                    <i data-feather="edit"></i>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

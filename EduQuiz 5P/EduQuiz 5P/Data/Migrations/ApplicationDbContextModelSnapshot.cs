@@ -370,7 +370,10 @@ namespace EduQuiz_5P.Migrations
                     b.Property<DateTime>("DateUpdate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("DescriptionMatrix")
+                    b.Property<string>("ExamMatrixDescription")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ExamMatrixName")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsDefault")
@@ -378,9 +381,6 @@ namespace EduQuiz_5P.Migrations
 
                     b.Property<bool>("IsRemoved")
                         .HasColumnType("bit");
-
-                    b.Property<string>("NameMatrix")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Total")
                         .HasColumnType("int");

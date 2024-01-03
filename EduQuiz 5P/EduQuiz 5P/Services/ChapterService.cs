@@ -62,8 +62,19 @@ namespace EduQuiz_5P.Services
         public async Task<ICollection<Chapter>> GetListAsync()
             => await _unitOfWork.ChapterRepository.GetAllAsync();
 
-        public async Task<ICollection<Chapter>> GetListAsync(int classId)
-            => await _unitOfWork.ChapterRepository.GetAllAsync(x => x.Id == classId);
+        public async Task<ICollection<Chapter>> GetListAsync(int? classId = null, int? subjectId = null, Func<IQueryable<Chapter>, IIncludableQueryable<Chapter, object>>? includes = null)
+        {
+            if((classId.HasValue &&  subjectId.HasValue) || subjectId.HasValue)
+            {
+                return await _unitOfWork.ChapterRepository.GetAllAsync(x => x.SubjectId == subjectId.Value, includes);
+            }
+            else if(classId.HasValue && !subjectId.HasValue)
+            {
+                var subjectLst = (await _unitOfWork.SubjectRepository.GetAllAsync(x => x.ClassesId == classId.Value)).Select(x => x.Id).ToList();
+                return await _unitOfWork.ChapterRepository.GetAllAsync(x => subjectLst.Contains(x.SubjectId), includes);
+            }
+            return await _unitOfWork.ChapterRepository.GetAllAsync(null, includes);
+        }
 
         public async Task<ICollection<Chapter>> GetListAsyncWithIncludes(Func<IQueryable<Chapter>, IIncludableQueryable<Chapter, object>> includes)
             => await _unitOfWork.ChapterRepository.GetAllAsync(null, includes);

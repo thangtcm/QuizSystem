@@ -2,6 +2,7 @@
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using EduQuiz_5P.Enums;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace EduQuiz_5P.Models
 {
@@ -21,5 +22,7 @@ namespace EduQuiz_5P.Models
         [DisplayName("Ma trận")]
         public ExamMatrix? ExamMatrix { get; set; }
         public DifficultyLevel Component { get; set; }
+        [NotMapped]
+        public SelectList SelectListClass { get; set; }
     }
 }

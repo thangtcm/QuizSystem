@@ -1,5 +1,7 @@
-﻿using EduQuiz_5P.Helpers;
+﻿using DocumentFormat.OpenXml.VariantTypes;
+using EduQuiz_5P.Helpers;
 using EduQuiz_5P.Models;
+using EduQuiz_5P.Services;
 using EduQuiz_5P.Services.Interface;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -25,12 +27,13 @@ namespace EduQuiz_5P.Areas.Admin.Controllers
             _classService = classService;
         }
 
-        public async Task<IActionResult> Index(int subjectId)
+        public async Task<IActionResult> Index(int? chapterId = null,int? subjectId = null)
         {
             ICollection<Chapter> Chapterlst = new List<Chapter>();
             try
             {
-                Chapterlst = await _chapterService.GetListAsync(subjectId);
+       
+                Chapterlst = await _chapterService.GetListAsync(chapterId, subjectId);
                 this.AddToastrMessage("Tải dữ liệu thành công.", Enums.ToastrMessageType.Success);
             }
             catch (Exception ex)
@@ -66,8 +69,8 @@ namespace EduQuiz_5P.Areas.Admin.Controllers
                 }
                 foreach(var item in chapters)
                 {
-                    Console.WriteLine($"Dữ liệu là {item.ChapterName} and {item.SubjectId}\n\n\n\n");
-                }    
+                    Console.WriteLine($" Item {item.ChapterName}");
+                }
                 //await _chapterService.AddRange(chapters, user.Id);
                 this.AddToastrMessage("Tạo dữ liệu chương thành công.", Enums.ToastrMessageType.Success);
                 return RedirectToAction(nameof(Index));
@@ -89,6 +92,13 @@ namespace EduQuiz_5P.Areas.Admin.Controllers
                 new () {SelectClass = new SelectList(classLst, "Id", "ClassName")}
             };
             return PartialView("_DynamicAddChapter", chapters.ToList());
+        }
+
+        public async Task<IActionResult> LoadChapter(int subjectId)
+        {
+            var chapterlst = await _chapterService.GetListAsync(null, subjectId);
+            var selectList = new SelectList(chapterlst, "Id", "ChapterName");
+            return Json(selectList);
         }
     }
 }

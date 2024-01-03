@@ -160,6 +160,11 @@ namespace EduQuiz_5P.Controllers
                     _logger.LogInformation("User logged in.");
                     return RedirectToAction("Index", "Home");
                 }
+                else
+                {
+                    ModelState.AddModelError(string.Empty, "Tên đăng nhập hoặc mật khẩu không chính xác.");
+                    return View(model);
+                }
             }
             catch(Exception ex)
             {

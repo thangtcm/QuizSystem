@@ -2,6 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace EduQuiz_5P.Models
 {
@@ -11,9 +12,9 @@ namespace EduQuiz_5P.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         [DisplayName("Tên Ma Trận")]
-        public string? NameMatrix { get; set; }
+        public string? ExamMatrixName { get; set; }
         [DisplayName("Mô Tả Ma Trận")]
-        public string? DescriptionMatrix { get; set; }
+        public string? ExamMatrixDescription { get; set; }
         [Display(Name = "Số lượng câu hỏi")]
         public int Total { get; set; }
         [Display(Name = "Trạng thái")]

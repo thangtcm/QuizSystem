@@ -1,0 +1,121 @@
+﻿@using EduQuiz_5P.Enums
+@using EduQuiz_5P.Helpers
+@model EduQuiz_5P.Models.ExamMatrix
+
+@{
+    ViewData["Title"] = "Tạo Ma Trận Đề";
+}
+
+<div class="content container-fluid">
+    <div class="page-header">
+        <div class="row align-items-center">
+            <div class="col">
+                <h3 class="page-title">@ViewData["Title"]</h3>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a asp-action="Index">Danh sách ma trận</a></li>
+                    <li class="breadcrumb-item active">@ViewData["Title"]</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-body">
+                    <form asp-action="Create">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="row">
+                            <div class="col-12">
+                                <h5 class="form-title"><span>Nhập thông tin ma trận</span></h5>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="form-group local-forms">
+                                    <label asp-for="ExamMatrixName" class="control-label"><span class="login-danger">*</span></label>
+                                    <input asp-for="ExamMatrixName" class="form-control" placeholder="Enter Name" />
+                                    <span asp-validation-for="ExamMatrixName" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group local-forms">
+                                    <label asp-for="ExamMatrixDescription"><span class="login-danger">*</span></label>
+                                    <textarea asp-for="ExamMatrixDescription" id="editor1" class="editor" cols="30" rows="10"></textarea>
+                                    <span asp-validation-for="ExamMatrixDescription" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-12" id="createExamMatrixContainers">
+                                @for(var i = 0; i < Model.ExamMatrixDetail!.Count; i++)
+                                {
+                                    var SelectSubject = $"SelectSubject{i}";
+                                    var SelectChapter = $"SelectChapter{i}";
+                                    <div class="row create-dynamic">
+                                        <div class="col-12 col-sm-6">
+                                            <div class="form-group local-forms">
+                                                <label>Lớp <span class="login-danger">*</span></label>
+                                                <select class="form-control select" onchange="getSubjectByClasses(this.value, '#@SelectSubject')" asp-items="@Model.ExamMatrixDetail[i].SelectListClass">
+                                                    <option value="">Chọn lớp</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <div class="form-group local-forms">
+                                                <label>Môn học<span class="login-danger">*</span></label>
+                                                <select id="@SelectSubject" class="form-control select" onchange="getChapterbySubject(this.value, '#@SelectChapter')">
+                                                    <option value="">Chọn môn học</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <div class="form-group local-forms">
+                                                <label>Chương<span class="login-danger">*</span></label>
+                                                <select asp-for="@Model.ExamMatrixDetail[i].ChappterId" id="@SelectChapter" class="form-control select" required>
+                                                    <option value="">Chọn chương</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <div class="form-group local-forms">
+                                                <label>Độ khó<span class="login-danger">*</span></label>
+                                                <select asp-for="@Model.ExamMatrixDetail[i].Component" class="form-control select" required>
+                                                    <option value="">Chọn độ khó</option>
+                                                    @foreach (var type in Enum.GetValues(typeof(DifficultyLevel)))
+                                                    {
+                                                        <option value="@((int)type)">@CallBack.GetEnumDisplayName((DifficultyLevel)type)</option>
+                                                    }
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-4">
+                                            <div class="form-group local-forms">
+                                                <label>Số câu <span class="text-danger">*</span></label>
+                                                <input asp-for="@Model.ExamMatrixDetail[i].NumberOfQuestion" class="form-control">
+                                                <span asp-validation-for="@Model.ExamMatrixDetail[i].NumberOfQuestion" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="form-group">
+                                    <input type="button" id="btnAdd" class="btn btn-primary" value="Thêm" style="width: 10rem;">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="student-submit">
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <script>
+        $('#btnAdd').on('click', function () {
+            addNewObject('/Admin/ExamMatrix/CreatePartial', '#createExamMatrixContainers');
+        });
+    </script>
+}

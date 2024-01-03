@@ -12,21 +12,21 @@ Version      : 1.0
 	var $pageWrapper = $('.page-wrapper');
 	var $slimScrolls = $('.slimscroll');
 
-	function initCKEditors() {
-        var textareas = document.querySelectorAll('textarea.editor');
+	//function initCKEditors() {
+	//	var textareas = document.querySelectorAll('textarea.editor');
 
-        for (var i = 0; i < textareas.length; i++) {
-            var textarea = textareas[i];
-            var editorId = textarea.getAttribute('id');
+	//	for (var i = 0; i < textareas.length; i++) {
+	//		var textarea = textareas[i];
+	//		var editorId = textarea.getAttribute('id');
 
-            CKEDITOR.replace(editorId);
-        }
-    }
+	//		CKEDITOR.replace(editorId);
+	//	}
+	//}
 
-    // Gọi hàm initCKEditors khi trang web được tải
-    $(document).ready(function () {
-        initCKEditors();
-    });
+ //   // Gọi hàm initCKEditors khi trang web được tải
+ //   $(document).ready(function () {
+ //       initCKEditors();
+ //   });
 
 	// Spinner
 	var spinner = function () {
@@ -132,53 +132,10 @@ Version      : 1.0
 	});
 	
 	// Select 2
-	if ($('.selectsearch').length > 0) {
-		$('.selectsearch').each(function () {
-			$(this).select2({
-				minimumResultsForSearch: 1,
-				width: '100%'
-			});
-		});
-	}
-
-	if ($('.select').length > 0) {
-		$('.select').each(function () {
-			$(this).select2({
-				minimumResultsForSearch: -1,
-				width: '100%'
-			});
-		});
-	}
-	
+	LoadSelectSearch();
+	LoadSelect();
 	// editor
-	if ($('.editor').length > 0) {
-		ClassicEditor
-			.create(document.querySelector('.editor'), {
-				toolbar: {
-					items: [
-						'heading', '|',
-						'fontfamily', 'fontsize', '|',
-						'alignment', '|',
-						'fontColor', 'fontBackgroundColor', '|',
-						'bold', 'italic', 'strikethrough', 'underline', 'subscript', 'superscript', '|',
-						'link', '|',
-						'outdent', 'indent', '|',
-						'bulletedList', 'numberedList', 'todoList', '|',
-						'code', 'codeBlock', '|',
-						'insertTable', '|',
-						'uploadImage', 'blockQuote', '|',
-						'undo', 'redo'
-					],
-					shouldNotGroupWhenFull: true
-				}
-			})
-			.then(editor => {
-				window.editor = editor;
-			})
-			.catch(err => {
-				console.error(err.stack);
-			});
-	}
+	LoadEditor();
 	
 	// Experience Add More
 	
@@ -628,3 +585,38 @@ Version      : 1.0
 		});
 	}
 })(jQuery);
+
+
+function LoadSelectSearch() {
+	if ($('.selectsearch').length > 0) {
+		$('.selectsearch').each(function () {
+			$(this).select2({
+				minimumResultsForSearch: 1,
+				width: '100%'
+			});
+		});
+	}
+}
+function LoadSelect() {
+	if ($('.select').length > 0) {
+		$('.select').each(function () {
+			$(this).select2({
+				minimumResultsForSearch: -1,
+				width: '100%'
+			});
+		});
+	}
+}
+
+
+function LoadEditor() {
+	var editorElements = document.querySelectorAll('.editor');
+
+	editorElements.forEach(function (editorElement) {
+		if (!editorElement.getAttribute('data-ckeditor-initialized')) {
+			CKEDITOR.replace(editorElement);
+			editorElement.setAttribute('data-ckeditor-initialized', 'true');
+		}
+	});
+}
+

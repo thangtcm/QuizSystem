@@ -1,0 +1,56 @@
+﻿@model List<ExamMatrixDetail>
+@using EduQuiz_5P.Enums
+@using EduQuiz_5P.Helpers
+@using EduQuiz_5P.Models;
+
+@{
+    var SelectSubject = $"SelectSubject0";
+    var SelectChapter = $"SelectChapter0";
+}
+<hr />
+<hr />
+<div class="row create-dynamic">
+    <div class="col-12 col-sm-6">
+        <div class="form-group local-forms">
+            <label>Lớp <span class="login-danger">*</span></label>
+            <select class="form-control select" onchange="getSubjectByClasses(this.value, '#@SelectSubject')" asp-items="@Model[0].SelectListClass">
+                <option value="">Chọn lớp</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-12 col-sm-6">
+        <div class="form-group local-forms">
+            <label>Môn học<span class="login-danger">*</span></label>
+            <select id="@SelectSubject" class="form-control select" onchange="getChapterbySubject(this.value, '#@SelectChapter')">
+                <option value="">Chọn môn học</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-12 col-sm-6">
+        <div class="form-group local-forms">
+            <label>Chương<span class="login-danger">*</span></label>
+            <select asp-for="@Model[0].ChappterId" id="@SelectChapter" class="form-control select" required>
+                <option value="">Chọn chương</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-12 col-sm-4">
+        <div class="form-group local-forms">
+            <label>Số câu <span class="text-danger">*</span></label>
+            <input asp-for="@Model[0].NumberOfQuestion" class="form-control">
+            <span asp-validation-for="@Model[0].NumberOfQuestion" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="col-12 col-sm-6">
+        <div class="form-group local-forms">
+            <label>Độ khó<span class="login-danger">*</span></label>
+            <select asp-for="@Model[0].Component" class="form-control select" required>
+                <option value="">Chọn độ khó</option>
+                @foreach (var type in Enum.GetValues(typeof(DifficultyLevel)))
+                {
+                    <option value="@((int)type)">@CallBack.GetEnumDisplayName((DifficultyLevel)type)</option>
+                }
+            </select>
+        </div>
+    </div>
+</div>

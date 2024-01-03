@@ -5,7 +5,7 @@ namespace EduQuiz_5P.Services.Interface
 {
     public interface IChapterService
     {
-        public Task<ICollection<Chapter>> GetListAsync(int classId);
+        public Task<ICollection<Chapter>> GetListAsync(int? classId = null, int? subjectId = null, Func<IQueryable<Chapter>, IIncludableQueryable<Chapter, object>>? includes = null);
         public Task<ICollection<Chapter>> GetListAsync();
         public Task<ICollection<Chapter>> GetListAsyncWithIncludes(Func<IQueryable<Chapter>, IIncludableQueryable<Chapter, object>> includes);
         public Task Add(Chapter chappter);

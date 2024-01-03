@@ -65,6 +65,7 @@ builder.Services.AddTransient(typeof(ISubjectService), typeof(SubjectService));
 builder.Services.AddTransient(typeof(IChapterService), typeof(ChapterService));
 builder.Services.AddTransient(typeof(IQuestionService), typeof(QuestionService));
 builder.Services.AddTransient(typeof(IExamService), typeof(ExamService));
+builder.Services.AddTransient(typeof(IExamMatrixService), typeof(ExamMatrixService));
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IUserEmailStore<ApplicationUser>, UserStore<ApplicationUser, ApplicationRole, ApplicationDbContext, long>>();
 builder.Services.AddScoped<IUserRoleStore<ApplicationUser>, UserStore<ApplicationUser, ApplicationRole, ApplicationDbContext, long>>();

@@ -5,9 +5,8 @@
         success: function (result) {
             var newIndex = $(".create-dynamic").length;
             result = result.replace(/\[0\]/g, "[" + newIndex + "]");
-            console.log(result);
             result = result.replace(/SelectSubject0/g, "SelectSubject" + newIndex);
-            console.log(result);
+            result = result.replace(/SelectChapter/g, "SelectChapter" + newIndex);
             $(containerSelector).append(result);
             LoadEditor();
             LoadSelectSearch();
@@ -20,7 +19,6 @@
 }
 
 function getSubjectByClasses(classesId, subjectSelectId) {
-    console.log('RUNNN');
     if (classesId) {
         $.ajax({
             url: "/Admin/Subject/LoadSubjects",
@@ -31,6 +29,23 @@ function getSubjectByClasses(classesId, subjectSelectId) {
                 $(subjectSelectId).append("<option value=''>Chọn môn học</option>");
                 $.each(data, function (index, item) {
                     $(subjectSelectId).append("<option value='" + item.value + "'>" + item.text + "</option>");
+                });
+            }
+        });
+    }
+}
+
+function getChapterbySubject(subjectId, ChapterSelectId) {
+    if (subjectId) {
+        $.ajax({
+            url: "/Admin/Chapter/LoadChapter",
+            type: "GET",
+            data: { subjectId: subjectId },
+            success: function (data) {
+                $(ChapterSelectId).empty();
+                $(ChapterSelectId).append("<option value=''>Chọn chương</option>");
+                $.each(data, function (index, item) {
+                    $(ChapterSelectId).append("<option value='" + item.value + "'>" + item.text + "</option>");
                 });
             }
         });
