@@ -53,6 +53,9 @@ builder.Services.AddScoped<IChapterRepository, ChapterRepository>();
 builder.Services.AddScoped<ISubjectRepository, SubjectRepository>();
 builder.Services.AddScoped<IQuestionRepository, QuestionRepository>();
 builder.Services.AddScoped<IAnswerRepository, AnswerRepository>();
+builder.Services.AddScoped<IExamRepository, ExamRepository>();
+builder.Services.AddScoped<IExamMatrixRepository, ExamMatrixRepository>();
+builder.Services.AddScoped<IExamMatrixDetailRepository, ExamMatrixDetailRepository>();
 
 //
 builder.Services.AddTransient(typeof(IUserService), typeof(UserService));
@@ -61,6 +64,7 @@ builder.Services.AddTransient(typeof(IClassService), typeof(ClassService));
 builder.Services.AddTransient(typeof(ISubjectService), typeof(SubjectService));
 builder.Services.AddTransient(typeof(IChapterService), typeof(ChapterService));
 builder.Services.AddTransient(typeof(IQuestionService), typeof(QuestionService));
+builder.Services.AddTransient(typeof(IExamService), typeof(ExamService));
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IUserEmailStore<ApplicationUser>, UserStore<ApplicationUser, ApplicationRole, ApplicationDbContext, long>>();
 builder.Services.AddScoped<IUserRoleStore<ApplicationUser>, UserStore<ApplicationUser, ApplicationRole, ApplicationDbContext, long>>();

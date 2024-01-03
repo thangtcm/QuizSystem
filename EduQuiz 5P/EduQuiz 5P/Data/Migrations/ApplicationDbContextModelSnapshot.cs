@@ -292,6 +292,12 @@ namespace EduQuiz_5P.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
+                    b.Property<int?>("ChapterId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ClassId")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("DateCreate")
                         .HasColumnType("datetime2");
 
@@ -310,6 +316,9 @@ namespace EduQuiz_5P.Migrations
                     b.Property<bool>("IsDefault")
                         .HasColumnType("bit");
 
+                    b.Property<bool>("IsHighSchoolExam")
+                        .HasColumnType("bit");
+
                     b.Property<bool>("IsRemoved")
                         .HasColumnType("bit");
 
@@ -318,6 +327,9 @@ namespace EduQuiz_5P.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("NumberOfQuestion")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("SubjectId")
                         .HasColumnType("int");
 
                     b.Property<int>("TotalUserExam")
@@ -330,6 +342,12 @@ namespace EduQuiz_5P.Migrations
                         .HasColumnType("bigint");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ChapterId");
+
+                    b.HasIndex("ClassId");
+
+                    b.HasIndex("SubjectId");
 
                     b.HasIndex("UserIdCreate");
 
@@ -700,6 +718,18 @@ namespace EduQuiz_5P.Migrations
 
             modelBuilder.Entity("EduQuiz_5P.Models.Exam", b =>
                 {
+                    b.HasOne("EduQuiz_5P.Models.Chapter", "Chapter")
+                        .WithMany()
+                        .HasForeignKey("ChapterId");
+
+                    b.HasOne("EduQuiz_5P.Models.Classes", "Classes")
+                        .WithMany()
+                        .HasForeignKey("ClassId");
+
+                    b.HasOne("EduQuiz_5P.Models.Subject", "Subject")
+                        .WithMany()
+                        .HasForeignKey("SubjectId");
+
                     b.HasOne("EduQuiz_5P.Data.ApplicationUser", "UserCreate")
                         .WithMany()
                         .HasForeignKey("UserIdCreate");
@@ -707,6 +737,12 @@ namespace EduQuiz_5P.Migrations
                     b.HasOne("EduQuiz_5P.Data.ApplicationUser", "UserRemove")
                         .WithMany()
                         .HasForeignKey("UserIdRemove");
+
+                    b.Navigation("Chapter");
+
+                    b.Navigation("Classes");
+
+                    b.Navigation("Subject");
 
                     b.Navigation("UserCreate");
 

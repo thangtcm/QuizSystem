@@ -20,6 +20,16 @@ namespace EduQuiz_5P.Models
         public int NumberOfQuestion { get; set; }
         [Display(Name = "Thời gian thi")]
         public double ExamTime { get; set; }
+        public int? ClassId { get; set; }
+        [ForeignKey("ClassId")]
+        public Classes? Classes { get; set; }
+        public int? SubjectId { get; set; }
+        [ForeignKey("SubjectId")]
+        public Subject? Subject { get; set; }   
+        public int? ChapterId { get; set; }
+        [ForeignKey("ChapterId")]
+        public Chapter? Chapter { get; set; }
+        public bool IsHighSchoolExam { get; set; }
         [Display(Name = "Trạng thái")]
         public bool IsRemoved { get; set; }
         [Display(Name = "Ngày tạo")]

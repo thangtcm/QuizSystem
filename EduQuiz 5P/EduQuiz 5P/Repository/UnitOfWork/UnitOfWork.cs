@@ -14,6 +14,9 @@ namespace EduQuiz_5P.Repository.UnitOfWork
         private IQuestionRepository _questionRepository;
         private ISubjectRepository _subjectRepository;
         private IAnswerRepository _answerRepository;
+        private IExamRepository _examRepository;
+        private IExamMatrixRepository _examMatrixRepository;
+        private IExamMatrixDetailRepository _examMatrixDetailRepository;
         public UnitOfWork(ApplicationDbContext context)
         {
             _context = context;
@@ -75,6 +78,28 @@ namespace EduQuiz_5P.Repository.UnitOfWork
             get
             {
                 return _subjectRepository ??= new SubjectRepository(_context);
+            }
+        }
+
+        public IExamMatrixDetailRepository ExamMatrixDetailRepository
+        {
+            get
+            {
+                return _examMatrixDetailRepository ??= new ExamMatrixDetailRepository(_context);
+            }
+        }
+        public IExamMatrixRepository ExamMatrixRepository
+        {
+            get
+            {
+                return _examMatrixRepository ??= new ExamMatrixRepository(_context);
+            }
+        }
+        public IExamRepository ExamRepository
+        {
+            get
+            {
+                return _examRepository ??= new ExamRepository(_context);
             }
         }
         public void Commit()
