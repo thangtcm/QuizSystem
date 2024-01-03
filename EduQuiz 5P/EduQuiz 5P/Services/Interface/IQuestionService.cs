@@ -12,6 +12,6 @@ namespace EduQuiz_5P.Services.Interface
         public Task<bool> DeleteQuestion(int Id);
         public Task<bool> Update(Question question);
         public Task<ICollection<QuestionVM>> ReadFileLatex(IFormFile file);
-        public Task<ICollection<QuestionVM>> ReadFileDoc(IFormFile file);
+        public ICollection<QuestionVM> ReadFileDoc(IFormFile file);
     }
 }

@@ -46,7 +46,7 @@
                         <div class="col-12 col-lg-6">
                             <div class="form-group local-forms">
                                 <label>Lớp <span class="login-danger">*</span></label>
-                                <select class="form-control select">
+                                <select class="form-control select" asp-items="@ViewBag.SelectListClass">
                                     <option value="">Chọn Lớp</option>
                                 </select>
                             </div>
@@ -89,54 +89,6 @@
         </div>
     </div>
 </div>
-<div class="modal" id="PreviewImport">
-    <div class="modal-dialog modal-dialog-centered modal-xl">
-        <div class="modal-content">
-            <form method="post">
-                <!-- Modal Header -->
-                <div class="modal-header">
-                    <h4 class="modal-title">Dữ liệu Import đề</h4>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-
-                <!-- Modal body -->
-                <div class="modal-body">
-                    <div id="previewData" class="row justify-content-center align-items-center" style="flex: 1;
-                            overflow-y: auto;">
-                        <div class="col-12">
-                            <p class="fw-bold">
-                                Câu 1. Trong không gian với hệ tọa độ $O x y z$, cho hai điểm $A(1 ; 2 ; 3), B(-2 ; 1 ; 5)$. Phương trình mặt cầu tâm
-                                $A$ bán kính $A B$ là:
-                            </p>
-                        </div>
-                        <div class="my-2">
-                            <p><span class="fw-bold">A.</span>$\bar{z}=-a-bi$</p>
-                            <p><span class="fw-bold">B.</span> $\bar{z}=-a-bi$</p>
-                            <p><span class="fw-bold">C.</span> $\bar{z}=-a-bi$</p>
-                            <p><span class="fw-bold">D.</span> $\bar{z}=-a-bi$</p>
-                        </div>
-                        <hr>
-                        <div class="col-12">
-                            <p class="fw-bold">
-                                Câu 1. Trong không gian với hệ tọa độ $O x y z$, cho hai điểm $A(1 ; 2 ; 3), B(-2 ; 1 ; 5)$. Phương trình mặt cầu tâm
-                                $A$ bán kính $A B$ là:
-                            </p>
-                        </div>
-                        <div class="my-2">
-                            <p><span class="fw-bold">A.</span>$\bar{z}=-a-bi$</p>
-                            <p><span class="fw-bold">B.</span> $\bar{z}=-a-bi$</p>
-                            <p><span class="fw-bold">C.</span> $\bar{z}=-a-bi$</p>
-                            <p><span class="fw-bold">D.</span> $\bar{z}=-a-bi$</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Modal footer -->
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Lưu</button>
-                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Đóng</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
+@section Scripts{
+    <script></script>
+}

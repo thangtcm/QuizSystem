@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EduQuiz 5P")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0781aaa4fbb01342c3d60670d74d42b158fba878")]
 [assembly: System.Reflection.AssemblyProductAttribute("EduQuiz 5P")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EduQuiz 5P")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

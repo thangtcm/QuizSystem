@@ -22,47 +22,53 @@
             <div class="card">
                 <div class="card-body">
                     <form asp-action="Create">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                         <div class="row">
                             <div class="col-12">
                                 <h5 class="form-title"><span>Basic Details</span></h5>
                             </div>
-                            <div id="createChapterContainers">
+                            <div class="col-12" id="createChapterContainers">
                             @for(var i = 0; i < Model.Count; i++)
                             {
-                                <hr />
-                                <hr />
-                                <div class="col-12 col-sm-6">
-                                    <div class="form-group local-forms">
-                                        <label>Tên chương học<span class="login-danger">*</span></label>
-                                        <input asp-for="@Model[i].ChapterName" class="form-control" placeholder="Enter Name">
+                                var SelectSubject = $"SelectSubject{i}";
+                                <div class="row create-dynamic">
+                                    <div class="col-12 col-sm-6">
+                                        <div class="form-group local-forms">
+                                            <label>Tên chương học<span class="login-danger">*</span></label>
+                                            <input asp-for="@Model[i].ChapterName" class="form-control" placeholder="Enter Name">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <div class="form-group local-forms">
-                                        <label>Lớp <span class="login-danger">*</span></label>
-                                        <select class="form-control select" asp-items="ViewBag.ClassList">
-                                            <option value="">Chọn lớp</option>
-                                        </select>
+                                    <div class="col-12 col-sm-6">
+                                        <div class="form-group local-forms">
+                                            <label>Lớp <span class="login-danger">*</span></label>
+                                            <select class="form-control select" asp-items="@Model[i].SelectClass" onchange="getSubjectByClasses(this.value, '#@SelectSubject')">
+                                                <option value="">Chọn lớp</option>
+                                            </select>
+                                        </div>
                                     </div>
-                                </div>
-                                var SubjectIdtext = $"#SelectSubject";
-                                <div class="col-12 col-sm-6">
-                                    <div class="form-group local-forms">
-                                        <label>Môn học<span class="login-danger">*</span></label>
-                                        <select class="form-control select" id="@SubjectIdtext">
-                                            <option value="">Chọn lớp</option>
-                                        </select>
+                                    <div class="col-12 col-sm-6">
+                                        <div class="form-group local-forms">
+                                            <label>Môn học<span class="login-danger">*</span></label>
+                                            <select id="@SelectSubject" asp-for="@Model[i].SubjectId" class="form-control select">
+                                                <option value="">Chọn môn học</option>
+                                            </select>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group local-forms">
-                                        <label>Mô tả chương học <span class="login-danger">*</span></label>
-                                        <textarea asp-for="@Model[i].ChapterDescription" id="editor1" class="editor" cols="30" rows="10"></textarea>
+                                    <div class="col-12">
+                                        <div class="form-group local-forms">
+                                            <label>Mô tả chương học <span class="login-danger">*</span></label>
+                                            <textarea asp-for="@Model[i].ChapterDescription" id="editor1" class="editor" cols="30" rows="10"></textarea>
+                                        </div>
                                     </div>
                                 </div>
                             }
                             </div>
-                            <div class="col-12">
+                            <div class="col-12 col-sm-6">
+                                <div class="form-group">
+                                    <input type="button" id="btnAdd" class="btn btn-primary" value="Thêm" style="width: 10rem;">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
                                 <div class="student-submit">
                                     <button type="submit" class="btn btn-primary">Submit</button>
                                 </div>

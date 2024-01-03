@@ -1,0 +1,60 @@
+﻿@model EduQuiz_5P.ViewModel.ImportQuestionVM
+
+@{
+    var questionIndex = 1;
+}
+
+<div class="modal" id="PreviewImport">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+        <form method="post">
+            <!-- Modal Header -->
+            <div class="modal-header">
+            <h4 class="modal-title">Dữ liệu Import đề</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body" >
+                <div id="previewData" class="row justify-content-center align-items-center" style="flex: 1;
+                overflow-y: auto;">
+                    <form method="post">
+                        <input asp-for="DifficultyLevel" hidden/>
+                        <input asp-for="ChapterId" hidden />
+                        @foreach(var item in Model.QuestionVMs)
+                        {
+                            <div class="question-name">
+                                <h3>Câu @(questionIndex++). </h3>
+                                <input asp-for="@item.QuestionName" class="form-control" />
+                                <img src="@item.UrlImage" />
+                                <input asp-for="@item.UploadImageQuestion" />
+                            </div>
+                            <div class="question-name">
+                                <label class=""></label>
+                                <input class="form-control" asp-for="@item.QuestionSolution" />
+                                <img src="@item.UrlImageSolution" />
+                                <input asp-for="@item.UploadImageQuestion" />
+                            </div>
+                            var answerIndex = 0;
+                            @foreach (var answer in item.AnswerList)
+                            {
+                                <div class="answer-container">
+                                    <label class="form-group">Đáp án @(Char.ToString('A')))</label>
+                                    <input asp-for="@answer.AnswerName"/>
+                                </div>
+                            }
+                        }
+
+                        <button class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+                
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Lưu</button>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Đóng</button>
+            </div>
+        </form>
+        </div>
+    </div>
+</div>

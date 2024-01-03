@@ -1,4 +1,7 @@
-﻿using EduQuiz_5P.Helpers;
+﻿using DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing;
+using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Wordprocessing;
+using EduQuiz_5P.Helpers;
 using EduQuiz_5P.Models;
 using EduQuiz_5P.Repository.UnitOfWork;
 using EduQuiz_5P.Services.Interface;
@@ -95,14 +98,45 @@ namespace EduQuiz_5P.Services
             return false;
         }
 
-        public async Task<ICollection<QuestionVM>> ReadFileDoc(IFormFile file)
+        public ICollection<QuestionVM> ReadFileDoc(IFormFile file)
         {
             ICollection<QuestionVM> questions = new List<QuestionVM>();
+            QuestionVM currentQuestion = new()
+            {
+                QuestionName = "",
+                AnswerList = new List<AnswerVMInfo>()
+            };
             if (file != null && file.Length > 0)
             {
                 if (Path.GetExtension(file.FileName) == ".docx")
                 {
-
+                    using (WordprocessingDocument doc = WordprocessingDocument.Open(file.FileName, false))
+                    {
+                        var body = doc.MainDocumentPart.Document.Body;
+                        foreach (var paragraph in body.Elements<Paragraph>())
+                        {
+                            string text = paragraph.InnerText.Trim();
+                            if (text.StartsWith("Câu") && text.Contains(":"))
+                            {
+                                // Create a new question
+                                currentQuestion = new QuestionVM
+                                {
+                                    QuestionName = text,
+                                    AnswerList = new List<AnswerVMInfo>()
+                                };
+                                questions.Add(currentQuestion);
+                            }
+                            else if (currentQuestion != null && text.StartsWith("A.") || text.StartsWith("B.") || text.StartsWith("C.") || text.StartsWith("D."))
+                            {
+                                // Add answers to the current question
+                                var answer = new AnswerVMInfo
+                                {
+                                    AnswerName = text.Substring(3).Trim(),
+                                };
+                                currentQuestion!.AnswerList.Add(answer);
+                            }
+                        }
+                    }
                 }
             }
             return questions;

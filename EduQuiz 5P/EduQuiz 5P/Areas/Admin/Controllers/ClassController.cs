@@ -10,6 +10,8 @@ using System.Security.Claims;
 namespace EduQuiz_5P.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize]
+    [Authorize(Roles = Constants.Roles.Admin)]
     public class ClassController : Controller
     {
         private ILogger<ClassController> _logger;

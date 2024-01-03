@@ -53,6 +53,8 @@ namespace EduQuiz_5P.Areas.Admin.Controllers
             return View(chapters.ToList());
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(ICollection<Chapter> chapters)
         {
             try
@@ -62,8 +64,13 @@ namespace EduQuiz_5P.Areas.Admin.Controllers
                 {
                     return NotFound();
                 }
-                await _chapterService.AddRange(chapters, user.Id);
+                foreach(var item in chapters)
+                {
+                    Console.WriteLine($"Dữ liệu là {item.ChapterName} and {item.SubjectId}\n\n\n\n");
+                }    
+                //await _chapterService.AddRange(chapters, user.Id);
                 this.AddToastrMessage("Tạo dữ liệu chương thành công.", Enums.ToastrMessageType.Success);
+                return RedirectToAction(nameof(Index));
             }
             catch(Exception ex)
             {
@@ -79,7 +86,7 @@ namespace EduQuiz_5P.Areas.Admin.Controllers
             var classLst = await _classService.GetListAsync();
             ICollection<Chapter> chapters = new List<Chapter>()
             {
-                new Chapter() {SelectClass = new SelectList(classLst, "Id", "ClassName")}
+                new () {SelectClass = new SelectList(classLst, "Id", "ClassName")}
             };
             return PartialView("_DynamicAddChapter", chapters.ToList());
         }

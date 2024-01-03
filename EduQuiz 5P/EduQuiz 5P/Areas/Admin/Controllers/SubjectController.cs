@@ -2,9 +2,11 @@
 using EduQuiz_5P.Models;
 using EduQuiz_5P.Services;
 using EduQuiz_5P.Services.Interface;
+using EduQuiz_5P.ViewModel;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Org.BouncyCastle.Utilities;
 
 namespace EduQuiz_5P.Areas.Admin.Controllers
 {
@@ -45,7 +47,7 @@ namespace EduQuiz_5P.Areas.Admin.Controllers
         public async Task<IActionResult> Create()
         {
             var classLst = await _classService.GetListAsync();
-            ICollection<Subject> model = new List<Subject> { new Subject() { SelectClass = new SelectList(classLst, "Id", "ClassName") } };
+            ICollection<Subject> model = new List<Subject> { new() { SelectClass = new SelectList(classLst, "Id", "ClassName") } };
             return View(model.ToList());
         }
 
@@ -62,6 +64,7 @@ namespace EduQuiz_5P.Areas.Admin.Controllers
                 }
                 await _subjectService.AddRange(subjects, user.Id);
                 this.AddToastrMessage("Tạo dữ liệu chương thành công.", Enums.ToastrMessageType.Success);
+                return RedirectToAction(nameof(Index));
             }
             catch (Exception ex)
             {
@@ -101,8 +104,15 @@ namespace EduQuiz_5P.Areas.Admin.Controllers
         public async Task<IActionResult> CreatePartial()
         {
             var classLst = await _classService.GetListAsync();
-            ICollection<Subject> model = new List<Subject> { new Subject() { SelectClass = new SelectList(classLst, "Id", "ClassName") } };
+            ICollection<Subject> model = new List<Subject> { new() { SelectClass = new SelectList(classLst, "Id", "ClassName") } };
             return PartialView("_DynamicAddSubject", model.ToList());
+        }
+
+        public async Task<IActionResult> LoadSubjects(int classId)
+        {
+            var subjectlst = await _subjectService.GetListAsync(classId);
+            var selectList = new SelectList(subjectlst, "Id", "SubjectName");
+            return Json(selectList);
         }
     }
 }
