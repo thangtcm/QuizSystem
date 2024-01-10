@@ -29,3 +29,12 @@
 #toast-container > div {
     overflow: visible;
 }
+
+#toast-container > div {
+    opacity: 1;
+}
+
+#toast-container > div:hover {
+    -webkit-box-shadow: 0 0 12px #595959;
+    box-shadow: 0 0 12px #595959;
+}

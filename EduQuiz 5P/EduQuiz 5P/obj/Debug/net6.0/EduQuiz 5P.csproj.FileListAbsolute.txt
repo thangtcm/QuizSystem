@@ -560,3 +560,6 @@ D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Debug\net6.0\refint\EduQuiz 5P.dll
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Debug\net6.0\EduQuiz 5P.pdb
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Debug\net6.0\EduQuiz 5P.genruntimeconfig.cache
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Debug\net6.0\ref\EduQuiz 5P.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\Firebase.Auth.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\Firebase.Storage.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Debug\net6.0\System.ServiceModel.dll

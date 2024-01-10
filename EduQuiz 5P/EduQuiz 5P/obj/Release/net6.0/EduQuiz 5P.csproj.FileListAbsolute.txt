@@ -560,3 +560,6 @@ D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Release\net6.0\DocumentFormat.OpenXml.dl
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Release\net6.0\DocumentFormat.OpenXml.Framework.dll
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Release\net6.0\System.IO.Packaging.dll
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\EduQuiz 5P.sourcelink.json
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Release\net6.0\Firebase.Auth.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Release\net6.0\Firebase.Storage.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Release\net6.0\System.ServiceModel.dll

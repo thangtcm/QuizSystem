@@ -1,9 +1,12 @@
-﻿namespace EduQuiz_5P.Enums
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace EduQuiz_5P.Enums
 {
     public enum ExamType
     {
+        [Display(Name = "Trung học phổ thông")]
         TrungHocPhoThong = 1,        // Thông hiểu
-        VanDung = 2,          // Vận dụng
-        VanDungCao = 3        // Vận dụng cao
+        [Display(Name = "Lớp học")]
+        Lop = 2,
     }
 }

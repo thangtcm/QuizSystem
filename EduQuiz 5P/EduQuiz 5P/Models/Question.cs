@@ -13,10 +13,8 @@ namespace EduQuiz_5P.Models
         [Required]
         [Display(Name = "Nội dung câu hỏi")]
         public string? QuestionName { get; set; }
-        [Required]
         [Display(Name = "Độ khó")]
         public int LevelType { get; set; }
-        [Required]
         [Display(Name = "Lời giải")]
         public string? QuestionSolution { get; set; }
         [Display(Name = "Gợi ý")]
@@ -40,12 +38,12 @@ namespace EduQuiz_5P.Models
         [ForeignKey("UserIdRemove")]
         public ApplicationUser? UserRemove { get; set; }
         [Display(Name = "Chương")]
-        public int ChappterId { get; set; }
+        public int? ChappterId { get; set; }
         [ForeignKey("ChappterId")]
         public Chapter? Chappter { get; set; }
         public string? IsImage { get; set; }
         public string? IsImageSolution { get; set; }
-        public DifficultyLevel DifficultyLevel { get; set; }
+        public DifficultyLevel? DifficultyLevel { get; set; }
         public virtual ICollection<Answer>? Answers { get; set; }
     }
 }

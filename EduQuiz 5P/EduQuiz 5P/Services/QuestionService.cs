@@ -14,30 +14,43 @@ namespace EduQuiz_5P.Services
     {
         public IUnitOfWork _unitOfWork;
         private readonly IUserService _userService;
-        public QuestionService(IUnitOfWork unitOfWork, IUserService userService)
+        private readonly IFirebaseStorageService _firebaseStorageService;
+        public QuestionService(IUnitOfWork unitOfWork, IUserService userService, IFirebaseStorageService firebaseStorageService)
         {
             _unitOfWork = unitOfWork;
             _userService = userService;
+            _firebaseStorageService = firebaseStorageService;
         }
         public async Task Add(ImportQuestionVM model)
         {
             ICollection<Question> questions = new List<Question>();
+            ICollection<Answer> answers = new List<Answer>();
             var user = await _userService.GetUser();
             foreach (var questionvm in model.QuestionVMs)
             {
+                var urlImageQuestion = questionvm.UrlImage;
+                var urlImageSolution = questionvm.UrlImageSolution;
+                if (questionvm.UploadImageQuestion != null)
+                {
+                    urlImageQuestion = (await _firebaseStorageService.UploadFile(questionvm.UploadImageQuestion)).ToString();
+                }    
+                if(questionvm.UploadImageQuestionSolution != null)
+                {
+                    urlImageSolution = (await _firebaseStorageService.UploadFile(questionvm.UploadImageQuestionSolution)).ToString();
+                }
                 Question question = new()
                 {
                     QuestionName = questionvm.QuestionName,
                     QuestionHints = questionvm.QuestionHints,
                     QuestionSolution = questionvm.QuestionSolution,
-                    IsImage = questionvm.UrlImage,
-                    IsImageSolution = questionvm.UrlImageSolution,
-                    ChappterId = model.ChapterId,
+                    IsImage = urlImageQuestion,
+                    IsImageSolution = urlImageSolution,
+                    ChappterId = model.ImportChapterId,
                     DateUpdate = DateTime.UtcNow.ToTimeZone(),
                     DifficultyLevel = model.DifficultyLevel,
                     UserUpdate = user
                 };
-                ICollection<Answer> answers = new List<Answer>();
+                questions.Add(question);
                 foreach (var ansVm in questionvm.AnswerList)
                 {
                     Answer answer = new()
@@ -50,10 +63,9 @@ namespace EduQuiz_5P.Services
                     };
                     answers.Add(answer);
                 }
-                question.Answers = answers;
-                questions.Add(question);
             }
             _unitOfWork.QuestionRepository.AddRange(questions);
+            _unitOfWork.AnswerRepository.AddRange(answers);
             await _unitOfWork.CommitAsync();
         }
 
@@ -98,9 +110,9 @@ namespace EduQuiz_5P.Services
             return false;
         }
 
-        public ICollection<QuestionVM> ReadFileDoc(IFormFile file)
+        public async Task<ICollection<QuestionVM>> ReadFileDoc(IFormFile file)
         {
-            ICollection<QuestionVM> questions = new List<QuestionVM>();
+            List<QuestionVM> questions = new ();
             QuestionVM currentQuestion = new()
             {
                 QuestionName = "",
@@ -110,30 +122,72 @@ namespace EduQuiz_5P.Services
             {
                 if (Path.GetExtension(file.FileName) == ".docx")
                 {
-                    using (WordprocessingDocument doc = WordprocessingDocument.Open(file.FileName, false))
+                    using (var memoryStream = new MemoryStream())
                     {
-                        var body = doc.MainDocumentPart.Document.Body;
-                        foreach (var paragraph in body.Elements<Paragraph>())
+                        await file.CopyToAsync(memoryStream);
+                        memoryStream.Position = 0;
+                        using (WordprocessingDocument doc = WordprocessingDocument.Open(memoryStream, false))
                         {
-                            string text = paragraph.InnerText.Trim();
-                            if (text.StartsWith("Câu") && text.Contains(":"))
+                            var body = doc.MainDocumentPart?.RootElement?.Descendants<Paragraph>();
+                            if(body != null)
                             {
-                                // Create a new question
-                                currentQuestion = new QuestionVM
+                                foreach (var paragraph in body)
                                 {
-                                    QuestionName = text,
-                                    AnswerList = new List<AnswerVMInfo>()
-                                };
-                                questions.Add(currentQuestion);
+                                    string text = paragraph.InnerText.Trim();
+                                    if (text.StartsWith("Câu") && text.Contains(':'))
+                                    {
+                                        Match match = Regex.Match(text, @"^Câu (\d+): (.+)$");
+                                        if (match.Success)
+                                        {
+                                            currentQuestion = new QuestionVM
+                                            {
+                                                QuestionName = match.Groups[2].Value.Trim(),
+                                                AnswerList = new List<AnswerVMInfo>()
+                                            };
+                                        }
+                                        else
+                                        {
+                                            currentQuestion = new QuestionVM
+                                            {
+                                                QuestionName = text,
+                                                AnswerList = new List<AnswerVMInfo>()
+                                            };
+                                        }
+                                        questions.Add(currentQuestion);
+                                    }
+                                    else if (currentQuestion != null && text.StartsWith("A.") || text.StartsWith("B.") || text.StartsWith("C.") || text.StartsWith("D."))
+                                    {
+                                        // Add answers to the current question
+                                        var answer = new AnswerVMInfo
+                                        {
+                                            AnswerName = text.Substring(3).Trim(),
+                                        };
+                                        currentQuestion!.AnswerList.Add(answer);
+                                    }
+                                }
                             }
-                            else if (currentQuestion != null && text.StartsWith("A.") || text.StartsWith("B.") || text.StartsWith("C.") || text.StartsWith("D."))
+                            var tables = doc.MainDocumentPart?.Document.Descendants<DocumentFormat.OpenXml.Wordprocessing.Table>().ToList();
+                            if(tables != null)
                             {
-                                // Add answers to the current question
-                                var answer = new AnswerVMInfo
+                                var table = tables.Last();
+                                if (table != null)
                                 {
-                                    AnswerName = text.Substring(3).Trim(),
-                                };
-                                currentQuestion!.AnswerList.Add(answer);
+                                    int questionIndex, answerIndex;
+                                    for (int row = 0; row < table.Elements<DocumentFormat.OpenXml.Wordprocessing.TableRow>().Count(); row++)
+                                    {
+                                        var tableRow = table.Elements<DocumentFormat.OpenXml.Wordprocessing.TableRow>().ElementAt(row);
+                                        for (int col = 0; col < tableRow.Elements<DocumentFormat.OpenXml.Wordprocessing.TableCell>().Count(); col++)
+                                        {
+                                            var cell = tableRow.Elements<DocumentFormat.OpenXml.Wordprocessing.TableCell>().ElementAt(col);
+                                            string cellText = cell.InnerText.Trim();
+
+                                            var result = ParseQuestionString(cellText);
+                                            questionIndex = result.questionIndex;
+                                            answerIndex = result.answerIndex;
+                                            questions[questionIndex - 1].AnswerList.ElementAt(answerIndex).IsCorrect = true;
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
@@ -141,6 +195,26 @@ namespace EduQuiz_5P.Services
             }
             return questions;
         }
+
+        public (int questionIndex, int answerIndex) ParseQuestionString(string questionString)
+        {
+            string[] parts = questionString.Split('.');
+
+            if (parts.Length == 2)
+            {
+                if (int.TryParse(parts[0], out int questionIndex))
+                {
+                    char answerChar = parts[1].Trim().ToUpper()[0];
+                    int answerIndex = answerChar - 'A';
+
+                    return (questionIndex, answerIndex);
+                }
+            }
+
+            // Trong trường hợp không thành công, trả về giá trị mặc định
+            return (-1, -1);
+        }
+
         public async Task<ICollection<QuestionVM>> ReadFileLatex(IFormFile file)
         {
             ICollection<QuestionVM> questions = new List<QuestionVM>();
@@ -193,7 +267,7 @@ namespace EduQuiz_5P.Services
                                     }
                                     answers.Add(answer);
                                 }
-                                question.AnswerList = answers;
+                                question.AnswerList = answers.ToList();
                             }
                             string solutionPattern = @"\\loigiai{([\s\S]*?)}\\end{loigiai}";
 

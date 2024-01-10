@@ -6,6 +6,7 @@ using EduQuiz_5P.Services.Interface;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 
 namespace EduQuiz_5P.Areas.Admin.Controllers
 {
@@ -33,7 +34,7 @@ namespace EduQuiz_5P.Areas.Admin.Controllers
             try
             {
        
-                Chapterlst = await _chapterService.GetListAsync(chapterId, subjectId);
+                Chapterlst = await _chapterService.GetListAsync(chapterId, subjectId, x => x.Include(s => s.Subject));
                 this.AddToastrMessage("Tải dữ liệu thành công.", Enums.ToastrMessageType.Success);
             }
             catch (Exception ex)
@@ -67,11 +68,7 @@ namespace EduQuiz_5P.Areas.Admin.Controllers
                 {
                     return NotFound();
                 }
-                foreach(var item in chapters)
-                {
-                    Console.WriteLine($" Item {item.ChapterName}");
-                }
-                //await _chapterService.AddRange(chapters, user.Id);
+                await _chapterService.AddRange(chapters, user.Id);
                 this.AddToastrMessage("Tạo dữ liệu chương thành công.", Enums.ToastrMessageType.Success);
                 return RedirectToAction(nameof(Index));
             }

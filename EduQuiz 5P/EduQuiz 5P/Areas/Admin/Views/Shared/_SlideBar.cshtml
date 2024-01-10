@@ -17,7 +17,7 @@
                     </ul>
                 </li>
                 <li class="menu-title">
-                    <span>Management</span>
+                    <span>Quản lý</span>
                 </li>
                 <li class="submenu">
                     <a href="#">
@@ -30,13 +30,29 @@
                 </li>
                 <li class="submenu">
                     <a href="#">
-                        <i class="fas fa-file-invoice-dollar"></i> <span>Ngân hàng đề</span> <span class="menu-arrow"></span>
+                        <i class="fas fa-file-invoice-dollar"></i> <span>Ngân hàng câu hỏi</span> <span class="menu-arrow"></span>
+                    </a>
+                    <ul>
+                        <li><a asp-area="Admin" asp-controller="Question" asp-action="Create">Thêm câu hỏi</a></li>
+                    </ul>
+                </li>
+                <li class="submenu">
+                    <a href="#">
+                        <i class="fas fa-file-invoice-dollar"></i> <span>Ngân hàng đề thi</span> <span class="menu-arrow"></span>
+                    </a>
+                    <ul>
+                        <li><a asp-area="Admin" asp-controller="ExamMatrix" asp-action="Index">Quản lý ma trận đề</a></li>
+                        <li><a asp-area="Admin" asp-controller="Exam" asp-action="Index">Quản lý đề thi</a></li>
+                    </ul>
+                </li>
+                <li class="submenu">
+                    <a href="#">
+                        <i class="fas fa-file-invoice-dollar"></i> <span>Khác</span> <span class="menu-arrow"></span>
                     </a>
                     <ul>
                         <li><a asp-area="Admin" asp-controller="Class" asp-action="Index">Quản lý lớp</a></li>
                         <li><a asp-area="Admin" asp-controller="Subject" asp-action="Index">Quản lý môn học</a></li>
                         <li><a asp-area="Admin" asp-controller="Chapter" asp-action="Index">Quản lý chương</a></li>
-                        <li><a asp-area="Admin" asp-controller="ExamMatrix" asp-action="Index">Quản lý Ma trận đề</a></li>
                     </ul>
                 </li>
             </ul>

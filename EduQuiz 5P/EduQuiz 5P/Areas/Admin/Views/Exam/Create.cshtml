@@ -1,0 +1,71 @@
+﻿@model EduQuiz_5P.Models.Exam
+
+@{
+    ViewData["Title"] = "Tạo đề thi";
+}
+
+<div class="content container-fluid">
+
+    <div class="page-header">
+        <div class="row align-items-center">
+            <div class="col">
+                <h3 class="page-title">@ViewData["Title"]</h3>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a asp-action="Index">Quản Lý Đề Thi</a></li>
+                    <li class="breadcrumb-item active">@ViewData["Title"]</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-body">
+                    <form asp-action="Create">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="row">
+                            <div class="col-12">
+                                <h5 class="form-title"><span>Thông tin cơ bản</span></h5>
+                            </div>
+                            <div class="col-12 col-sm-4">
+                                <div class="form-group local-forms">
+                                    <label asp-for="ExamName">Tên Đề Thi<span class="login-danger">*</span></label>
+                                    <input asp-for="ExamName" class="form-control" />
+                                    <span asp-validation-for="ExamName" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-4">
+                                <div class="form-group local-forms">
+                                    <label asp-for="ExamDescription">Mô tả đề thi<span class="login-danger">*</span></label>
+                                    <input asp-for="ExamDescription" class="form-control" />
+                                    <span asp-validation-for="ExamDescription" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-4">
+                                <div class="form-group local-forms">
+                                    <label asp-for="ExamTime">Thời gian thi<span class="login-danger">*</span></label>
+                                    <input asp-for="ExamTime" class="form-control" />
+                                    <span asp-validation-for="ExamTime" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="form-group local-forms">
+                                    <label>Ma trận đề <span class="login-danger">*</span></label>
+                                    <select name="examMatrixId" class="form-control select" asp-items="@ViewBag.ExamMatrix">
+                                        <option value="0">Chọn ma trận đề</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="student-submit">
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

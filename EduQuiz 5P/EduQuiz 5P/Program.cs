@@ -10,6 +10,7 @@ using EduQuiz_5P.Services;
 using EduQuiz_5P.Models;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing;
 
 var builder = WebApplication.CreateBuilder(args);
 if (builder.Environment.IsDevelopment())
@@ -70,6 +71,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IUserEmailStore<ApplicationUser>, UserStore<ApplicationUser, ApplicationRole, ApplicationDbContext, long>>();
 builder.Services.AddScoped<IUserRoleStore<ApplicationUser>, UserStore<ApplicationUser, ApplicationRole, ApplicationDbContext, long>>();
 builder.Services.AddScoped<UserManager<ApplicationUser>>();
+builder.Services.AddTransient(typeof(IFirebaseStorageService), typeof(FirebaseStorageService));
 
 //Mail
 builder.Services.AddOptions();
@@ -93,7 +95,7 @@ builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession(options =>
 {
     options.Cookie.Name = ".EduQuiz5P.Session";
-    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.IdleTimeout = TimeSpan.FromDays(1);
     options.Cookie.IsEssential = true;
     options.Cookie.HttpOnly = true;
 });
@@ -102,7 +104,6 @@ builder.Services.ConfigureApplicationCookie(options =>
 {
     // Cookie settings
     options.Cookie.HttpOnly = true;
-    options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
     options.Cookie.SameSite = SameSiteMode.None;
     options.LoginPath = "/Account/Login";
     options.AccessDeniedPath = "/Identity/Account/AccessDenied";

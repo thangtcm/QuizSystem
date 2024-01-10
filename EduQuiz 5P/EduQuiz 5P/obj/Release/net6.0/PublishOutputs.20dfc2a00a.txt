@@ -2,6 +2,7 @@ D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\EduQuiz 5P.exe
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\appsettings.Development.json
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\appsettings.json
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\libman.json
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\wwwroot\js\general.js
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\refs\Microsoft.AspNetCore.Antiforgery.dll
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\refs\Microsoft.AspNetCore.Authentication.Abstractions.dll
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\refs\Microsoft.AspNetCore.Authentication.Cookies.dll
@@ -259,6 +260,7 @@ D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\refs\System.Se
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\refs\System.Security.Principal.dll
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\refs\System.Security.Principal.Windows.dll
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\refs\System.Security.SecureString.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\refs\System.ServiceModel.dll
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\refs\System.ServiceModel.Web.dll
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\refs\System.ServiceProcess.dll
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\refs\System.Text.Encoding.dll
@@ -298,6 +300,8 @@ D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\EduQuiz 5P.pdb
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\BouncyCastle.Cryptography.dll
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\DocumentFormat.OpenXml.dll
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\DocumentFormat.OpenXml.Framework.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\Firebase.Auth.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\Firebase.Storage.dll
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\Humanizer.dll
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\MailKit.dll
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\MessagePack.dll
@@ -343,6 +347,7 @@ D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\Microsoft.Iden
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\Microsoft.IdentityModel.Tokens.dll
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\Microsoft.NET.StringTools.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\System.ServiceModel.dll
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\Microsoft.VisualStudio.Debugger.Contracts.dll
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGeneration.dll
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll

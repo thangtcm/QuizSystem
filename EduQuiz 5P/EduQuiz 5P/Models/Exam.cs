@@ -1,4 +1,5 @@
 ﻿using EduQuiz_5P.Data;
+using EduQuiz_5P.Enums;
 using EduQuiz_5P.Helpers;
 using EduQuiz_5P.ViewModel;
 using System.ComponentModel.DataAnnotations;
@@ -19,7 +20,7 @@ namespace EduQuiz_5P.Models
         [Display(Name = "Số lượng câu hỏi")]
         public int NumberOfQuestion { get; set; }
         [Display(Name = "Thời gian thi")]
-        public double ExamTime { get; set; }
+        public int ExamTime { get; set; }
         public int? ClassId { get; set; }
         [ForeignKey("ClassId")]
         public Classes? Classes { get; set; }
@@ -29,7 +30,6 @@ namespace EduQuiz_5P.Models
         public int? ChapterId { get; set; }
         [ForeignKey("ChapterId")]
         public Chapter? Chapter { get; set; }
-        public bool IsHighSchoolExam { get; set; }
         [Display(Name = "Trạng thái")]
         public bool IsRemoved { get; set; }
         [Display(Name = "Ngày tạo")]
@@ -45,6 +45,7 @@ namespace EduQuiz_5P.Models
         [ForeignKey("UserIdRemove")]
         public ApplicationUser? UserRemove { get; set; }
         public bool IsDefault { get; set; }
+        public ExamType ExamType { get; set; }
         public int TotalUserExam { get; set; }
         public string ListQuestion { get; set; }
 

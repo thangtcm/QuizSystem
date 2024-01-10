@@ -1,5 +1,6 @@
 ﻿using EduQuiz_5P.Enums;
 using EduQuiz_5P.Helpers;
+using EduQuiz_5P.Models;
 using EduQuiz_5P.Services.Interface;
 using EduQuiz_5P.ViewModel;
 using Microsoft.AspNetCore.Authorization;
@@ -28,60 +29,57 @@ namespace EduQuiz_5P.Areas.Admin.Controllers
         public async Task<IActionResult> Create()
         {
             var classlist = await _classService.GetListAsync();
-            TempData["SelectListClass"] = new SelectList(classlist, "Id", "ClassName");
+            ViewData["SelectListClass"] = new SelectList(classlist, "Id", "ClassName");
             return View();
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(ImportQuestionVM model)
         {
             try
             {
-                ICollection<QuestionVM> Questionlst = new List<QuestionVM>();
-                if(Path.GetExtension(model.UploadFile.FileName) == ".tex")
-                {
-                    Questionlst = await _questionService.ReadFileLatex(model.UploadFile);
-                }
-                else if(Path.GetExtension(model.UploadFile.FileName) == ".docs")
-                {
-
-                }
-                model.QuestionVMs = Questionlst;
                 await _questionService.Add(model);
+                this.AddToastrMessage("Thêm dữ liệu câu hỏi thành công", ToastrMessageType.Success);
+                return RedirectToAction(nameof(Create));
             }
             catch(Exception ex)
             {
+                this.AddToastrMessage("Đã có lỗi xảy ra trong quá trình thêm dữ liệu câu hỏi", ToastrMessageType.Error);
                 _logger.LogError(ex.Message.ToString());
             }
+            var classlist = await _classService.GetListAsync();
+            ViewData["SelectListClass"] = new SelectList(classlist, "Id", "ClassName");
             return View();
         }
 
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public async Task<IActionResult> DynamicImportQuestion(IFormFile fileUpload, int chapterId, DifficultyLevel difficultyLevel)
         {
-            ImportQuestionVM model = new ImportQuestionVM();
+            ImportQuestionVM model = new ();
             try
             {
-                model.ChapterId = chapterId;
+                model.ImportChapterId = chapterId;
                 model.DifficultyLevel = difficultyLevel;
                 if (Path.GetExtension(fileUpload.FileName) == ".tex")
                 {
                     var question = await _questionService.ReadFileLatex(fileUpload);
-                    model.QuestionVMs = question;
+                    model.QuestionVMs = question.ToList();
+                    return PartialView("_DynamicPreview", model);
                 }
-                else if (Path.GetExtension(model.UploadFile.FileName) == ".docx")
+                else if (Path.GetExtension(fileUpload.FileName) == ".docx")
                 {
-                    var question = _questionService.ReadFileDoc(fileUpload);
-                    model.QuestionVMs = question;
+                    var question = (await _questionService.ReadFileDoc(fileUpload)) ?? new List<QuestionVM>() ;
+                    model.QuestionVMs = question.ToList();
+                    return PartialView("_DynamicPreview", model);
                 }
             }
-            catch(Exception)
+            catch(Exception ex)
             {
-
+                Console.WriteLine($"Lỗi {ex.Message}");
             }
-            return PartialView("_DynamicPreview", model);
+            return NotFound();
         }
     }
 }

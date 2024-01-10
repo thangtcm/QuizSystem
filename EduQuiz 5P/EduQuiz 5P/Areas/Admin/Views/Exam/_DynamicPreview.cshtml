@@ -1,0 +1,108 @@
+﻿@model EduQuiz_5P.ViewModel.ImportExamFileVM
+
+@{
+    var questionIndex = 0;
+}
+
+
+<form method="post" asp-action="CreateFile" enctype="multipart/form-data">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="modal-body">
+        <div class="row justify-content-center align-items-center" style="flex: 1;
+        overflow-y: auto;">
+            <input asp-for="@Model.ExamTime" value="@Model.ExamTime" hidden />
+            <input asp-for="@Model.ExamName" value="@Model.ExamName" hidden />
+            <input asp-for="@Model.ExamDescription" value="@Model.ExamDescription" hidden />
+            <input asp-for="@Model.ExamSubjectId" value="@Model.ExamSubjectId" hidden />
+            <input asp-for="@Model.ExamClassId" value="@Model.ExamClassId" hidden />
+            <input asp-for="@Model.ExamType" value="@Model.ExamType" hidden />
+            @for (var i = 0; i < Model.QuestionVMs.Count; i++)
+            {
+                var question = Model.QuestionVMs.ElementAt(i);
+                <input type="hidden" asp-for="@Model.QuestionVMs[i].QuestionName" value="@question.QuestionName">
+                <input type="hidden" asp-for="@Model.QuestionVMs[i].QuestionHints" value="@question.QuestionHints">
+                <input type="hidden" asp-for="@Model.QuestionVMs[i].QuestionSolution" value="@question.QuestionSolution">
+                <p class="fw-bold">
+                    Câu @(questionIndex += 1). @question.QuestionName:
+                </p>
+                <p class="fw-bold">
+                    Ảnh câu hỏi:
+                    @{
+                        if (String.IsNullOrEmpty(question.UrlImage))
+                        {
+                            <span class="text-danger">(Không có)</span>
+                        }
+                    }
+
+                </p>
+                @if (!String.IsNullOrEmpty(question.UrlImage))
+                {
+                    <input type="hidden" asp-for="@Model.QuestionVMs[i].UrlImage" value="@question.UrlImage">
+                    <img src="@question.UrlImage" alt="Ảnh Câu Hỏi">
+                }
+                <div class="col-12">
+                    <div class="form-group local-forms">
+                        <label>Chọn ảnh (Chỉ chọn lại nếu bị sai) <span class="login-danger">*</span></label>
+                        <div class="col-md-12">
+                            <input class="form-control" asp-for="@Model.QuestionVMs[i].UploadImageQuestion" id="fileInput" type="file" placeholder="Chọn File" accept="image/*">
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <p class="fw-bold">Đáp án</p>
+                @for (var j = 0; j < question.AnswerList.Count; j++)
+                {
+                    var answer = question.AnswerList.ElementAt(j);
+                    <input type="hidden" asp-for="@Model.QuestionVMs[i].AnswerList[j].AnswerName" value="@answer.AnswerName">
+                    <input type="hidden" asp-for="@Model.QuestionVMs[i].AnswerList[j].IsCorrect" value="@(answer.IsCorrect.ToString().ToLower())">
+                    <div class="my-2">
+                        <p><span class="fw-bold">@((char)('A' + j)). </span>@answer.AnswerName 
+                            (@if(answer.IsCorrect)
+                            {
+                                <span class="text-success">Đúng</span>
+                            }
+                            else
+                            {
+                                <span class="text-danger">Sai</span>
+                            }
+                            )
+                        </p>
+                    </div>
+                }
+                <div class="col-12">
+                    <p class="fw-bold">
+                        Ảnh lời giải:
+                        @{
+                            if (String.IsNullOrEmpty(question.UrlImageSolution))
+                            {
+                                <span class="text-danger">(Không có)</span>
+                            }
+                        }
+
+                    </p>
+                    @if (!String.IsNullOrEmpty(question.UrlImageSolution))
+                    {
+                        <input type="hidden" asp-for="QuestionVMs[@i].IsImageSolution" value="@question.UrlImageSolution">
+                        <img src="@Model.QuestionVMs[i].UrlImageSolution" alt="Ảnh Câu Hỏi">
+                    }
+                    <div class="form-group local-forms">
+                        <label>Chọn ảnh lời giải (Chỉ chọn lại nếu bị sai) <span class="login-danger">*</span></label>
+                        <div class="col-md-12">
+                            <input class="form-control" asp-for="@Model.QuestionVMs[i].UploadImageQuestionSolution" id="fileInput" type="file" placeholder="Chọn File" accept="image/*">
+                        </div>
+                    </div>
+                    <p class="fw-bold">
+                        Lời giải:<br> @question.QuestionSolution
+                    </p>
+
+                </div>
+                <hr>
+            }
+        </div>
+    </div>
+    <!-- Modal footer -->
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Lưu</button>
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Đóng</button>
+    </div>
+</form>

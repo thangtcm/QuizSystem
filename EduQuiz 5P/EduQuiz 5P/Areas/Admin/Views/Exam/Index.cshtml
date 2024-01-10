@@ -1,0 +1,122 @@
+﻿@model ICollection<EduQuiz_5P.Models.Exam>
+@{
+    ViewData["Title"] = "Danh sách đề thi";
+}
+
+<div class="content container-fluid">
+    <div class="page-header">
+        <div class="row align-items-center">
+            <div class="col">
+                <h3 class="page-title">@ViewData["Title"]</h3>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a asp-action="Index" asp-controller="HomeAdmin" asp-area="Admin">Dashboard</a></li>
+                    <li class="breadcrumb-item active">@ViewData["Title"]</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="student-group-form">
+        <form asp-action="Index" asp-area="Admin" method="get" class="row">
+            <div class="col-lg-3 col-md-6">
+                <div class="form-group">
+                    <input type="text" name="Name" class="form-control" placeholder="Search by Name ...">
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="search-student-btn">
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card card-table">
+                <div class="card-body">
+                    <div class="page-header">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <h3 class="page-title">@ViewData["Title"]</h3>
+                            </div>
+                            <div class="col-auto text-end float-end ms-auto download-grp">
+                                <a asp-action="CreateFile" asp-area="Admin" class="btn btn-primary">
+                                    <i class="fas fa-file"></i>
+                                </a>
+                            </div>
+                            <div class="col-auto text-end float-end ms-auto download-grp">
+                                <a asp-action="Create" asp-area="Admin" class="btn btn-primary">
+                                    <i class="fas fa-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table border-0 star-student table-hover table-center mb-0 datatable table-striped" style="width:100%">
+                            <thead>
+                                <tr role="row">
+                                    <th>@Html.DisplayNameFor(model => model.First().Id)</th>
+                                    <th>@Html.DisplayNameFor(model => model.First().ExamName)</th>
+                                    <th>@Html.DisplayNameFor(model => model.First().ExamDescription)</th>
+                                    <th>@Html.DisplayNameFor(model => model.First().NumberOfQuestion)</th>
+                                    <th>@Html.DisplayNameFor(model => model.First().ExamTime)</th>
+                                    <th>@Html.DisplayNameFor(model => model.First().UserCreate)</th>
+                                    <th>@Html.DisplayNameFor(model => model.First().IsRemoved)</th>
+                                    <th class="text-end">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr role="row">
+                                        <td>
+                                            @item.Id
+                                        </td>
+                                        <td>
+                                            @item.ExamName
+                                        </td>
+                                        <td>
+                                            @Html.Raw(item.ExamDescription)
+                                        </td>
+                                        <td>
+                                            @item.NumberOfQuestion
+                                        </td>
+                                        <td>
+                                            @item.ExamTime
+                                        </td>
+                                        <td>
+                                            @(item.UserCreate == null ? "SQL CUSTOM" : item.UserCreate.FullName)
+                                        </td>
+                                        <td>
+                                            @{
+                                                bool isRemove = item.IsRemoved;
+                                                if (isRemove)
+                                                {
+                                                    <span class="badge bg-danger-dark">Not Active</span>
+                                                }
+                                                else
+                                                {
+                                                    <span class="badge bg-primary-light">Active</span>
+                                                }
+
+                                            }
+                                        </td>
+                                        <td class="text-end">
+                                            <div class="actions">
+                                                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm bg-success-light me-2">
+                                                    <i data-feather="eye"></i>
+                                                </a>
+                                                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm bg-danger-light">
+                                                    <i data-feather="edit"></i>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

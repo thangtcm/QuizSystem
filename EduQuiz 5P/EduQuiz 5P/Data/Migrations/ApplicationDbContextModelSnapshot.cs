@@ -310,13 +310,13 @@ namespace EduQuiz_5P.Migrations
                     b.Property<string>("ExamName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<double>("ExamTime")
-                        .HasColumnType("float");
+                    b.Property<int>("ExamTime")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ExamType")
+                        .HasColumnType("int");
 
                     b.Property<bool>("IsDefault")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("IsHighSchoolExam")
                         .HasColumnType("bit");
 
                     b.Property<bool>("IsRemoved")
@@ -440,7 +440,7 @@ namespace EduQuiz_5P.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int>("ChappterId")
+                    b.Property<int?>("ChappterId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("DateRemove")
@@ -449,7 +449,7 @@ namespace EduQuiz_5P.Migrations
                     b.Property<DateTime>("DateUpdate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("DifficultyLevel")
+                    b.Property<int?>("DifficultyLevel")
                         .HasColumnType("int");
 
                     b.Property<string>("IsImage")
@@ -478,7 +478,6 @@ namespace EduQuiz_5P.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("QuestionSolution")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<long?>("UserIdRemove")
@@ -787,9 +786,7 @@ namespace EduQuiz_5P.Migrations
                 {
                     b.HasOne("EduQuiz_5P.Models.Chapter", "Chappter")
                         .WithMany("Questions")
-                        .HasForeignKey("ChappterId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ChappterId");
 
                     b.HasOne("EduQuiz_5P.Data.ApplicationUser", "UserRemove")
                         .WithMany()

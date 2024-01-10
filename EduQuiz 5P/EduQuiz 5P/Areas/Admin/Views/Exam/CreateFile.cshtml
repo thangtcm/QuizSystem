@@ -1,0 +1,190 @@
+﻿@using EduQuiz_5P.Enums
+@using EduQuiz_5P.Helpers
+@model EduQuiz_5P.ViewModel.ImportExamFileVM
+@{
+    ViewData["Title"] = "Import đề thi";
+}
+<div class="content container-fluid">
+    <div class="page-header invoices-page-header">
+        <div class="row justify-content-end">
+            <div class="col-auto">
+                <div class="invoices-create-btn">
+                    <button data-bs-toggle="modal" data-bs-target="#PreviewImport"
+                            class="btn delete-invoice-btn">
+                        <i data-feather="eye"></i>
+                        Preview
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-header">
+        <div class="row align-items-center">
+            <div class="col">
+                <h3 class="page-title">@ViewData["Title"]</h3>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Exam">Quản lý đề thi</a></li>
+                    <li class="breadcrumb-item active">@ViewData["Title"]</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-body row">
+                    <div class="col-12">
+                        <h5 class="form-title"><span>Thông tin cơ bản</span></h5>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="form-group local-forms">
+                            <label>Tên Đề Thi<span class="login-danger">*</span></label>
+                            <input class="form-control" id="ExamName" placeholder="Nhập tên đề thi" />
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="form-group local-forms">
+                            <label>Thời gian thi<span class="login-danger">*</span></label>
+                            <input class="form-control" id="ExamTime" type="number" placeholder="Nhập số phút làm bài" />
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group local-forms">
+                            <label>Mô tả đề thi<span class="login-danger">*</span></label>
+                            <textarea id="editor1 ExamDescription" class="editor" cols="30" rows="10"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="form-group local-forms">
+                            <label>Lớp <span class="login-danger">*</span></label>
+                            <select class="form-control select" asp-items="@ViewBag.SelectListClass" id="SelectClass" onchange="getSubjectByClasses(this.value, '#SelectSubject')">
+                                <option value="">Chọn Lớp</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="form-group local-forms">
+                            <label>Môn học <span class="login-danger">*</span></label>
+                            <select class="form-control select" id="SelectSubject">
+                                <option value="">Chọn môn học</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="form-group local-forms">
+                            <label>Loại đề thi <span class="login-danger">*</span></label>
+                            <select asp-for="ExamType" id="ExamType" class="form-control select">
+                                <option value="">Chọn loại đề thi</option>
+                                @foreach (var type in Enum.GetValues(typeof(ExamType)))
+                                {
+                                    <option value="@((int)type)">@CallBack.GetEnumDisplayName((ExamType)type)</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="form-group local-forms">
+                            <label>File Input <span class="login-danger">*</span></label>
+                            <div class="col-md-12">
+                                <input class="form-control" id="fileInput" type="file" placeholder="Chọn File">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="PreviewImport">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Dữ liệu Import đề</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <!-- Modal body -->
+            <div id="previewData">
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $("#fileInput").change(function () {
+                var fileInput = $(this)[0];
+                if (fileInput.files && fileInput.files[0]) {
+                    var formData = new FormData();
+                    formData.append("fileUpload", fileInput.files[0]);
+                    var examName = $("#ExamName").val();
+                    var examDescription = CKEDITOR.instances['editor1 ExamDescription'].getData();
+                    var examTime = $("#ExamTime").val();
+                    if (examName.trim() === '' || examDescription.trim() === '' || examTime.trim() === '') {
+                        toastr.error("Vui lòng điền đầy đủ thông tin.");
+                        $("#fileInput").val('');
+                        return; 
+                    }
+                    formData.append("ExamName", examName);
+                    formData.append("ExamDescription", examDescription);
+                    formData.append("ExamTime", examTime);
+                    var selectSubjectValue = $("#SelectSubject").val();
+                    var selectClassValue = $("#SelectClass").val();
+                    var examTypeValue = $("#ExamType").val();
+                    if (selectSubjectValue !== null && selectSubjectValue !== 0 && selectSubjectValue !== '') {
+                        formData.append("SubjectId", selectSubjectValue);
+                    } else {
+                        toastr.error("Vui lòng chọn môn học");
+                        $("#fileInput").val('');
+                        return;
+                    }
+                    if (examTypeValue !== null && examTypeValue !== 0 && examTypeValue !== '') {
+                        formData.append("ExamType", examTypeValue);
+                    } else {
+                        toastr.error("Vui lòng chọn loại đề thi");
+                        return;
+                    }
+                    // Hiển thị spinner trước khi gửi AJAX request
+                    $('#spinner').removeClass('d-none');
+                    $('#spinner').addClass('show');
+                    $.ajax({
+                        url: "/Admin/Exam/DynamicImportQuestion",
+                        type: "POST",
+                        data: formData,
+                        contentType: false,
+                        processData: false,
+                        success: function (data) {
+                            console.log(data);
+                            // Hiển thị dữ liệu JSON trong modal
+                            $("#previewData").html(data);
+                            renderMathInElement(document.getElementById("previewData"), {
+                                delimiters: [
+                                    { left: '$$', right: '$$', display: true },
+                                    { left: '$', right: '$', display: false },
+                                    { left: "\\(", right: "\\)", display: false },
+                                    { left: "\\begin{equation}", right: "\\end{equation}", display: true },
+                                    { left: "\\begin{align}", right: "\\end{align}", display: true },
+                                    { left: "\\begin{alignat}", right: "\\end{alignat}", display: true },
+                                    { left: "\\begin{gather}", right: "\\end{gather}", display: true },
+                                    { left: "\\begin{CD}", right: "\\end{CD}", display: true },
+                                    { left: "\\begin{tikzpicture}", right: "\\end{tikzpicture}", display: true },
+                                    { left: "\\[", right: "\\]", display: true }
+                                ],
+                                // • rendering keys, e.g.:
+                                ignoredClasses: ["disable-katex-render"],
+                                throwOnError: false
+                            });
+                        },
+                        error: function () {
+                            // Xử lý lỗi nếu có
+                        },
+                        complete: function () {
+                            // Tắt spinner sau khi request hoàn thành
+                            $('#spinner').removeClass('show');
+                            $('#spinner').addClass('d-none');
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+}

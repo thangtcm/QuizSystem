@@ -16,7 +16,7 @@ namespace EduQuiz_5P.ViewModel
         [Display(Name = "Số lượng câu hỏi")]
         public int NumberOfQuestion { get; set; }
         [Display(Name = "Thời gian thi")]
-        public double ExamTime { get; set; }
+        public int ExamTime { get; set; }
         [Display(Name = "Trạng thái")]
         public bool IsRemoved { get; set; }
         [Display(Name = "Ngày tạo")]

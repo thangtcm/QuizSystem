@@ -1,18 +1,12 @@
-﻿@model EduQuiz_5P.ViewModel.ImportQuestionVM
+﻿@using EduQuiz_5P.Enums
+@using EduQuiz_5P.Helpers
+@model EduQuiz_5P.ViewModel.ImportQuestionVM
 @{
     ViewData["Title"] = "Import câu hỏi";
 }
 <div class="content container-fluid">
     <div class="page-header invoices-page-header">
-        <div class="row align-items-center">
-            <div class="col">
-                <div class="invoices-create-btn">
-                    <a href="#" class="btn delete-invoice-btn">
-                        <i data-feather="chevron-left"></i>
-                        Preview
-                    </a>
-                </div>
-            </div>
+        <div class="row justify-content-end">
             <div class="col-auto">
                 <div class="invoices-create-btn">
                     <button data-bs-toggle="modal" data-bs-target="#PreviewImport"
@@ -38,57 +32,151 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="card">
-                <div class="card-body">
-                    <form class="row" asp-action="Create" enctype="multipart/form-data">
-                        <div class="col-12">
-                            <h5 class="form-title"><span>Thông tin cơ bản</span></h5>
+                <div class="card-body row">
+                    <div class="col-12">
+                        <h5 class="form-title"><span>Thông tin cơ bản</span></h5>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="form-group local-forms">
+                            <label>Lớp <span class="login-danger">*</span></label>
+                            <select class="form-control select" asp-items="@ViewBag.SelectListClass" onchange="getSubjectByClasses(this.value, '#SelectSubject')">
+                                <option value="">Chọn Lớp</option>
+                            </select>
                         </div>
-                        <div class="col-12 col-lg-6">
-                            <div class="form-group local-forms">
-                                <label>Lớp <span class="login-danger">*</span></label>
-                                <select class="form-control select" asp-items="@ViewBag.SelectListClass">
-                                    <option value="">Chọn Lớp</option>
-                                </select>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="form-group local-forms">
+                            <label>Môn học <span class="login-danger">*</span></label>
+                            <select class="form-control select" id="SelectSubject" onchange="getChapterbySubject(this.value, '#SelectChapter')">
+                                <option value="">Chọn môn học</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="form-group local-forms">
+                            <label>Chương <span class="login-danger">*</span></label>
+                            <select asp-for="ImportChapterId" id="SelectChapter" class="form-control select">
+                                <option value="">Chọn chương</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="form-group local-forms">
+                            <label>Độ khó <span class="login-danger">*</span></label>
+                            <select asp-for="DifficultyLevel" id="DifficultyLevel" class="form-control select">
+                                <option value="">Chọn Độ khó</option>
+                                @foreach (var type in Enum.GetValues(typeof(DifficultyLevel)))
+                                {
+                                    <option value="@((int)type)">@CallBack.GetEnumDisplayName((DifficultyLevel)type)</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="form-group local-forms">
+                            <label>File Input <span class="login-danger">*</span></label>
+                            <div class="col-md-12">
+                                <input class="form-control" id="fileInput" type="file" placeholder="Chọn File">
                             </div>
                         </div>
-                        <div class="col-12 col-lg-6">
-                            <div class="form-group local-forms">
-                                <label>Môn học <span class="login-danger">*</span></label>
-                                <select class="form-control select">
-                                    <option value="">Chọn môn học</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-6">
-                            <div class="form-group local-forms">
-                                <label>Chương <span class="login-danger">*</span></label>
-                                <select asp-for="ChapterId" class="form-control select">
-                                    <option value="">Chọn chương</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-6">
-                            <div class="form-group local-forms">
-                                <label>Độ khó <span class="login-danger">*</span></label>
-                                <select asp-for="DifficultyLevel" class="form-control select">
-                                    <option value="">Chọn Độ khó</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-6">
-                            <div class="form-group local-forms">
-                                <label>File Input <span class="login-danger">*</span></label>
-                                <div class="col-md-12">
-                                    <input asp-for="UploadFile" class="form-control" type="file" placeholder="Chọn File">
-                                </div>
-                            </div>
-                        </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<div class="modal" id="PreviewImport">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Dữ liệu Import đề</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <!-- Modal body -->
+            <div id="previewData">
+            </div>
+        </div>
+    </div>
+</div>
 @section Scripts{
-    <script></script>
+    <script>
+        $(document).ready(function () {
+            $("#fileInput").change(function () {
+                var fileInput = $(this)[0];
+                if (fileInput.files && fileInput.files[0]) {
+
+                    var formData = new FormData();
+                    formData.append("fileUpload", fileInput.files[0]);
+                    var selectChapterValue = $("#SelectChapter").val();
+                    var difficultyLevelValue = $("#DifficultyLevel").val();
+                    console.log(selectChapterValue + 'và ' + difficultyLevelValue);
+                    if (selectChapterValue !== null && selectChapterValue !== 0 && selectChapterValue !== '') {
+                        formData.append("chapterId", selectChapterValue);
+                    } else {
+                        toastr.error("Vui lòng chọn chương");
+                        return;
+                    }
+
+                    if (difficultyLevelValue !== null && difficultyLevelValue !== 0 && difficultyLevelValue !== '') {
+                        formData.append("difficultyLevel", difficultyLevelValue);
+                    } else {
+                        toastr.error("Vui lòng chọn độ khó");
+                        return;
+                    }
+                    // Hiển thị spinner trước khi gửi AJAX request
+                    $('#spinner').removeClass('d-none');
+                    $('#spinner').addClass('show');
+                    $.ajax({
+                        url: "/Admin/Question/DynamicImportQuestion",
+                        type: "POST",
+                        data: formData,
+                        contentType: false,
+                        processData: false,
+                        success: function (data) {
+                            console.log(data);
+                            // Hiển thị dữ liệu JSON trong modal
+                            $("#previewData").html(data);
+                            renderMathInElement(document.getElementById("previewData"), {
+                                delimiters: [
+                                    { left: '$$', right: '$$', display: true },
+                                    { left: '$', right: '$', display: false },
+                                    { left: "\\(", right: "\\)", display: false },
+                                    { left: "\\begin{equation}", right: "\\end{equation}", display: true },
+                                    { left: "\\begin{align}", right: "\\end{align}", display: true },
+                                    { left: "\\begin{alignat}", right: "\\end{alignat}", display: true },
+                                    { left: "\\begin{gather}", right: "\\end{gather}", display: true },
+                                    { left: "\\begin{CD}", right: "\\end{CD}", display: true },
+                                    { left: "\\begin{tikzpicture}", right: "\\end{tikzpicture}", display: true },
+                                    { left: "\\[", right: "\\]", display: true }
+                                ],
+                                // • rendering keys, e.g.:
+                                ignoredClasses: ["disable-katex-render"],
+                                throwOnError: false
+                            });
+                        },
+                        error: function () {
+                            // Xử lý lỗi nếu có
+                        },
+                        complete: function () {
+                            // Tắt spinner sau khi request hoàn thành
+                            $('#spinner').removeClass('show');
+                            $('#spinner').addClass('d-none');
+                        }
+                    });
+                }
+            });
+        });
+        $(document).ready(function () {
+            // Bắt sự kiện khi người dùng nhấn nút "Lưu"
+            $("#PreviewImport").click(function () {
+                // Lấy giá trị đã chọn từ các dropdown
+                var selectedChapter = $("#chapterSelect").val();
+                var selectedComponent = $("#componentSelect").val();
+
+                // Cập nhật giá trị của các input ẩn
+                $("input[name='ChapterId']").val(selectedChapter);
+                $("input[name='ComponentChapterId']").val(selectedComponent);
+            });
+        });
+    </script>
 }

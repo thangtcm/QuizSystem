@@ -66,6 +66,22 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRXhhbU1hdHJpeFxfRHluYW1pY0FkZEV4YW1NYXRyaXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/QuizSystem/EduQuiz 5P/EduQuiz 5P/Areas/Admin/Views/Exam/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRXhhbVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/QuizSystem/EduQuiz 5P/EduQuiz 5P/Areas/Admin/Views/Exam/CreateFile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRXhhbVxDcmVhdGVGaWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/QuizSystem/EduQuiz 5P/EduQuiz 5P/Areas/Admin/Views/Exam/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRXhhbVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/QuizSystem/EduQuiz 5P/EduQuiz 5P/Areas/Admin/Views/Exam/_DynamicPreview.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRXhhbVxfRHluYW1pY1ByZXZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/QuizSystem/EduQuiz 5P/EduQuiz 5P/Areas/Admin/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
