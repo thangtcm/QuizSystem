@@ -1,0 +1,236 @@
+﻿@using X.PagedList;
+@model EduQuiz_5P.ViewModel.ViewExamList
+
+@{
+    ViewData["Title"] = "Luyện Thi trung học phổ thông";
+}
+
+<section class="container pt-8">
+    <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);"
+         aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Home">Trang chủ</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Luyện Thi THPT</li>
+        </ol>
+    </nav>
+    <div class="py-6">
+        <div class="container">
+            <div class="text-center mx-auto mb-5">
+                <div class="mb-3">
+                    <h5 class="header-title mb-4" style="max-width: 500px; margin: 0 auto;">
+                        Tìm bài thi hoàn hảo
+                        dựa trên nhu cầu và khả năng của bạn.
+                    </h5>
+                    <p class="container">
+                        Bộ câu hỏi luyện thi THPT quốc gia tiếng Anh mang đến môi trường ôn tập
+                        chất lượng, đa dạng, dạng câu hỏi giống đề thi thật, giúp học sinh rèn luyện khả năng
+                        ngôn ngữ và tự tin hơn khi đối mặt với kỳ thi. với những kỳ thi quan trọng.
+                    </p>
+                </div>
+                <div class="mt-5">
+                    <a href="" class="btn btn-primary fw-bold m-2" style="min-width: 15rem;">Lọc bài kiểm tra</a>
+                    <a href="" class="btn btn-primary fw-bold m-2" style="min-width: 15rem;">
+                        Tạo bài kiểm tra cho
+                        bạn
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="nav-subject">
+                <ul id="owl-list-subject" class="owl-carousel owl-theme owl-loaded owl-drag nav">
+                    @foreach(var item in Model.Subjects)
+                    {
+                        <li class="item @(item == Model.Subjects.First() ? "ms-3" : "")" style="min-width: 150px;">
+                            <a class="nav-link @(Model.SelectSubject == item.Id ? "active" : "")" href="@Url.Action("Index", new { subjectId = item.Id })">@item.SubjectName</a>
+                        </li>
+                    }
+                </ul>
+            </div>
+            <div class="row justify-content-center align-items-center gy-3 py-3">
+                @if(Model.ExamList.Count == 0)
+                {
+                    <div class="col-12">
+                        <div class="d-flex align-items-center justify-content-center align-content-center" style="height: 20rem;">
+                            <h5>Không tìm thấy dữ liệu</h5>
+                        </div>
+                    </div>
+                }
+                @foreach(var item in Model.ExamList)
+                {
+                    var ExamDetailsModal = $"ExamDetails{item.ExamId}";
+                    <div class="col-12 col-md-6 col-lg-4 col-xxl-3">
+                        <a class="card-exam" data-bs-toggle="modal" data-bs-target="#@ExamDetailsModal">
+                            <div class="exam-content">
+                                <h5 class="exam-title fw-bold">@item.ExamName</h5>
+                                <div class="my-3">
+                                    <p class="mb-0">Mã đề:<span class="ms-2">@item.ExamId</span></p>
+                                    <p class="mb-0">Môn học:<span class="ms-2">@item.SubjectName</span></p>
+                                    <p class="mb-0">Số câu:<span class="ms-2">@item.NumberOfQuestion</span></p>
+                                    <p>Thời gian làm bài:<span class="ms-2">@item.ExamTime phút</span></p>
+                                </div>
+                                <div class=" row align-items-center justify-content-between g-3">
+                                    <div class="avatar-group mb-2 col col-auto">
+                                        <div class="avatar">
+                                            <img class="avatar-img rounded-circle border border-white"
+                                                 src="~/img/gallery/author-1.png" alt="" />
+                                        </div>
+                                        <div class="avatar">
+                                            <img class="avatar-img rounded-circle border border-white"
+                                                 src="~/img/gallery/author-2.png" alt="" />
+                                        </div>
+                                        <div class="avatar">
+                                            <img class="avatar-img rounded-circle border border-white"
+                                                 src="~/img/gallery/author-3.png" alt="" />
+                                        </div>
+                                        <div class="avatar" style="width: auto;">
+                                            <span class="avatar-name rounded-circle">+40 người khác</span>
+                                        </div>
+                                    </div>
+                                    <form class="avatar-group mb-2 col col-auto">
+                                        <input type="text" name="" id="" hidden>
+                                        <button type="submit" class="avatar bookmark">
+                                            <span class="rounded-circle "><i class="far fa-bookmark"></i></span>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="modal fade" id="@ExamDetailsModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                         aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header border-0">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body border-0 exam-detail">
+                                    <div class="container-fluid">
+                                        <h5 class="fw-bold text-center mb-5">@item.ExamName</h5>
+                                        <div class="exam-typequestion">
+                                            <div class="row align-content-center align-items-center gy-3 mb-2">
+                                                <div class="col-12 col-lg-3">
+                                                    <h5 class="mb-0 fw-semi-bold">Nhận biết</h5>
+                                                </div>
+                                                <div class="col-2 col-lg-2 pe-1 text-end">
+                                                    <span>@item.KnowQuestion %</span>
+                                                </div>
+                                                <div class="col-10 col-lg-7">
+                                                    <div class="progress" data-index="1">
+                                                        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: @(item.KnowQuestion)%;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row align-content-center align-items-center gy-3 mb-2">
+                                                <div class="col-12 col-lg-3">
+                                                    <h5 class="mb-0 fw-semi-bold">Thông hiểu</h5>
+                                                </div>
+                                                <div class="col-2 col-lg-2 pe-1 text-end">
+                                                    <span>@(item.UnderstandQuestion)%</span>
+                                                </div>
+                                                <div class="col-10 col-lg-7">
+                                                    <div class="progress" data-index="2">
+                                                        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: @(item.UnderstandQuestion)%;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row align-content-center align-items-center gy-3 mb-2">
+                                                <div class="col-12 col-lg-3">
+                                                    <h5 class="mb-0 fw-semi-bold">Vận dụng</h5>
+                                                </div>
+                                                <div class="col-2 col-lg-2 pe-1 text-end">
+                                                    <span>@(item.ManipulateQuestion)%</span>
+                                                </div>
+                                                <div class="col-10 col-lg-7">
+                                                    <div class="progress" data-index="3">
+                                                        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: @(item.ManipulateQuestion)%;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h5 class="fw-bold text-center mb-5">Thông tin chung</h5>
+                                        <div class="exam-info">
+                                            <div class="row gy-3">
+                                                <div class="col-12 col-lg-6">
+                                                    <div class="card">
+                                                        <div class="col-4 col-md-3">
+                                                            <img src="~/img/Frame 154.png" alt="">
+                                                        </div>
+                                                        <div class="col-8 col-md-9">
+                                                            <p>Sau khi hoàn thành, bạn có thể thấy ngay câu trả lời.</p>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-lg-6">
+                                                    <div class="card">
+                                                        <div class="col-4 col-md-3">
+                                                            <img src="~/img/Frame 15124.png" alt="">
+                                                        </div>
+                                                        <div class="col-8 col-md-9">
+                                                            <p>Sau khi hoàn thành, bạn có thể thấy ngay câu trả lời.</p>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-lg-6">
+                                                    <div class="card">
+                                                        <div class="col-4 col-md-3">
+                                                            <img src="~/img/Frame 1514.png" alt="">
+                                                        </div>
+                                                        <div class="col-8 col-md-9">
+                                                            <p>Đánh giá điểm mạnh, điểm yếu và phương pháp đào tạo.</p>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-lg-6">
+                                                    <div class="card">
+                                                        <div class="col-4 col-md-3">
+                                                            <img src="~/img/6.png" alt="">
+                                                        </div>
+                                                        <div class="col-8 col-md-9">
+                                                            <p>Câu hỏi được cập nhật liên tục và mới nhất</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer border-0 justify-content-center">
+                                    <a href="" class="btn btn-secondary me-2" data-bs-dismiss="modal">Đóng</a>
+                                    <a class="btn btn-primary" href="@Url.Action("Take", "UserExam", new { ExamId = item.ExamId })">Bắt đầu</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+            @if (Model.ExamList.Count > 0)
+            {
+                <div class="row ">
+                    <div class="col-md-12">
+                        <div class="pagination-tab  d-flex justify-content-center">
+                            <ul class="pagination mb-0">
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="@Url.Action("Index", new { page = Model.ExamList.PageNumber - 1 })" tabindex="-1" @(Model.ExamList.HasPreviousPage ? "disabled" : "")><i class="fas fa-angle-left"></i></a>
+                                </li>
+                                @for (int pageNumber = 1; pageNumber <= Model.ExamList.PageCount; pageNumber++)
+                                {
+                                    <li class="page-item @(pageNumber == Model.ExamList.PageNumber ? "active" : "")">
+                                        <a class="page-link" href="@Url.Action("Index", new { page = pageNumber })">@pageNumber</a>
+                                    </li>
+                                }
+                                <li class="page-item">
+                                    <a class="page-link" href="@Url.Action("Index", new { page = Model.ExamList.PageNumber + 1 })" @(Model.ExamList.HasNextPage ? "disabled" : "")><i class="fas fa-angle-right"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

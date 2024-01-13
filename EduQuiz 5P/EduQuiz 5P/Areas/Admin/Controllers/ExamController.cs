@@ -20,14 +20,16 @@ namespace EduQuiz_5P.Areas.Admin.Controllers
         private readonly IExamMatrixService _examMatrix;
         private readonly IQuestionService _questionService;
         private readonly IClassService _classService;
+        private readonly ISubjectService _subjectService;
         public ExamController(IExamService examService, IUserService userService,
-            IExamMatrixService examMatrix, IQuestionService questionService, IClassService classService)
+            IExamMatrixService examMatrix, IQuestionService questionService, IClassService classService, ISubjectService subjectService)
         {
             _examService = examService;
             _userService = userService;
             _examMatrix = examMatrix;
             _questionService = questionService;
             _classService = classService;
+            _subjectService = subjectService;
         }
         public async Task<IActionResult> Index()
         {
@@ -70,7 +72,9 @@ namespace EduQuiz_5P.Areas.Admin.Controllers
         public async Task<IActionResult> CreateFile()
         {
             var classlist = await _classService.GetListAsync();
+            var subjectlist = await _subjectService.GetListAsync();
             ViewData["SelectListClass"] = new SelectList(classlist, "Id", "ClassName");
+            ViewData["SelectListSubject"] = new SelectList(subjectlist, "Id", "SubjectName");
             return View();
         }
 

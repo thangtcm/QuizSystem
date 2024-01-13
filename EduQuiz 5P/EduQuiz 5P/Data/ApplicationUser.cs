@@ -19,7 +19,7 @@ namespace EduQuiz_5P.Data
         public DateTime Birthday { get; set; }
         public Gender Gender { get; set; }
         public string? ImgAvatar { get; set; }
-
+        public double Point { get; set; }
         public ApplicationUser() { }
 
     }

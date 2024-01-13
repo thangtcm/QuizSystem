@@ -29,13 +29,13 @@ namespace EduQuiz_5P.Models
         [ForeignKey("UserIdRemove")]
         [Display(Name = "Người xóa")]
         public ApplicationUser? UserRemove { get; set; }
-        public virtual ICollection<Subject>? Subject { get; set; }
+        public virtual ICollection<Chapter>? Chapter { get; set; }
         public Classes() { }
 
         public Classes(Classes model)
         {
             ClassName = model.ClassName;
-            Subject = model.Subject;
+            Chapter = model.Chapter;
         }
     }
 }

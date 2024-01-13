@@ -186,6 +186,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/QuizSystem/EduQuiz 5P/EduQuiz 5P/Views/Account/ChangePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxDaGFuZ2VQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/QuizSystem/EduQuiz 5P/EduQuiz 5P/Views/Account/EmailConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxFbWFpbENvbmZpcm1hdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -198,12 +202,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/QuizSystem/EduQuiz 5P/EduQuiz 5P/Views/Account/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxQcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/QuizSystem/EduQuiz 5P/EduQuiz 5P/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/QuizSystem/EduQuiz 5P/EduQuiz 5P/Views/Account/_LayoutAccount.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxfTGF5b3V0QWNjb3VudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/QuizSystem/EduQuiz 5P/EduQuiz 5P/Views/Account/_NavMenuProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxfTmF2TWVudVByb2ZpbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/QuizSystem/EduQuiz 5P/EduQuiz 5P/Views/Exam/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/QuizSystem/EduQuiz 5P/EduQuiz 5P/Views/Home/Index.cshtml]
@@ -240,6 +256,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/QuizSystem/EduQuiz 5P/EduQuiz 5P/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/QuizSystem/EduQuiz 5P/EduQuiz 5P/Views/UserExam/Result.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckV4YW1cUmVzdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/QuizSystem/EduQuiz 5P/EduQuiz 5P/Views/UserExam/TakeExam.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckV4YW1cVGFrZUV4YW0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/QuizSystem/EduQuiz 5P/EduQuiz 5P/Views/UserExam/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckV4YW1cX0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/QuizSystem/EduQuiz 5P/EduQuiz 5P/Views/_ViewImports.cshtml]

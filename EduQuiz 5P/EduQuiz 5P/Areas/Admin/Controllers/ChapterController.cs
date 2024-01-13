@@ -19,22 +19,23 @@ namespace EduQuiz_5P.Areas.Admin.Controllers
         private IChapterService _chapterService;
         private readonly IUserService _userService;
         private readonly IClassService _classService;
+        private readonly ISubjectService _subjectService;
         public ChapterController(ILogger<ChapterController> logger, IChapterService chapterService, IUserService userService, 
-            IClassService classService)
+            IClassService classService, ISubjectService subjectService)
         {
             _logger = logger;
             _chapterService = chapterService;
             _userService = userService;
             _classService = classService;
+            _subjectService = subjectService;
         }
 
-        public async Task<IActionResult> Index(int? chapterId = null,int? subjectId = null)
+        public async Task<IActionResult> Index(int? classId = null,int? subjectId = null)
         {
             ICollection<Chapter> Chapterlst = new List<Chapter>();
             try
             {
-       
-                Chapterlst = await _chapterService.GetListAsync(chapterId, subjectId, x => x.Include(s => s.Subject));
+                Chapterlst = await _chapterService.GetListAsync(classId, subjectId, x => x.Include(s => s.Subject));
                 this.AddToastrMessage("Tải dữ liệu thành công.", Enums.ToastrMessageType.Success);
             }
             catch (Exception ex)
@@ -43,16 +44,19 @@ namespace EduQuiz_5P.Areas.Admin.Controllers
                 this.AddToastrMessage("Đã có lỗi xảy ra.", Enums.ToastrMessageType.Error);
             }
             var classLst = await _classService.GetListAsync();
-            ViewData["ClassList"] = new SelectList(classLst, "Id", "ClassName");
+            var subjectLst = await _subjectService.GetListAsync();
+            ViewData["ClassList"] = new SelectList(classLst, "Id", "ClassName", classId);
+            ViewData["SubjectList"] = new SelectList(subjectLst, "Id", "SubjectName", subjectId);
             return View(Chapterlst);
         }
 
         public async Task<IActionResult> Create()
         {
             var classLst = await _classService.GetListAsync();
+            var subjectLst = await _subjectService.GetListAsync();
             ICollection<Chapter> chapters = new List<Chapter>()
             {
-                new Chapter() {SelectClass = new SelectList(classLst, "Id", "ClassName")}
+                new Chapter() {SelectClass = new SelectList(classLst, "Id", "ClassName"), SelectSubject = new SelectList(subjectLst, "Id", "SubjectName")}
             };
             return View(chapters.ToList());
         }
@@ -80,21 +84,47 @@ namespace EduQuiz_5P.Areas.Admin.Controllers
             return View(chapters);
         }
 
+        public IActionResult Edit(int? id)
+        {
+            var subject = _subjectService.GetById(id);
+            if (subject == null)
+            {
+                return NotFound();
+            }
+            return View(subject);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, Subject model)
+        {
+            try
+            {
+                await _subjectService.Update(model);
+                return RedirectToAction(nameof(Index));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Lỗi Khi cập nhật Một Class : \n" + ex.ToString() + "\n\n");
+            }
+            return View(model);
+        }
 
         public async Task<IActionResult> CreatePartial()
         {
             var classLst = await _classService.GetListAsync();
+            var subjectLst = await _subjectService.GetListAsync();
             ICollection<Chapter> chapters = new List<Chapter>()
             {
-                new () {SelectClass = new SelectList(classLst, "Id", "ClassName")}
+                new Chapter() {SelectClass = new SelectList(classLst, "Id", "ClassName"), SelectSubject = new SelectList(subjectLst, "Id", "SubjectName")}
             };
             return PartialView("_DynamicAddChapter", chapters.ToList());
         }
 
-        public async Task<IActionResult> LoadChapter(int subjectId)
+        public async Task<IActionResult> LoadChapter(int? classId, int? subjectId)
         {
-            var chapterlst = await _chapterService.GetListAsync(null, subjectId);
-            var selectList = new SelectList(chapterlst, "Id", "ChapterName");
+            var chapterlst = await _chapterService.GetListAsync(classId, subjectId, x => x.Include(c => c.Classes!).Include(s => s.Subject!));
+            var selectList = new SelectList(chapterlst, "Id", "DisplayText");
             return Json(selectList);
         }
     }

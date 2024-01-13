@@ -27,14 +27,14 @@
             </div>
             <div class="col-lg-3 col-md-6">
                 <div class="form-group">
-                    <select name="chapterId" asp-items="@ViewBag.ClassList" class="form-control select" onchange="getSubjectByClasses(this.value, '#SelectSubject')">
+                    <select name="classId" asp-items="@ViewBag.ClassList" class="form-control select">
                         <option value="">Chọn lớp</option>
                     </select>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
                 <div class="form-group">
-                    <select id="SelectSubject" name="subjectId" class="form-control select">
+                    <select id="SelectSubject" name="subjectId" class="form-control select" asp-items="@ViewBag.SubjectList">
                         <option value="">Chọn môn học</option>
                     </select>
                 </div>

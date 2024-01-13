@@ -8,7 +8,7 @@
 <div class="custom-shape"></div>
 <div class="min-vh-100 container d-flex justify-content-center align-items-center">
     <div class="card p-lg-5 my-5 shadow shadow-lg rounded" style="max-width: 100vh;">
-        <div class="row g-0">
+        <div class="row g-0 align-items-center">
             <div class="col-md-6">
                 <img src="~/img/profile/imageleft.png" class="img-fluid rounded-start" alt="...">
             </div>
@@ -18,49 +18,49 @@
                         <div class="text-center pb-5">
                             <h4 class="card-title">Sign up</h4>
                             <div class="d-inline-block w-100">
-                                <p class="card-text mt-0 ">Do you already have an account?<a href="#" class="ms-2">Sign in</a></p>
+                                <p class="card-text mt-0 ">Bạn đã có tài khoản?<a href="#" class="ms-2">Đăng nhập</a></p>
                             </div>
                         </div>
                         <form asp-action="Register" asp-controller="Account" asp-area="">
                             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                             <div class="mb-3">
-                                <label class="form-label">UserName:</label>
+                                <label class="form-label">Tên tài khoản:</label>
                                 <input asp-for="UserName" class="form-control" placeholder="Thangepe" required>
                             </div>
                             <div class="mb-3">
-                                <label class="form-label">FullName:</label>
-                                <input asp-for="FullName" class="form-control" placeholder="John Angner">
+                                <label class="form-label">Họ và tên:</label>
+                                <input asp-for="FullName" class="form-control" placeholder="Trần Cao Minh Thắng">
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Email:</label>
                                 <input asp-for="Email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nhập email của bạn" required>
-                                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                                <div id="emailHelp" class="form-text">Chúng tôi sẽ không bao giờ chia sẻ email của bạn với bất kỳ ai khác.</div>
                             </div>
                             <div class="mb-3">
-                                <label class="form-label">Gender:</label>
+                                <label class="form-label">Giới tính:</label>
                                 <select class="form-select">
-                                    <option value="">Select Gender</option>
-                                    <option value="0">Male</option>
-                                    <option value="1">Female</option>
-                                    <option value="2">Another</option>
+                                    <option value="">Chọn giới tính</option>
+                                    <option value="0">Nam</option>
+                                    <option value="1">Nữ</option>
+                                    <option value="2">Khác</option>
                                 </select>
                             </div>
                             <div class="mb-3">
-                                <label class="form-label">Password</label>
-                                <input asp-for="Password" class="form-control" placeholder="Enter your password" required>
+                                <label class="form-label">Mật khẩu</label>
+                                <input asp-for="Password" class="form-control" placeholder="Nhập mật khẩu" required>
                             </div>
                             <div class="mb-3">
-                                <label class="form-label">Confirm Password</label>
-                                <input asp-for="PasswordOld" class="form-control" placeholder="Enter your confirm password" required>
+                                <label class="form-label">Xác nhận mật khẩu</label>
+                                <input asp-for="PasswordOld" class="form-control" placeholder="Nhập lại mật khẩu" required>
                             </div>
                             <div class="d-flex justify-content-center align-items-center">
                                 <p class="text-center" style="color: #333; font-size: 13px;">
-                                    When you click Sign Up, you agree to our policies and
-                                    Terms of use.
+                                    Khi bạn nhấp vào Đăng ký, bạn đồng ý với các chính sách của chúng tôi và
+                                    Điều khoản sử dụng.
                                 </p>
                             </div>
 
-                            <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+                            <button type="submit" class="btn btn-primary w-100">Đăng ký</button>
                         </form>
                     </div>
                 </div>

@@ -9,15 +9,6 @@
             <span asp-validation-for="@Model[0].SubjectName" class="text-danger"></span>
         </div>
     </div>
-    <div class="col-12 col-sm-6">
-        <div class="form-group local-forms">
-            <label>Lớp <span class="login-danger">*</span></label>
-            <select asp-for="@Model[0].ClassesId" class="form-control select" asp-items="@Model[0].SelectClass">
-                <option value="">Chọn lớp</option>
-            </select>
-            <span asp-validation-for="@Model[0].ClassesId" class="text-danger"></span>
-        </div>
-    </div>
     <div class="col-12">
         <div class="form-group local-forms">
             <label>Mô tả môn học <span class="login-danger">*</span></label>

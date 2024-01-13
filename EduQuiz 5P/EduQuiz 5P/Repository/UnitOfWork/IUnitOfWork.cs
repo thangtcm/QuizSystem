@@ -15,6 +15,8 @@ namespace EduQuiz_5P.Repository.UnitOfWork
         IExamMatrixRepository ExamMatrixRepository { get; }
         IExamMatrixDetailRepository ExamMatrixDetailRepository { get; }
         IExamRepository ExamRepository { get; }
+        IUserExamRepository UserExamRepository { get; }
+        IUserExamDetailRepository UserExamDetailRepository { get; }
         void Commit();
         void Rollback();
         Task CommitAsync();

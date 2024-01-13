@@ -57,6 +57,8 @@ builder.Services.AddScoped<IAnswerRepository, AnswerRepository>();
 builder.Services.AddScoped<IExamRepository, ExamRepository>();
 builder.Services.AddScoped<IExamMatrixRepository, ExamMatrixRepository>();
 builder.Services.AddScoped<IExamMatrixDetailRepository, ExamMatrixDetailRepository>();
+builder.Services.AddScoped<IUserExamRepository, UserExamRepository>();
+builder.Services.AddScoped<IUserExamDetailRepository, UserExamDetailRepository>();
 
 //
 builder.Services.AddTransient(typeof(IUserService), typeof(UserService));
@@ -72,6 +74,8 @@ builder.Services.AddScoped<IUserEmailStore<ApplicationUser>, UserStore<Applicati
 builder.Services.AddScoped<IUserRoleStore<ApplicationUser>, UserStore<ApplicationUser, ApplicationRole, ApplicationDbContext, long>>();
 builder.Services.AddScoped<UserManager<ApplicationUser>>();
 builder.Services.AddTransient(typeof(IFirebaseStorageService), typeof(FirebaseStorageService));
+builder.Services.AddTransient(typeof(IUserExamService), typeof(UserExamService));
+builder.Services.AddTransient(typeof(IUserExamDetailService), typeof(UserExamDetailService));
 
 //Mail
 builder.Services.AddOptions();
@@ -104,11 +108,13 @@ builder.Services.ConfigureApplicationCookie(options =>
 {
     // Cookie settings
     options.Cookie.HttpOnly = true;
+    options.ExpireTimeSpan = TimeSpan.FromDays(1);
     options.Cookie.SameSite = SameSiteMode.None;
     options.LoginPath = "/Account/Login";
     options.AccessDeniedPath = "/Identity/Account/AccessDenied";
     options.SlidingExpiration = true;
 });
+builder.Services.AddHttpClient();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

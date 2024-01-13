@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\css\themeexam.css" />
     <_ContentIncludedByDefault Remove="wwwroot\js\general.js" />
   </ItemGroup>
 
@@ -48,6 +49,7 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.16" />
     <PackageReference Include="MimeKit" Version="4.3.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="X.PagedList" Version="8.4.7" />
   </ItemGroup>
 
   <ItemGroup>

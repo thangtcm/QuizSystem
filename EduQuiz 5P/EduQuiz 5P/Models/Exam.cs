@@ -47,7 +47,10 @@ namespace EduQuiz_5P.Models
         public bool IsDefault { get; set; }
         public ExamType ExamType { get; set; }
         public int TotalUserExam { get; set; }
-        public string ListQuestion { get; set; }
+        public ICollection<Question> Questions { get; set; }
+        public double KnowQuestion { get; set; }
+        public double UnderstandQuestion { get; set; }
+        public double ManipulateQuestion { get; set; }
 
         public void ExamCreate(ExamInfoVM model, long UserIdControl)
         {
@@ -58,7 +61,6 @@ namespace EduQuiz_5P.Models
             IsRemoved = model.IsRemoved;
             IsDefault = model.IsDefault;
             TotalUserExam = model.TotalUserExam;
-            ListQuestion = (model.ListQuestion is null || model.ListQuestion.Count == 0) ? "" : string.Join(", ", model.ListQuestion);
             UserIdCreate = UserIdControl;
             DateCreate = DateTime.UtcNow.ToTimeZone();
         }

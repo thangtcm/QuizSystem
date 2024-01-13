@@ -23,20 +23,25 @@ namespace EduQuiz_5P.Services
 
         public async Task<ICollection<Exam>> GetExamDefaultList(int? ClassId = null, int? SubjectId = null, int? ChapterId = null, Func<IQueryable<Exam>, IIncludableQueryable<Exam, object>>? includes = null)
         {
-            if (ClassId.HasValue && SubjectId.HasValue && ChapterId.HasValue)
+            var exams = await _unitOfWork.ExamRepository.GetAllAsync(e => e.IsDefault, includes);
+
+            var query = exams.AsQueryable();
+
+            if (ClassId.HasValue)
             {
-                return await _unitOfWork.ExamRepository.GetAllAsync(e => e.IsDefault && e.ChapterId == ChapterId, includes);
+                query = query.Where(e => e.ClassId == ClassId);
             }
-            else if (ClassId.HasValue && SubjectId.HasValue && !ChapterId.HasValue)
+
+            if (SubjectId.HasValue)
             {
-                return await _unitOfWork.ExamRepository.GetAllAsync(e => e.IsDefault && e.SubjectId == SubjectId, includes);
+                query = query.Where(e => e.SubjectId == SubjectId);
             }
-            else if (ClassId.HasValue && !SubjectId.HasValue && !ChapterId.HasValue)
+
+            if (ChapterId.HasValue)
             {
-                return await _unitOfWork.ExamRepository.GetAllAsync(e => e.IsDefault && e.ClassId == ClassId, includes);
+                query = query.Where(e => e.ChapterId == ChapterId);
             }
-            else
-                return await _unitOfWork.ExamRepository.GetAllAsync(e => e.IsDefault);
+            return query.ToList();
         }
 
         public async Task<ICollection<Exam>> GetExamOwnerList(long userId, int? ClassId = null, int? SubjectId = null, int? ChapterId = null, Func<IQueryable<Exam>, IIncludableQueryable<Exam, object>>? includes = null)
@@ -72,8 +77,28 @@ namespace EduQuiz_5P.Services
             throw new NotImplementedException();
         }
 
-        public async Task<ICollection<Exam>> GetListAsync(Func<IQueryable<Exam>, IIncludableQueryable<Exam, object>>? includes = null)
-            => await _unitOfWork.ExamRepository.GetAllAsync(null, includes);
+        public async Task<ICollection<Exam>> GetListAsync(int? ClassId = null, int? SubjectId = null, int? ChapterId = null, Func<IQueryable<Exam>, IIncludableQueryable<Exam, object>>? includes = null)
+        {
+            var exams = await _unitOfWork.ExamRepository.GetAllAsync(null, includes);
+            
+            var query = exams.AsQueryable();
+
+            if (ClassId.HasValue)
+            {
+                query = query.Where(e => e.ClassId == ClassId);
+            }
+
+            if (SubjectId.HasValue)
+            {
+                query = query.Where(e => e.SubjectId == SubjectId);
+            }
+
+            if (ChapterId.HasValue)
+            {
+                query = query.Where(e => e.ChapterId == ChapterId);
+            }
+            return query.ToList();
+        }
 
         public async Task<Exam?> GetByIdAsync(int Id)
            => await _unitOfWork.ExamRepository.GetAsync(x => x.Id == Id);
@@ -145,7 +170,7 @@ namespace EduQuiz_5P.Services
                 NumberOfQuestion = questions.Count,
                 IsRemoved = false,
                 DateCreate = DateTime.UtcNow.ToTimeZone(),
-                ListQuestion = string.Join(", ", questions.Select(x => x.Id).ToList()),
+                Questions = questions,
                 TotalUserExam = 0,
                 SubjectId = model.ExamSubjectId
             };

@@ -4,6 +4,7 @@
 @using EduQuiz_5P.Models;
 
 @{
+    var SelectClass = "SelectClass0";
     var SelectSubject = $"SelectSubject0";
     var SelectChapter = $"SelectChapter0";
 }
@@ -13,7 +14,7 @@
     <div class="col-12 col-sm-6">
         <div class="form-group local-forms">
             <label>Lớp <span class="login-danger">*</span></label>
-            <select class="form-control select" onchange="getSubjectByClasses(this.value, '#@SelectSubject')" asp-items="@Model[0].SelectListClass">
+            <select class="form-control select" id="@SelectClass" onchange="getChapter(this, '#@SelectSubject', '@SelectChapter')" asp-items="@Model[0].SelectListClass">
                 <option value="">Chọn lớp</option>
             </select>
         </div>
@@ -21,7 +22,7 @@
     <div class="col-12 col-sm-6">
         <div class="form-group local-forms">
             <label>Môn học<span class="login-danger">*</span></label>
-            <select id="@SelectSubject" class="form-control select" onchange="getChapterbySubject(this.value, '#@SelectChapter')">
+            <select id="@SelectSubject" class="form-control select" onchange="getChapter('@SelectClass', this, '#@SelectChapter')">
                 <option value="">Chọn môn học</option>
             </select>
         </div>

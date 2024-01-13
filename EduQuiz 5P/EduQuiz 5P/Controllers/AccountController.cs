@@ -1,8 +1,10 @@
 ﻿using EduQuiz_5P.Data;
 using EduQuiz_5P.Enums;
 using EduQuiz_5P.Helpers;
+using EduQuiz_5P.Services.Interface;
 using EduQuiz_5P.ViewModel;
 using Microsoft.AspNetCore.Authentication.Google;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -20,11 +22,12 @@ namespace EduQuiz_5P.Controllers
         private readonly IUserStore<ApplicationUser> _userStore;
         private readonly IUserEmailStore<ApplicationUser> _emailStore;
         private readonly IEmailSender _emailSender;
+        private readonly IUserService _userService;
         public AccountController(ILogger<AccountController> logger, UserManager<ApplicationUser> userManager, 
             SignInManager<ApplicationUser> signInManager, 
             IPasswordValidator<ApplicationUser> passwordValidator,
             IEmailSender emailSender, IUserStore<ApplicationUser> userStore,
-            IUserEmailStore<ApplicationUser> emailStore)
+            IUserEmailStore<ApplicationUser> emailStore, IUserService userService)
         {
             _logger = logger;
             _signInManager = signInManager;
@@ -33,10 +36,12 @@ namespace EduQuiz_5P.Controllers
             _emailSender = emailSender;
             _userStore = userStore;
             _emailStore = emailStore;
+            _userService = userService;
         }
 
-        public async Task<IActionResult> Login()
+        public async Task<IActionResult> Login(string? returnUrl = null)
         {
+            TempData["ReturnUrl"] = returnUrl;
             UserInfoVM model = new ();
             model.ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             return View(model);
@@ -148,6 +153,7 @@ namespace EduQuiz_5P.Controllers
         {
             try
             {
+                var returnUrl = TempData["ReturnUrl"]?.ToString() ?? Url.Content("~/");
                 model.ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
                 if (!ModelState.IsValid)
                 {
@@ -158,7 +164,7 @@ namespace EduQuiz_5P.Controllers
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");
-                    return RedirectToAction("Index", "Home");
+                    return LocalRedirect(returnUrl);
                 }
                 else
                 {
@@ -216,16 +222,16 @@ namespace EduQuiz_5P.Controllers
                 }
                 Random random = new();
                 var code = random.Next(1000, 9999);
-                UserCode userCode = new ()
+                VerifyEmailVM verifyEmail = new ()
                 {
                     User = model,
                     Code = code,
-                    DateSend = DateTime.UtcNow.AddMinutes(5).ToTimeZone()
+                    ExpiryCode = DateTime.UtcNow.AddMinutes(5).ToTimeZone(),
+                    EmailType = VerifyEmailType.Register,
+                    Email = model.Email ?? ""
                 };
                 await _emailSender.SendEmailAsync(model.Email, "[LuyenToan.Online] Xác nhận email", CallBack.GetMailHtml(model.Email, model.FullName, code));
-                var data = JsonConvert.SerializeObject(userCode);
-                Console.WriteLine($"Data là {data}");
-                HttpContext.Session.SetString(Constants.CodeSession, data);
+                HttpContext.Session.SetObjectAsJson(Constants.CodeSession, verifyEmail);
                 return RedirectToAction("EmailConfirmation", "Account");
             }
             catch (Exception ex)
@@ -238,7 +244,7 @@ namespace EduQuiz_5P.Controllers
 
         public IActionResult EmailConfirmation()
         {
-            var model = HttpContext.Session.GetString(Constants.CodeSession);
+            var model = HttpContext.Session.GetObjectFromJson<VerifyEmailVM>(Constants.CodeSession) ?? new VerifyEmailVM();
             if (model == null)
             {
                 return View();
@@ -251,41 +257,47 @@ namespace EduQuiz_5P.Controllers
         {
             try
             {
-                var model = HttpContext.Session.GetString(Constants.CodeSession);
+                var model = HttpContext.Session.GetObjectFromJson<VerifyEmailVM>(Constants.CodeSession) ?? new VerifyEmailVM();
                 if (model == null)
                 {
                     return RedirectToAction("Login", "Account");
                 }
-                var userCode = JsonConvert.DeserializeObject<UserCode>(model);
-                if(userCode == null)
+                if(model.ExpiryCode <= DateTime.UtcNow.ToTimeZone() || model.Code != code)
                 {
-                    return RedirectToAction("Login", "Account");
-                }
-                if(userCode.DateSend <= DateTime.UtcNow.ToTimeZone() || userCode.Code != code)
-                {
-                    ModelState.AddModelError(string.Empty, "Authentication code does not exist.");
+                    ModelState.AddModelError(string.Empty, "Mã code không tồn tại.");
                     return View();
                 }    
-                else
+                switch(model.EmailType)
                 {
-                    var user = CreateUser();
-                    user.FullName = userCode.User.FullName ?? string.Empty;
-                    user.Gender = userCode.User.Gender ?? Gender.Another;
-                    await _userStore.SetUserNameAsync(user, userCode.User.UserName, CancellationToken.None);
-                    await _emailStore.SetEmailAsync(user, userCode.User.Email, CancellationToken.None);
-                    user.EmailConfirmed = true;
-                    var result = await _userManager.CreateAsync(user, userCode.User.Password);
-                    if (result.Succeeded)
+                    case VerifyEmailType.Register:
                     {
-                        HttpContext.Session.Remove(Constants.CodeSession);
-                        return RedirectToAction("Login", "Account");
+                        if(model.User == null)
+                        {
+                            this.AddToastrMessage("Đã có lỗi xảy ra, vui lòng đăng ký lại.", ToastrMessageType.Error);
+                            return RedirectToAction(nameof(Register));
+                        }    
+                        var user = CreateUser();
+                        user.FullName = model.User.FullName ?? string.Empty;
+                        user.Gender = model.User.Gender ?? Gender.Another;
+                        await _userStore.SetUserNameAsync(user, model.User.UserName, CancellationToken.None);
+                        await _emailStore.SetEmailAsync(user, model.User.Email, CancellationToken.None);
+                        user.EmailConfirmed = true;
+                        var result = await _userManager.CreateAsync(user, model.User.Password);
+                        if (result.Succeeded)
+                        {
+                            HttpContext.Session.Remove(Constants.CodeSession);
+                            return RedirectToAction("Login", "Account");
+                        }
+                        ModelState.AddModelError(string.Empty, "Confirm Email Not Success.");
+                        break;
                     }
-                    ModelState.AddModelError(string.Empty, "Confirm Email Not Success.");
-                    return View();
+                    case VerifyEmailType.Password:
+                    {
+                        break;
+                    }
                 }
-
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 _logger.LogError(ex.Message.ToString());
             }
@@ -304,6 +316,111 @@ namespace EduQuiz_5P.Controllers
                 throw new InvalidOperationException($"Can't create an instance of '{nameof(ApplicationUser)}'. " +
                     $"Ensure that '{nameof(ApplicationUser)}' is not an abstract class and has a parameterless constructor, or alternatively " +
                     $"override the register page in /Areas/Identity/Pages/Account/Register.cshtml");
+            }
+        }
+
+        [Authorize]
+        public async Task<IActionResult> ChangePassword()
+        {
+            try
+            {
+                var user = await _userService.GetUser();
+                if (user == null)
+                {
+                    ModelState.AddModelError(string.Empty, "Bạn cần đăng nhập.");
+                    return View();
+                }
+                return View(new UserInfoVM(user));
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message);
+            }
+            return View();
+        }
+
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> ChangePassword(UserInfoVM model)
+        {
+            try
+            {
+                if (!model.UserId.HasValue)
+                {
+                    this.AddToastrMessage("Bạn cần đăng nhập và thử lại.", ToastrMessageType.Error);
+                    return RedirectToAction(nameof(Profile));
+                }
+                var user = await _userService.GetUser(model.UserId.Value);
+                if (user is null)
+                {
+                    this.AddToastrMessage("Bạn cần đăng nhập và thử lại.", ToastrMessageType.Error);
+                    return RedirectToAction(nameof(Profile));
+                }
+                var changePasswordResult = await _userManager.ChangePasswordAsync(user, model.PasswordOld, model.Password);
+                if (!changePasswordResult.Succeeded)
+                {
+                    this.AddToastrMessage("Thay đổi mật khẩu thành công", ToastrMessageType.Success);
+                    return RedirectToAction(nameof(Profile));
+                }
+                ModelState.AddModelError(string.Empty, "Thay đổi mật khẩu không thành công, có vẻ bạn nhập sai mật khẩu.");
+                return View(model);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message);
+            }
+            return View();
+        }
+
+        [Authorize]
+        public async Task<IActionResult> Profile()
+        {
+            try
+            {
+                var user = await _userService.GetUser();
+                if (user == null)
+                {
+                    ModelState.AddModelError(string.Empty, "Bạn cần đăng nhập.");
+                    return View();
+                }
+                return View(new UserInfoVM(user));
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message);
+            }
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Update(long? userId, UserInfoVM model)
+        {
+            try
+            {
+                await _userService.UpdateUser(model);
+                this.AddToastrMessage("Cập nhật thông tin thành công.", ToastrMessageType.Success);
+                return View(nameof(Profile));
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message);
+            }
+            return View();
+        }
+
+
+        [HttpPost]
+        public async Task<IActionResult> LogOut(string? returnUrl = null)
+        {
+            await _signInManager.SignOutAsync();
+            _logger.LogInformation("User logged out.");
+            if (returnUrl != null)
+            {
+                return LocalRedirect(returnUrl);
+            }
+            else
+            {
+                return View();
             }
         }
 

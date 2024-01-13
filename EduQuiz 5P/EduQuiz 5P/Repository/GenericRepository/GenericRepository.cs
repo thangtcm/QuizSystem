@@ -47,10 +47,10 @@ namespace EduQuiz_5P.Repository.GenericRepository
 
 
         public ICollection<T> GetAll(Expression<Func<T, bool>> expression)
-            => _entitySet.Where(expression).ToList();
+            => _entitySet.AsNoTracking().Where(expression).ToList();
 
         public async Task<ICollection<T>> GetAllAsync(CancellationToken cancellationToken = default)
-            => await _entitySet.ToListAsync(cancellationToken);
+            => await _entitySet.AsNoTracking().ToListAsync(cancellationToken);
 
 
         public async Task<ICollection<T>> GetAllAsync(Expression<Func<T, bool>>? expression,
@@ -59,7 +59,7 @@ namespace EduQuiz_5P.Repository.GenericRepository
                                              int? take = null,
                                              CancellationToken cancellationToken = default)
         {
-            IQueryable<T> query = _entitySet;
+            IQueryable<T> query = _entitySet.AsNoTracking();
 
             if (include != null)
             {

@@ -2,6 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using EduQuiz_5P.Models;
+using EduQuiz_5P.Enums;
 
 namespace EduQuiz_5P.ViewModel
 {
@@ -24,8 +25,12 @@ namespace EduQuiz_5P.ViewModel
         [Display(Name = "Ngày xóa")]
         public string DateRemove { get; set; }
         public bool IsDefault { get; set; }
+        public string SubjectName { get; set; }
+        public ExamType ExamType { get; set; }
         public int TotalUserExam { get; set; }
-        public ICollection<int> ListQuestion { get; set; }
+        public double KnowQuestion { get; set; }
+        public double UnderstandQuestion { get; set; }
+        public double ManipulateQuestion { get; set; }
         public ExamInfoVM()
         {
 
@@ -33,18 +38,19 @@ namespace EduQuiz_5P.ViewModel
 
         public ExamInfoVM(Exam model)
         {
-            ListQuestion = new List<int>();
             ExamId = model.Id;
             ExamName = model.ExamName;
             ExamDescription = model.ExamDescription;
             NumberOfQuestion = model.NumberOfQuestion;
             ExamTime = model.ExamTime;
             IsRemoved = model.IsRemoved;
+            KnowQuestion = model.KnowQuestion;
+            UnderstandQuestion = model.UnderstandQuestion;
+            ManipulateQuestion = model.ManipulateQuestion;
+            this.ExamType = model.ExamType;
+            SubjectName = model.Subject is null ? "" : model.Subject.SubjectName ?? "";
             IsDefault = model.IsDefault;
             TotalUserExam = model.TotalUserExam;
-            ListQuestion = string.IsNullOrEmpty(model.ListQuestion) ? new List<int>() : model.ListQuestion.Split(", ")
-                         .Select(int.Parse)
-                         .ToList();
         }
     }
 }

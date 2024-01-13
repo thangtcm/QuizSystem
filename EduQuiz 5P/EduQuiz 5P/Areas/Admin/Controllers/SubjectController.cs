@@ -107,12 +107,5 @@ namespace EduQuiz_5P.Areas.Admin.Controllers
             ICollection<Subject> model = new List<Subject> { new() { SelectClass = new SelectList(classLst, "Id", "ClassName") } };
             return PartialView("_DynamicAddSubject", model.ToList());
         }
-
-        public async Task<IActionResult> LoadSubjects(int classId)
-        {
-            var subjectlst = await _subjectService.GetListAsync(classId);
-            var selectList = new SelectList(subjectlst, "Id", "SubjectName");
-            return Json(selectList);
-        }
     }
 }

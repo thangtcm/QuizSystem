@@ -7,6 +7,7 @@ namespace EduQuiz_5P.Services.Interface
     {
         public Task<ICollection<Question>> GetQuestions();
         public Task Add(ImportQuestionVM model);
+        public Task AddAPI(ICollection<Question> model, int chapterId);
         public Task<Question?> GetQuestionByIdAsync(int id);
         public Question? GetById(int id);
         public Task<bool> DeleteQuestion(int Id);

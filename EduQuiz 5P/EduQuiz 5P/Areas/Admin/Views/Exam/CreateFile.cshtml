@@ -57,7 +57,7 @@
                     <div class="col-12 col-lg-6">
                         <div class="form-group local-forms">
                             <label>Lớp <span class="login-danger">*</span></label>
-                            <select class="form-control select" asp-items="@ViewBag.SelectListClass" id="SelectClass" onchange="getSubjectByClasses(this.value, '#SelectSubject')">
+                            <select class="form-control select" asp-items="@ViewBag.SelectListClass" id="SelectClass">
                                 <option value="">Chọn Lớp</option>
                             </select>
                         </div>
@@ -65,7 +65,7 @@
                     <div class="col-12 col-lg-6">
                         <div class="form-group local-forms">
                             <label>Môn học <span class="login-danger">*</span></label>
-                            <select class="form-control select" id="SelectSubject">
+                            <select class="form-control select" id="SelectSubject" asp-items="@ViewBag.SelectListSubject">
                                 <option value="">Chọn môn học</option>
                             </select>
                         </div>

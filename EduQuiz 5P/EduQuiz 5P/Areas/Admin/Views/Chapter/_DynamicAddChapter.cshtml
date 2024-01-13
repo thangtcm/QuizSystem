@@ -5,6 +5,26 @@
     var SelectSubject = $"SelectSubject{0}";
 }
 <div class="row create-dynamic">
+    <div class="col-12">
+        <div class="form-group">
+            <div class="container">
+                <div class="row justify-content-center align-items-center align-content-center">
+                    <div class="profile-user-box mt-3">
+                        <div class="profile-user-img ">
+                            <img src="~/logo.png" alt="Profile" id="UploadImage0">
+                            <div class="form-group students-up-files profile-edit-icon mb-0">
+                                <div class="uplod d-flex">
+                                    <label class="file-upload profile-upbtn mb-0">
+                                        <i class="fas fa-edit"></i><input asp-for="@Model[0].UploadImg" onchange="previewImage(this, '#UploadImage0')">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="col-12 col-sm-6">
         <div class="form-group local-forms">
             <label>Tên chương học<span class="login-danger">*</span></label>
@@ -14,7 +34,7 @@
     <div class="col-12 col-sm-6">
         <div class="form-group local-forms">
             <label>Lớp <span class="login-danger">*</span></label>
-            <select class="form-control select" asp-items="@Model[0].SelectClass" onchange="getSubjectByClasses(this.value, '#@SelectSubject')">
+            <select class="form-control select" asp-for="@Model[0].ClassesId" asp-items="@Model[0].SelectClass">
                 <option value="">Chọn lớp</option>
             </select>
         </div>
@@ -22,7 +42,7 @@
     <div class="col-12 col-sm-6">
         <div class="form-group local-forms">
             <label>Môn học<span class="login-danger">*</span></label>
-            <select id="@SelectSubject" asp-for="@Model[0].SubjectId" class="form-control select">
+            <select id="@SelectSubject" asp-for="@Model[0].SubjectId" class="form-control select" asp-items="@Model[0].SelectSubject">
                 <option value="">Chọn môn học</option>
             </select>
         </div>

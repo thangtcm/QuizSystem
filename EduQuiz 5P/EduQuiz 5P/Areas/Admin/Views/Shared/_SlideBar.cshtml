@@ -1,11 +1,12 @@
-﻿<div class="sidebar" id="sidebar">
+﻿@using EduQuiz_5P.Helpers
+<div class="sidebar" id="sidebar">
     <div class="sidebar-inner slimscroll">
         <div id="sidebar-menu" class="sidebar-menu">
             <ul>
                 <li class="menu-title">
                     <span>Main Menu</span>
                 </li>
-                <li class="submenu active">
+                <li class="submenu @ManageNavPages.MainNavClass(ViewContext, "Home", null, "Admin")">
                     <a href="#">
                         <i class="fas fa-th-large"></i> <span>
                             Dashboard
@@ -13,46 +14,45 @@
                         <span class="menu-arrow"></span>
                     </a>
                     <ul style="display: block;">
-                        <li><a asp-action="Index" asp-controller="Home" asp-area="Admin" class="active">Admin Dashboard</a></li>
+                        <li><a asp-action="Index" asp-controller="Home" asp-area="Admin" class="@ManageNavPages.MainNavClass(ViewContext, "Home", null, "Admin")">Admin Dashboard</a></li>
                     </ul>
                 </li>
                 <li class="menu-title">
                     <span>Quản lý</span>
                 </li>
-                <li class="submenu">
+                <li class="submenu @ManageNavPages.MainNavMutipleClass(ViewContext, new List<string>(){"Account"}, null, "Admin")">
                     <a href="#">
-                        <i class="fas fa-file-invoice-dollar"></i> <span> Accounts</span> <span class="menu-arrow"></span>
+                        <i class="fas fa-file-invoice-dollar"></i> <span> Tài khoản</span> <span class="menu-arrow"></span>
                     </a>
                     <ul>
-                        <li><a asp-area="Admin" asp-controller="Account" asp-action="Index">Quản lý phân quyền</a></li>
-                        <li><a asp-area="Admin">Quản lý tài khoản</a></li>
+                        <li><a asp-area="Admin" asp-controller="Account" asp-action="Index" class="@ManageNavPages.MainNavClass(ViewContext, "Account", null, "Admin")">Quản lý tài khoản</a></li>
                     </ul>
                 </li>
-                <li class="submenu">
+                <li class="submenu @ManageNavPages.MainNavMutipleClass(ViewContext, new List<string>(){"Question"}, null, "Admin")">
                     <a href="#">
                         <i class="fas fa-file-invoice-dollar"></i> <span>Ngân hàng câu hỏi</span> <span class="menu-arrow"></span>
                     </a>
                     <ul>
-                        <li><a asp-area="Admin" asp-controller="Question" asp-action="Create">Thêm câu hỏi</a></li>
+                        <li><a asp-area="Admin" asp-controller="Question" asp-action="Create" class="@ManageNavPages.MainNavClass(ViewContext, "Question", null, "Admin")">Thêm câu hỏi</a></li>
                     </ul>
                 </li>
-                <li class="submenu">
+                <li class="submenu @ManageNavPages.MainNavMutipleClass(ViewContext, new List<string>(){"ExamMatrix", "Exam"}, null, "Admin")">
                     <a href="#">
                         <i class="fas fa-file-invoice-dollar"></i> <span>Ngân hàng đề thi</span> <span class="menu-arrow"></span>
                     </a>
                     <ul>
-                        <li><a asp-area="Admin" asp-controller="ExamMatrix" asp-action="Index">Quản lý ma trận đề</a></li>
-                        <li><a asp-area="Admin" asp-controller="Exam" asp-action="Index">Quản lý đề thi</a></li>
+                        <li><a asp-area="Admin" asp-controller="ExamMatrix" asp-action="Index" class="@ManageNavPages.MainNavClass(ViewContext, "ExamMatrix", null, "Admin")">Quản lý ma trận đề</a></li>
+                        <li><a asp-area="Admin" asp-controller="Exam" asp-action="Index" class="@ManageNavPages.MainNavClass(ViewContext, "Exam", null, "Admin")">Quản lý đề thi</a></li>
                     </ul>
                 </li>
-                <li class="submenu">
+                <li class="submenu @ManageNavPages.MainNavMutipleClass(ViewContext, new List<string>(){"Class", "Subject", "Chapter"}, null, "Admin")">
                     <a href="#">
                         <i class="fas fa-file-invoice-dollar"></i> <span>Khác</span> <span class="menu-arrow"></span>
                     </a>
                     <ul>
-                        <li><a asp-area="Admin" asp-controller="Class" asp-action="Index">Quản lý lớp</a></li>
-                        <li><a asp-area="Admin" asp-controller="Subject" asp-action="Index">Quản lý môn học</a></li>
-                        <li><a asp-area="Admin" asp-controller="Chapter" asp-action="Index">Quản lý chương</a></li>
+                        <li><a asp-area="Admin" asp-controller="Class" asp-action="Index" class="@ManageNavPages.MainNavClass(ViewContext, "Class", null, "Admin")">Quản lý lớp</a></li>
+                        <li><a asp-area="Admin" asp-controller="Subject" asp-action="Index" class="@ManageNavPages.MainNavClass(ViewContext, "Subject", null, "Admin")">Quản lý môn học</a></li>
+                        <li><a asp-area="Admin" asp-controller="Chapter" asp-action="Index" class="@ManageNavPages.MainNavClass(ViewContext, "Chapter", null, "Admin")">Quản lý chương</a></li>
                     </ul>
                 </li>
             </ul>

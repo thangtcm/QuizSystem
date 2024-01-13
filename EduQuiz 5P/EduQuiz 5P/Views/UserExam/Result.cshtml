@@ -1,0 +1,150 @@
+﻿@model EduQuiz_5P.ViewModel.UserExamInfoVM
+@using EduQuiz_5P.Helpers;
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "_Layout.cshtml";
+    ViewData["Title"] = "Làm bài thi";
+    int index = 0;
+}
+<section id="home" class="container section-exam py-2">
+    <nav class="mt-1"
+         style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);"
+         aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+            <li class="breadcrumb-item"><a href="#">English</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Bài thi @(Model.UserExamId == 0 ? "" : Model.UserExamId)</li>
+        </ol>
+    </nav>
+    <div class="exam-header">
+        <h4 class="header-title">@Model.ExamName</h4>
+    </div>
+
+</section>
+<aside id="sidebar" class="sidebar sidebar-exam text-center d-none d-lg-block">
+    <h5 class="text-start fw-bold">Thời gian</h5>
+    <h3 class="text-primary mb-4 fw-bold" id="countdown-exam">00:00</h3>
+    <h5 class="fw-bold my-3 text-start">Danh sách câu hỏi</h5>
+    <div class="row gap-2 overflow-y-auto" style="max-height:320px">
+        @{
+            index = 1;
+        }
+        @foreach (var item in Model.UserExamDetailVM)
+        {
+            var QuestionElement = $"Question{item.QuestionVM.QuestionId}";
+            var IsCorrect = item.QuestionVM.AnswerList.FirstOrDefault(x => x.AnswerId == item.SelectAnswerId && x.IsCorrect == true) != null;
+            <div class="col-2">
+                <a href="#@QuestionElement" class="btn btn-question @(IsCorrect ? "success" : "error")">@(index++)</a>
+            </div>
+        }
+    </div>
+    <hr>
+    <div class="exam-info mb-3">
+        <p class="correct">Số câu trả lời đúng: <span class="fw-bold">@Model.NumberOfCorrect</span></p>
+        <p class="wrong">Số câu trả lời sai: <span class="fw-bold">@(Model.NumberOfQuestion - Model.NumberOfCorrect)</span></p>
+    </div>
+
+</aside><!-- End Sidebar-->
+<section class="py-0 container-exam">
+    <div class="mt-lg-5 mt-md-3">
+        <div class="exam-content">
+            @{
+                index = 1;
+            }
+            @foreach (var item in Model.UserExamDetailVM)
+            {
+                var QuestionElement = $"Question{item.QuestionVM.QuestionId}";
+                <div id="@QuestionElement" class="row card p-4 mb-7 border-0 align-items-center justify-content-center">
+                    <p class="text-question">
+                        <span class="fw-bold">Câu @(index++).</span> @item.QuestionVM.QuestionName
+                    </p>
+                    @if (!string.IsNullOrEmpty(@item.QuestionVM.UrlImage))
+                    {
+                        <img src="@item.QuestionVM.UrlImage" alt="Ảnh Câu Hỏi" style="max-width:30rem">
+                    }
+                    @foreach (var answer in item.QuestionVM.AnswerList)
+                    {
+                        @if (answer.IsCorrect == true)
+                        {
+                            <div class="radio-field success">
+                                <input type="radio" id="answer[@answer.AnswerId]" name="Question[@item.QuestionVM.QuestionId]" value="@answer.AnswerId"
+                                       onchange="saveAnswer(this, @answer.AnswerId, @item.QuestionVM.QuestionId, @item.UserExamDetailId)" @(item.SelectAnswerId == answer.AnswerId ? "checked" : "") readonly>
+                                <label for="Question[@item.QuestionVM.QuestionId]">
+                                    @answer.AnswerName
+                                </label>
+                            </div>
+                        }
+                        else if (answer.IsCorrect == false && item.SelectAnswerId == answer.AnswerId)
+                        {
+                            <div class="radio-field error">
+                                <input type="radio" id="answer[@answer.AnswerId]" name="Question[@item.QuestionVM.QuestionId]" value="@answer.AnswerId"
+                                       onchange="saveAnswer(this, @answer.AnswerId, @item.QuestionVM.QuestionId, @item.UserExamDetailId)" @(item.SelectAnswerId == answer.AnswerId ? "checked" : "") readonly>
+                                <label for="Question[@item.QuestionVM.QuestionId]">
+                                    @answer.AnswerName
+                                </label>
+                            </div>
+                        }
+                        else if (!item.SelectAnswerId.HasValue)
+                        {
+                            <div class="radio-field not-choose">
+                                <input type="radio" id="answer[@answer.AnswerId]" name="Question[@item.QuestionVM.QuestionId]" value="@answer.AnswerId"
+                                       onchange="saveAnswer(this, @answer.AnswerId, @item.QuestionVM.QuestionId, @item.UserExamDetailId)" @(item.SelectAnswerId == answer.AnswerId ? "checked" : "") readonly>
+                                <label for="Question[@item.QuestionVM.QuestionId]">
+                                    @answer.AnswerName
+                                </label>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="radio-field">
+                                <input type="radio" id="answer[@answer.AnswerId]" name="Question[@item.QuestionVM.QuestionId]" value="@answer.AnswerId"
+                                       onchange="saveAnswer(this, @answer.AnswerId, @item.QuestionVM.QuestionId, @item.UserExamDetailId)" @(item.SelectAnswerId == answer.AnswerId ? "checked" : "") readonly>
+                                <label for="Question[@item.QuestionVM.QuestionId]">
+                                    @answer.AnswerName
+                                </label>
+                            </div>
+                        }
+                    }
+                </div>
+            }
+        </div>
+    </div>
+</section>
+<div class="offcanvas offcanvas-bottom" tabindex="-1" id="MobileExam" aria-labelledby="MobileExamLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="MobileExamLabel">Bài thi @(Model.UserExamId == 0 ? "" : Model.UserExamId)</h5>
+        <a type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></a>
+    </div>
+    <hr>
+    <div class="offcanvas-body">
+        <h5 class="fw-bold mt-3 mb-4">Danh sách câu hỏi</h5>
+        <div class="container">
+            <div class="row gap-2">
+                @{
+                    index = 1;
+                }
+                @foreach (var item in Model.UserExamDetailVM)
+                {
+                    var QuestionElement = $"Question{item.QuestionVM.QuestionId}";
+                    <div class="col-2">
+                        <a href="#@QuestionElement" class="btn btn-question @(item.SelectAnswerId.HasValue ? "active" : "")">@(index++)</a>
+                    </div>
+                }
+            </div>
+            <hr>
+            <div class="exam-info mb-3">
+                <p class="correct">Số câu trả lời đúng: <span class="fw-bold">@Model.NumberOfCorrect</span></p>
+                <p class="wrong">Số câu trả lời sai: <span class="fw-bold">@(Model.NumberOfQuestion - Model.NumberOfCorrect)</span></p>
+            </div>
+            <hr>
+        </div>
+    </div>
+</div>
+<div class="d-block d-lg-none d-flex justify-content-center align-items-center mobileexam-to-top w-100">
+    <div class="">
+        <a data-bs-toggle="offcanvas" href="#MobileExam" role="button" aria-controls="MobileExam"
+           class="btn btn-questionlist">Câu hỏi</a>
+    </div>
+</div>

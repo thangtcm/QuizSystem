@@ -46,13 +46,14 @@
                             <div class="col-12" id="createExamMatrixContainers">
                                 @for(var i = 0; i < Model.ExamMatrixDetail!.Count; i++)
                                 {
+                                    var SelectClass = $"SelectClass{i}";
                                     var SelectSubject = $"SelectSubject{i}";
                                     var SelectChapter = $"SelectChapter{i}";
                                     <div class="row create-dynamic">
                                         <div class="col-12 col-sm-6">
                                             <div class="form-group local-forms">
                                                 <label>Lớp <span class="login-danger">*</span></label>
-                                                <select class="form-control select" onchange="getSubjectByClasses(this.value, '#@SelectSubject')" asp-items="@Model.ExamMatrixDetail[i].SelectListClass">
+                                                <select class="form-control select" id="@SelectClass" onchange="getChapter(this, '#@SelectSubject', '#@SelectChapter')" asp-items="@Model.ExamMatrixDetail[i].SelectListClass">
                                                     <option value="">Chọn lớp</option>
                                                 </select>
                                             </div>
@@ -60,7 +61,7 @@
                                         <div class="col-12 col-sm-6">
                                             <div class="form-group local-forms">
                                                 <label>Môn học<span class="login-danger">*</span></label>
-                                                <select id="@SelectSubject" class="form-control select" onchange="getChapterbySubject(this.value, '#@SelectChapter')">
+                                                <select id="@SelectSubject" class="form-control select" onchange="getChapter('#@SelectClass', this, '#@SelectChapter')" asp-items="@Model.ExamMatrixDetail[i].SelectListSubject">
                                                     <option value="">Chọn môn học</option>
                                                 </select>
                                             </div>

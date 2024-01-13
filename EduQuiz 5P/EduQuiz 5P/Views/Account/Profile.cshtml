@@ -1,0 +1,71 @@
+﻿@using EduQuiz_5P.Helpers;
+@using EduQuiz_5P.ViewModel;
+@model UserInfoVM
+
+@{
+    ViewData["Title"] = "Quản lý thông tin";
+}
+
+<section class="container pt-8">
+    <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);"
+         aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Home">Trang chủ</a></li>
+            <li class="breadcrumb-item active" aria-current="page">@ViewData["Title"]</li>
+        </ol>
+    </nav>
+    <div class="py-6">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-xl-4 col-lg-4 mb-5">
+                    <partial name="_NavMenuProfile" />
+                </div>
+                <div class="col-xl-8 col-lg-8 col-12">
+                    <div class="content container w-100 pt-0">
+                        <div class="container">
+                            <div class="content-page-header">
+                                <h5>Cài đặt tài khoản</h5>
+                            </div>
+                            <div class="row">
+                                <form asp-action="Update" asp-controller="Account" asp-area="" class="py-2">
+                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                    <input type="hidden" asp-for="UserId" />
+                                    <div class="avatar-upload">
+                                        <div class="avatar-edit">
+                                            <a action="" method="post" id="form-image">
+                                                <input type="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+                                                <label for="imageUpload">
+                                                    <i class="fas fa-camera"></i>
+                                                </label>
+                                            </a>
+                                        </div>
+                                        <div class="avatar-preview">
+                                            <img class="profile-user-img img-responsive rounded-circle" id="imagePreview" src="~/img/Anh-Wibu-mat-do.jpg" alt="User profile picture">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="FullName" class="form-label font-weight-600">Họ và tên</label>
+                                        <input asp-for="FullName" class="form-control" placeholder="Nhập họ và tên">
+                                        <span asp-validation-for="FullName" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="Gender" class="form-label font-weight-600">Giới tính</label>
+                                        <select asp-for="Gender" class="select">
+                                            <option value="">Chọn giới tính</option>
+                                            <option value="0">Nam</option>
+                                            <option value="1">Nữ</option>
+                                            <option value="2">Khác</option>
+                                        </select>
+                                    </div>
+                                    <div class="text-end">
+                                        <button type="submit" class="btn btn-primary w-25">Lưu</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

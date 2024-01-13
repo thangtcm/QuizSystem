@@ -1,0 +1,14 @@
+﻿@using static EduQuiz_5P.Helpers.ManageNavPages;
+
+<ul class="main-categories container">
+    <li class="main-nav-list @MainNavClass(ViewContext, "Account", "Profile")">
+        <a asp-action="Profile" asp-controller="Account">
+            <span class="me-2 categories-title ">Thông tin tài khoản</span>
+        </a>
+    </li>
+    <li class="main-nav-list @MainNavClass(ViewContext, "Account", "ChangePassword")">
+        <a asp-action="ChangePassword" asp-controller="Account">
+            <span class="me-2 categories-title ">Thay đổi mật khẩu</span>
+        </a>
+    </li>
+</ul>

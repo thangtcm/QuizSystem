@@ -1,4 +1,5 @@
-﻿using EduQuiz_5P.Enums;
+﻿using DocumentFormat.OpenXml.VariantTypes;
+using EduQuiz_5P.Enums;
 using EduQuiz_5P.Helpers;
 using EduQuiz_5P.Models;
 using EduQuiz_5P.Services.Interface;
@@ -18,13 +19,15 @@ namespace EduQuiz_5P.Areas.Admin.Controllers
         private readonly IExamMatrixService _examMatrixService;
         private readonly IClassService _classService;
         private readonly IUserService _userService;
+        private readonly ISubjectService _subjectService;
         public ExamMatrixController(ILogger<ExamMatrixController> logger, IExamMatrixService examMatrixService, IUserService userService,
-            IClassService classService)
+            IClassService classService, ISubjectService subjectService)
         { 
             _logger = logger; 
             _examMatrixService = examMatrixService;
             _userService = userService;
             _classService = classService;
+            _subjectService = subjectService;
         }
         public async Task<IActionResult> Index()
         {
@@ -35,8 +38,10 @@ namespace EduQuiz_5P.Areas.Admin.Controllers
         {
             var model = new ExamMatrix();
             var classlst = await _classService.GetListAsync();
-            model.ExamMatrixDetail = new List<ExamMatrixDetail>() { new ExamMatrixDetail() {
+            var subjectlst = await _subjectService.GetListAsync();
+            model.ExamMatrixDetail = new List<ExamMatrixDetail>() { new() {
                 SelectListClass = new SelectList(classlst, "Id", "ClassName"),
+                SelectListSubject = new SelectList(subjectlst, "Id", "SubjectName")
                 } 
             };
             return View(model);
@@ -100,9 +105,12 @@ namespace EduQuiz_5P.Areas.Admin.Controllers
 
         public async Task<IActionResult> CreatePartial()
         {
+            var model = new ExamMatrix();
             var classlst = await _classService.GetListAsync();
-            ICollection<ExamMatrixDetail> model = new List<ExamMatrixDetail>() { new ExamMatrixDetail() {
+            var subjectlst = await _subjectService.GetListAsync();
+            model.ExamMatrixDetail = new List<ExamMatrixDetail>() { new() {
                 SelectListClass = new SelectList(classlst, "Id", "ClassName"),
+                SelectListSubject = new SelectList(subjectlst, "Id", "SubjectName")
                 }
             };
             return PartialView("_DynamicAddExamMatrix", model);

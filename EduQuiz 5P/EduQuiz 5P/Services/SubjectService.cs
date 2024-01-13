@@ -41,7 +41,7 @@ namespace EduQuiz_5P.Services
             return true;
         }
 
-        public Subject? GetById(int id)
+        public Subject? GetById(int? id)
             => _unitOfWork.SubjectRepository.Get(x => x.Id == id);
 
         public async Task<Subject?> GetByIdAsync(int? id)
@@ -50,14 +50,8 @@ namespace EduQuiz_5P.Services
         public async Task<Subject?> GetByIdAsync(int? id, Func<IQueryable<Subject>, IIncludableQueryable<Subject, object>> includes)
             => await _unitOfWork.SubjectRepository.GetAsync(x => x.Id == id, includes);
 
-        public async Task<ICollection<Subject>> GetListAsync(int? classId = null, Func<IQueryable<Subject>, IIncludableQueryable<Subject, object>>? includes = null)
-        {
-            if(classId.HasValue)
-            {
-                return await _unitOfWork.SubjectRepository.GetAllAsync(x => x.ClassesId == classId, includes);
-            }
-            return await _unitOfWork.SubjectRepository.GetAllAsync();
-        }
+        public async Task<ICollection<Subject>> GetListAsync(Func<IQueryable<Subject>, IIncludableQueryable<Subject, object>>? includes = null)
+            => await _unitOfWork.SubjectRepository.GetAllAsync();
 
         public async Task Update(Subject subject)
         {
@@ -65,7 +59,6 @@ namespace EduQuiz_5P.Services
             if (model != null)
             {
                 model.SubjectDescription = subject.SubjectDescription;
-                model.ClassesId = subject.ClassesId;
                 model.SubjectName = subject.SubjectName;
                 _unitOfWork.SubjectRepository.Update(model);
                 await _unitOfWork.CommitAsync();

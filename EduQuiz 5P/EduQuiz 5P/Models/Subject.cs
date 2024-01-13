@@ -29,9 +29,6 @@ namespace EduQuiz_5P.Models
         public long? UserIdRemove { get; set; }
         [ForeignKey("UserIdRemove")]
         public ApplicationUser? UserRemove { get; set; }
-        public int ClassesId { get; set; }
-        [ForeignKey("ClassesId")]
-        public Classes? Classes { get; set; }
         [NotMapped]
         public virtual SelectList SelectClass { get; set; }
         public virtual ICollection<Chapter>? Chapters { get; set; }
@@ -41,7 +38,6 @@ namespace EduQuiz_5P.Models
         {
             this.SubjectName = model.SubjectName;
             this.SubjectDescription = model.SubjectDescription;
-            this.ClassesId = model.ClassesId;
         }
     }
 }

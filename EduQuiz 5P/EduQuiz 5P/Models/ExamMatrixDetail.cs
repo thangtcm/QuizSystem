@@ -24,5 +24,7 @@ namespace EduQuiz_5P.Models
         public DifficultyLevel Component { get; set; }
         [NotMapped]
         public SelectList SelectListClass { get; set; }
+        [NotMapped]
+        public SelectList SelectListSubject { get; set; }
     }
 }

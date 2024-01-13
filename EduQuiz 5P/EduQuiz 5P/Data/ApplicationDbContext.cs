@@ -22,6 +22,8 @@ namespace EduQuiz_5P.Data
         public DbSet<ExamMatrix>? ExamMatrix { get; set; }
         public DbSet<ExamMatrixDetail>? ExamMatrixDetail { get; set; }
         public DbSet<Exam>? Exam { get; set; }
+        public DbSet<UserExams>? UserExams { get; set; }
+        public DbSet<UserExamDetail>? UserExamDetail { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

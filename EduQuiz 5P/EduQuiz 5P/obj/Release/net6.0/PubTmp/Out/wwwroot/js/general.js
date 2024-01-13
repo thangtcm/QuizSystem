@@ -17,3 +17,53 @@
         throwOnError: false
     });
 });
+
+function updateQuestionComplete(userExamId) {
+    let elementList = document.querySelectorAll('#question-complete');
+    $.ajax({
+        url: '/UserExam/GetQuestionComplete',
+        type: 'GET',
+        data: {
+            UserExamId: userExamId,
+        },
+        success: function (result) {
+            elementList.forEach(item => {
+                item.innerText = result;
+            });
+            console.log(result);
+            console.log('Run Set Câu');
+        }
+    });
+}
+
+function countdown(remainingTime, elementIdSetTime, userExamId) {
+    setInterval(function () {
+        var minutes = Math.floor(remainingTime / 60);
+        var seconds = remainingTime % 60;
+
+        minutes = String(minutes).padStart(2, '0');
+        seconds = String(seconds).padStart(2, '0');
+
+        let listElementTimes = document.querySelectorAll(elementIdSetTime);
+        listElementTimes.forEach(listElementTime => {
+            listElementTime.textContent = minutes + ':' + seconds;
+        });
+
+        if (--remainingTime <= 0) {
+            $.ajax({
+                url: "/UserExam/Result",
+                type: "POST",
+                data: {
+                    Id: userExamId,
+                },
+                success: function () {
+                    console.log("Nộp bài thành công");
+                    window.location.href = "/UserExam/QuizResult?Id=" + userExamId;
+                },
+                error: function (_xhr, _status, error) {
+                    console.error(error);
+                }
+            });
+        }
+    }, 1000);
+}

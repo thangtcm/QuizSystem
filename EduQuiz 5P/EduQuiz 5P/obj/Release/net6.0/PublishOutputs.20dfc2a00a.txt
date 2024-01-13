@@ -2,6 +2,7 @@ D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\EduQuiz 5P.exe
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\appsettings.Development.json
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\appsettings.json
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\libman.json
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\wwwroot\css\themeexam.css
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\wwwroot\js\general.js
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\refs\Microsoft.AspNetCore.Antiforgery.dll
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\refs\Microsoft.AspNetCore.Authentication.Abstractions.dll
@@ -303,6 +304,7 @@ D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\DocumentFormat
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\Firebase.Auth.dll
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\Firebase.Storage.dll
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\Humanizer.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\JetBrains.Annotations.dll
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\MailKit.dll
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\MessagePack.dll
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\MessagePack.Annotations.dll
@@ -386,6 +388,7 @@ D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\System.Securit
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\System.Security.Permissions.dll
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\System.Text.Encoding.CodePages.dll
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\System.Windows.Extensions.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\X.PagedList.dll
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\af\Humanizer.resources.dll
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\ar\Humanizer.resources.dll
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\obj\Release\net6.0\PubTmp\Out\az\Humanizer.resources.dll

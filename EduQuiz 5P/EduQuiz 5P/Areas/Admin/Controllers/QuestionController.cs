@@ -18,18 +18,22 @@ namespace EduQuiz_5P.Areas.Admin.Controllers
         private readonly IQuestionService _questionService;
         private readonly IClassService _classService;
         private readonly IUserService _userService;
-        public QuestionController(ILogger<QuestionController> logger, IQuestionService questionService, IUserService userService, IClassService classService)
+        private readonly ISubjectService _subjectService;
+        public QuestionController(ILogger<QuestionController> logger, IQuestionService questionService, IUserService userService, IClassService classService, ISubjectService subjectService)
         {
             _logger = logger;
             _questionService = questionService;
             _userService = userService;
             _classService = classService;
+            _subjectService = subjectService;
         }
 
         public async Task<IActionResult> Create()
         {
             var classlist = await _classService.GetListAsync();
+            var subjectlst = await _subjectService.GetListAsync();
             ViewData["SelectListClass"] = new SelectList(classlist, "Id", "ClassName");
+            ViewData["SelectListSubject"] = new SelectList(subjectlst, "Id", "SubjectName");
             return View();
         }
 
@@ -40,6 +44,22 @@ namespace EduQuiz_5P.Areas.Admin.Controllers
             try
             {
                 await _questionService.Add(model);
+                //int i = 0, j =0 ;
+                //foreach(var item in model.QuestionVMs)
+                //{
+                //    j = 0;
+                //    Console.WriteLine($"{item.QuestionName} {i++}");
+                //    foreach(var answer in item.AnswerList)
+                //    {
+                //        if(answer.AnswerName == null)
+                //        {
+                //            return View();
+
+                //        }   
+                //        Console.WriteLine($"{answer.AnswerName} , {j++}");
+
+                //    }
+                //}    
                 this.AddToastrMessage("Thêm dữ liệu câu hỏi thành công", ToastrMessageType.Success);
                 return RedirectToAction(nameof(Create));
             }

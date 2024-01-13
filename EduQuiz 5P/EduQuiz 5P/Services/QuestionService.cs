@@ -1,6 +1,7 @@
 ﻿using DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
+using EduQuiz_5P.Enums;
 using EduQuiz_5P.Helpers;
 using EduQuiz_5P.Models;
 using EduQuiz_5P.Repository.UnitOfWork;
@@ -69,6 +70,26 @@ namespace EduQuiz_5P.Services
             await _unitOfWork.CommitAsync();
         }
 
+
+        public async Task AddAPI(ICollection<Question> model, int chapterId)
+        {
+            Random random = new();
+
+            foreach(var item in model)
+            {
+                item.ChappterId = chapterId;
+                item.DateUpdate = DateTime.UtcNow.ToTimeZone();
+                item.DifficultyLevel = (DifficultyLevel)(random.Next(4) + 1);
+                item.UserIdUpdate = 1;
+                foreach(var answer in item.Answers!)
+                {
+                    answer.DateUpdate = DateTime.UtcNow.ToTimeZone();
+                    answer.UserIdUpdate = 1;
+                }    
+            }
+            await _unitOfWork.QuestionRepository.AddRangeAsync(model);
+            await _unitOfWork.CommitAsync();
+        }
         public async Task<bool> DeleteQuestion(int Id)
         {
             var question = GetById(Id);
