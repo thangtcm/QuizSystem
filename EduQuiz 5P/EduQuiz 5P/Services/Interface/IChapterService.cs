@@ -16,7 +16,7 @@ namespace EduQuiz_5P.Services.Interface
         public Task<Chapter?> FindAsync(int? id);
         public Chapter? GetById(int? id);
         public Task<bool> Delete(int Id);
-        public Task Update(Chapter chappter);
+        public Task Update(Chapter chapter);
         public Task SaveChanges();
     }
 }

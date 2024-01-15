@@ -19,9 +19,10 @@ namespace EduQuiz_5P.Models
         public long UserId { get; set; }
         [ForeignKey(nameof(UserId))]
         public ApplicationUser? ApplicationUser { get; set; }
-        public double KnowQuestion { get; set; }
-        public double UnderstandQuestion { get; set; }
-        public double ManipulateQuestion { get; set; }
+        public double Identification { get; set; }
+        public double Understanding { get; set; }
+        public double Application { get; set; }
+        public double AdvancedApplication { get; set; }
         public ICollection<UserExamDetail>? UserExamDetails { get; set; }
         public void CreateUserExam(Exam model)
         {
@@ -30,9 +31,10 @@ namespace EduQuiz_5P.Models
             NumberOfQuestion = model.NumberOfQuestion;
             StartTime = DateTime.UtcNow.ToTimeZone();
             EndTime = DateTime.UtcNow.ToTimeZone().AddMinutes(model.ExamTime + 5);
-            KnowQuestion = model.KnowQuestion;
-            UnderstandQuestion = model.UnderstandQuestion;
-            ManipulateQuestion = model.ManipulateQuestion;
+            Identification = model.Identification;
+            Understanding = model.Understanding;
+            Application = model.Application;
+            AdvancedApplication = model.AdvancedApplication;
             NumberOfCorrect = 0;
         }
     }

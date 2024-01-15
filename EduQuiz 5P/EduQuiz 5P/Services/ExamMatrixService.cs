@@ -17,11 +17,8 @@ namespace EduQuiz_5P.Services
             _userService = userService;
         }
 
-        public async Task<ICollection<ExamMatrix>> GetListAsync()
-            => await _unitOfWork.ExamMatrixRepository.GetAllAsync();
-
-        public async Task<ICollection<ExamMatrix>> GetListAsync(Func<IQueryable<ExamMatrix>, IIncludableQueryable<ExamMatrix, object>>? includes = null, string? Name = null)
-            => await _unitOfWork.ExamMatrixRepository.GetAllAsync(x => x.ExamMatrixName!.Contains(Name ?? ""), includes);
+        public async Task<ICollection<ExamMatrix>> GetListAsync(int? subjectId = null, Func<IQueryable<ExamMatrix>, IIncludableQueryable<ExamMatrix, object>>? includes = null, string? Name = null)
+            => await _unitOfWork.ExamMatrixRepository.GetAllAsync(x => x.ExamMatrixName!.Contains(Name ?? "") && (subjectId.HasValue ? x.SubjectId == subjectId.Value : true), includes);
 
         public async Task Add(ExamMatrix examMatrix, long userId)
         {

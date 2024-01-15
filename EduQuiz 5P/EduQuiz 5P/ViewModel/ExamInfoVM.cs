@@ -21,16 +21,17 @@ namespace EduQuiz_5P.ViewModel
         [Display(Name = "Trạng thái")]
         public bool IsRemoved { get; set; }
         [Display(Name = "Ngày tạo")]
-        public string DateCreate { get; set; }
+        public string? DateCreate { get; set; }
         [Display(Name = "Ngày xóa")]
-        public string DateRemove { get; set; }
+        public string? DateRemove { get; set; }
         public bool IsDefault { get; set; }
-        public string SubjectName { get; set; }
-        public ExamType ExamType { get; set; }
+        public string? SubjectName { get; set; }
+        public ExamType? ExamType { get; set; }
         public int TotalUserExam { get; set; }
-        public double KnowQuestion { get; set; }
-        public double UnderstandQuestion { get; set; }
-        public double ManipulateQuestion { get; set; }
+        public double Identification { get; set; }
+        public double Understanding { get; set; }
+        public double Application { get; set; }
+        public double AdvancedApplication { get; set; }
         public ExamInfoVM()
         {
 
@@ -44,9 +45,10 @@ namespace EduQuiz_5P.ViewModel
             NumberOfQuestion = model.NumberOfQuestion;
             ExamTime = model.ExamTime;
             IsRemoved = model.IsRemoved;
-            KnowQuestion = model.KnowQuestion;
-            UnderstandQuestion = model.UnderstandQuestion;
-            ManipulateQuestion = model.ManipulateQuestion;
+            Identification = model.Identification;
+            Understanding = model.Understanding;
+            Application = model.Application;
+            AdvancedApplication = model.AdvancedApplication;
             this.ExamType = model.ExamType;
             SubjectName = model.Subject is null ? "" : model.Subject.SubjectName ?? "";
             IsDefault = model.IsDefault;

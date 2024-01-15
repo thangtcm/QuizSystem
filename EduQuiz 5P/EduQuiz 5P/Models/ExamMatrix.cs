@@ -33,6 +33,9 @@ namespace EduQuiz_5P.Models
         [ForeignKey("UserIdRemove")]
         [Display(Name = "Người xóa")]
         public bool IsDefault { get; set; }
+        public int? SubjectId { get; set; }
+        [ForeignKey("SubjectId")]
+        public Subject? Subject { get; set; }
         public ApplicationUser? UserRemove { get; set; }
         public virtual List<ExamMatrixDetail>? ExamMatrixDetail { get; set; }
     }

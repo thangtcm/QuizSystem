@@ -9,12 +9,18 @@ namespace EduQuiz_5P.Services
     public class SubjectService : ISubjectService
     {
         public IUnitOfWork _unitOfWork;
-        public SubjectService(IUnitOfWork unitOfWork)
+        private readonly IFirebaseStorageService _firebaseStorageService;
+        public SubjectService(IUnitOfWork unitOfWork, IFirebaseStorageService firebaseStorageService)
         {
             _unitOfWork = unitOfWork;
-        }    
+            _firebaseStorageService = firebaseStorageService;
+        }
         public async Task Add(Subject subject, long userId)
         {
+            if(subject.UploadImage != null)
+            {
+                subject.UrlBackground = (await _firebaseStorageService.UploadFile(subject.UploadImage)).ToString();
+            }    
             subject.UserIdUpdate = userId;
             subject.DateUpdate = DateTime.UtcNow.ToTimeZone();
             _unitOfWork.SubjectRepository.Add(subject);
@@ -60,9 +66,14 @@ namespace EduQuiz_5P.Services
             {
                 model.SubjectDescription = subject.SubjectDescription;
                 model.SubjectName = subject.SubjectName;
-                _unitOfWork.SubjectRepository.Update(model);
+                if (subject.UploadImage != null)
+                {
+                    model.UrlBackground = (await _firebaseStorageService.UploadFile(subject.UploadImage)).ToString();
+                }
+                _unitOfWork.SubjectRepository.Update(subject);
                 await _unitOfWork.CommitAsync();
             }
+           
         }
     }
 }

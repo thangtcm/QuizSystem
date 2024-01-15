@@ -1,4 +1,6 @@
-﻿@model EduQuiz_5P.Models.Exam
+﻿@using EduQuiz_5P.Enums
+@using EduQuiz_5P.Helpers
+@model EduQuiz_5P.Models.Exam
 
 @{
     ViewData["Title"] = "Tạo đề thi";
@@ -49,10 +51,38 @@
                                     <span asp-validation-for="ExamTime" class="text-danger"></span>
                                 </div>
                             </div>
+                            <div class="col-12 col-lg-6">
+                                <div class="form-group local-forms">
+                                    <label>Lớp <span class="login-danger">*</span></label>
+                                    <select asp-for="@Model.ClassId" class="form-control select" asp-items="@ViewBag.SelectListClass" id="SelectClass" >
+                                        <option value="">Chọn Lớp</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <div class="form-group local-forms">
+                                    <label>Môn học <span class="login-danger">*</span></label>
+                                    <select asp-for="@Model.SubjectId" class="form-control select" id="SelectSubject" asp-items="@ViewBag.SelectListSubject" onchange="getExamMatrix(this, '#SelectExamMatrix')">
+                                        <option value="">Chọn môn học</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <div class="form-group local-forms">
+                                    <label>Loại đề thi <span class="login-danger">*</span></label>
+                                    <select asp-for="ExamType" id="ExamType" class="form-control select">
+                                        <option value="">Chọn loại đề thi</option>
+                                        @foreach (var type in Enum.GetValues(typeof(ExamType)))
+                                        {
+                                            <option value="@((int)type)">@CallBack.GetEnumDisplayName((ExamType)type)</option>
+                                        }
+                                    </select>
+                                </div>
+                            </div>
                             <div class="col-12 col-sm-6">
                                 <div class="form-group local-forms">
                                     <label>Ma trận đề <span class="login-danger">*</span></label>
-                                    <select name="examMatrixId" class="form-control select" asp-items="@ViewBag.ExamMatrix">
+                                    <select name="examMatrixId" id="SelectExamMatrix" class="form-control select" asp-items="@ViewBag.ExamMatrix">
                                         <option value="0">Chọn ma trận đề</option>
                                     </select>
                                 </div>

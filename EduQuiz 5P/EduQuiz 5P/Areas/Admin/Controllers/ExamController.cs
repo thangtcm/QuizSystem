@@ -33,14 +33,18 @@ namespace EduQuiz_5P.Areas.Admin.Controllers
         }
         public async Task<IActionResult> Index()
         {
+            var subjectLst = await _subjectService.GetListAsync();
+            ViewData["SubjectList"] = new SelectList(subjectLst, "Id", "SubjectName");
             var applicationDbContext = await _examService.GetListAsync();
             return View(applicationDbContext);
         }
 
         public async Task<IActionResult> Create()
         {
-            var examMatrix = await _examMatrix.GetListAsync();
-            ViewData["ExamMatrix"] = new SelectList(examMatrix, "Id", "ExamMatrixName");
+            var classlist = await _classService.GetListAsync();
+            var subjectlist = await _subjectService.GetListAsync();
+            ViewData["SelectListClass"] = new SelectList(classlist, "Id", "ClassName");
+            ViewData["SelectListSubject"] = new SelectList(subjectlist, "Id", "SubjectName");
             return View();
         }
 
@@ -48,16 +52,24 @@ namespace EduQuiz_5P.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Exam exam, int examMatrixId)
         {
-            var examMatrix = await _examMatrix.GetListAsync();
-            if (examMatrixId == 0)
-            {
-                ModelState.AddModelError(string.Empty, "Bạn chưa chọn ma trận đề");
-                ViewData["ExamMatrix"] = new SelectList(examMatrix, "Id", "ExamMatrixName");
-                return View();
-            }
+            ICollection<ExamMatrix> examMatrixs = new List<ExamMatrix>();
             try
             {
-                await _examService.CreateExamWithMatrix(exam, examMatrixId);
+                var user = await _userService.GetUser();
+                examMatrixs = await _examMatrix.GetListAsync();
+
+                if (examMatrixId == 0)
+                {
+                    ModelState.AddModelError(string.Empty, "Bạn chưa chọn ma trận đề");
+                    ViewData["ExamMatrix"] = new SelectList(examMatrixs, "Id", "ExamMatrixName");
+                    return View();
+                }
+                if(user == null)
+                {
+                    this.AddToastrMessage("Vui lòng đăng nhập lại", ToastrMessageType.Error);
+                    return RedirectToAction(nameof(Index));
+                }
+                await _examService.CreateExamWithMatrix(exam, examMatrixId, user.Id);
                 return RedirectToAction(nameof(Index));
             }
             catch (Exception ex)
@@ -65,7 +77,7 @@ namespace EduQuiz_5P.Areas.Admin.Controllers
                 Console.WriteLine(ex.ToString());
                 ModelState.AddModelError(string.Empty, "Đã có lỗi xảy ra");
             }
-            ViewData["ExamMatrix"] = new SelectList(examMatrix, "Id", "ExamMatrixName");
+            ViewData["ExamMatrix"] = new SelectList(examMatrixs, "Id", "ExamMatrixName");
             return View(exam);
         }
 
@@ -100,29 +112,33 @@ namespace EduQuiz_5P.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> DynamicImportQuestion(IFormFile fileUpload, string ExamName, string ExamDescription, int ExamTime, int SubjectId, int ClassId, ExamType ExamType)
+        public async Task<IActionResult> DynamicImportQuestion(ImportExamFileVM model)
         {
-            ImportExamFileVM model = new();
             try
             {
-                model.ExamName = ExamName;
-                model.ExamDescription = ExamDescription;
-                model.ExamTime = ExamTime;
-                model.ExamSubjectId = SubjectId;
-                model.ExamClassId = ClassId;
-                model.ExamType = ExamType;
-                if (Path.GetExtension(fileUpload.FileName) == ".tex")
+                if(model.FileUpload != null)
                 {
-                    var question = await _questionService.ReadFileLatex(fileUpload);
-                    model.QuestionVMs = question.ToList();
-                    return PartialView("_DynamicPreview", model);
-                }
-                else if (Path.GetExtension(fileUpload.FileName) == ".docx")
-                {
-                    var question = (await _questionService.ReadFileDoc(fileUpload)) ?? new List<QuestionVM>();
-                    model.QuestionVMs = question.ToList();
-                    return PartialView("_DynamicPreview", model);
-                }
+                    if (Path.GetExtension(model.FileUpload.FileName) == ".tex")
+                    {
+                        var question = await _questionService.ReadFileLatex(model.FileUpload);
+                        model.QuestionVMs = question.ToList();
+                        model.ExamIdentification = (model.ExamIdentification / question.Count) * 100;
+                        model.ExamUnderstanding = (model.ExamUnderstanding / question.Count) * 100;
+                        model.ExamApplication = (model.ExamApplication / question.Count) * 100;
+                        model.ExamAdvancedApplication = (model.ExamAdvancedApplication / question.Count) * 100;
+                        return PartialView("_DynamicPreview", model);
+                    }
+                    else if (Path.GetExtension(model.FileUpload.FileName) == ".docx")
+                    {
+                        var question = (await _questionService.ReadFileDoc(model.FileUpload)) ?? new List<QuestionVM>();
+                        model.QuestionVMs = question.ToList();
+                        model.ExamIdentification = (model.ExamIdentification / question.Count) * 100;
+                        model.ExamUnderstanding = (model.ExamUnderstanding / question.Count) * 100;
+                        model.ExamApplication = (model.ExamApplication / question.Count) * 100;
+                        model.ExamAdvancedApplication = (model.ExamAdvancedApplication / question.Count) * 100;
+                        return PartialView("_DynamicPreview", model);
+                    }
+                }    
             }
             catch (Exception ex)
             {

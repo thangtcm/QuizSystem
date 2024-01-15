@@ -25,6 +25,31 @@ namespace EduQuiz_5P.Controllers
             _userExamDetailService = userExamDetailService;
         }
 
+        [HttpPost]
+        public async Task<IActionResult> GenerateExamMatrix(UserExamGenerate model, string? returnUrl = null)
+        {
+            returnUrl ??= Url.Content("~/");
+            try
+            {
+                var user = await _userService.GetUser();
+                if(user != null)
+                {
+                    var result = await _userExamService.GenerateExamMatrix(model, user.Id);
+                    if (!result.IsSuccess)
+                    {
+                        this.AddToastrMessage(result.Message, Enums.ToastrMessageType.Error);
+                        return LocalRedirect(returnUrl);
+                    }
+                    return RedirectToAction(nameof(TakeExam), new { userExamId = result.Result!.UserExamId, returnUrl = returnUrl });
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message);
+            }
+            return LocalRedirect(returnUrl);
+        }
+
         public async Task<IActionResult> Take(int examId, string? returnUrl = null)
         {
             returnUrl ??= Url.Content("~/");

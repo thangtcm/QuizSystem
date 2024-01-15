@@ -7,6 +7,7 @@ using EduQuiz_5P.Models;
 using EduQuiz_5P.Repository.UnitOfWork;
 using EduQuiz_5P.Services.Interface;
 using EduQuiz_5P.ViewModel;
+using Microsoft.EntityFrameworkCore;
 using System.Text.RegularExpressions;
 
 namespace EduQuiz_5P.Services
@@ -70,7 +71,37 @@ namespace EduQuiz_5P.Services
             await _unitOfWork.CommitAsync();
         }
 
+        public async Task<ResponResultData<Question>> GenerateQuestion(int examMatrixId)
+        {
+            ResponResultData<Question> model = new();
+            var examMatrix = await _unitOfWork.ExamMatrixRepository.GetAsync(x => x.Id == examMatrixId, x => x.Include(ed => ed.ExamMatrixDetail!));
+            if (examMatrix != null && examMatrix.ExamMatrixDetail != null)
+            {
+                var components = examMatrix.ExamMatrixDetail.Select(x => x.ChappterId).ToList();
+                var questions = await _unitOfWork.QuestionRepository.GetAllAsync(x => x.ChappterId != null && components.Contains(x.ChappterId.Value) && x.IsRemoved == false);
+                var randomQuestions = new List<Question>();
+                foreach (var detail in examMatrix.ExamMatrixDetail)
+                {
+                    var getquestion = questions.Where(x => x.ChappterId == detail.ChappterId && x.DifficultyLevel == detail.Component).ToList();
 
+                    if (detail.NumberOfQuestion > getquestion.Count)
+                    {
+                        model.IsSuccess = false;
+                        model.Message = "Tài nguyên không đủ để sinh đề.";
+                        return model;
+                    }
+                    var randQuestion = getquestion.OrderBy(q => Guid.NewGuid()).Take(detail.NumberOfQuestion).ToList();
+                    randomQuestions.AddRange(randQuestion);
+                }
+                model.IsSuccess = true;
+                model.Message = "Sinh đề thành công.";
+                model.ListResult = randomQuestions;
+                return model;
+            }
+            model.IsSuccess = false;
+            model.Message = "Tài nguyên không đủ để sinh đề.";
+            return model;
+        }    
         public async Task AddAPI(ICollection<Question> model, int chapterId)
         {
             Random random = new();
@@ -106,6 +137,9 @@ namespace EduQuiz_5P.Services
             }
             return false;
         }
+
+        public async Task<int> CountAsync()
+            => await _unitOfWork.QuestionRepository.CountAsync();
 
         public Question? GetById(int id)
             => _unitOfWork.QuestionRepository.Get(x => x.Id == id);

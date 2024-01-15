@@ -19,6 +19,9 @@ namespace EduQuiz_5P.Repository.UnitOfWork
         private IExamMatrixDetailRepository _examMatrixDetailRepository;
         private IUserExamRepository _userExamRepository;
         private IUserExamDetailRepository _userExamDetailRepository;
+        private IUserRegistrationRepository _userRegistrationRepository;
+        private IUserActivityLogRepository _userActivityLogRepository;
+        private IExamDetailRepository _examDetailRepository;
         public UnitOfWork(ApplicationDbContext context)
         {
             _context = context;
@@ -118,6 +121,30 @@ namespace EduQuiz_5P.Repository.UnitOfWork
             {
                 return _userExamDetailRepository ??= new UserExamDetailRepository(_context);
             }
+        }
+
+        public IUserRegistrationRepository UserRegistrationRepository
+        {
+            get
+            {
+                return _userRegistrationRepository ??= new UserRegistrationRepository(_context);
+            }
+        }
+        public IUserActivityLogRepository UserActivityLogRepository
+        {
+            get
+            {
+                return _userActivityLogRepository ??= new UserActivityLogRepository(_context);
+            }
+        }
+
+        public IExamDetailRepository ExamDetailRepository
+        {
+            get
+            {
+                return _examDetailRepository ??= new ExamDetailRepository(_context);
+            }
+
         }
         public void Commit()
             => _context.SaveChanges();

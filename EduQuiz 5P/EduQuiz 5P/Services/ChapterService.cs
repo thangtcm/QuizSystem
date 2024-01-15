@@ -84,19 +84,24 @@ namespace EduQuiz_5P.Services
         public async Task<ICollection<Chapter>> GetListAsyncWithIncludes(Func<IQueryable<Chapter>, IIncludableQueryable<Chapter, object>> includes)
             => await _unitOfWork.ChapterRepository.GetAllAsync(null, includes);
 
-        public async Task Update(Chapter chappter)
+        public async Task Update(Chapter chapter)
         {
-            var model = await _unitOfWork.ChapterRepository.GetAsync(x => x.Id == chappter.Id);
-            if (model != null)
+            //var model = await _unitOfWork.ChapterRepository.GetAsync(x => x.Id == chappter.Id);
+            //if (model != null)
+            //{
+            //    var user = await _userService.GetUser();
+            //    model.UserIdUpdate = user!.Id;
+            //    model.DateUpdate = DateTime.Now;
+            //    model.ChapterName = chappter.ChapterName;
+            //    model.ChapterDescription = chappter.ChapterDescription;
+
+            //}
+            if (chapter.UploadImg != null)
             {
-                var user = await _userService.GetUser();
-                model.UserIdUpdate = user!.Id;
-                model.DateUpdate = DateTime.Now;
-                model.ChapterName = chappter.ChapterName;
-                model.ChapterDescription = chappter.ChapterDescription;
-                _unitOfWork.ChapterRepository.Update(model);
-                await _unitOfWork.CommitAsync();
+                chapter.UrlBackground = (await _firebaseStorageService.UploadFile(chapter.UploadImg)).ToString();
             }
+            _unitOfWork.ChapterRepository.Update(chapter);
+            await _unitOfWork.CommitAsync();
         }
 
         public async Task SaveChanges()

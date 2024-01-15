@@ -59,6 +59,9 @@ builder.Services.AddScoped<IExamMatrixRepository, ExamMatrixRepository>();
 builder.Services.AddScoped<IExamMatrixDetailRepository, ExamMatrixDetailRepository>();
 builder.Services.AddScoped<IUserExamRepository, UserExamRepository>();
 builder.Services.AddScoped<IUserExamDetailRepository, UserExamDetailRepository>();
+builder.Services.AddScoped<IUserRegistrationRepository, UserRegistrationRepository>();
+builder.Services.AddScoped<IUserActivityLogRepository, UserActivityLogRepository>();
+builder.Services.AddScoped<IExamDetailRepository, ExamDetailRepository>();
 
 //
 builder.Services.AddTransient(typeof(IUserService), typeof(UserService));
@@ -76,6 +79,7 @@ builder.Services.AddScoped<UserManager<ApplicationUser>>();
 builder.Services.AddTransient(typeof(IFirebaseStorageService), typeof(FirebaseStorageService));
 builder.Services.AddTransient(typeof(IUserExamService), typeof(UserExamService));
 builder.Services.AddTransient(typeof(IUserExamDetailService), typeof(UserExamDetailService));
+builder.Services.AddTransient(typeof(IUserRegistrationService), typeof(UserRegistrationService));
 
 //Mail
 builder.Services.AddOptions();

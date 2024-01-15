@@ -2,6 +2,7 @@
 using EduQuiz_5P.Enums;
 using EduQuiz_5P.Helpers;
 using EduQuiz_5P.Models;
+using EduQuiz_5P.Services;
 using EduQuiz_5P.Services.Interface;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -114,6 +115,14 @@ namespace EduQuiz_5P.Areas.Admin.Controllers
                 }
             };
             return PartialView("_DynamicAddExamMatrix", model);
+        }
+
+        [AllowAnonymous]
+        public async Task<IActionResult> LoadExamMatrix(int? subjectId)
+        {
+            var examMatrix = await _examMatrixService.GetListAsync(subjectId);
+            var selectList = new SelectList(examMatrix, "Id", "ExamMatrixName");
+            return Json(selectList);
         }
     }
 }

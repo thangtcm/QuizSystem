@@ -1,4 +1,4 @@
-﻿@model List<ExamMatrixDetail>
+﻿@model ExamMatrix
 @using EduQuiz_5P.Enums
 @using EduQuiz_5P.Helpers
 @using EduQuiz_5P.Models;
@@ -14,7 +14,7 @@
     <div class="col-12 col-sm-6">
         <div class="form-group local-forms">
             <label>Lớp <span class="login-danger">*</span></label>
-            <select class="form-control select" id="@SelectClass" onchange="getChapter(this, '#@SelectSubject', '@SelectChapter')" asp-items="@Model[0].SelectListClass">
+            <select class="form-control select" id="@SelectClass" onchange="getChapter(this, '#@SelectSubject', '#@SelectChapter')" asp-items="@Model.ExamMatrixDetail![0].SelectListClass">
                 <option value="">Chọn lớp</option>
             </select>
         </div>
@@ -22,7 +22,7 @@
     <div class="col-12 col-sm-6">
         <div class="form-group local-forms">
             <label>Môn học<span class="login-danger">*</span></label>
-            <select id="@SelectSubject" class="form-control select" onchange="getChapter('@SelectClass', this, '#@SelectChapter')">
+            <select id="@SelectSubject" class="form-control select" onchange="getChapter('#@SelectClass', this, '#@SelectChapter')" asp-items="@Model.ExamMatrixDetail![0].SelectListSubject">
                 <option value="">Chọn môn học</option>
             </select>
         </div>
@@ -30,22 +30,15 @@
     <div class="col-12 col-sm-6">
         <div class="form-group local-forms">
             <label>Chương<span class="login-danger">*</span></label>
-            <select asp-for="@Model[0].ChappterId" id="@SelectChapter" class="form-control select" required>
+            <select asp-for="@Model.ExamMatrixDetail![0].ChappterId" id="@SelectChapter" class="form-control select" required>
                 <option value="">Chọn chương</option>
             </select>
-        </div>
-    </div>
-    <div class="col-12 col-sm-4">
-        <div class="form-group local-forms">
-            <label>Số câu <span class="text-danger">*</span></label>
-            <input asp-for="@Model[0].NumberOfQuestion" class="form-control">
-            <span asp-validation-for="@Model[0].NumberOfQuestion" class="text-danger"></span>
         </div>
     </div>
     <div class="col-12 col-sm-6">
         <div class="form-group local-forms">
             <label>Độ khó<span class="login-danger">*</span></label>
-            <select asp-for="@Model[0].Component" class="form-control select" required>
+            <select asp-for="@Model.ExamMatrixDetail![0].Component" class="form-control select" required>
                 <option value="">Chọn độ khó</option>
                 @foreach (var type in Enum.GetValues(typeof(DifficultyLevel)))
                 {
@@ -54,4 +47,12 @@
             </select>
         </div>
     </div>
+    <div class="col-12 col-sm-4">
+        <div class="form-group local-forms">
+            <label>Số câu <span class="text-danger">*</span></label>
+            <input asp-for="@Model.ExamMatrixDetail![0].NumberOfQuestion" class="form-control">
+            <span asp-validation-for="@Model.ExamMatrixDetail![0].NumberOfQuestion" class="text-danger"></span>
+        </div>
+    </div>
+    
 </div>

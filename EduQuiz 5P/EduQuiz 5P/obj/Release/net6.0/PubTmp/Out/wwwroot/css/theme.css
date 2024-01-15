@@ -2892,7 +2892,7 @@ progress {
     font-weight: 400;
     line-height: 1.5;
     color: #6C7E99;
-    background-color: #f4f6fa;
+    background-color: #fff;
     background-clip: padding-box;
     border: 1px solid #7E92B2;
     -webkit-appearance: none;
@@ -22675,6 +22675,128 @@ ul, ol {
         top: 50%;
         width: 0;
     }
+
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+    border-color: transparent transparent #000;
+    border-width: 0 6px 6px;
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+    padding-right: 30px;
+    padding-left: 15px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #333;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 43px;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background-color: #18aefa;
+}
+
+.select2-container--default .select2-selection--multiple {
+    border: 1px solid #ddd;
+    min-height: 40px;
+}
+
+/*-----------------
+	Aos Animation
+-----------------------*/
+.img {
+    max-width: 100%;
+}
+
+@-webkit-keyframes up-down {
+    0% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes up-down {
+    0% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+/*-----------------
+	Statistical
+-----------------------*/
+.enroll-group {
+    background: linear-gradient(90deg, rgba(161, 196, 253, 0.79) 0%, rgba(194, 233, 251, 0.36) 100%);
+    border: 1px solid rgba(255, 222, 218, 0.38);
+    border-radius: 20px;
+    padding: 30px;
+    margin: 80px 0px;
+}
+
+.enroll-img {
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.course-count {
+    margin-left: 25px;
+    color: #000000;
+}
+
+.course-count p {
+    margin-bottom: 0;
+    font-size: 18px;
+}
+
+.course-count h3 {
+    font-weight: 700;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 767.98px) {
+    .course-count p {
+        font-size: 14px;
+    }
+
+    .course-count p {
+        font-size: 15px;
+    }
+}
+/*-----------------
+	5. Select2
+-----------------------*/
+
+.select2-container .select2-selection--single {
+    border: 1px solid #ddd;
+    height: 45px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 43px;
+    right: 7px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+    border-color: #000 transparent transparent;
+    border-style: solid;
+    border-width: 6px 6px 0;
+    height: 0;
+    left: 50%;
+    margin-left: -10px;
+    margin-top: -2px;
+    position: absolute;
+    top: 50%;
+    width: 0;
+}
 
 .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
     border-color: transparent transparent #000;

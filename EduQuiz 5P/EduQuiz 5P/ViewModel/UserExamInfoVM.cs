@@ -24,6 +24,7 @@ namespace EduQuiz_5P.ViewModel
             StartTime = model.StartTime;
             EndTime = model.EndTime;
             QuestionComplete = 0;
+            NumberOfCorrect = model.NumberOfCorrect;
             NumberOfQuestion = model.NumberOfQuestion;
             UserExamDetailVM = model.UserExamDetails is null ? new List<UserExamDetailInfoVM>() : model.UserExamDetails.Select(x => new UserExamDetailInfoVM(x)).ToList();
         }    

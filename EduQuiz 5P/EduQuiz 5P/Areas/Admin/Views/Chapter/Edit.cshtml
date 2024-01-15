@@ -1,0 +1,99 @@
+﻿@model EduQuiz_5P.Models.Chapter
+@{
+    ViewData["Title"] = "Chỉnh sửa chapter";
+}
+
+<div class="content container-fluid">
+
+    <div class="page-header">
+        <div class="row align-items-center">
+            <div class="col">
+                <h3 class="page-title">@ViewData["Title"]</h3>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Chapter">Danh sách chương</a></li>
+                    <li class="breadcrumb-item active">@ViewData["Title"]</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-body">
+                    <form asp-action="Create">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="row">
+                            <div class="col-12">
+                                <h5 class="form-title"><span>Basic Details</span></h5>
+                            </div>
+                            <div class="col-12" id="createChapterContainers">
+                                    <div class="row create-dynamic">
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <div class="container">
+                                                    <div class="row justify-content-center align-items-center align-content-center">
+                                                        <div class="profile-user-box mt-3">
+                                                            <div class="profile-user-img ">
+                                                                <img src="~/logo.png" alt="Profile" id="UploadImage">
+                                                                <div class="form-group students-up-files profile-edit-icon mb-0">
+                                                                    <div class="uplod d-flex">
+                                                                        <label class="file-upload profile-upbtn mb-0">
+                                                                        <i class="fas fa-edit"></i><input asp-for="@Model.UploadImg" onchange="previewImage(this, '#UploadImage')">
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <div class="form-group local-forms">
+                                                <label>Tên chương học<span class="login-danger">*</span></label>
+                                                <input asp-for="@Model.ChapterName" class="form-control" placeholder="Enter Name">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <div class="form-group local-forms">
+                                                <label>Lớp <span class="login-danger">*</span></label>
+                                                <select class="form-control select" asp-for="@Model.ClassesId" asp-items="@Model.SelectClass">
+                                                    <option value="">Chọn lớp</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <div class="form-group local-forms">
+                                                <label>Môn học<span class="login-danger">*</span></label>
+                                                <select asp-for="@Model.SubjectId" class="form-control select" asp-items="@Model.SelectSubject">
+                                                    <option value="">Chọn môn học</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-group local-forms">
+                                                <label>Mô tả chương học <span class="login-danger">*</span></label>
+                                                <textarea asp-for="@Model.ChapterDescription" id="editor1" class="editor" cols="30" rows="10"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="form-group">
+                                    <input type="button" id="btnAdd" class="btn btn-primary" value="Thêm" style="width: 10rem;">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="student-submit">
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

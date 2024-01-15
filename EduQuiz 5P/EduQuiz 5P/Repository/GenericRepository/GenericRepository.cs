@@ -122,10 +122,16 @@ namespace EduQuiz_5P.Repository.GenericRepository
         public void UpdateRange(ICollection<T> entities)
             => _entitySet.UpdateRange(entities);
 
-        public async Task<int> CountAsync(Expression<Func<T, bool>> expression)
-            => await _entitySet.CountAsync(expression);
+        public async Task<int> CountAsync(Expression<Func<T, bool>>? expression = null)
+        {
+            if(expression != null)
+            {
+                return await _entitySet.CountAsync(expression);
+            }
+            return await _entitySet.CountAsync();
+        }
 
-        public int Count(Expression<Func<T, bool>> expression)
+            public int Count(Expression<Func<T, bool>> expression)
             => _entitySet.Count(expression);
 
         public SelectList GetSelectList(string Id, string Name)

@@ -9,7 +9,12 @@ namespace EduQuiz_5P.ViewModel
         public int ExamTime { get; set; }
         public int ExamClassId { get; set; }
         public int ExamSubjectId { get; set; }
+        public double ExamIdentification { get; set; }
+        public double ExamUnderstanding { get; set; }
+        public double ExamApplication { get; set; }
+        public double ExamAdvancedApplication { get; set; }
         public ExamType ExamType { get; set; }
+        public IFormFile? FileUpload { get; set; }
         public List<QuestionVM> QuestionVMs { get; set; }
     }
 }

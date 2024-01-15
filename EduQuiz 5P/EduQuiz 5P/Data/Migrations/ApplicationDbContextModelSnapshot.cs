@@ -308,6 +308,12 @@ namespace EduQuiz_5P.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
+                    b.Property<double>("AdvancedApplication")
+                        .HasColumnType("float");
+
+                    b.Property<double>("Application")
+                        .HasColumnType("float");
+
                     b.Property<int?>("ChapterId")
                         .HasColumnType("int");
 
@@ -332,17 +338,14 @@ namespace EduQuiz_5P.Migrations
                     b.Property<int>("ExamType")
                         .HasColumnType("int");
 
+                    b.Property<double>("Identification")
+                        .HasColumnType("float");
+
                     b.Property<bool>("IsDefault")
                         .HasColumnType("bit");
 
                     b.Property<bool>("IsRemoved")
                         .HasColumnType("bit");
-
-                    b.Property<double>("KnowQuestion")
-                        .HasColumnType("float");
-
-                    b.Property<double>("ManipulateQuestion")
-                        .HasColumnType("float");
 
                     b.Property<int>("NumberOfQuestion")
                         .HasColumnType("int");
@@ -353,7 +356,7 @@ namespace EduQuiz_5P.Migrations
                     b.Property<int>("TotalUserExam")
                         .HasColumnType("int");
 
-                    b.Property<double>("UnderstandQuestion")
+                    b.Property<double>("Understanding")
                         .HasColumnType("float");
 
                     b.Property<long?>("UserIdCreate")
@@ -375,6 +378,29 @@ namespace EduQuiz_5P.Migrations
                     b.HasIndex("UserIdRemove");
 
                     b.ToTable("Exam");
+                });
+
+            modelBuilder.Entity("EduQuiz_5P.Models.ExamDetail", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("ExamId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("QuestionId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ExamId");
+
+                    b.HasIndex("QuestionId");
+
+                    b.ToTable("ExamDetail");
                 });
 
             modelBuilder.Entity("EduQuiz_5P.Models.ExamMatrix", b =>
@@ -403,6 +429,9 @@ namespace EduQuiz_5P.Migrations
                     b.Property<bool>("IsRemoved")
                         .HasColumnType("bit");
 
+                    b.Property<int?>("SubjectId")
+                        .HasColumnType("int");
+
                     b.Property<int>("Total")
                         .HasColumnType("int");
 
@@ -416,6 +445,8 @@ namespace EduQuiz_5P.Migrations
                         .HasColumnType("bigint");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("SubjectId");
 
                     b.HasIndex("UserIdUpdate");
 
@@ -473,9 +504,6 @@ namespace EduQuiz_5P.Migrations
                     b.Property<int?>("DifficultyLevel")
                         .HasColumnType("int");
 
-                    b.Property<int?>("ExamId")
-                        .HasColumnType("int");
-
                     b.Property<string>("IsImage")
                         .HasColumnType("nvarchar(max)");
 
@@ -514,8 +542,6 @@ namespace EduQuiz_5P.Migrations
 
                     b.HasIndex("ChappterId");
 
-                    b.HasIndex("ExamId");
-
                     b.HasIndex("UserIdRemove");
 
                     b.HasIndex("UserIdUpdate");
@@ -546,6 +572,10 @@ namespace EduQuiz_5P.Migrations
                     b.Property<string>("SubjectName")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("UrlBackground")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<long?>("UserIdRemove")
                         .HasColumnType("bigint");
 
@@ -559,6 +589,39 @@ namespace EduQuiz_5P.Migrations
                     b.HasIndex("UserIdUpdate");
 
                     b.ToTable("Subject");
+                });
+
+            modelBuilder.Entity("EduQuiz_5P.Models.UserActivityLog", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("ActivityType")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ExamId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ExamName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Message")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Timestamp")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("UserActivityLog");
                 });
 
             modelBuilder.Entity("EduQuiz_5P.Models.UserExamDetail", b =>
@@ -597,6 +660,12 @@ namespace EduQuiz_5P.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
+                    b.Property<double>("AdvancedApplication")
+                        .HasColumnType("float");
+
+                    b.Property<double>("Application")
+                        .HasColumnType("float");
+
                     b.Property<DateTime>("EndTime")
                         .HasColumnType("datetime2");
 
@@ -607,10 +676,7 @@ namespace EduQuiz_5P.Migrations
                     b.Property<int>("ExamTime")
                         .HasColumnType("int");
 
-                    b.Property<double>("KnowQuestion")
-                        .HasColumnType("float");
-
-                    b.Property<double>("ManipulateQuestion")
+                    b.Property<double>("Identification")
                         .HasColumnType("float");
 
                     b.Property<int>("NumberOfCorrect")
@@ -622,7 +688,7 @@ namespace EduQuiz_5P.Migrations
                     b.Property<DateTime>("StartTime")
                         .HasColumnType("datetime2");
 
-                    b.Property<double>("UnderstandQuestion")
+                    b.Property<double>("Understanding")
                         .HasColumnType("float");
 
                     b.Property<long>("UserId")
@@ -633,6 +699,27 @@ namespace EduQuiz_5P.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("UserExams");
+                });
+
+            modelBuilder.Entity("EduQuiz_5P.Models.UserRegistration", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("RegistrationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long?>("UserId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("UserRegistration");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<long>", b =>
@@ -849,8 +936,31 @@ namespace EduQuiz_5P.Migrations
                     b.Navigation("UserRemove");
                 });
 
+            modelBuilder.Entity("EduQuiz_5P.Models.ExamDetail", b =>
+                {
+                    b.HasOne("EduQuiz_5P.Models.Exam", "Exam")
+                        .WithMany("ExamDetail")
+                        .HasForeignKey("ExamId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("EduQuiz_5P.Models.Question", "Question")
+                        .WithMany()
+                        .HasForeignKey("QuestionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Exam");
+
+                    b.Navigation("Question");
+                });
+
             modelBuilder.Entity("EduQuiz_5P.Models.ExamMatrix", b =>
                 {
+                    b.HasOne("EduQuiz_5P.Models.Subject", "Subject")
+                        .WithMany()
+                        .HasForeignKey("SubjectId");
+
                     b.HasOne("EduQuiz_5P.Data.ApplicationUser", "UserUpdate")
                         .WithMany()
                         .HasForeignKey("UserIdUpdate");
@@ -858,6 +968,8 @@ namespace EduQuiz_5P.Migrations
                     b.HasOne("EduQuiz_5P.Data.ApplicationUser", "UserRemove")
                         .WithMany()
                         .HasForeignKey("UserRemoveId");
+
+                    b.Navigation("Subject");
 
                     b.Navigation("UserRemove");
 
@@ -888,10 +1000,6 @@ namespace EduQuiz_5P.Migrations
                     b.HasOne("EduQuiz_5P.Models.Chapter", "Chappter")
                         .WithMany("Questions")
                         .HasForeignKey("ChappterId");
-
-                    b.HasOne("EduQuiz_5P.Models.Exam", null)
-                        .WithMany("Questions")
-                        .HasForeignKey("ExamId");
 
                     b.HasOne("EduQuiz_5P.Data.ApplicationUser", "UserRemove")
                         .WithMany()
@@ -959,6 +1067,15 @@ namespace EduQuiz_5P.Migrations
                     b.Navigation("ApplicationUser");
                 });
 
+            modelBuilder.Entity("EduQuiz_5P.Models.UserRegistration", b =>
+                {
+                    b.HasOne("EduQuiz_5P.Data.ApplicationUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<long>", b =>
                 {
                     b.HasOne("EduQuiz_5P.Data.ApplicationRole", null)
@@ -1022,7 +1139,7 @@ namespace EduQuiz_5P.Migrations
 
             modelBuilder.Entity("EduQuiz_5P.Models.Exam", b =>
                 {
-                    b.Navigation("Questions");
+                    b.Navigation("ExamDetail");
                 });
 
             modelBuilder.Entity("EduQuiz_5P.Models.ExamMatrix", b =>

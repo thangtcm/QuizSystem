@@ -47,10 +47,11 @@ namespace EduQuiz_5P.Models
         public bool IsDefault { get; set; }
         public ExamType ExamType { get; set; }
         public int TotalUserExam { get; set; }
-        public ICollection<Question> Questions { get; set; }
-        public double KnowQuestion { get; set; }
-        public double UnderstandQuestion { get; set; }
-        public double ManipulateQuestion { get; set; }
+        public ICollection<ExamDetail> ExamDetail { get; set; }
+        public double Identification { get; set; }
+        public double Understanding { get; set; }
+        public double Application { get; set; }
+        public double AdvancedApplication { get; set; }
 
         public void ExamCreate(ExamInfoVM model, long UserIdControl)
         {

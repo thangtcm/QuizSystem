@@ -1,7 +1,7 @@
 ﻿@model EduQuiz_5P.ViewModel.UserInfoVM
 
 @{
-    ViewData["Title"] = "Register";
+    ViewData["Title"] = "Đăng ký";
     Layout = "~/Views/Account/_LayoutAccount.cshtml";
 }
 
@@ -16,7 +16,7 @@
                 <div class="card-body">
                     <div class="container">
                         <div class="text-center pb-5">
-                            <h4 class="card-title">Sign up</h4>
+                            <h4 class="card-title">@ViewData["Title"]</h4>
                             <div class="d-inline-block w-100">
                                 <p class="card-text mt-0 ">Bạn đã có tài khoản?<a href="#" class="ms-2">Đăng nhập</a></p>
                             </div>

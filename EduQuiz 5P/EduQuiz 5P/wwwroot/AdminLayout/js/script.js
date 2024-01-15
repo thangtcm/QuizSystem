@@ -454,15 +454,6 @@ Version      : 1.0
 		});
     }
 	
-	// Counter 
-	
-	if($('.counter').length > 0) {
-	   $('.counter').counterUp({
-			delay: 20,
-            time: 2000
-       });
-	}
-	
 	if($('#timer-countdown').length > 0) {
 		$( '#timer-countdown' ).countdown( {
 			from: 180, // 3 minutes (3*60)
@@ -584,6 +575,26 @@ Version      : 1.0
 
 		});
 	}
+
+	const counterUp = window.counterUp.default;
+
+	const callback = entries => {
+		entries.forEach(entry => {
+			const el = entry.target;
+			if (entry.isIntersecting) {
+				counterUp(el, {
+					duration: 2000,
+					delay: 16,
+				});
+			}
+		});
+	};
+
+	const IO = new IntersectionObserver(callback, { threshold: 1 });
+
+	const elements = document.querySelectorAll('.counter');
+
+	elements.forEach(el => IO.observe(el));
 })(jQuery);
 
 

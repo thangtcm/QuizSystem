@@ -84,23 +84,28 @@ namespace EduQuiz_5P.Areas.Admin.Controllers
             return View(chapters);
         }
 
-        public IActionResult Edit(int? id)
+        public async Task<IActionResult> Edit(int? id)
         {
-            var subject = _subjectService.GetById(id);
-            if (subject == null)
+            
+            var chapter = _chapterService.GetById(id);
+            if (chapter == null)
             {
                 return NotFound();
             }
-            return View(subject);
+            var classLst = await _classService.GetListAsync();
+            var subjectLst = await _subjectService.GetListAsync();
+            chapter.SelectClass = new SelectList(classLst, "Id", "ClassName", chapter.ClassesId);
+            chapter.SelectSubject = new SelectList(subjectLst, "Id", "SubjectName", chapter.SubjectId);
+            return View(chapter);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, Subject model)
+        public async Task<IActionResult> Edit(int id, Chapter model)
         {
             try
             {
-                await _subjectService.Update(model);
+                await _chapterService.Update(model);
                 return RedirectToAction(nameof(Index));
             }
             catch (Exception ex)

@@ -48,6 +48,30 @@
                             <input class="form-control" id="ExamTime" type="number" placeholder="Nhập số phút làm bài" />
                         </div>
                     </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="form-group local-forms">
+                            <label>Số câu nhận biết<span class="login-danger">*</span></label>
+                            <input class="form-control" id="Identification" type="number" placeholder="Nhập số câu nhận biết" />
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="form-group local-forms">
+                            <label>Số câu thông hiểu<span class="login-danger">*</span></label>
+                            <input class="form-control" id="Understanding" type="number" placeholder="Nhập số câu thông hiểu" />
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="form-group local-forms">
+                            <label>Số câu vận dụng<span class="login-danger">*</span></label>
+                            <input class="form-control" id="Application" type="number" placeholder="Nhập số câu vận dụng" />
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="form-group local-forms">
+                            <label>Số câu nâng cao<span class="login-danger">*</span></label>
+                            <input class="form-control" id="AdvancedApplication" type="number" placeholder="Nhập số câu vận dụng cao" />
+                        </div>
+                    </div>
                     <div class="col-12">
                         <div class="form-group local-forms">
                             <label>Mô tả đề thi<span class="login-danger">*</span></label>
@@ -115,11 +139,17 @@
                 var fileInput = $(this)[0];
                 if (fileInput.files && fileInput.files[0]) {
                     var formData = new FormData();
-                    formData.append("fileUpload", fileInput.files[0]);
+                    formData.append("FileUpload", fileInput.files[0]);
                     var examName = $("#ExamName").val();
                     var examDescription = CKEDITOR.instances['editor1 ExamDescription'].getData();
                     var examTime = $("#ExamTime").val();
-                    if (examName.trim() === '' || examDescription.trim() === '' || examTime.trim() === '') {
+                    var identification = $("#Identification").val();
+                    var understanding = $("#Understanding").val();
+                    var application = $("#Application").val();
+                    var advancedApplication = $("#AdvancedApplication").val();
+                    if (examName.trim() === '' || examDescription.trim() === '' || 
+                        examTime.trim() === '' || identification.trim() == '' ||
+                        understanding.trim() == '' || application.trim() == '' || advancedApplication.trim() == '') {
                         toastr.error("Vui lòng điền đầy đủ thông tin.");
                         $("#fileInput").val('');
                         return; 
@@ -127,13 +157,24 @@
                     formData.append("ExamName", examName);
                     formData.append("ExamDescription", examDescription);
                     formData.append("ExamTime", examTime);
+                    formData.append("ExamIdentification", identification);
+                    formData.append("ExamUnderstanding", understanding);
+                    formData.append("ExamApplication", application);
+                    formData.append("ExamAdvancedApplication", advancedApplication);
                     var selectSubjectValue = $("#SelectSubject").val();
                     var selectClassValue = $("#SelectClass").val();
                     var examTypeValue = $("#ExamType").val();
                     if (selectSubjectValue !== null && selectSubjectValue !== 0 && selectSubjectValue !== '') {
-                        formData.append("SubjectId", selectSubjectValue);
+                        formData.append("ExamSubjectId", selectSubjectValue);
                     } else {
                         toastr.error("Vui lòng chọn môn học");
+                        $("#fileInput").val('');
+                        return;
+                    }
+                    if (selectClassValue !== null && selectClassValue !== 0 && selectClassValue !== '') {
+                        formData.append("ExamClassId", selectClassValue);
+                    } else {
+                        toastr.error("Vui lòng chọn lớp");
                         $("#fileInput").val('');
                         return;
                     }
@@ -141,6 +182,7 @@
                         formData.append("ExamType", examTypeValue);
                     } else {
                         toastr.error("Vui lòng chọn loại đề thi");
+                        $("#fileInput").val('');
                         return;
                     }
                     // Hiển thị spinner trước khi gửi AJAX request

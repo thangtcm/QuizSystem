@@ -19,9 +19,11 @@ namespace EduQuiz_5P.ViewModel
         public Gender? Gender { get; set; }
         public DateTime? Birthday { get; set; }
         public bool RememberMe { get; set; }
+        public double Point { get; set; }
         public IList<AuthenticationScheme>? ExternalLogins { get; set; }
         public virtual ICollection<string>? Roles { get; set; }
         public virtual ICollection<string>? Tokens { get; set; }
+
         public UserInfoVM()
         {
         }
@@ -31,6 +33,7 @@ namespace EduQuiz_5P.ViewModel
             this.UserName = user.UserName;
             this.UserId = user.Id;
             this.Gender = user.Gender;
+            this.Point = user.Point;
         }
 
         public UserInfoVM(ApplicationUser user, List<string> roles)

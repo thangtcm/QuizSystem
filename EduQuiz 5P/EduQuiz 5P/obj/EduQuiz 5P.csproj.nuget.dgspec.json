@@ -48,6 +48,10 @@
               "target": "Package",
               "version": "[3.0.0, )"
             },
+            "EPPlus": {
+              "target": "Package",
+              "version": "[7.0.6, )"
+            },
             "Firebase.Auth": {
               "target": "Package",
               "version": "[1.0.0, )"

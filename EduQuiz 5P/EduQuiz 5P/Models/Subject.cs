@@ -15,6 +15,7 @@ namespace EduQuiz_5P.Models
         public string? SubjectName { get; set; }
         [Display(Name = "Mô tả Môn Học")]
         public string? SubjectDescription { get; set; }
+        public string UrlBackground { get; set; }
         [Display(Name = "Trạng thái")]
         public bool IsRemoved { get; set; }
         [Display(Name = "Ngày cập nhật")]
@@ -31,6 +32,8 @@ namespace EduQuiz_5P.Models
         public ApplicationUser? UserRemove { get; set; }
         [NotMapped]
         public virtual SelectList SelectClass { get; set; }
+        [NotMapped]
+        public IFormFile UploadImage { get; set; }
         public virtual ICollection<Chapter>? Chapters { get; set; }
 
         public Subject() { }

@@ -101,6 +101,8 @@ namespace EduQuiz_5P.Areas.Admin.Controllers
             }
             return View(model);
         }
+
+        [AllowAnonymous]
         public async Task<IActionResult> CreatePartial()
         {
             var classLst = await _classService.GetListAsync();

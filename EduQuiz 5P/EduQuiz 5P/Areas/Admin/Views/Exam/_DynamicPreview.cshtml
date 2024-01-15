@@ -16,6 +16,10 @@
             <input asp-for="@Model.ExamSubjectId" value="@Model.ExamSubjectId" hidden />
             <input asp-for="@Model.ExamClassId" value="@Model.ExamClassId" hidden />
             <input asp-for="@Model.ExamType" value="@Model.ExamType" hidden />
+            <input asp-for="@Model.ExamIdentification" value="@Model.ExamIdentification" hidden />
+            <input asp-for="@Model.ExamUnderstanding" value="@Model.ExamUnderstanding" hidden />
+            <input asp-for="@Model.ExamApplication" value="@Model.ExamApplication" hidden />
+            <input asp-for="@Model.ExamAdvancedApplication" value="@Model.ExamAdvancedApplication" hidden />
             @for (var i = 0; i < Model.QuestionVMs.Count; i++)
             {
                 var question = Model.QuestionVMs.ElementAt(i);

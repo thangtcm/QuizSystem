@@ -1,4 +1,8 @@
-﻿@{
+﻿@using EduQuiz_5P.Enums
+@using EduQuiz_5P.Helpers
+@model EduQuiz_5P.ViewModel.StatisticalVM;
+
+@{
     ViewData["Title"] = "Trang chủ Admin";
 }
 
@@ -9,7 +13,7 @@
                 <div class="page-sub-header">
                     <h3 class="page-title">Welcome Admin!</h3>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item"><a asp-action="Index">Home</a></li>
                         <li class="breadcrumb-item active">Admin</li>
                     </ul>
                 </div>
@@ -24,8 +28,8 @@
                 <div class="card-body">
                     <div class="db-widgets d-flex justify-content-between align-items-center">
                         <div class="db-info">
-                            <h6>Students</h6>
-                            <h3>50055</h3>
+                            <h6>Người dùng</h6>
+                            <h3 class="counter">@Model.NumberOfUser</h3>
                         </div>
                         <div class="db-icon">
                             <img src="~/AdminLayout/images/icons/dash-icon-01.svg" alt="Dashboard Icon">
@@ -39,11 +43,11 @@
                 <div class="card-body">
                     <div class="db-widgets d-flex justify-content-between align-items-center">
                         <div class="db-info">
-                            <h6>Awards</h6>
-                            <h3>50+</h3>
+                            <h6>Ngân hàng câu hỏi</h6>
+                            <h3><span class="counter">@Model.NumberOfQuestion</span>+</h3>
                         </div>
                         <div class="db-icon">
-                            <img src="~/AdminLayout/images/icons/dash-icon-02.svg" alt="Dashboard Icon">
+                            <img src="~/img/icons/pencil-icon.svg" alt="Dashboard Icon">
                         </div>
                     </div>
                 </div>
@@ -54,11 +58,11 @@
                 <div class="card-body">
                     <div class="db-widgets d-flex justify-content-between align-items-center">
                         <div class="db-info">
-                            <h6>Department</h6>
-                            <h3>30+</h3>
+                            <h6>Ngân hàng đề thi</h6>
+                            <h3><span class="counter">@Model.NumberOfExam</span>+</h3>
                         </div>
                         <div class="db-icon">
-                            <img src="~/AdminLayout/images/icons/dash-icon-03.svg" alt="Dashboard Icon">
+                            <img src="~/AdminLayout/images/icons/teacher-icon-02.svg" alt="Dashboard Icon">
                         </div>
                     </div>
                 </div>
@@ -69,11 +73,11 @@
                 <div class="card-body">
                     <div class="db-widgets d-flex justify-content-between align-items-center">
                         <div class="db-info">
-                            <h6>Revenue</h6>
-                            <h3>$505</h3>
+                            <h6>Lượt làm bài</h6>
+                            <h3><span class="counter">@Model.NumberOfUserExam</span>+</h3>
                         </div>
                         <div class="db-icon">
-                            <img src="~/AdminLayout/images/icons/dash-icon-04.svg" alt="Dashboard Icon">
+                            <img src="~/AdminLayout/images/icons/teacher-icon-01.svg" alt="Dashboard Icon">
                         </div>
                     </div>
                 </div>
@@ -92,8 +96,7 @@
                         </div>
                         <div class="col-6">
                             <ul class="chart-list-out">
-                                <li><span class="circle-blue"></span>Teacher</li>
-                                <li><span class="circle-green"></span>Student</li>
+                                <li><span class="circle-blue"></span>Người dùng đăng ký</li>
                                 <li class="star-menus">
                                     <a href="javascript:;">
                                         <i class="fas fa-ellipsis-v"></i>
@@ -156,7 +159,7 @@
 
             <div class="card flex-fill student-space comman-shadow">
                 <div class="card-header d-flex align-items-center">
-                    <h5 class="card-title">Star Students</h5>
+                    <h5 class="card-title">Người dùng hạng cao nhất</h5>
                     <ul class="chart-list-out student-ellips">
                         <li class="star-menus">
                             <a href="javascript:;"><i class="fas fa-ellipsis-v"></i></a>
@@ -169,103 +172,32 @@
                             <thead class="thead-light">
                                 <tr>
                                     <th>ID</th>
-                                    <th>Name</th>
-                                    <th class="text-center">Marks</th>
-                                    <th class="text-center">Percentage</th>
-                                    <th class="text-end">Year</th>
+                                    <th>Họ và tên</th>
+                                    <th>Giới tính</th>
+                                    <th class="text-center">Điểm</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td class="text-nowrap">
-                                        <div>PRE2209</div>
-                                    </td>
-                                    <td class="text-nowrap">
-                                        <a href="profile.html">
-                                            <img class="rounded-circle"
-                                                 src="~/AdminLayout/images/profiles/avatar-02.jpg" width="25"
-                                                 alt="Star Students">
-                                            John Smith
-                                        </a>
-                                    </td>
-                                    <td class="text-center">1185</td>
-                                    <td class="text-center">98%</td>
-                                    <td class="text-end">
-                                        <div>2019</div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-nowrap">
-                                        <div>PRE1245</div>
-                                    </td>
-                                    <td class="text-nowrap">
-                                        <a href="profile.html">
-                                            <img class="rounded-circle"
-                                                 src="~/AdminLayout/images/profiles/avatar-01.jpg" width="25"
-                                                 alt="Star Students">
-                                            Jolie Hoskins
-                                        </a>
-                                    </td>
-                                    <td class="text-center">1195</td>
-                                    <td class="text-center">99.5%</td>
-                                    <td class="text-end">
-                                        <div>2018</div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-nowrap">
-                                        <div>PRE1625</div>
-                                    </td>
-                                    <td class="text-nowrap">
-                                        <a href="profile.html">
-                                            <img class="rounded-circle"
-                                                 src="~/AdminLayout/images/profiles/avatar-03.jpg" width="25"
-                                                 alt="Star Students">
-                                            Pennington Joy
-                                        </a>
-                                    </td>
-                                    <td class="text-center">1196</td>
-                                    <td class="text-center">99.6%</td>
-                                    <td class="text-end">
-                                        <div>2017</div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-nowrap">
-                                        <div>PRE2516</div>
-                                    </td>
-                                    <td class="text-nowrap">
-                                        <a href="profile.html">
-                                            <img class="rounded-circle"
-                                                 src="~/AdminLayout/images/profiles/avatar-04.jpg" width="25"
-                                                 alt="Star Students">
-                                            Millie Marsden
-                                        </a>
-                                    </td>
-                                    <td class="text-center">1187</td>
-                                    <td class="text-center">98.2%</td>
-                                    <td class="text-end">
-                                        <div>2016</div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-nowrap">
-                                        <div>PRE2209</div>
-                                    </td>
-                                    <td class="text-nowrap">
-                                        <a href="profile.html">
-                                            <img class="rounded-circle"
-                                                 src="~/AdminLayout/images/profiles/avatar-05.jpg" width="25"
-                                                 alt="Star Students">
-                                            John Smith
-                                        </a>
-                                    </td>
-                                    <td class="text-center">1185</td>
-                                    <td class="text-center">98%</td>
-                                    <td class="text-end">
-                                        <div>2015</div>
-                                    </td>
-                                </tr>
+                                @foreach (var user in Model.UserTopRank)
+                                {
+                                    <tr>
+                                        <td class="text-nowrap">
+                                            <div>@user.UserId</div>
+                                        </td>
+                                        <td class="text-nowrap">
+                                            <a href="#">
+                                                <img class="rounded-circle"
+                                                     src="~/AdminLayout/images/profiles/avatar-02.jpg" width="25"
+                                                     alt="Star Students">
+                                                @user.FullName
+                                            </a>
+                                        </td>
+                                        <td>@CallBack.GetEnumDisplayName((Gender)(user.Gender ?? Gender.Another))</td>
+                                        <td class="text-center">
+                                            <div>@user.Point.ToString("N2")</div>
+                                        </td>
+                                    </tr>
+                                }
                             </tbody>
                         </table>
                     </div>
@@ -277,7 +209,7 @@
 
             <div class="card flex-fill comman-shadow">
                 <div class="card-header d-flex align-items-center">
-                    <h5 class="card-title ">Student Activity </h5>
+                    <h5 class="card-title ">Người dùng hoạt động </h5>
                     <ul class="chart-list-out student-ellips">
                         <li class="star-menus">
                             <a href="javascript:;"><i class="fas fa-ellipsis-v"></i></a>
@@ -291,14 +223,14 @@
                                 <img src="~/AdminLayout/images/icons/award-icon-01.svg" alt="Award">
                             </div>
                             <div class="award-list-outs">
-                                <h4>1st place in "Chess”</h4>
-                                <h5>John Doe won 1st place in "Chess"</h5>
+                                <h4>Đạt danh hiệu điểm cao nhất bài thi</h4>
+                                <h5>Admin đã hoàn thành bài thi nhận 60 point</h5>
                             </div>
                             <div class="award-time-list">
                                 <span>1 Day ago</span>
                             </div>
                         </div>
-                        <div class="activity-awards">
+                        @* <div class="activity-awards">
                             <div class="award-boxs">
                                 <img src="~/AdminLayout/images/icons/award-icon-02.svg" alt="Award">
                             </div>
@@ -333,59 +265,224 @@
                             <div class="award-time-list">
                                 <span>3 Day ago</span>
                             </div>
-                        </div>
+                        </div> *@
                     </div>
                 </div>
             </div>
 
         </div>
     </div>
-
-    <div class="row">
-        <div class="col-xl-3 col-sm-6 col-12">
-            <div class="card flex-fill fb sm-box">
-                <div class="social-likes">
-                    <p>Like us on facebook</p>
-                    <h6>50,095</h6>
-                </div>
-                <div class="social-boxs">
-                    <img src="~/AdminLayout/images/icons/social-icon-01.svg" alt="Social Icon">
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-3 col-sm-6 col-12">
-            <div class="card flex-fill twitter sm-box">
-                <div class="social-likes">
-                    <p>Follow us on twitter</p>
-                    <h6>48,596</h6>
-                </div>
-                <div class="social-boxs">
-                    <img src="~/AdminLayout/images/icons/social-icon-02.svg" alt="Social Icon">
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-3 col-sm-6 col-12">
-            <div class="card flex-fill insta sm-box">
-                <div class="social-likes">
-                    <p>Follow us on instagram</p>
-                    <h6>52,085</h6>
-                </div>
-                <div class="social-boxs">
-                    <img src="~/AdminLayout/images/icons/social-icon-03.svg" alt="Social Icon">
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-3 col-sm-6 col-12">
-            <div class="card flex-fill linkedin sm-box">
-                <div class="social-likes">
-                    <p>Follow us on linkedin</p>
-                    <h6>69,050</h6>
-                </div>
-                <div class="social-boxs">
-                    <img src="~/AdminLayout/images/icons/social-icon-04.svg" alt="Social Icon">
-                </div>
-            </div>
-        </div>
-    </div>
-
 </div>
+
+@section Scripts{
+    <script>
+        'use strict';
+
+        $(document).ready(function () {
+
+            // Line chart
+            var monthlyRegistrationData = @Html.Raw(Json.Serialize(Model.UserRegisterData));
+            console.log(JSON.stringify(monthlyRegistrationData));
+            const counts = monthlyRegistrationData.reduce((acc, item) => {
+                acc.push(item.count);
+                return acc;
+            }, []);
+
+            const months = monthlyRegistrationData.reduce((acc, item) => {
+                acc.push(item.month);
+                return acc;
+            }, []);
+
+            console.log('Counts:', counts);
+            console.log('Months:', months);
+
+            if ($('#apexcharts-area').length > 0) {
+                var options = {
+                    chart: {
+                        height: 350,
+                        type: "line",
+                        toolbar: {
+                            show: false
+                        },
+                    },
+                    dataLabels: {
+                        enabled: false
+                    },
+                    stroke: {
+                        curve: "smooth"
+                    },
+                    series: [{
+                        name: "User",
+                        color: '#70C4CF',
+                        data: counts
+                    }],
+                    xaxis: {
+                        categories: months,
+                    }
+                }
+                var chart = new ApexCharts(
+                    document.querySelector("#apexcharts-area"),
+                    options
+                );
+                chart.render();
+            }
+
+            // Area chart
+
+            if ($('#school-area').length > 0) {
+                var options = {
+                    chart: {
+                        height: 350,
+                        type: "area",
+                        toolbar: {
+                            show: false
+                        },
+                    },
+                    dataLabels: {
+                        enabled: false
+                    },
+                    stroke: {
+                        curve: "straight"
+                    },
+                    series: [{
+                        name: "Người dùng",
+                        color: '#70C4CF',
+                        data: [24, 48, 56, 32, 34, 52, 25]
+                    }],
+                    xaxis: {
+                        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+                    }
+                }
+                var chart = new ApexCharts(
+                    document.querySelector("#school-area"),
+                    options
+                );
+                chart.render();
+            }
+
+            // Bar chart
+
+            if ($('#bar').length > 0) {
+                var optionsBar = {
+                    chart: {
+                        type: 'bar',
+                        height: 350,
+                        width: '100%',
+                        stacked: false,
+                        toolbar: {
+                            show: false
+                        },
+                    },
+                    dataLabels: {
+                        enabled: false
+                    },
+                    plotOptions: {
+                        bar: {
+                            columnWidth: '55%',
+                            endingShape: 'rounded'
+                        },
+                    },
+                    stroke: {
+                        show: true,
+                        width: 2,
+                        colors: ['transparent']
+                    },
+                    series: [{
+                        name: "Boys",
+                        color: '#70C4CF',
+                        data: [420, 532, 516, 575, 519, 517, 454, 392, 262, 383, 446, 551],
+                    }, {
+                        name: "Girls",
+                        color: '#3D5EE1',
+                        data: [336, 612, 344, 647, 345, 563, 256, 344, 323, 300, 455, 456],
+                    }],
+                    labels: [2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020],
+                    xaxis: {
+                        labels: {
+                            show: false
+                        },
+                        axisBorder: {
+                            show: false
+                        },
+                        axisTicks: {
+                            show: false
+                        },
+                    },
+                    yaxis: {
+                        axisBorder: {
+                            show: false
+                        },
+                        axisTicks: {
+                            show: false
+                        },
+                        labels: {
+                            style: {
+                                colors: '#777'
+                            }
+                        }
+                    },
+                    title: {
+                        text: '',
+                        align: 'left',
+                        style: {
+                            fontSize: '18px'
+                        }
+                    }
+
+                }
+
+                var chartBar = new ApexCharts(document.querySelector('#bar'), optionsBar);
+                chartBar.render();
+            }
+
+            // Simple Line
+
+            if ($('#s-line').length > 0) {
+                var sline = {
+                    chart: {
+                        height: 350,
+                        type: 'line',
+                        zoom: {
+                            enabled: false
+                        },
+                        toolbar: {
+                            show: false,
+                        }
+                    },
+                    // colors: ['#4361ee'],
+                    dataLabels: {
+                        enabled: false
+                    },
+                    stroke: {
+                        curve: 'straight'
+                    },
+                    series: [{
+                        name: "Desktops",
+                        data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
+                    }],
+                    title: {
+                        text: 'Product Trends by Month',
+                        align: 'left'
+                    },
+                    grid: {
+                        row: {
+                            colors: ['#f1f2f3', 'transparent'], // takes an array which will be repeated on columns
+                            opacity: 0.5
+                        },
+                    },
+                    xaxis: {
+                        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+                    }
+                }
+
+                var chart = new ApexCharts(
+                    document.querySelector("#s-line"),
+                    sline
+                );
+
+                chart.render();
+            }
+
+        });
+    </script>
+}

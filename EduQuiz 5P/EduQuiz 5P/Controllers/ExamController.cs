@@ -3,6 +3,7 @@ using EduQuiz_5P.Models;
 using EduQuiz_5P.Services.Interface;
 using EduQuiz_5P.ViewModel;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using X.PagedList;
 
@@ -14,12 +15,14 @@ namespace EduQuiz_5P.Controllers
         private readonly ILogger<ExamController> _logger;
         private readonly IUserService _userService;
         private readonly ISubjectService _subjectService;
-        public ExamController(IExamService examService, ILogger<ExamController> logger, IUserService userService, ISubjectService subjectService)
+        private readonly IClassService _classService;
+        public ExamController(IExamService examService, ILogger<ExamController> logger, IUserService userService, ISubjectService subjectService, IClassService classService)
         {
             _examService = examService;
             _logger = logger;
             _userService = userService;
             _subjectService = subjectService;
+            _classService = classService;
         }
         public async Task<IActionResult> Index(int? page, int? ClassId = null, int subjectId = 1)
         {
@@ -34,7 +37,10 @@ namespace EduQuiz_5P.Controllers
             try
             {
                 var user = await _userService.GetUser();
+                var classlst = await _classService.GetListAsync();
                 var subjectlst = await _subjectService.GetListAsync();
+                ViewData["SubjectList"] = new SelectList(subjectlst, "Id", "SubjectName");
+                ViewData["ClassList"] = new SelectList(classlst, "Id", "ClassName");
                 model.Subjects = subjectlst.ToList();
                 if(user == null)
                 {

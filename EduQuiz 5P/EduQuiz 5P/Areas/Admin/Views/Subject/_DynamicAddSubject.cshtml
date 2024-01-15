@@ -2,6 +2,26 @@
 @using EduQuiz_5P.Models;
 
 <div class="row create-dynamic">
+    <div class="col-12">
+        <div class="form-group">
+            <div class="container">
+                <div class="row justify-content-center align-items-center align-content-center">
+                    <div class="profile-user-box mt-3">
+                        <div class="profile-user-img ">
+                            <img src="~/logo.png" alt="Profile" id="UploadImage0">
+                            <div class="form-group students-up-files profile-edit-icon mb-0">
+                                <div class="uplod d-flex">
+                                    <label class="file-upload profile-upbtn mb-0">
+                                        <i class="fas fa-edit"></i><input asp-for="@Model[0].UploadImage" onchange="previewImage(this, '#UploadImage0')">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="col-12 col-sm-6">
         <div class="form-group local-forms">
             <label>Tên chương học<span class="login-danger">*</span></label>

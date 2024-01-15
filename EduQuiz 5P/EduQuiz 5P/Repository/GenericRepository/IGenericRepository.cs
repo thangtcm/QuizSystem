@@ -27,7 +27,7 @@ namespace EduQuiz_5P.Repository.GenericRepository
         Task<ICollection<T>> GetRandomItemsAsync(int numberOfItems, params Expression<Func<T, object>>[] includes);
         Task AddAsync(T entity, CancellationToken cancellationToken = default);
         Task AddRangeAsync(ICollection<T> entities, CancellationToken cancellationToken = default);
-        Task<int> CountAsync(Expression<Func<T, bool>> expression);
+        Task<int> CountAsync(Expression<Func<T, bool>>? expression = null);
         int Count(Expression<Func<T, bool>> expression);
         SelectList GetSelectList(string Id, string Name);
     }

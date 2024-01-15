@@ -13,16 +13,20 @@ namespace EduQuiz_5P.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly HttpClient _client;
-        public HomeController(ILogger<HomeController> logger, HttpClient client)
+        private readonly IExamService _examService;
+        public HomeController(ILogger<HomeController> logger, HttpClient client, IExamService examService)
         {
             _logger = logger;
             _client = client;
+            _examService = examService;
         }
 
         public IActionResult Index()
         {
             return View();
         }
+
+        
 
         //public async Task<IActionResult> Test(string UrlAPI, int chapterId)
         //{

@@ -1,0 +1,40 @@
+﻿@model EduQuiz_5P.ViewModel.UserExamGenerate
+<div class="modal fade" id="GenerateRandomExam" tabindex="-1" aria-labelledby="GenerateRandomExamModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+                <h5 class="modal-title" id="GenerateRandomExamModalLabel"><span class="fw-bold">Chọn cấu trúc đề thi</span></h5><button class="btn p-1" type="button" data-bs-dismiss="modal" aria-label="Close"><span class="fas fa-times fs--1"></span></button>
+            </div>
+            <form asp-action="GenerateExamMatrix" asp-controller="UserExam" method="post">
+                <div class="modal-body">
+                    <input name="returnUrl" value="@Url.Action("Index", "Exam" , new { area="" })" hidden />
+                    <div class="form-group">
+                        <label class="form-control-label">Số phút thực hiện</label>
+                        <input type="number" asp-for="@Model.ExamTime" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-control-label">Số câu hỏi</label>
+                        <input type="number" asp-for="@Model.NumberOfQuestion" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-control-label">Chọn lớp</label>
+                        <select class="selectModal select" asp-for="@Model.ClassId" data-modal-id="GenerateRandomExam" asp-items="@ViewBag.ClassList">
+                            <option value="">Chọn môn học</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-control-label">Chọn môn học </label>
+                        <select class="selectModal select" id="SelectSubject" asp-for="@Model.SubjectId" data-modal-id="GenerateRandomExam" asp-items="@ViewBag.SubjectList">
+                            <option value="">Chọn môn học</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" type="submit">Bắt đầu</button>
+                    <button class="btn btn-outline-primary" type="button" data-bs-dismiss="modal">Hủy bỏ</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

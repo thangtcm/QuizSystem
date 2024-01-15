@@ -1,32 +1,91 @@
 ﻿@{
     ViewData["Title"] = "Trang chủ";
 }
-<section id="home">
-    <div class="bg-holder d-none d-md-block bg-size" style="background-image:url(./img/illustrations/hero.png);background-position:right center;">
+<section id="home" class="pb-0">
+    <div class="bg-holder"
+         style="background-image:url(./img/illustrations/service.png);background-position:bottom center;background-size:contain;">
     </div>
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-md-7 col-lg-6 py-6 text-sm-start text-center">
+            <div class="col-md-7 py-lg-6 text-sm-start text-center" data-aos="fade-up">
                 <h1 class="fw-bold display-4 fs-4 fs-lg-6 fs-xxl-7 text-gradient lh-sm">Học dễ dàng hơn với EduQuiz5P</h1>
-                <p class="mb-5 mt-3 fs-0 w-lg-75 text-justify">Bộ bài tập và đề thi được cá nhân hóa theo trình độ từng học sinh giúp các em tự tin đứng top chỉ với 30 phút học mỗi ngày.</p>
+                <p class="mb-5 mt-3 fs-0 w-lg-75 text-justify">
+                    Bộ bài tập và đề thi được cá nhân hóa theo trình độ từng học
+                    sinh giúp các em tự tin đứng top chỉ với 30 phút học mỗi ngày.
+                </p>
+                <div class="mt-3">
+                    <a class="btn btn-lg btn-klean-outline order-0" asp-action="Index" asp-controller="Exam"><span class="text-gradient fw-bold">Luyện ngay</span></a>
+                </div>
+            </div>
+            <div class="col-md-5 d-flex align-items-center">
+                <div class="girl-slide-img floating-horizontal" data-aos="fade-up">
+                    <img class="img" src="~/img/object.png" alt="">
+                </div>
             </div>
         </div>
     </div>
 </section>
-
+<section class="section student-course pt-0">
+    <div class="container">
+        <div class="enroll-group" data-aos="fade-up">
+            <div class="row gy-3 justify-content-center align-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="total-course d-flex align-items-center">
+                        <div class="blur-border">
+                            <div class="enroll-img ">
+                                <img src="~/img/icons/icon-07.svg" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="course-count">
+                            <h3><span class="counter">253,085</span></h3>
+                            <p>Người dùng đăng ký</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="total-course d-flex align-items-center">
+                        <div class="blur-border">
+                            <div class="enroll-img ">
+                                <img src="~/img/icons/icon-08.svg" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="course-count">
+                            <h3><span class="counter">5</span></h3>
+                            <p>Đề thi</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="total-course d-flex align-items-center">
+                        <div class="blur-border">
+                            <div class="enroll-img ">
+                                <img src="~/img/icons/icon-09.svg" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="course-count">
+                            <h3><span class="counter">1,200</span></h3>
+                            <p>Ngân hàng câu hỏi</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <section class="py-0 circle-blend circle-blend-right circle-warning" id="THPT">
 
     <div class="container">
         <div class="row">
             <div class="col-lg-7 col-xxl-5 mx-auto text-center pt-7 pb-2">
-                <h1 class="text-title mb-5">Môn học</h1>
+                <h1 class="text-title mb-5" data-aos="fade-up">Môn học</h1>
             </div>
         </div>
         <div class="row justify-content-center circle gy-5">
             <div class="col-12 col-lg-4">
-                <a class="card card-bg h-100 p-2">
+                <a class="card card-bg h-100 p-2" data-aos="fade-up">
                     <div class="text-center hov-img-zoom">
-                        <img src="~/img/subjects/English.png" width="100%" alt="Môn English" />
+                        <img src="./img/subjects/English.png" width="100%"
+                             alt="Môn English" />
                     </div>
                     <div class="card-body text-start">
                         <h5 class="fw-bold mb-0 mt-2">Tiếng Anh</h5>
@@ -35,9 +94,10 @@
                 </a>
             </div>
             <div class="col-12 col-lg-4">
-                <a class="card card-bg h-100 p-2">
+                <a class="card card-bg h-100 p-2" data-aos="fade-up">
                     <div class="text-center hov-img-zoom">
-                        <img src="~/img/subjects/Hoahoc.png" width="100%" alt="Môn hóa học" />
+                        <img src="./img/subjects/Hoahoc.png" width="100%"
+                             alt="Môn English" />
                     </div>
                     <div class="card-body text-start">
                         <h5 class="fw-bold mb-0 mt-2">Hóa học</h5>
@@ -46,9 +106,10 @@
                 </a>
             </div>
             <div class="col-12 col-lg-4">
-                <a class="card card-bg h-100 p-2">
+                <a class="card card-bg h-100 p-2" data-aos="fade-up">
                     <div class="text-center hov-img-zoom">
-                        <img src="~/img/subjects/Math.png" width="100%" alt="Môn Toán" />
+                        <img src="./img/subjects/Math.png" width="100%"
+                             alt="Môn English" />
                     </div>
                     <div class="card-body text-start">
                         <h5 class="fw-bold mb-0 mt-2">Toán</h5>
@@ -57,85 +118,37 @@
                 </a>
             </div>
             <div class="col-12 col-lg-4">
-                <a class="card card-bg h-100 p-2">
+                <a class="card card-bg h-100 p-2" data-aos="fade-up">
                     <div class="text-center hov-img-zoom">
-                        <img src="~/img/subjects/Physic.png" width="100%" alt="Môn English" />
+                        <img src="./img/subjects/Physic.png" width="100%"
+                             alt="Môn English" />
                     </div>
                     <div class="card-body text-start">
-                        <h5 class="fw-bold mb-0 mt-2">Tiếng Anh</h5>
-                        <p class="my-2 text-content">Đầy đủ ngữ pháp và kiến thức</p>
+                        <h5 class="fw-bold mb-0 mt-2">Vậy lý</h5>
+                        <p class="my-2 text-content">Giải thích chi tiết, công thức đầy đủ dễ hiểu</p>
                     </div>
                 </a>
             </div>
             <div class="col-12 col-lg-4">
-                <a class="card card-bg h-100 p-2">
+                <a class="card card-bg h-100 p-2" data-aos="fade-up">
                     <div class="text-center hov-img-zoom">
-                        <img src="~/img/subjects/Lichsu.png" width="100%" alt="Môn English" />
+                        <img src="./img/subjects/Lichsu.png" width="100%"
+                             alt="Môn English" />
                     </div>
                     <div class="card-body text-start">
-                        <h5 class="fw-bold mb-0 mt-2">Tiếng Anh</h5>
-                        <p class="my-2 text-content">Đầy đủ ngữ pháp và kiến thức</p>
+                        <h5 class="fw-bold mb-0 mt-2">Lịch sử</h5>
+                        <p class="my-2 text-content">Câu hỏi lịch sử thường gặp</p>
                     </div>
                 </a>
             </div>
             <div class="col-12 text-center">
-                <a class="btn btn-lg btn-klean-outline order-0" type="submit"><span class="text-gradient fw-bold">Xem tất cả các môn</span></a>
+                <a class="btn btn-lg btn-klean-outline order-0" type="submit">
+                    <span class="text-gradient fw-bold">
+                        Xem tất cả
+                        các môn
+                    </span>
+                </a>
             </div>
-            <!-- <div class="col-md-4 mb-4">
-              <div class="card card-bg h-100 px-4 px-md-2 px-lg-3 px-xxl-4 pt-4">
-                <div class="text-center"><img class="my-5" src="~/img/subjects/English.png" width="100%" alt="THPT" />
-                  <div class="card-body text-center">
-                    <h1 class="fw-bold fs-4">Lớp 10</h1>
-                    <p class="mt-3 mb-md-0 mb-lg-3">Bộ bài tập và kiến thức mở đầu cho Cấp 3</p>
-                      <a class="btn btn-light shadow-klean order-0 " ><span class="text-gradient fw-bold">Luyện ngay ></span></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 mb-4">
-              <div class="card card-bg h-100 px-4 px-md-2 px-lg-3 px-xxl-4 pt-4">
-                <div class="text-center"><img class="my-5" src="~/img/gallery/lop-11.png" width="100%" alt="THPT" />
-                  <div class="card-body text-center">
-                    <h1 class="fw-bold fs-4">Lớp 11</h1>
-                    <p class="mt-3 mb-md-0 mb-lg-3">Bộ bài tập, đề thi lớp 11 và lập kế hoạch cho tương lai</p>
-                    <a class="btn btn-light shadow-klean order-0 " ><span class="text-gradient fw-bold">Luyện ngay ></span></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 mb-4">
-              <div class="card card-bg h-100 px-4 px-md-2 px-lg-3 px-xxl-4 pt-4">
-                <div class="text-center"><img class="my-5" src="~/img/gallery/lop-12.png" width="100%" alt="THPT" />
-                  <div class="card-body text-center">
-                    <h1 class="fw-bold fs-4">Lớp 12</h1>
-                    <p class="mt-3 mb-md-0 mb-lg-3">Chuẩn bị cho kỳ thi tốt nghiệp cấp 3 và đại học với lớp 12</p>
-                      <a class="btn btn-light shadow-klean order-0 " ><span class="text-gradient fw-bold">Luyện ngay ></span></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 mb-4">
-              <div class="card card-bg h-100 px-4 px-md-2 px-lg-3 px-xxl-4 pt-4">
-                <div class="text-center"><img class="my-5" src="~/img/gallery/dgnl.png" width="100%" alt="THPT" />
-                  <div class="card-body text-center">
-                    <h1 class="fw-bold fs-4">Đề thi ĐGNL</h1>
-                    <p class="mt-3 mb-md-0 mb-lg-3">Bộ đề thi đánh giá năng lực mới nhất từ các trường</p>
-                      <a class="btn btn-light shadow-klean order-0 " ><span class="text-gradient fw-bold">Luyện ngay ></span></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 mb-4">
-              <div class="card card-bg h-100 px-4 px-md-2 px-lg-3 px-xxl-4 pt-4">
-                <div class="text-center"><img class="my-5" src="~/img/gallery/thpt.png" width="100%" alt="THPT" />
-                  <div class="card-body text-center">
-                    <h1 class="fw-bold fs-4">Luyện thi THPT</h1>
-                    <p class="mt-3 mb-md-0 mb-lg-3">Bài tập và đề luyện thi THPT Quốc Gia mới nhất</p>
-                      <a class="btn btn-light shadow-klean order-0 " ><span class="text-gradient fw-bold">Luyện ngay ></span></a>
-                  </div>
-                </div>
-              </div>
-            </div> -->
         </div>
     </div>
     <!-- end of .container-->
@@ -145,37 +158,49 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-7 col-xxl-5 mx-auto text-center py-7">
-                <h1 class="fw-bold fs-4 fs-lg-6 lh-sm mb-3">3 bước chinh phục điểm 10 cùng Học <span class="text-gradient">EduQuiz5P</span></h1>
+                <h1 class="fw-bold fs-4 fs-lg-6 lh-sm mb-3" data-aos="fade-up">
+                    3 bước chinh phục điểm 10 cùng Học <span class="text-gradient">EduQuiz5P</span>
+                </h1>
             </div>
         </div>
-        <div class="bg-holder" style="background-image:url(./img/illustrations/service.png);background-position:bottom center;background-size:contain;">
+        <div class="bg-holder"
+             style="background-image:url(./img/illustrations/service.png);background-position:bottom center;background-size:contain;">
         </div>
         <!--/.bg-holder-->
-        <div class="row justify-content-center circle container">
+        <div class="row justify-content-center circle container" data-aos="fade-up">
             <div class="col-md-4 mb-4">
                 <div class="card card-bg h-100 px-3 px-md-2 px-lg-3 px-xxl-3 pt-4">
-                    <div class="card-body py-7">
+                    <div class="card-body py-lg-7">
                         <h2 class="fw-bold"><span class="text-warning">Bước 1</span></h2>
                         <h5 class="fw-bold">Phát hiện điểm mạnh, yếu</h5>
-                        <p class="mt-3 mb-md-0 mb-lg-3 text-justify">Các bài tập được cá nhân hóa theo từng học sinh, các em sẽ biết được trình độ ngay khi hoàn thành bài học đó với nội dung luyện tập được cập nhật mới nhất.</p>
+                        <p class="mt-3 mb-md-0 mb-lg-3 text-justify">
+                            Các bài tập được cá nhân hóa theo từng học sinh, các em sẽ
+                            biết được trình độ ngay khi hoàn thành bài học đó với nội dung luyện tập được cập nhật mới nhất.
+                        </p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4 mb-4">
                 <div class="card card-bg h-100 px-3  px-md-2 px-lg-3 px-xxl-3 pt-4">
-                    <div class="card-body py-7">
+                    <div class="card-body py-lg-7">
                         <h2 class="fw-bold"><span class="text-warning">Bước 2</span></h2>
                         <h5 class="fw-bold">Bổ sung kiến thức</h5>
-                        <p class="mt-3 mb-md-0 mb-lg-3 text-justify">Ngay khi biết được trình độ của mình, điểm mạnh, điểm yếu ở từng bài tập các em sẽ có kế hoạch bổ sung kiến thức của mình dễ dàng hơn.</p>
+                        <p class="mt-3 mb-md-0 mb-lg-3 text-justify">
+                            Ngay khi biết được trình độ của mình, điểm mạnh, điểm yếu ở
+                            từng bài tập các em sẽ có kế hoạch bổ sung kiến thức của mình dễ dàng hơn.
+                        </p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4 mb-4">
                 <div class="card card-bg h-100 px-3  px-md-2 px-lg-3 px-xxl-3 pt-4">
-                    <div class="card-body py-7">
+                    <div class="card-body py-lg-7">
                         <h2 class="fw-bold"><span class="text-warning">Bước 3</span></h2>
                         <h5 class="fw-bold">Lên kế hoạch học tập</h5>
-                        <p class="mt-3 mb-md-0 mb-lg-3 text-justify">Khi biết mình yếu môn nào, giỏi môn nào thì việc lên kế hoach học tập để đạt mục tiêu điểm là điều kiện không thể thiếu nếu muốn có được kết quả tốt nhất.</p>
+                        <p class="mt-3 mb-md-0 mb-lg-3 text-justify">
+                            Khi biết mình yếu môn nào, giỏi môn nào thì việc lên kế
+                            hoach học tập để đạt mục tiêu điểm là điều kiện không thể thiếu nếu muốn có được kết quả tốt nhất.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -184,44 +209,56 @@
     <!-- end of .container-->
 </section>
 <section>
-    <div class="bg-holder" style="background-image:url(./img/illustrations/product-bg-1.png);background-position:center;background-size:cover;">
+    <div class="bg-holder"
+         style="background-image:url(./img/illustrations/product-bg-1.png);background-position:center;background-size:cover;">
     </div>
     <!--/.bg-holder-->
 
-    <div class="bg-holder mt-n4" style="background-image:url(./img/illustrations/product-bg-2.png);background-position:left top;background-size:contain;">
+    <div class="bg-holder mt-n4"
+         style="background-image:url(./img/illustrations/product-bg-2.png);background-position:left top;background-size:contain;">
     </div>
     <!--/.bg-holder-->
 
     <div class="container">
         <div class="row flex-center circle-blend circle-blend-left-product circle-cyan gy-3">
             <div class="col-lg-6">
-                <div class="square shadow-square-bottom">
+                <div class="square shadow-square-bottom" data-aos="fade-up">
                     <div class="card product-card-bg">
                         <div class="card-body p-4 h-100">
-                            <img class="img-fluid border-img position-relative" src="~/img/gallery/feature-girl.png" height="100%" alt="..." />
-                            <div class="spinner-border m-5 position-absolute spinner-custom d-none d-lg-block" role="status">
+                            <img class="img-fluid border-img position-relative" src="./img/join.png" height="100%"
+                                 alt="..." />
+                            <!-- <div class="spinner-border m-5 position-absolute spinner-custom d-none d-lg-block" role="status">
                                 <span class="visually-hidden">Loading...</span>
-                            </div>
+                              </div> -->
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6">
-                <div class="row">
+                <div class="row" data-aos="fade-up">
                     <div class="col-md-6">
                         <img style="margin-top: 0.5cm" src="~/img/gallery/feature-1.png" width="30%" alt="daucau" />
                         <h3 class="fw-bold lh-sm my-4">Câu hỏi phong phú</h3>
-                        <p class="mb-3 pe-xxl-8">Với hơn 10.000+ câu hỏi được biên soạn chi tiết từ chương trình học mới nhất có đáp án và giải thích</p>
+                        <p class="mb-3 pe-xxl-8">
+                            Với hơn 10.000+ câu hỏi được biên soạn chi tiết từ chương trình học mới nhất có
+                            đáp án và giải thích
+                        </p>
                     </div>
                     <div class="col-md-6">
                         <img style="margin-top: 0.5cm" src="~/img/gallery/feature-2.png" width="30%" alt="daucau" />
                         <h3 class="fw-bold lh-sm my-4">Đa dạng đề thi</h3>
-                        <p class="mb-3 pe-xxl-8">Bộ đề thi theo các môn với đầy đủ đề thi Học Kì, THPT Quốc Gia, DGNL có chấm điểm</p>
+                        <p class="mb-3 pe-xxl-8">
+                            Bộ đề thi theo các môn với đầy đủ đề thi Học Kì, THPT Quốc Gia, DGNL có chấm
+                            điểm
+                        </p>
                     </div>
                     <div class="col-md-6">
                         <img style="margin-top: 0.5cm" src="~/img/gallery/feature-3.png" width="30%" alt="daucau" />
                         <h3 class="fw-bold lh-sm my-4">Cá Nhân Hoá</h3>
-                        <p class="mb-3 pe-xxl-8">Các câu hỏi sẽ được đề xuất liên tục theo trình độ người học, và liên tục cập nhật mới</p>
+                        <p class="mb-3 pe-xxl-8">
+                            Các câu hỏi sẽ được đề xuất liên tục theo trình độ người học, và liên tục cập
+                            nhật mới
+                        </p>
                     </div>
                     <div class="col-md-6">
                         <img style="margin-top: 0.5cm" src="~/img/gallery/feature-4.png" width="30%" alt="daucau" />
@@ -235,17 +272,19 @@
     </div>
 </section>
 <section>
-    <div class="bg-holder" style="background-image:url(./img/illustrations/product-bg-1.png);background-position:center;background-size:cover;">
+    <div class="bg-holder"
+         style="background-image:url(./img/illustrations/product-bg-1.png);background-position:center;background-size:cover;">
     </div>
-    <div class="bg-holder mt-n4" style="background-image:url(./img/illustrations/product-bg-2.png);background-position:left top;background-size:contain;">
+    <div class="bg-holder mt-n4"
+         style="background-image:url(./img/illustrations/product-bg-2.png);background-position:left top;background-size:contain;">
     </div>
     <div class="container">
         <div class="row align-items-center align-content-center justify-content-center circle-blend circle-blend-left-product circle-cyan px-5">
             <div class="col-lg-7">
-                <div class="row">
+                <div class="row" data-aos="fade-up">
                     <div class="col-md-6">
                         <div class="d-flex align-items-center">
-                            <img src="~/img/gallery/document-icon.png" width="15%" alt="sach">
+                            <img src="./img/icons/icon-1.svg" alt="sach">
                             <div class="flex-1 ms-3">
                                 <p class="mb-3">Tổng hợp các công thức lượng giác thường xuyên sử dụng trong chương trình THPT</p>
                             </div>
@@ -253,7 +292,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="d-flex align-items-center">
-                            <img src="~/img/gallery/document-icon.png" width="15%" alt="sach">
+                            <img src="./img/icons/icon-1.svg" alt="sach">
                             <div class="flex-1 ms-3">
                                 <p class="mb-3">Đáp án chính thức môn Toán thi THPT Quốc Gia 2023</p>
                             </div>
@@ -261,7 +300,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="d-flex align-items-center">
-                            <img src="~/img/gallery/document-icon.png" width="15%" alt="sach">
+                            <img src="./img/icons/icon-1.svg" alt="sach">
                             <div class="flex-1 ms-3">
                                 <p class="mb-3">Đề thi minh họa môn Toán trường Đại học Ngân hàng TP HCM</p>
                             </div>
@@ -269,7 +308,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="d-flex align-items-center">
-                            <img src="~/img/gallery/document-icon.png" width="15%" alt="sach">
+                            <img src="./img/icons/icon-1.svg" alt="sach">
                             <div class="flex-1 ms-3">
                                 <p class="mb-3">Đề minh họa thi THPT Quốc Gia 2023 môn Toán</p>
                             </div>
@@ -277,7 +316,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="d-flex align-items-center">
-                            <img src="~/img/gallery/document-icon.png" width="15%" alt="sach">
+                            <img src="./img/icons/icon-1.svg" alt="sach">
                             <div class="flex-1 ms-3">
                                 <p class="mb-3">Tổng hợp kiến thức về mặt phẳng tọa độ Oxyz</p>
                             </div>
@@ -285,7 +324,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="d-flex align-items-center">
-                            <img src="~/img/gallery/document-icon.png" width="15%" alt="sach">
+                            <img src="./img/icons/icon-1.svg" alt="sach">
                             <div class="flex-1 ms-3">
                                 <p class="mb-3">5 dạng bài tập trắc nghiệm nguyên hàm cơ bản lớp 12</p>
                             </div>
@@ -297,7 +336,7 @@
                 <div class="square shadow-square-bottom floating-horizontal">
                     <div class="card product-card-bg">
                         <div class="card-body p-4 h-100">
-                            <img class="img-fluid border-img" src="~/img/gallery/document.png" height="100%" alt="..." />
+                            <img class="img-fluid border-img" src="./img/share.png" height="100%" alt="..." />
                         </div>
                     </div>
                 </div>
@@ -309,37 +348,61 @@
 <section class="pb-0" container container-lg-fluid container-xl="container container-lg-fluid container-xl">
 
     <div class="container">
-        <div class="bg-holder" style="background-image:url(./img/illustrations/team-bg.png);background-position:left top;background-size:auto;">
+        <div class="bg-holder"
+             style="background-image:url(./img/illustrations/team-bg.png);background-position:left top;background-size:auto;">
         </div>
         <!--/.bg-holder-->
 
         <div class="row justify-content-center mb-6">
             <div class="col-lg-6 text-center mx-auto mb-7">
-                <h5 class="fw-bold fs-3 fs-lg-5 lh-sm mb-3">Cảm nhận của học sinh</h5>
+                <h5 class="fw-bold fs-3 fs-lg-5 lh-sm mb-3" data-aos="fade-up">Cảm nhận của học sinh</h5>
             </div>
             <div class="col-xxl-9">
-                <div class="row flex-center gap-5">
+                <div class="row flex-center gap-5" data-aos="fade-up">
                     <div class="col-sm-6 col-lg-3 text-center">
-                        <div class="wrapper shadow-square-right"><img class="team-card-1" src="~/img/gallery/john.png" width="200" alt="..." /></div>
+                        <div class="wrapper shadow-square-right">
+                            <img class="team-card-1" src="~/img/gallery/john.png"
+                                 width="200" alt="..." />
+                        </div>
                         <h5 class="text-800 fw-bold mt-4 mb-1">Trần Lê Mai Anh</h5>
-                        <p>Mình nhận thấy web thực sự hữu ích cho học sinh, giao diện thân thiện, bài tập chi tiết và rõ ràng giúp các con dễ dàng luyện tập.</p>
+                        <p>
+                            Mình nhận thấy web thực sự hữu ích cho học sinh, giao diện thân thiện, bài tập chi tiết và rõ ràng
+                            giúp các con dễ dàng luyện tập.
+                        </p>
                     </div>
                     <div class="col-sm-6 col-lg-3 text-center">
-                        <div class="wrapper shadow-square-left"><img class="team-card-2" src="~/img/gallery/carrey.png" width="200" alt="..." /></div>
+                        <div class="wrapper shadow-square-left">
+                            <img class="team-card-2" src="~/img/gallery/carrey.png"
+                                 width="200" alt="..." />
+                        </div>
                         <h5 class="text-800 fw-bold mt-4 mb-1">Nguyễn Phúc Trung Kiên</h5>
-                        <p>Mình nhận thấy web thực sự hữu ích cho học sinh, giao diện thân thiện, bài tập chi tiết và rõ ràng giúp các con dễ dàng luyện tập.</p>
+                        <p>
+                            Mình nhận thấy web thực sự hữu ích cho học sinh, giao diện thân thiện, bài tập chi tiết và rõ ràng
+                            giúp các con dễ dàng luyện tập.
+                        </p>
                     </div>
                     <div class="col-sm-6 col-lg-3 text-center">
-                        <div class="wrapper shadow-square-right"><img class="team-card-3" src="~/img/gallery/ray.png" width="200" alt="..." /></div>
+                        <div class="wrapper shadow-square-right">
+                            <img class="team-card-3" src="~/img/gallery/ray.png"
+                                 width="200" alt="..." />
+                        </div>
                         <h5 class="text-800 fw-bold mt-4 mb-1">Nguyễn Diệu Hương</h5>
-                        <p>Mình nhận thấy web thực sự hữu ích cho học sinh, giao diện thân thiện, bài tập chi tiết và rõ ràng giúp các con dễ dàng luyện tập.</p>
+                        <p>
+                            Mình nhận thấy web thực sự hữu ích cho học sinh, giao diện thân thiện, bài tập chi tiết và rõ ràng
+                            giúp các con dễ dàng luyện tập.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-auto mx-auto mb-8">
-                <a class="btn btn-lg btn-klean-outline order-0" type="submit"><span class="text-gradient fw-bold">Xem toàn bộ</span></a>
+                <a class="btn btn-lg btn-klean-outline order-0" type="submit">
+                    <span class="text-gradient fw-bold">
+                        Xem toàn
+                        bộ
+                    </span>
+                </a>
             </div>
         </div>
     </div>
@@ -347,11 +410,13 @@
 
 </section>
 <section>
-    <div class="bg-holder" style="background-image:url(./img/illustrations/cta-bg.png);background-position:center;background-size:cover;">
+    <div class="bg-holder"
+         style="background-image:url(./img/illustrations/cta-bg.png);background-position:center;background-size:cover;">
     </div>
     <!--/.bg-holder-->
 
-    <div class="bg-holder" style="background-image:url(./img/illustrations/cta-bg-1.png);background-position:right top;background-size:auto;margin-top:-38px;margin-left:-200px;">
+    <div class="bg-holder"
+         style="background-image:url(./img/illustrations/cta-bg-1.png);background-position:right top;background-size:auto;margin-top:-38px;margin-left:-200px;">
     </div>
     <!--/.bg-holder-->
 

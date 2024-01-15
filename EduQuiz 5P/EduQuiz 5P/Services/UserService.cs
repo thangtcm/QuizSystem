@@ -76,6 +76,9 @@ namespace EduQuiz_5P.Services
         public async Task<ApplicationUser?> GetUser(long userId)
             => await _unitOfWork.UserRepository.GetAsync(x => x.Id == userId);
 
+        public async Task<int> CountAsync()
+            => await _unitOfWork.UserRepository.CountAsync();
+
         public async Task<bool> UpdateUser(UserInfoVM user)
         {
             if (user.UserId < 1000000000) return false;
@@ -87,6 +90,9 @@ namespace EduQuiz_5P.Services
             await _unitOfWork.CommitAsync();
             return true;
         }
+
+        public async Task<ICollection<UserInfoVM>> GetTopRank()
+            => await _unitOfWork.UserRepository.GetTopRank();    
 
     }
 }

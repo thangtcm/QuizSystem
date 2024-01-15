@@ -1,4 +1,5 @@
-﻿using EduQuiz_5P.Helpers;
+﻿using EduQuiz_5P.Enums;
+using EduQuiz_5P.Helpers;
 using EduQuiz_5P.Models;
 using EduQuiz_5P.Repository.UnitOfWork;
 using EduQuiz_5P.Services.Interface;
@@ -14,11 +15,15 @@ namespace EduQuiz_5P.Services
         public IUnitOfWork _unitOfWork;
         private readonly IUserService _userService;
         private readonly IFirebaseStorageService _firebaseStorageService;
-        public ExamService(IUnitOfWork unitOfWork, IUserService userService, IFirebaseStorageService firebaseStorageService)
+        private readonly IExamMatrixService _examMatrixService;
+        private readonly IQuestionService _questionService;
+        public ExamService(IUnitOfWork unitOfWork, IUserService userService, IFirebaseStorageService firebaseStorageService, IExamMatrixService examMatrixService, IQuestionService questionService)
         {
             _unitOfWork = unitOfWork;
             _userService = userService;
             _firebaseStorageService = firebaseStorageService;
+            _examMatrixService = examMatrixService;
+            _questionService = questionService;
         }
 
         public async Task<ICollection<Exam>> GetExamDefaultList(int? ClassId = null, int? SubjectId = null, int? ChapterId = null, Func<IQueryable<Exam>, IIncludableQueryable<Exam, object>>? includes = null)
@@ -62,19 +67,51 @@ namespace EduQuiz_5P.Services
                 return await _unitOfWork.ExamRepository.GetAllAsync(e => e.IsDefault == false);
         }
 
-        public Task CreateExamWithMatrix(Exam exam, int examMatrixId)
+        public async Task<ResponResultData<Exam>> CreateExamWithMatrix(Exam exam, int examMatrixId, long userId)
         {
-            throw new NotImplementedException();
-        }
+            ResponResultData<Exam> result = new();
 
-        public Task<Exam?> CreateExamMatrixDefault(long userId)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<Exam> CreateExam(int NumberOfQuestions, int ExamTime, int? ClassId = null, int? SubjectId = null)
-        {
-            throw new NotImplementedException();
+            var examMatrix = await _unitOfWork.ExamMatrixRepository.GetAsync(x => x.Id == examMatrixId, x => x.Include(ed => ed.ExamMatrixDetail!));
+            if (examMatrix != null && examMatrix.ExamMatrixDetail != null)
+            {
+                var questions = await _questionService.GenerateQuestion(examMatrix.Id);
+                if(!questions.IsSuccess || questions.ListResult == null)
+                {
+                    result.IsSuccess = false;
+                    result.Message = questions.Message;
+                    result.Result = exam;
+                    return result;
+                }
+                ICollection<ExamDetail> examDetails = new List<ExamDetail>();
+                foreach(var q in questions.ListResult)
+                {
+                    ExamDetail examDetail = new()
+                    {
+                        Exam = exam,
+                        QuestionId = q.Id
+                    };
+                    examDetails.Add(examDetail);
+                }    
+                exam.NumberOfQuestion = questions.ListResult.Count;
+                exam.Identification = questions.ListResult.Count(x => x.DifficultyLevel == DifficultyLevel.RECOGNITION);
+                exam.Understanding = questions.ListResult.Count(x => x.DifficultyLevel == DifficultyLevel.UNDERSTANDING);
+                exam.Application = questions.ListResult.Count(x => x.DifficultyLevel == DifficultyLevel.APPLICATION);
+                exam.AdvancedApplication = questions.ListResult.Count(x => x.DifficultyLevel == DifficultyLevel.HIGHER_ORDER_APPLICATION);
+                exam.IsRemoved = false;
+                exam.DateCreate = DateTime.UtcNow.ToTimeZone();
+                exam.TotalUserExam = 0;
+                await _unitOfWork.ExamRepository.AddAsync(exam);
+                await _unitOfWork.ExamDetailRepository.AddRangeAsync(examDetails);
+                await _unitOfWork.CommitAsync();
+                exam.ExamDetail = examDetails;
+                result.IsSuccess = true;
+                result.Message = "Sinh đề thành công.";
+                result.Result = exam;
+                return result;
+            }
+            result.IsSuccess = false;
+            result.Message = "Tài nguyên không đủ để sinh đề.";
+            return result;
         }
 
         public async Task<ICollection<Exam>> GetListAsync(int? ClassId = null, int? SubjectId = null, int? ChapterId = null, Func<IQueryable<Exam>, IIncludableQueryable<Exam, object>>? includes = null)
@@ -116,6 +153,9 @@ namespace EduQuiz_5P.Services
                 await _unitOfWork.CommitAsync();
             }    
         }
+
+        public async Task<int> CountAsync()
+            => await _unitOfWork.ExamRepository.CountAsync();
 
         public async Task CreateExamImport(ImportExamFileVM model)
         {
@@ -160,7 +200,7 @@ namespace EduQuiz_5P.Services
             }
             _unitOfWork.QuestionRepository.AddRange(questions);
             _unitOfWork.AnswerRepository.AddRange(answers);
-            await _unitOfWork.CommitAsync();
+            
             var exam = new Exam()
             {
                 ExamType = model.ExamType,
@@ -170,11 +210,25 @@ namespace EduQuiz_5P.Services
                 NumberOfQuestion = questions.Count,
                 IsRemoved = false,
                 DateCreate = DateTime.UtcNow.ToTimeZone(),
-                Questions = questions,
                 TotalUserExam = 0,
-                SubjectId = model.ExamSubjectId
+                SubjectId = model.ExamSubjectId,
+                Identification = model.ExamIdentification,
+                Understanding = model.ExamUnderstanding,
+                Application = model.ExamApplication,
+                AdvancedApplication = model.ExamAdvancedApplication,
             };
-            if(model.ExamType == Enums.ExamType.Lop)
+            ICollection<ExamDetail> examDetails = new List<ExamDetail>();
+            foreach (var q in questions)
+            {
+                ExamDetail examDetail = new()
+                {
+                    Exam = exam,
+                    Question = q
+                };
+                examDetails.Add(examDetail);
+            }
+            exam.ExamDetail = examDetails;
+            if (model.ExamType == Enums.ExamType.Lop)
             {
                 exam.ClassId = model.ExamClassId;
             }

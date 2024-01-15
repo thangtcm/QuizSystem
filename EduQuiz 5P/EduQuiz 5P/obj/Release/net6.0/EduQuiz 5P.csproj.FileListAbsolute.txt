@@ -565,3 +565,7 @@ D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Release\net6.0\Firebase.Storage.dll
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Release\net6.0\System.ServiceModel.dll
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Release\net6.0\JetBrains.Annotations.dll
 D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Release\net6.0\X.PagedList.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Release\net6.0\EPPlus.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Release\net6.0\EPPlus.Interfaces.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Release\net6.0\EPPlus.System.Drawing.dll
+D:\QuizSystem\EduQuiz 5P\EduQuiz 5P\bin\Release\net6.0\Microsoft.IO.RecyclableMemoryStream.dll

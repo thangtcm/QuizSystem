@@ -1,0 +1,3005 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\EduQuiz 5P.bundle.scp.css",
+      "PackagePath": "staticwebassets\\EduQuiz 5P.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\css\\font.css",
+      "PackagePath": "staticwebassets\\AdminLayout\\css\\font.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\css\\responsive.css",
+      "PackagePath": "staticwebassets\\AdminLayout\\css\\responsive.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\css\\style.css",
+      "PackagePath": "staticwebassets\\AdminLayout\\css\\style.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\images\\icons\\award-icon-01.svg",
+      "PackagePath": "staticwebassets\\AdminLayout\\images\\icons\\award-icon-01.svg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\images\\icons\\award-icon-02.svg",
+      "PackagePath": "staticwebassets\\AdminLayout\\images\\icons\\award-icon-02.svg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\images\\icons\\award-icon-03.svg",
+      "PackagePath": "staticwebassets\\AdminLayout\\images\\icons\\award-icon-03.svg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\images\\icons\\award-icon-04.svg",
+      "PackagePath": "staticwebassets\\AdminLayout\\images\\icons\\award-icon-04.svg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\images\\icons\\dash-icon-01.svg",
+      "PackagePath": "staticwebassets\\AdminLayout\\images\\icons\\dash-icon-01.svg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\images\\icons\\dash-icon-02.svg",
+      "PackagePath": "staticwebassets\\AdminLayout\\images\\icons\\dash-icon-02.svg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\images\\icons\\dash-icon-03.svg",
+      "PackagePath": "staticwebassets\\AdminLayout\\images\\icons\\dash-icon-03.svg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\images\\icons\\dash-icon-04.svg",
+      "PackagePath": "staticwebassets\\AdminLayout\\images\\icons\\dash-icon-04.svg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\images\\icons\\header-icon-01.svg",
+      "PackagePath": "staticwebassets\\AdminLayout\\images\\icons\\header-icon-01.svg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\images\\icons\\header-icon-04.svg",
+      "PackagePath": "staticwebassets\\AdminLayout\\images\\icons\\header-icon-04.svg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\images\\icons\\header-icon-05.svg",
+      "PackagePath": "staticwebassets\\AdminLayout\\images\\icons\\header-icon-05.svg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\images\\icons\\social-icon-01.svg",
+      "PackagePath": "staticwebassets\\AdminLayout\\images\\icons\\social-icon-01.svg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\images\\icons\\social-icon-02.svg",
+      "PackagePath": "staticwebassets\\AdminLayout\\images\\icons\\social-icon-02.svg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\images\\icons\\social-icon-03.svg",
+      "PackagePath": "staticwebassets\\AdminLayout\\images\\icons\\social-icon-03.svg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\images\\icons\\social-icon-04.svg",
+      "PackagePath": "staticwebassets\\AdminLayout\\images\\icons\\social-icon-04.svg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\images\\icons\\teacher-icon-01.svg",
+      "PackagePath": "staticwebassets\\AdminLayout\\images\\icons\\teacher-icon-01.svg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\images\\icons\\teacher-icon-02.svg",
+      "PackagePath": "staticwebassets\\AdminLayout\\images\\icons\\teacher-icon-02.svg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\images\\logo\\logo-text.png",
+      "PackagePath": "staticwebassets\\AdminLayout\\images\\logo\\logo-text.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\images\\logo\\logo.png",
+      "PackagePath": "staticwebassets\\AdminLayout\\images\\logo\\logo.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\images\\profiles\\avatar-01.jpg",
+      "PackagePath": "staticwebassets\\AdminLayout\\images\\profiles\\avatar-01.jpg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\images\\profiles\\avatar-02.jpg",
+      "PackagePath": "staticwebassets\\AdminLayout\\images\\profiles\\avatar-02.jpg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\images\\profiles\\avatar-03.jpg",
+      "PackagePath": "staticwebassets\\AdminLayout\\images\\profiles\\avatar-03.jpg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\images\\profiles\\avatar-04.jpg",
+      "PackagePath": "staticwebassets\\AdminLayout\\images\\profiles\\avatar-04.jpg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\images\\profiles\\avatar-05.jpg",
+      "PackagePath": "staticwebassets\\AdminLayout\\images\\profiles\\avatar-05.jpg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\images\\profiles\\avatar-11.jpg",
+      "PackagePath": "staticwebassets\\AdminLayout\\images\\profiles\\avatar-11.jpg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\images\\profiles\\avatar-13.jpg",
+      "PackagePath": "staticwebassets\\AdminLayout\\images\\profiles\\avatar-13.jpg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\images\\profiles\\avatar-17.jpg",
+      "PackagePath": "staticwebassets\\AdminLayout\\images\\profiles\\avatar-17.jpg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\js\\chart-data.js",
+      "PackagePath": "staticwebassets\\AdminLayout\\js\\chart-data.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\js\\feather.min.js",
+      "PackagePath": "staticwebassets\\AdminLayout\\js\\feather.min.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\js\\script.js",
+      "PackagePath": "staticwebassets\\AdminLayout\\js\\script.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\.editorconfig",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\.editorconfig"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\.gitignore",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\.gitignore"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\.npmignore",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\.npmignore"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\CONTRIBUTING.md",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\CONTRIBUTING.md"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\HISTORY.md",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\HISTORY.md"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\LICENSE",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\JedWatson-classnames-0251060"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\README.md",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\README.md"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\benchmarks\\benchmarks.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\benchmarks\\benchmarks.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\benchmarks\\fixtures.js",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\benchmarks\\fixtures.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\benchmarks\\package-lock.json",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\benchmarks\\package-lock.json"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\benchmarks\\package.json",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\benchmarks\\package.json"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\benchmarks\\run.js",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\benchmarks\\run.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\benchmarks\\runChecks.js",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\benchmarks\\runChecks.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\benchmarks\\runInBrowser.js",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\benchmarks\\runInBrowser.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\benchmarks\\runSuite.js",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\benchmarks\\runSuite.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\bind.d.ts",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\bind.d.ts"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\bind.js",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\bind.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\dedupe.d.ts",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\dedupe.d.ts"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\dedupe.js",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\dedupe.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\index.d.ts",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\index.d.ts"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\index.js",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\index.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\package-lock.json",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\package-lock.json"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\package.json",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\package.json"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\tests\\bind.js",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\tests\\bind.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\tests\\dedupe.js",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\tests\\dedupe.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\tests\\index.js",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\tests\\index.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\tests\\types.ts",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\tests\\types.ts"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\tsconfig.json",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\tsconfig.json"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\tslint.json",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\JedWatson-classnames-0251060\\tslint.json"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\apexcharts.amd.js",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\apexcharts.amd.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\apexcharts.amd.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\apexcharts.amd.js.LICENSE.txt"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\apexcharts.common.js",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\apexcharts.common.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\apexcharts.css",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\apexcharts.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\apexcharts.esm.js",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\apexcharts.esm.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\apexcharts.js",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\apexcharts.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\apexcharts.min.js",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\apexcharts.min.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\ar.json",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\ar.json"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\ca.json",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\ca.json"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\cs.json",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\cs.json"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\da.json",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\da.json"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\de.json",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\de.json"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\el.json",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\el.json"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\en.json",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\en.json"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\es.json",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\es.json"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\et.json",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\et.json"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\fa.json",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\fa.json"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\fi.json",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\fi.json"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\fr.json",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\fr.json"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\he.json",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\he.json"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\hi.json",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\hi.json"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\hr.json",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\hr.json"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\hu.json",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\hu.json"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\hy.json",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\hy.json"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\id.json",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\id.json"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\it.json",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\it.json"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\ja.json",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\ja.json"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\ka.json",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\ka.json"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\ko.json",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\ko.json"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\lt.json",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\lt.json"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\lv.json",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\lv.json"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\nb.json",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\nb.json"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\nl.json",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\nl.json"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\pl.json",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\pl.json"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\pt-br.json",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\pt-br.json"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\pt.json",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\pt.json"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\rs.json",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\rs.json"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\ru.json",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\ru.json"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\se.json",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\se.json"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\sk.json",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\sk.json"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\sl.json",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\sl.json"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\sq.json",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\sq.json"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\th.json",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\th.json"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\tr.json",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\tr.json"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\ua.json",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\ua.json"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\zh-cn.json",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\zh-cn.json"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\zh-tw.json",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\dist\\locales\\zh-tw.json"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\assets\\github-data.js",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\assets\\github-data.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\assets\\images\\1101098.png",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\assets\\images\\1101098.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\assets\\images\\2979121308_59539a3898_z.jpg",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\assets\\images\\2979121308_59539a3898_z.jpg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\assets\\images\\4274635880_809a4b9d0d_z.jpg",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\assets\\images\\4274635880_809a4b9d0d_z.jpg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\assets\\images\\4679113782_ca13e2e6c0_z.jpg",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\assets\\images\\4679113782_ca13e2e6c0_z.jpg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\assets\\images\\abstract.jpg",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\assets\\images\\abstract.jpg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\assets\\images\\clock.png",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\assets\\images\\clock.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\assets\\images\\ico-instagram.png",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\assets\\images\\ico-instagram.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\assets\\images\\ico-messenger.png",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\assets\\images\\ico-messenger.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\assets\\images\\stripes.jpg",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\assets\\images\\stripes.jpg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\assets\\irregular-data-series.js",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\assets\\irregular-data-series.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\assets\\ohlc.js",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\assets\\ohlc.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\assets\\stock-prices.js",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\assets\\stock-prices.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\assets\\styles.css",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\assets\\styles.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\area\\area-datetime.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\area\\area-datetime.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\area\\area-github-style.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\area\\area-github-style.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\area\\area-spline.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\area\\area-spline.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\area\\area-with-missing-data.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\area\\area-with-missing-data.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\area\\area-with-negative.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\area\\area-with-negative.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\area\\basic-area.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\area\\basic-area.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\area\\stacked-area.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\area\\stacked-area.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\area\\timeseries-with-irregular-data.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\area\\timeseries-with-irregular-data.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\bar\\bar-with-custom-data-labels.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\bar\\bar-with-custom-data-labels.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\bar\\bar-with-images.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\bar\\bar-with-images.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\bar\\bar-with-markers.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\bar\\bar-with-markers.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\bar\\bar-with-negative.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\bar\\bar-with-negative.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\bar\\basic-bar.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\bar\\basic-bar.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\bar\\grouped-bar.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\bar\\grouped-bar.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\bar\\grouped-stacked-bar.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\bar\\grouped-stacked-bar.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\bar\\patterned-bar.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\bar\\patterned-bar.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\bar\\reversed-bar.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\bar\\reversed-bar.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\bar\\stacked-bar-100.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\bar\\stacked-bar-100.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\bar\\stacked-bar.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\bar\\stacked-bar.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\boxPlot\\basic.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\boxPlot\\basic.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\boxPlot\\boxplot-scatter.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\boxPlot\\boxplot-scatter.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\boxPlot\\horizontal-boxplot.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\boxPlot\\horizontal-boxplot.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\bubble\\3d-bubble.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\bubble\\3d-bubble.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\bubble\\simple-bubble.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\bubble\\simple-bubble.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\candlestick\\basic.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\candlestick\\basic.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\candlestick\\candlestick-bar.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\candlestick\\candlestick-bar.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\candlestick\\candlestick-category.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\candlestick\\candlestick-category.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\candlestick\\candlestick-line.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\candlestick\\candlestick-line.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\column\\basic-column.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\column\\basic-column.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\column\\column-with-data-labels.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\column\\column-with-data-labels.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\column\\column-with-group-label.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\column\\column-with-group-label.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\column\\column-with-markers.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\column\\column-with-markers.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\column\\column-with-negative.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\column\\column-with-negative.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\column\\column-with-rotated-data-labels.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\column\\column-with-rotated-data-labels.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\column\\column-with-rotated-labels.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\column\\column-with-rotated-labels.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\column\\data-color.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\column\\data-color.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\column\\distributed-columns.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\column\\distributed-columns.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\column\\dumbbell-chart.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\column\\dumbbell-chart.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\column\\dynamic-loaded-chart.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\column\\dynamic-loaded-chart.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\column\\grouped-stacked-column.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\column\\grouped-stacked-column.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\column\\range-column.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\column\\range-column.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\column\\stacked-column-100.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\column\\stacked-column-100.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\column\\stacked-column-with-line.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\column\\stacked-column-with-line.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\column\\stacked-column.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\column\\stacked-column.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\funnel\\funnel.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\funnel\\funnel.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\funnel\\pyramid.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\funnel\\pyramid.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\heatmap\\basic.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\heatmap\\basic.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\heatmap\\color-range.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\heatmap\\color-range.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\heatmap\\image-fill.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\heatmap\\image-fill.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\heatmap\\multiple-color-scales-flipped.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\heatmap\\multiple-color-scales-flipped.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\heatmap\\multiple-color.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\heatmap\\multiple-color.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\heatmap\\rounded.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\heatmap\\rounded.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\line\\basic-line.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\line\\basic-line.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\line\\brush-charts.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\line\\brush-charts.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\line\\dashed-line.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\line\\dashed-line.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\line\\gradient-line.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\line\\gradient-line.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\line\\line-with-annotations.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\line\\line-with-annotations.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\line\\line-with-data-labels.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\line\\line-with-data-labels.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\line\\line-with-image.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\line\\line-with-image.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\line\\line-with-missing-data.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\line\\line-with-missing-data.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\line\\logarithmic-line.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\line\\logarithmic-line.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\line\\realtime.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\line\\realtime.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\line\\stepline.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\line\\stepline.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\line\\syncing-charts.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\line\\syncing-charts.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\line\\zoomable-timeseries.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\line\\zoomable-timeseries.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\misc\\annotations-example.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\misc\\annotations-example.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\misc\\minMaxPoints.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\misc\\minMaxPoints.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\misc\\range-annotations-inverted-axis-example.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\misc\\range-annotations-inverted-axis-example.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\mixed\\line-area.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\mixed\\line-area.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\mixed\\line-column-area.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\mixed\\line-column-area.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\mixed\\line-column.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\mixed\\line-column.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\mixed\\line-scatter.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\mixed\\line-scatter.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\mixed\\multiple-yaxes.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\mixed\\multiple-yaxes.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\pie\\donut-update.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\pie\\donut-update.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\pie\\donut-with-pattern.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\pie\\donut-with-pattern.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\pie\\gradient-donut.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\pie\\gradient-donut.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\pie\\monochrome-pie.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\pie\\monochrome-pie.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\pie\\pie-with-image.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\pie\\pie-with-image.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\pie\\semi-donut.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\pie\\semi-donut.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\pie\\simple-donut.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\pie\\simple-donut.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\pie\\simple-pie.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\pie\\simple-pie.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\polarArea\\basic-polar-area.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\polarArea\\basic-polar-area.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\polarArea\\polar-area-monochrome.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\polarArea\\polar-area-monochrome.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\radar\\basic-radar.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\radar\\basic-radar.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\radar\\radar-multiple-series.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\radar\\radar-multiple-series.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\radar\\radar-with-polygon-fill.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\radar\\radar-with-polygon-fill.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\radialBar\\circle-chart-multiple.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\radialBar\\circle-chart-multiple.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\radialBar\\circle-chart-with-image.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\radialBar\\circle-chart-with-image.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\radialBar\\circle-chart.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\radialBar\\circle-chart.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\radialBar\\circle-custom-angle.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\radialBar\\circle-custom-angle.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\radialBar\\circle-gradient.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\radialBar\\circle-gradient.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\radialBar\\semi-circle-chart.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\radialBar\\semi-circle-chart.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\radialBar\\stroked-gauge.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\radialBar\\stroked-gauge.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\rangeArea\\basic-range-area.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\rangeArea\\basic-range-area.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\rangeArea\\range-area-line-combo.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\rangeArea\\range-area-line-combo.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\scatter\\scatter-basic.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\scatter\\scatter-basic.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\scatter\\scatter-datetime.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\scatter\\scatter-datetime.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\scatter\\scatter-images.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\scatter\\scatter-images.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\sparklines\\sparklines.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\sparklines\\sparklines.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\timelines\\advanced.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\timelines\\advanced.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\timelines\\controlling-colors.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\timelines\\controlling-colors.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\timelines\\dumbbell-chart-horizontal.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\timelines\\dumbbell-chart-horizontal.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\timelines\\multi-series-group-rows.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\timelines\\multi-series-group-rows.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\timelines\\multi-series.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\timelines\\multi-series.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\timelines\\simple.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\timelines\\simple.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\treemap\\basic.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\treemap\\basic.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\treemap\\color-scale.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\treemap\\color-scale.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\treemap\\distributed.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\treemap\\distributed.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\treemap\\multi-dimensional.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\react\\treemap\\multi-dimensional.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\area\\area-datetime.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\area\\area-datetime.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\area\\area-github-style.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\area\\area-github-style.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\area\\area-spline.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\area\\area-spline.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\area\\area-with-missing-data.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\area\\area-with-missing-data.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\area\\area-with-negative.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\area\\area-with-negative.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\area\\basic-area.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\area\\basic-area.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\area\\stacked-area.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\area\\stacked-area.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\area\\timeseries-with-irregular-data.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\area\\timeseries-with-irregular-data.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\bar\\bar-with-custom-data-labels.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\bar\\bar-with-custom-data-labels.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\bar\\bar-with-images.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\bar\\bar-with-images.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\bar\\bar-with-markers.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\bar\\bar-with-markers.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\bar\\bar-with-negative.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\bar\\bar-with-negative.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\bar\\basic-bar.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\bar\\basic-bar.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\bar\\grouped-bar.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\bar\\grouped-bar.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\bar\\grouped-stacked-bar.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\bar\\grouped-stacked-bar.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\bar\\patterned-bar.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\bar\\patterned-bar.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\bar\\reversed-bar.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\bar\\reversed-bar.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\bar\\stacked-bar-100.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\bar\\stacked-bar-100.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\bar\\stacked-bar.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\bar\\stacked-bar.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\boxPlot\\basic.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\boxPlot\\basic.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\boxPlot\\boxplot-scatter.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\boxPlot\\boxplot-scatter.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\boxPlot\\horizontal-boxplot.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\boxPlot\\horizontal-boxplot.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\bubble\\3d-bubble.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\bubble\\3d-bubble.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\bubble\\simple-bubble.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\bubble\\simple-bubble.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\candlestick\\basic.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\candlestick\\basic.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\candlestick\\candlestick-bar.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\candlestick\\candlestick-bar.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\candlestick\\candlestick-category.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\candlestick\\candlestick-category.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\candlestick\\candlestick-line.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\candlestick\\candlestick-line.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\column\\basic-column.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\column\\basic-column.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\column\\column-with-data-labels.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\column\\column-with-data-labels.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\column\\column-with-group-label.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\column\\column-with-group-label.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\column\\column-with-markers.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\column\\column-with-markers.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\column\\column-with-negative.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\column\\column-with-negative.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\column\\column-with-rotated-data-labels.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\column\\column-with-rotated-data-labels.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\column\\column-with-rotated-labels.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\column\\column-with-rotated-labels.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\column\\data-color.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\column\\data-color.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\column\\distributed-columns.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\column\\distributed-columns.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\column\\dumbbell-chart.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\column\\dumbbell-chart.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\column\\dynamic-loaded-chart.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\column\\dynamic-loaded-chart.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\column\\grouped-stacked-column.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\column\\grouped-stacked-column.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\column\\histogram.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\column\\histogram.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\column\\range-column.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\column\\range-column.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\column\\stacked-column-100.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\column\\stacked-column-100.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\column\\stacked-column-with-line.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\column\\stacked-column-with-line.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\column\\stacked-column.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\column\\stacked-column.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\dashboards\\dark\\assets\\scripts.js",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\dashboards\\dark\\assets\\scripts.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\dashboards\\dark\\assets\\styles.css",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\dashboards\\dark\\assets\\styles.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\dashboards\\dark\\index.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\dashboards\\dark\\index.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\dashboards\\material\\assets\\scripts.js",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\dashboards\\material\\assets\\scripts.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\dashboards\\material\\assets\\styles.css",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\dashboards\\material\\assets\\styles.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\dashboards\\material\\index.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\dashboards\\material\\index.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\dashboards\\modern\\assets\\data.js",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\dashboards\\modern\\assets\\data.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\dashboards\\modern\\assets\\img\\banana.png",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\dashboards\\modern\\assets\\img\\banana.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\dashboards\\modern\\assets\\img\\logo.png",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\dashboards\\modern\\assets\\img\\logo.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\dashboards\\modern\\assets\\img\\map.png",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\dashboards\\modern\\assets\\img\\map.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\dashboards\\modern\\assets\\img\\tellius.png",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\dashboards\\modern\\assets\\img\\tellius.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\dashboards\\modern\\assets\\img\\user.png",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\dashboards\\modern\\assets\\img\\user.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\dashboards\\modern\\assets\\scripts.js",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\dashboards\\modern\\assets\\scripts.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\dashboards\\modern\\assets\\styles.css",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\dashboards\\modern\\assets\\styles.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\dashboards\\modern\\index.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\dashboards\\modern\\index.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\dashboards\\realtime\\assets\\edit-on-codepen.png",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\dashboards\\realtime\\assets\\edit-on-codepen.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\dashboards\\realtime\\assets\\scripts.js",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\dashboards\\realtime\\assets\\scripts.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\dashboards\\realtime\\assets\\styles.css",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\dashboards\\realtime\\assets\\styles.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\dashboards\\realtime\\index.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\dashboards\\realtime\\index.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\funnel\\funnel.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\funnel\\funnel.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\funnel\\pyramid.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\funnel\\pyramid.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\heatmap\\basic.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\heatmap\\basic.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\heatmap\\color-range.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\heatmap\\color-range.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\heatmap\\image-fill.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\heatmap\\image-fill.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\heatmap\\multiple-color-scales-flipped.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\heatmap\\multiple-color-scales-flipped.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\heatmap\\multiple-color.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\heatmap\\multiple-color.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\heatmap\\rounded.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\heatmap\\rounded.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\line\\basic-line.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\line\\basic-line.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\line\\brush-charts.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\line\\brush-charts.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\line\\dashed-line.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\line\\dashed-line.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\line\\gradient-line.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\line\\gradient-line.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\line\\line-with-annotations.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\line\\line-with-annotations.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\line\\line-with-data-labels.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\line\\line-with-data-labels.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\line\\line-with-image.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\line\\line-with-image.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\line\\line-with-missing-data.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\line\\line-with-missing-data.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\line\\logarithmic-line.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\line\\logarithmic-line.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\line\\realtime.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\line\\realtime.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\line\\stepline.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\line\\stepline.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\line\\syncing-charts.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\line\\syncing-charts.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\line\\zoomable-timeseries.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\line\\zoomable-timeseries.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\misc\\annotations-example.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\misc\\annotations-example.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\misc\\axios.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\misc\\axios.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\misc\\custom-legend.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\misc\\custom-legend.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\misc\\init-from-attrs.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\misc\\init-from-attrs.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\misc\\jquery.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\misc\\jquery.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\misc\\minMaxPoints.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\misc\\minMaxPoints.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\misc\\range-annotations-inverted-axis-example.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\misc\\range-annotations-inverted-axis-example.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\mixed\\line-area.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\mixed\\line-area.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\mixed\\line-column-area.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\mixed\\line-column-area.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\mixed\\line-column.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\mixed\\line-column.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\mixed\\line-scatter.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\mixed\\line-scatter.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\mixed\\multiple-yaxes.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\mixed\\multiple-yaxes.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\pie\\donut-update.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\pie\\donut-update.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\pie\\donut-with-pattern.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\pie\\donut-with-pattern.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\pie\\gradient-donut.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\pie\\gradient-donut.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\pie\\monochrome-pie.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\pie\\monochrome-pie.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\pie\\pie-with-image.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\pie\\pie-with-image.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\pie\\semi-donut.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\pie\\semi-donut.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\pie\\simple-donut.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\pie\\simple-donut.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\pie\\simple-pie.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\pie\\simple-pie.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\polarArea\\basic-polar-area.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\polarArea\\basic-polar-area.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\polarArea\\polar-area-monochrome.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\polarArea\\polar-area-monochrome.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\radar\\basic-radar.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\radar\\basic-radar.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\radar\\radar-multiple-series.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\radar\\radar-multiple-series.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\radar\\radar-with-polygon-fill.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\radar\\radar-with-polygon-fill.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\radialBar\\circle-chart-multiple.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\radialBar\\circle-chart-multiple.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\radialBar\\circle-chart-with-image.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\radialBar\\circle-chart-with-image.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\radialBar\\circle-chart.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\radialBar\\circle-chart.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\radialBar\\circle-custom-angle.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\radialBar\\circle-custom-angle.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\radialBar\\circle-gradient.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\radialBar\\circle-gradient.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\radialBar\\semi-circle-chart.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\radialBar\\semi-circle-chart.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\radialBar\\stroked-gauge.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\radialBar\\stroked-gauge.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\rangeArea\\basic-range-area.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\rangeArea\\basic-range-area.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\rangeArea\\range-area-line-combo.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\rangeArea\\range-area-line-combo.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\scatter\\scatter-basic.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\scatter\\scatter-basic.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\scatter\\scatter-datetime.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\scatter\\scatter-datetime.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\scatter\\scatter-images.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\scatter\\scatter-images.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\sparklines\\sparklines.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\sparklines\\sparklines.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\timelines\\advanced.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\timelines\\advanced.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\timelines\\controlling-colors.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\timelines\\controlling-colors.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\timelines\\dumbbell-chart-horizontal.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\timelines\\dumbbell-chart-horizontal.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\timelines\\multi-series-group-rows.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\timelines\\multi-series-group-rows.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\timelines\\multi-series.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\timelines\\multi-series.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\timelines\\simple.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\timelines\\simple.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\treemap\\basic.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\treemap\\basic.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\treemap\\color-scale.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\treemap\\color-scale.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\treemap\\distributed.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\treemap\\distributed.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\treemap\\multi-dimensional.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vanilla-js\\treemap\\multi-dimensional.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\area\\area-datetime.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\area\\area-datetime.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\area\\area-github-style.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\area\\area-github-style.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\area\\area-spline.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\area\\area-spline.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\area\\area-with-missing-data.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\area\\area-with-missing-data.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\area\\area-with-negative.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\area\\area-with-negative.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\area\\basic-area.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\area\\basic-area.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\area\\stacked-area.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\area\\stacked-area.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\area\\timeseries-with-irregular-data.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\area\\timeseries-with-irregular-data.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\bar\\bar-with-custom-data-labels.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\bar\\bar-with-custom-data-labels.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\bar\\bar-with-images.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\bar\\bar-with-images.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\bar\\bar-with-markers.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\bar\\bar-with-markers.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\bar\\bar-with-negative.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\bar\\bar-with-negative.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\bar\\basic-bar.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\bar\\basic-bar.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\bar\\grouped-bar.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\bar\\grouped-bar.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\bar\\grouped-stacked-bar.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\bar\\grouped-stacked-bar.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\bar\\patterned-bar.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\bar\\patterned-bar.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\bar\\reversed-bar.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\bar\\reversed-bar.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\bar\\stacked-bar-100.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\bar\\stacked-bar-100.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\bar\\stacked-bar.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\bar\\stacked-bar.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\boxPlot\\basic.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\boxPlot\\basic.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\boxPlot\\boxplot-scatter.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\boxPlot\\boxplot-scatter.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\boxPlot\\horizontal-boxplot.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\boxPlot\\horizontal-boxplot.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\bubble\\3d-bubble.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\bubble\\3d-bubble.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\bubble\\simple-bubble.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\bubble\\simple-bubble.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\candlestick\\basic.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\candlestick\\basic.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\candlestick\\candlestick-bar.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\candlestick\\candlestick-bar.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\candlestick\\candlestick-category.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\candlestick\\candlestick-category.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\candlestick\\candlestick-line.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\candlestick\\candlestick-line.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\column\\basic-column.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\column\\basic-column.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\column\\column-with-data-labels.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\column\\column-with-data-labels.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\column\\column-with-group-label.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\column\\column-with-group-label.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\column\\column-with-markers.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\column\\column-with-markers.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\column\\column-with-negative.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\column\\column-with-negative.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\column\\column-with-rotated-data-labels.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\column\\column-with-rotated-data-labels.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\column\\column-with-rotated-labels.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\column\\column-with-rotated-labels.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\column\\data-color.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\column\\data-color.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\column\\distributed-columns.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\column\\distributed-columns.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\column\\dumbbell-chart.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\column\\dumbbell-chart.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\column\\dynamic-loaded-chart.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\column\\dynamic-loaded-chart.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\column\\grouped-stacked-column.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\column\\grouped-stacked-column.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\column\\range-column.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\column\\range-column.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\column\\stacked-column-100.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\column\\stacked-column-100.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\column\\stacked-column-with-line.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\column\\stacked-column-with-line.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\column\\stacked-column.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\column\\stacked-column.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\funnel\\funnel.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\funnel\\funnel.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\funnel\\pyramid.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\funnel\\pyramid.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\heatmap\\basic.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\heatmap\\basic.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\heatmap\\color-range.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\heatmap\\color-range.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\heatmap\\image-fill.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\heatmap\\image-fill.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\heatmap\\multiple-color-scales-flipped.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\heatmap\\multiple-color-scales-flipped.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\heatmap\\multiple-color.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\heatmap\\multiple-color.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\heatmap\\rounded.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\heatmap\\rounded.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\line\\basic-line.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\line\\basic-line.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\line\\brush-charts.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\line\\brush-charts.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\line\\dashed-line.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\line\\dashed-line.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\line\\gradient-line.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\line\\gradient-line.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\line\\line-with-annotations.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\line\\line-with-annotations.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\line\\line-with-data-labels.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\line\\line-with-data-labels.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\line\\line-with-image.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\line\\line-with-image.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\line\\line-with-missing-data.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\line\\line-with-missing-data.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\line\\logarithmic-line.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\line\\logarithmic-line.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\line\\realtime.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\line\\realtime.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\line\\stepline.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\line\\stepline.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\line\\syncing-charts.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\line\\syncing-charts.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\line\\zoomable-timeseries.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\line\\zoomable-timeseries.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\misc\\annotations-example.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\misc\\annotations-example.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\misc\\minMaxPoints.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\misc\\minMaxPoints.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\misc\\range-annotations-inverted-axis-example.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\misc\\range-annotations-inverted-axis-example.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\mixed\\line-area.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\mixed\\line-area.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\mixed\\line-column-area.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\mixed\\line-column-area.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\mixed\\line-column.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\mixed\\line-column.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\mixed\\line-scatter.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\mixed\\line-scatter.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\mixed\\multiple-yaxes.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\mixed\\multiple-yaxes.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\pie\\donut-update.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\pie\\donut-update.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\pie\\donut-with-pattern.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\pie\\donut-with-pattern.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\pie\\gradient-donut.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\pie\\gradient-donut.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\pie\\monochrome-pie.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\pie\\monochrome-pie.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\pie\\pie-with-image.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\pie\\pie-with-image.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\pie\\semi-donut.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\pie\\semi-donut.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\pie\\simple-donut.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\pie\\simple-donut.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\pie\\simple-pie.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\pie\\simple-pie.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\polarArea\\basic-polar-area.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\polarArea\\basic-polar-area.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\polarArea\\polar-area-monochrome.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\polarArea\\polar-area-monochrome.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\radar\\basic-radar.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\radar\\basic-radar.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\radar\\radar-multiple-series.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\radar\\radar-multiple-series.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\radar\\radar-with-polygon-fill.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\radar\\radar-with-polygon-fill.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\radialBar\\circle-chart-multiple.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\radialBar\\circle-chart-multiple.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\radialBar\\circle-chart-with-image.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\radialBar\\circle-chart-with-image.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\radialBar\\circle-chart.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\radialBar\\circle-chart.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\radialBar\\circle-custom-angle.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\radialBar\\circle-custom-angle.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\radialBar\\circle-gradient.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\radialBar\\circle-gradient.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\radialBar\\semi-circle-chart.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\radialBar\\semi-circle-chart.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\radialBar\\stroked-gauge.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\radialBar\\stroked-gauge.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\rangeArea\\basic-range-area.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\rangeArea\\basic-range-area.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\rangeArea\\range-area-line-combo.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\rangeArea\\range-area-line-combo.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\scatter\\scatter-basic.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\scatter\\scatter-basic.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\scatter\\scatter-datetime.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\scatter\\scatter-datetime.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\scatter\\scatter-images.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\scatter\\scatter-images.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\sparklines\\sparklines.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\sparklines\\sparklines.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\timelines\\advanced.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\timelines\\advanced.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\timelines\\controlling-colors.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\timelines\\controlling-colors.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\timelines\\dumbbell-chart-horizontal.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\timelines\\dumbbell-chart-horizontal.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\timelines\\multi-series-group-rows.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\timelines\\multi-series-group-rows.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\timelines\\multi-series.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\timelines\\multi-series.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\timelines\\simple.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\timelines\\simple.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\treemap\\basic.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\treemap\\basic.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\treemap\\color-scale.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\treemap\\color-scale.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\treemap\\distributed.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\treemap\\distributed.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\treemap\\multi-dimensional.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\apexcharts-bundle\\samples\\vue\\treemap\\multi-dimensional.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\jQuery-slimScroll-master\\.gitignore",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\jQuery-slimScroll-master\\.gitignore"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\jQuery-slimScroll-master\\README.md",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\jQuery-slimScroll-master\\README.md"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\jQuery-slimScroll-master\\bower.json",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\jQuery-slimScroll-master\\bower.json"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\jQuery-slimScroll-master\\examples\\allow-page-scroll.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\jQuery-slimScroll-master\\examples\\allow-page-scroll.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\jQuery-slimScroll-master\\examples\\chaining.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\jQuery-slimScroll-master\\examples\\chaining.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\jQuery-slimScroll-master\\examples\\disable-fade-out.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\jQuery-slimScroll-master\\examples\\disable-fade-out.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\jQuery-slimScroll-master\\examples\\dynamic-content.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\jQuery-slimScroll-master\\examples\\dynamic-content.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\jQuery-slimScroll-master\\examples\\height-width.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\jQuery-slimScroll-master\\examples\\height-width.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\jQuery-slimScroll-master\\examples\\index.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\jQuery-slimScroll-master\\examples\\index.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\jQuery-slimScroll-master\\examples\\libs\\prettify\\prettify.css",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\jQuery-slimScroll-master\\examples\\libs\\prettify\\prettify.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\jQuery-slimScroll-master\\examples\\libs\\prettify\\prettify.js",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\jQuery-slimScroll-master\\examples\\libs\\prettify\\prettify.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\jQuery-slimScroll-master\\examples\\mouse-wheel.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\jQuery-slimScroll-master\\examples\\mouse-wheel.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\jQuery-slimScroll-master\\examples\\multiple-elements.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\jQuery-slimScroll-master\\examples\\multiple-elements.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\jQuery-slimScroll-master\\examples\\navigation.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\jQuery-slimScroll-master\\examples\\navigation.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\jQuery-slimScroll-master\\examples\\nested.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\jQuery-slimScroll-master\\examples\\nested.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\jQuery-slimScroll-master\\examples\\programmatic-scrolling.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\jQuery-slimScroll-master\\examples\\programmatic-scrolling.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\jQuery-slimScroll-master\\examples\\rail.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\jQuery-slimScroll-master\\examples\\rail.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\jQuery-slimScroll-master\\examples\\scroll-events.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\jQuery-slimScroll-master\\examples\\scroll-events.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\jQuery-slimScroll-master\\examples\\scrollbar.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\jQuery-slimScroll-master\\examples\\scrollbar.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\jQuery-slimScroll-master\\examples\\start-position.html",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\jQuery-slimScroll-master\\examples\\start-position.html"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\jQuery-slimScroll-master\\examples\\style.css",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\jQuery-slimScroll-master\\examples\\style.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\jQuery-slimScroll-master\\jquery.slimscroll.js",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\jQuery-slimScroll-master\\jquery.slimscroll.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\jQuery-slimScroll-master\\jquery.slimscroll.min.js",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\jQuery-slimScroll-master\\jquery.slimscroll.min.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\AdminLayout\\plugin\\jQuery-slimScroll-master\\package.json",
+      "PackagePath": "staticwebassets\\AdminLayout\\plugin\\jQuery-slimScroll-master\\package.json"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\css\\theme.css",
+      "PackagePath": "staticwebassets\\css\\theme.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\css\\theme.min.css",
+      "PackagePath": "staticwebassets\\css\\theme.min.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\css\\themeexam.css",
+      "PackagePath": "staticwebassets\\css\\themeexam.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\css\\themelogin.css",
+      "PackagePath": "staticwebassets\\css\\themelogin.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\css\\toastrcustom.css",
+      "PackagePath": "staticwebassets\\css\\toastrcustom.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\.gitkeep",
+      "PackagePath": "staticwebassets\\img\\.gitkeep"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\6.png",
+      "PackagePath": "staticwebassets\\img\\6.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\Anh-Wibu-mat-do.jpg",
+      "PackagePath": "staticwebassets\\img\\Anh-Wibu-mat-do.jpg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\Frame 15124.png",
+      "PackagePath": "staticwebassets\\img\\Frame 15124.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\Frame 1514.png",
+      "PackagePath": "staticwebassets\\img\\Frame 1514.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\Frame 154.png",
+      "PackagePath": "staticwebassets\\img\\Frame 154.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\career.png",
+      "PackagePath": "staticwebassets\\img\\career.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\favicons\\android-chrome-192x192.png",
+      "PackagePath": "staticwebassets\\img\\favicons\\android-chrome-192x192.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\favicons\\android-chrome-512x512.png",
+      "PackagePath": "staticwebassets\\img\\favicons\\android-chrome-512x512.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\favicons\\apple-touch-icon.png",
+      "PackagePath": "staticwebassets\\img\\favicons\\apple-touch-icon.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\favicons\\browserconfig.xml",
+      "PackagePath": "staticwebassets\\img\\favicons\\browserconfig.xml"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\favicons\\favicon-16x16.png",
+      "PackagePath": "staticwebassets\\img\\favicons\\favicon-16x16.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\favicons\\favicon-32x32.png",
+      "PackagePath": "staticwebassets\\img\\favicons\\favicon-32x32.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\favicons\\favicon.ico",
+      "PackagePath": "staticwebassets\\img\\favicons\\favicon.ico"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\favicons\\manifest.json",
+      "PackagePath": "staticwebassets\\img\\favicons\\manifest.json"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\favicons\\mstile-150x150.png",
+      "PackagePath": "staticwebassets\\img\\favicons\\mstile-150x150.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\favicons\\site.webmanifest",
+      "PackagePath": "staticwebassets\\img\\favicons\\site.webmanifest"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\austin.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\austin.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\author-1.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\author-1.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\author-2.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\author-2.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\author-3.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\author-3.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\carrey.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\carrey.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\contact-bg.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\contact-bg.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\dedicate.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\dedicate.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\dgnl.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\dgnl.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\document-icon.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\document-icon.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\document.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\document.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\feature-1.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\feature-1.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\feature-2.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\feature-2.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\feature-3.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\feature-3.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\feature-4.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\feature-4.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\feature-girl.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\feature-girl.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\google.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\google.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\hero.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\hero.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\john.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\john.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\logo.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\logo.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\lop-10.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\lop-10.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\lop-11.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\lop-11.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\lop-12.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\lop-12.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\lop-6.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\lop-6.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\lop-7.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\lop-7.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\lop-8.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\lop-8.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\lop-9.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\lop-9.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\mailbluster.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\mailbluster.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\microsoft.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\microsoft.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\netflix.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\netflix.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\product.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\product.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\project-1.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\project-1.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\project-2.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\project-2.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\project-3.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\project-3.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\project-4.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\project-4.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\project-5.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\project-5.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\project-6.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\project-6.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\quotation.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\quotation.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\ray.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\ray.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\testimonial.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\testimonial.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\theme-wagon.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\theme-wagon.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\gallery\\thpt.png",
+      "PackagePath": "staticwebassets\\img\\gallery\\thpt.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\hero-img.png",
+      "PackagePath": "staticwebassets\\img\\hero-img.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\hocAZ.jpg",
+      "PackagePath": "staticwebassets\\img\\hocAZ.jpg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\icons\\app.png",
+      "PackagePath": "staticwebassets\\img\\icons\\app.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\icons\\certificate-icon.svg",
+      "PackagePath": "staticwebassets\\img\\icons\\certificate-icon.svg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\icons\\cources-icon.svg",
+      "PackagePath": "staticwebassets\\img\\icons\\cources-icon.svg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\icons\\exam.svg",
+      "PackagePath": "staticwebassets\\img\\icons\\exam.svg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\icons\\facebook.svg",
+      "PackagePath": "staticwebassets\\img\\icons\\facebook.svg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\icons\\gratuate-icon.svg",
+      "PackagePath": "staticwebassets\\img\\icons\\gratuate-icon.svg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\icons\\icon-07.svg",
+      "PackagePath": "staticwebassets\\img\\icons\\icon-07.svg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\icons\\icon-08.svg",
+      "PackagePath": "staticwebassets\\img\\icons\\icon-08.svg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\icons\\icon-09.svg",
+      "PackagePath": "staticwebassets\\img\\icons\\icon-09.svg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\icons\\icon-1.svg",
+      "PackagePath": "staticwebassets\\img\\icons\\icon-1.svg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\icons\\linkdin.svg",
+      "PackagePath": "staticwebassets\\img\\icons\\linkdin.svg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\icons\\log-book.png",
+      "PackagePath": "staticwebassets\\img\\icons\\log-book.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\icons\\mail-1.png",
+      "PackagePath": "staticwebassets\\img\\icons\\mail-1.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\icons\\organized.png",
+      "PackagePath": "staticwebassets\\img\\icons\\organized.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\icons\\pencil-icon.svg",
+      "PackagePath": "staticwebassets\\img\\icons\\pencil-icon.svg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\icons\\printing.png",
+      "PackagePath": "staticwebassets\\img\\icons\\printing.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\icons\\right-arrow.svg",
+      "PackagePath": "staticwebassets\\img\\icons\\right-arrow.svg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\icons\\screen.png",
+      "PackagePath": "staticwebassets\\img\\icons\\screen.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\icons\\sketch.png",
+      "PackagePath": "staticwebassets\\img\\icons\\sketch.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\icons\\statistics.png",
+      "PackagePath": "staticwebassets\\img\\icons\\statistics.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\icons\\text.png",
+      "PackagePath": "staticwebassets\\img\\icons\\text.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\icons\\thumbs-up.svg",
+      "PackagePath": "staticwebassets\\img\\icons\\thumbs-up.svg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\icons\\twitter.svg",
+      "PackagePath": "staticwebassets\\img\\icons\\twitter.svg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\icons\\youtube.svg",
+      "PackagePath": "staticwebassets\\img\\icons\\youtube.svg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\illustrations\\blog-bg-1.png",
+      "PackagePath": "staticwebassets\\img\\illustrations\\blog-bg-1.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\illustrations\\blog-bg.png",
+      "PackagePath": "staticwebassets\\img\\illustrations\\blog-bg.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\illustrations\\brand-bg.png",
+      "PackagePath": "staticwebassets\\img\\illustrations\\brand-bg.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\illustrations\\contact-us-bg.png",
+      "PackagePath": "staticwebassets\\img\\illustrations\\contact-us-bg.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\illustrations\\cta-bg-1.png",
+      "PackagePath": "staticwebassets\\img\\illustrations\\cta-bg-1.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\illustrations\\cta-bg-2.png",
+      "PackagePath": "staticwebassets\\img\\illustrations\\cta-bg-2.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\illustrations\\cta-bg.png",
+      "PackagePath": "staticwebassets\\img\\illustrations\\cta-bg.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\illustrations\\feature-bg.png",
+      "PackagePath": "staticwebassets\\img\\illustrations\\feature-bg.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\illustrations\\footer-bg.png",
+      "PackagePath": "staticwebassets\\img\\illustrations\\footer-bg.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\illustrations\\hero-bg.png",
+      "PackagePath": "staticwebassets\\img\\illustrations\\hero-bg.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\illustrations\\hero.png",
+      "PackagePath": "staticwebassets\\img\\illustrations\\hero.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\illustrations\\heroheader-bg.png",
+      "PackagePath": "staticwebassets\\img\\illustrations\\heroheader-bg.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\illustrations\\product-bg-1.png",
+      "PackagePath": "staticwebassets\\img\\illustrations\\product-bg-1.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\illustrations\\product-bg-2.png",
+      "PackagePath": "staticwebassets\\img\\illustrations\\product-bg-2.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\illustrations\\project-bg.png",
+      "PackagePath": "staticwebassets\\img\\illustrations\\project-bg.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\illustrations\\service-bg.png",
+      "PackagePath": "staticwebassets\\img\\illustrations\\service-bg.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\illustrations\\service.png",
+      "PackagePath": "staticwebassets\\img\\illustrations\\service.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\illustrations\\team-bg.png",
+      "PackagePath": "staticwebassets\\img\\illustrations\\team-bg.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\illustrations\\testimonial-bg-1.png",
+      "PackagePath": "staticwebassets\\img\\illustrations\\testimonial-bg-1.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\illustrations\\testimonial-bg.png",
+      "PackagePath": "staticwebassets\\img\\illustrations\\testimonial-bg.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\join.png",
+      "PackagePath": "staticwebassets\\img\\join.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\logo.png",
+      "PackagePath": "staticwebassets\\img\\logo.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\object.png",
+      "PackagePath": "staticwebassets\\img\\object.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\profile\\bottom-layout.png",
+      "PackagePath": "staticwebassets\\img\\profile\\bottom-layout.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\profile\\imageleft.png",
+      "PackagePath": "staticwebassets\\img\\profile\\imageleft.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\share.png",
+      "PackagePath": "staticwebassets\\img\\share.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\slider-01.png",
+      "PackagePath": "staticwebassets\\img\\slider-01.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\slider-02.png",
+      "PackagePath": "staticwebassets\\img\\slider-02.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\subjects\\English.png",
+      "PackagePath": "staticwebassets\\img\\subjects\\English.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\subjects\\Hoahoc.png",
+      "PackagePath": "staticwebassets\\img\\subjects\\Hoahoc.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\subjects\\Lichsu.png",
+      "PackagePath": "staticwebassets\\img\\subjects\\Lichsu.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\subjects\\Math.png",
+      "PackagePath": "staticwebassets\\img\\subjects\\Math.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\img\\subjects\\Physic.png",
+      "PackagePath": "staticwebassets\\img\\subjects\\Physic.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\js\\_func.js",
+      "PackagePath": "staticwebassets\\js\\_func.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\js\\main.js",
+      "PackagePath": "staticwebassets\\js\\main.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\js\\toastrjs.js",
+      "PackagePath": "staticwebassets\\js\\toastrjs.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\logo.png",
+      "PackagePath": "staticwebassets\\logo.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\Counter-Up-1.0.0\\index.js",
+      "PackagePath": "staticwebassets\\plugins\\Counter-Up-1.0.0\\index.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\plugins\\bootstrap-5.3.2-dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\bootstrap-5.3.2-dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\plugins\\bootstrap-5.3.2-dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\bootstrap-5.3.2-dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\plugins\\bootstrap-5.3.2-dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\bootstrap-5.3.2-dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\plugins\\bootstrap-5.3.2-dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\bootstrap-5.3.2-dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\plugins\\bootstrap-5.3.2-dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\bootstrap-5.3.2-dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\plugins\\bootstrap-5.3.2-dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\bootstrap-5.3.2-dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\plugins\\bootstrap-5.3.2-dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\bootstrap-5.3.2-dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\plugins\\bootstrap-5.3.2-dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\bootstrap-5.3.2-dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\plugins\\bootstrap-5.3.2-dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\bootstrap-5.3.2-dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\plugins\\bootstrap-5.3.2-dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\bootstrap-5.3.2-dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\plugins\\bootstrap-5.3.2-dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\bootstrap-5.3.2-dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\plugins\\bootstrap-5.3.2-dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\bootstrap-5.3.2-dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\plugins\\bootstrap-5.3.2-dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\owlcarousel\\LICENSE",
+      "PackagePath": "staticwebassets\\plugins\\owlcarousel"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\owlcarousel\\README.md",
+      "PackagePath": "staticwebassets\\plugins\\owlcarousel\\README.md"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\owlcarousel\\assets\\ajax-loader.gif",
+      "PackagePath": "staticwebassets\\plugins\\owlcarousel\\assets\\ajax-loader.gif"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\owlcarousel\\assets\\owl.carousel.css",
+      "PackagePath": "staticwebassets\\plugins\\owlcarousel\\assets\\owl.carousel.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\owlcarousel\\assets\\owl.carousel.min.css",
+      "PackagePath": "staticwebassets\\plugins\\owlcarousel\\assets\\owl.carousel.min.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\owlcarousel\\assets\\owl.theme.default.css",
+      "PackagePath": "staticwebassets\\plugins\\owlcarousel\\assets\\owl.theme.default.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\owlcarousel\\assets\\owl.theme.default.min.css",
+      "PackagePath": "staticwebassets\\plugins\\owlcarousel\\assets\\owl.theme.default.min.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\owlcarousel\\assets\\owl.theme.green.css",
+      "PackagePath": "staticwebassets\\plugins\\owlcarousel\\assets\\owl.theme.green.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\owlcarousel\\assets\\owl.theme.green.min.css",
+      "PackagePath": "staticwebassets\\plugins\\owlcarousel\\assets\\owl.theme.green.min.css"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\owlcarousel\\assets\\owl.video.play.png",
+      "PackagePath": "staticwebassets\\plugins\\owlcarousel\\assets\\owl.video.play.png"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\owlcarousel\\owl.carousel.js",
+      "PackagePath": "staticwebassets\\plugins\\owlcarousel\\owl.carousel.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\plugins\\owlcarousel\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\plugins\\owlcarousel\\owl.carousel.min.js"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\video\\.gitkeep",
+      "PackagePath": "staticwebassets\\video\\.gitkeep"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\video\\beach.jpg",
+      "PackagePath": "staticwebassets\\video\\beach.jpg"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\video\\beach.mp4",
+      "PackagePath": "staticwebassets\\video\\beach.mp4"
+    },
+    {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\video\\beach.webm",
+      "PackagePath": "staticwebassets\\video\\beach.webm"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.EduQuiz 5P.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.EduQuiz 5P.props",
+      "PackagePath": "build\\EduQuiz 5P.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.EduQuiz 5P.props",
+      "PackagePath": "buildMultiTargeting\\EduQuiz 5P.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.EduQuiz 5P.props",
+      "PackagePath": "buildTransitive\\EduQuiz 5P.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -23,11 +23,13 @@ namespace EduQuiz_5P.Controllers
         private readonly IUserEmailStore<ApplicationUser> _emailStore;
         private readonly IEmailSender _emailSender;
         private readonly IUserService _userService;
+        private readonly IUserRegistrationService _userRegistrationService;
         public AccountController(ILogger<AccountController> logger, UserManager<ApplicationUser> userManager, 
             SignInManager<ApplicationUser> signInManager, 
             IPasswordValidator<ApplicationUser> passwordValidator,
             IEmailSender emailSender, IUserStore<ApplicationUser> userStore,
-            IUserEmailStore<ApplicationUser> emailStore, IUserService userService)
+            IUserEmailStore<ApplicationUser> emailStore, IUserService userService,
+            IUserRegistrationService userRegistrationService)
         {
             _logger = logger;
             _signInManager = signInManager;
@@ -37,6 +39,7 @@ namespace EduQuiz_5P.Controllers
             _userStore = userStore;
             _emailStore = emailStore;
             _userService = userService;
+            _userRegistrationService = userRegistrationService;
         }
 
         public async Task<IActionResult> Login(string? returnUrl = null)
@@ -127,6 +130,7 @@ namespace EduQuiz_5P.Controllers
                     var result = await _userManager.CreateAsync(user);
                     if (result.Succeeded)
                     {
+                        await _userRegistrationService.Add(user.Id);
                         result = await _userManager.AddLoginAsync(user, info);
                         if (result.Succeeded)
                         {
@@ -285,6 +289,7 @@ namespace EduQuiz_5P.Controllers
                         var result = await _userManager.CreateAsync(user, model.User.Password);
                         if (result.Succeeded)
                         {
+                            await _userRegistrationService.Add(user.Id);
                             HttpContext.Session.Remove(Constants.CodeSession);
                             return RedirectToAction("Login", "Account");
                         }
