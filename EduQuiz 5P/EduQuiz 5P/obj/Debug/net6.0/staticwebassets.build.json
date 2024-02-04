@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "kdpqZJ/MPs9oQZ+Xq5S3ZPkdwzVyhrM8HqZ6GWA6ToI=",
+  "Hash": "HZez4RmyJdeOCY2Ebdbw6TA70/hQrwtIr9/erQl61kw=",
   "Source": "EduQuiz 5P",
   "BasePath": "_content/EduQuiz 5P",
   "Mode": "Default",
@@ -10712,6 +10712,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\theme.min.css"
+    },
+    {
+      "Identity": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\css\\themeerror.css",
+      "SourceId": "EduQuiz 5P",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\",
+      "BasePath": "_content/EduQuiz 5P",
+      "RelativePath": "css/themeerror.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\themeerror.css"
     },
     {
       "Identity": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\css\\themeexam.css",

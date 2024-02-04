@@ -68,9 +68,10 @@ namespace EduQuiz_5P.Services
                 model.SubjectName = subject.SubjectName;
                 if (subject.UploadImage != null)
                 {
+                    Console.WriteLine("RUnnn \n\n\n\n");
                     model.UrlBackground = (await _firebaseStorageService.UploadFile(subject.UploadImage)).ToString();
                 }
-                _unitOfWork.SubjectRepository.Update(subject);
+                _unitOfWork.SubjectRepository.Update(model);
                 await _unitOfWork.CommitAsync();
             }
            

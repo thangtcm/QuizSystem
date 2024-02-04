@@ -2009,6 +2009,10 @@
       "PackagePath": "staticwebassets\\css\\theme.min.css"
     },
     {
+      "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\css\\themeerror.css",
+      "PackagePath": "staticwebassets\\css\\themeerror.css"
+    },
+    {
       "Id": "D:\\QuizSystem\\EduQuiz 5P\\EduQuiz 5P\\wwwroot\\css\\themeexam.css",
       "PackagePath": "staticwebassets\\css\\themeexam.css"
     },

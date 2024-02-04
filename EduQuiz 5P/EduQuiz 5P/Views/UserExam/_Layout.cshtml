@@ -44,6 +44,11 @@
 <body>
     <span id="message" class="d-none">@TempData["ToastrMessage"]</span>
     <span id="status" class="d-none">@TempData["ToastrMessageType"]</span>
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
     <main class="main" id="top">
         <nav class="navbar navbar-expand-lg navbar-light py-3 d-block navbar-klean"
              style="box-shadow: 0px -1px 23.2px 0px rgba(153, 167, 192, 0.25);">

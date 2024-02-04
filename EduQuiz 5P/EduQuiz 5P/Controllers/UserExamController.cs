@@ -3,6 +3,7 @@ using EduQuiz_5P.Models;
 using EduQuiz_5P.Services;
 using EduQuiz_5P.Services.Interface;
 using EduQuiz_5P.ViewModel;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Policy;
@@ -25,6 +26,7 @@ namespace EduQuiz_5P.Controllers
             _userExamDetailService = userExamDetailService;
         }
 
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> GenerateExamMatrix(UserExamGenerate model, string? returnUrl = null)
         {
@@ -45,6 +47,7 @@ namespace EduQuiz_5P.Controllers
             }
             catch (Exception ex)
             {
+                this.AddToastrMessage("Đã có lỗi xảy ra.", Enums.ToastrMessageType.Error);
                 _logger.LogError(ex.Message);
             }
             return LocalRedirect(returnUrl);
@@ -69,6 +72,33 @@ namespace EduQuiz_5P.Controllers
                 _logger.LogError(ex.Message);
             }
             return RedirectToAction(nameof(TakeExam), new { userExamId = model.UserExamId, returnUrl = returnUrl });
+        }
+
+        [Authorize]
+        public async Task<IActionResult> TakeAgain(int userExamId)
+        {
+            try
+            {
+                var user = await _userService.GetUser();
+                if(user == null)
+                {
+                    this.AddToastrMessage("Bạn chưa đăng nhập, vui lòng thao tác lại.", Enums.ToastrMessageType.Error);
+                    return RedirectToAction("Index", "Home");
+                }    
+                var result = await _userExamService.TakeAgain(userExamId, user.Id);
+                if (result == null)
+                {
+                    this.AddToastrMessage("Đã có lỗi xảy ra, vui lòng thao tác lại.", Enums.ToastrMessageType.Error);
+                    return RedirectToAction(nameof(Result), new {UserExamId = userExamId });
+                }
+                return RedirectToAction(nameof(TakeExam), new { userExamId = result.Value });
+            }
+            catch (Exception ex)
+            {
+                this.AddToastrMessage("Đã có lỗi xảy ra, vui lòng thao tác lại.", Enums.ToastrMessageType.Error);
+                _logger.LogError(ex.Message);
+            }
+            return RedirectToAction("Index", "Exam");
         }
 
         public async Task<IActionResult> TakeExam(int? userExamId, string? returnUrl = null)

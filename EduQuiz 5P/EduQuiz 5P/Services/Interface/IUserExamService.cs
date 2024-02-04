@@ -9,6 +9,7 @@ namespace EduQuiz_5P.Services.Interface
         public Task<ICollection<UserExams>> GetListAsync(long? userId = null, Func<IQueryable<UserExams>, IIncludableQueryable<UserExams, object>>? includes = null, DateTime? date = null, bool IsOrder = false);
         public Task<UserExamInfoVM?> Add(int examId, long? userId);
         public Task<ResponResultData<UserExamInfoVM>> GenerateExamMatrix(UserExamGenerate model, long userId);
+        public Task<int?> TakeAgain(int userExamId, long userId);
         public Task<int> CountAsync();
         public Task<UserExams?> GetByIdAsync(int Id, long? userId, Func<IQueryable<UserExams>, IIncludableQueryable<UserExams, object>>? includes = null);
         public UserExams? GetById(int Id);

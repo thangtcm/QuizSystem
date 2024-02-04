@@ -88,11 +88,17 @@ namespace EduQuiz_5P.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, Subject model)
+        public async Task<IActionResult> Edit(int Id, Subject model)
         {
             try
             {
+                if(Id != model.Id)
+                {
+                    this.AddToastrMessage("Đã có lỗi xảy ra.", Enums.ToastrMessageType.Error);
+                    return RedirectToAction(nameof(Edit), new { id = model.Id });
+                }
                 await _subjectService.Update(model);
+                this.AddToastrMessage("Bạn đã cập nhật thành công", Enums.ToastrMessageType.Success);
                 return RedirectToAction(nameof(Index));
             }
             catch (Exception ex)

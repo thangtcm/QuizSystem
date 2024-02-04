@@ -1,7 +1,9 @@
 ﻿using EduQuiz_5P.Enums;
 using EduQuiz_5P.Helpers;
 using EduQuiz_5P.Models;
+using EduQuiz_5P.Services;
 using EduQuiz_5P.Services.Interface;
+using EduQuiz_5P.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -14,16 +16,29 @@ namespace EduQuiz_5P.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly HttpClient _client;
         private readonly IExamService _examService;
-        public HomeController(ILogger<HomeController> logger, HttpClient client, IExamService examService)
+        private readonly IUserService _userService;
+        private readonly IQuestionService _questionService;
+        public HomeController(ILogger<HomeController> logger, HttpClient client, IExamService examService, IUserService userService, IQuestionService questionService)
         {
             _logger = logger;
             _client = client;
             _examService = examService;
+            _userService = userService;
+            _questionService = questionService;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var users = await _userService.CountAsync();
+            var questions = await _questionService.CountAsync();
+            var exams = await _examService.CountAsync();
+            StatisticalVM model = new()
+            {
+                NumberOfUser = users,
+                NumberOfQuestion = questions,
+                NumberOfExam = exams,
+            };
+            return View(model);
         }
 
         

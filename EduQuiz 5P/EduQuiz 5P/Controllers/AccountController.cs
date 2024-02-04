@@ -1,6 +1,7 @@
 ﻿using EduQuiz_5P.Data;
 using EduQuiz_5P.Enums;
 using EduQuiz_5P.Helpers;
+using EduQuiz_5P.Models;
 using EduQuiz_5P.Services.Interface;
 using EduQuiz_5P.ViewModel;
 using Microsoft.AspNetCore.Authentication.Google;
@@ -10,6 +11,7 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Security.Claims;
+using X.PagedList;
 
 namespace EduQuiz_5P.Controllers
 {
@@ -24,12 +26,13 @@ namespace EduQuiz_5P.Controllers
         private readonly IEmailSender _emailSender;
         private readonly IUserService _userService;
         private readonly IUserRegistrationService _userRegistrationService;
+        private readonly IUserExamService _userExamService;
         public AccountController(ILogger<AccountController> logger, UserManager<ApplicationUser> userManager, 
             SignInManager<ApplicationUser> signInManager, 
             IPasswordValidator<ApplicationUser> passwordValidator,
             IEmailSender emailSender, IUserStore<ApplicationUser> userStore,
             IUserEmailStore<ApplicationUser> emailStore, IUserService userService,
-            IUserRegistrationService userRegistrationService)
+            IUserRegistrationService userRegistrationService, IUserExamService userExamService)
         {
             _logger = logger;
             _signInManager = signInManager;
@@ -39,7 +42,9 @@ namespace EduQuiz_5P.Controllers
             _userStore = userStore;
             _emailStore = emailStore;
             _userService = userService;
+            _userExamService = userExamService;
             _userRegistrationService = userRegistrationService;
+
         }
 
         public async Task<IActionResult> Login(string? returnUrl = null)
@@ -428,6 +433,29 @@ namespace EduQuiz_5P.Controllers
                 return View();
             }
         }
+
+        [Authorize]
+        public async Task<IActionResult> HistoryExam(int? page)
+        {
+            try
+            {
+                var user = await _userService.GetUser();
+                if(user ==  null)
+                {
+                    return RedirectToAction("Index", "Home");
+                }
+                var userExam = await _userExamService.GetListAsync(user.Id);
+                int pagesize = 4;
+                int pagenumber = page == null || page < 0 ? 1 : page.Value;
+                var model = new PagedList<UserExamInfoVM>(userExam.Select(x => new UserExamInfoVM(x)).ToList(), pagenumber, pagesize);
+                return View(model);
+            }
+            catch(Exception ex)
+            {
+                _logger.LogError(ex.Message.ToString());
+            }
+            return View();
+        }    
 
         private IUserEmailStore<ApplicationUser> GetEmailStore()
         {

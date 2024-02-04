@@ -1,4 +1,5 @@
-﻿using DocumentFormat.OpenXml.Office2010.Excel;
+﻿using DocumentFormat.OpenXml.Drawing;
+using DocumentFormat.OpenXml.Office2010.Excel;
 using DocumentFormat.OpenXml.VariantTypes;
 using EduQuiz_5P.Enums;
 using EduQuiz_5P.Helpers;
@@ -19,13 +20,16 @@ namespace EduQuiz_5P.Services
         private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly IUserService _userService;
         private readonly IQuestionService _questionService;
-        public UserExamService(IUnitOfWork unitOfWork, IExamService examService, IHttpContextAccessor httpContextAccessor, IUserService userService, IQuestionService questionService)
+        private readonly ISubjectService _subjectService;
+        public UserExamService(IUnitOfWork unitOfWork, IExamService examService, IHttpContextAccessor httpContextAccessor, IUserService userService, 
+            IQuestionService questionService, ISubjectService subjectService)
         {
             _unitOfWork = unitOfWork;
             _examService = examService;
             _httpContextAccessor = httpContextAccessor;
             _userService = userService;
             _questionService = questionService;
+            _subjectService = subjectService;
         }
 
         public async Task<ResponResultData<UserExamInfoVM>> GenerateExamMatrix(UserExamGenerate model, long userId)
@@ -33,7 +37,7 @@ namespace EduQuiz_5P.Services
             ResponResultData<UserExamInfoVM> result = new();
             if (model.ExamMatrixId.HasValue)
             {
-                var examMatrix = await _unitOfWork.ExamMatrixRepository.GetAsync(x => x.Id == model.ExamMatrixId.Value, x => x.Include(ed => ed.ExamMatrixDetail!));
+                var examMatrix = await _unitOfWork.ExamMatrixRepository.GetAsync(x => x.Id == model.ExamMatrixId.Value, x => x.Include(ed => ed.ExamMatrixDetail!).Include(s => s.Subject));
                 if (examMatrix != null && examMatrix.ExamMatrixDetail != null)
                 {
                     var questions = await _questionService.GenerateQuestion(examMatrix.Id);
@@ -54,6 +58,8 @@ namespace EduQuiz_5P.Services
                         };
                         userExamDetails.Add(examDetail);
                     }
+                    userExams.UserId = userId;
+                    userExams.SubjectName = examMatrix.Subject is null ? "" : examMatrix.Subject.SubjectName ?? "";
                     userExams.ExamName = $"Thi ngẫu nhiên {DateTime.UtcNow.ToTimeZone().ToString("dd/MM/yyyy HH:mm")}";
                     userExams.NumberOfQuestion = questions.ListResult.Count;
                     userExams.Identification = questions.ListResult.Count(x => x.DifficultyLevel == DifficultyLevel.RECOGNITION);
@@ -76,7 +82,7 @@ namespace EduQuiz_5P.Services
             {
                 ICollection<Question> randomQuestions;
                 randomQuestions = await _unitOfWork.QuestionRepository.GetAllAsync(
-                    x => x.IsRemoved == false && x.Chappter!.ClassesId == model.ClassId,
+                    x => x.IsRemoved == false && x.Chappter!.ClassesId == model.ClassId && x.Chappter!.SubjectId == model.SubjectId,
                     x => x.Include(c => c.Chappter!),
                     query => query.OrderBy(q => Guid.NewGuid()),
                     model.NumberOfQuestion
@@ -92,6 +98,10 @@ namespace EduQuiz_5P.Services
                     };
                     userExamDetails.Add(examDetail);
                 }
+                var subject = await _subjectService.GetByIdAsync(model.SubjectId);
+                userExams.UserId = userId;
+                userExams.SubjectName = subject is null ? "" : subject.SubjectName ?? "";
+                userExams.ExamName = $"Thi ngẫu nhiên {DateTime.UtcNow.ToTimeZone().ToString("dd/MM/yyyy HH:mm")}";
                 userExams.NumberOfQuestion = randomQuestions.Count;
                 userExams.Identification = randomQuestions.Count(x => x.DifficultyLevel == DifficultyLevel.RECOGNITION);
                 userExams.Understanding = randomQuestions.Count(x => x.DifficultyLevel == DifficultyLevel.UNDERSTANDING);
@@ -113,15 +123,42 @@ namespace EduQuiz_5P.Services
             return result;
         }
 
+        public async Task<int?> TakeAgain(int userExamId, long userId)
+        {
+            var userExam = await _unitOfWork.UserExamRepository.GetAsync(x => x.Id == userExamId && x.UserId == userId, x => x.Include(ued => ued.UserExamDetails!));
+            if(userExam != null)
+            {
+                UserExams model = new();
+                var userExamDetails = userExam.UserExamDetails!.Select(x => new UserExamDetail() { QuestionId = x.QuestionId, UserExam = model }).ToList();
+                model.ExamName = userExam.ExamName ?? "";
+                model.SubjectName = userExam.SubjectName;
+                model.UserId = userId;
+                model.StartTime = DateTime.UtcNow.ToTimeZone();
+                model.EndTime = DateTime.UtcNow.ToTimeZone().AddMinutes(userExam.ExamTime + 5);
+                model.NumberOfQuestion = userExam.NumberOfQuestion;
+                model.Identification = userExam.Identification;
+                model.Understanding = userExam.Understanding;
+                model.Application = userExam.Application;
+                model.AdvancedApplication = userExam.AdvancedApplication;
+                model.NumberOfCorrect = 0;
+                _unitOfWork.UserExamRepository.Add(model);
+                await _unitOfWork.UserExamDetailRepository.AddRangeAsync(userExamDetails);
+                await _unitOfWork.CommitAsync();
+                return model.Id;
+            }
+            return null;
+        }
+
         public async Task<UserExamInfoVM?> Add(int examId, long? userId)
         {
-            var exam = await _examService.GetByIdAsync(examId, x => x.Include(ed => ed.ExamDetail!).ThenInclude(q => q.Question!).ThenInclude(a => a.Answers!));
+            var exam = await _examService.GetByIdAsync(examId, x => x.Include(s => s.Subject).Include(ed => ed.ExamDetail!).ThenInclude(q => q.Question!).ThenInclude(a => a.Answers!));
             if (exam == null)
             {
                 return null;
             }
             UserExamInfoVM model = new() { 
                 ExamName = exam.ExamName ?? "",
+                SubjectName = exam.Subject is null ? "" : exam.Subject.SubjectName ?? "",
                 UserId = userId,
                 StartTime = DateTime.UtcNow.ToTimeZone(),
                 EndTime = DateTime.UtcNow.ToTimeZone().AddMinutes(exam.ExamTime + 5),

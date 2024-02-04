@@ -1,8 +1,9 @@
-﻿@model EduQuiz_5P.ViewModel.UserExamInfoVM
+﻿@model EduQuiz_5P.ViewModel.UserExamInfoVM;
 @using EduQuiz_5P.Helpers;
-@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+@using Microsoft.AspNetCore.Identity;
+@using EduQuiz_5P.Data;
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
 @{
     Layout = "_Layout.cshtml";
     ViewData["Title"] = "Làm bài thi";
@@ -44,6 +45,14 @@
     <div class="exam-info mb-3">
         <p class="correct">Số câu trả lời đúng: <span class="fw-bold">@Model.NumberOfCorrect</span></p>
         <p class="wrong">Số câu trả lời sai: <span class="fw-bold">@(Model.NumberOfQuestion - Model.NumberOfCorrect)</span></p>
+    </div>
+    <div class="text-center">
+        @if (SignInManager.IsSignedIn(User) && Model.UserExamId != 0)
+        {
+            <form asp-action="TakeAgain" asp-route-userExamId="@Model.UserExamId">
+                <button class="btn btn-primary">Làm lại</button>
+            </form>
+        }
     </div>
 
 </aside><!-- End Sidebar-->

@@ -1,4 +1,5 @@
-﻿using EduQuiz_5P.Models;
+﻿using EduQuiz_5P.Enums;
+using EduQuiz_5P.Models;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EduQuiz_5P.ViewModel
@@ -15,13 +16,25 @@ namespace EduQuiz_5P.ViewModel
         public DateTime EndTime { get; set; }
         public int NumberOfQuestion { get; set; }
         public int QuestionComplete { get; set; }
+        public int ExamTime { get; set; }
+        public string? SubjectName { get; set; }
+        public double Identification { get; set; }
+        public double Understanding { get; set; }
+        public double Application { get; set; }
+        public double AdvancedApplication { get; set; }
         public UserExamInfoVM() { }
         public UserExamInfoVM(UserExams model)
         {
             ExamName = model.ExamName;
             UserExamId = model.Id;
+            this.Identification = model.Identification;
+            this.Understanding = model.Understanding;
+            this.Application = model.Application;
+            this.AdvancedApplication = model.AdvancedApplication;
             UserId = model.UserId;
             StartTime = model.StartTime;
+            SubjectName = model.SubjectName;
+            ExamTime = model.ExamTime;
             EndTime = model.EndTime;
             QuestionComplete = 0;
             NumberOfCorrect = model.NumberOfCorrect;

@@ -11,6 +11,7 @@ namespace EduQuiz_5P.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public string ExamName { get; set; }
+        public string? SubjectName { get; set; }
         public int NumberOfCorrect { get; set; }
         public int ExamTime { get; set; }
         public int NumberOfQuestion { get; set; }
@@ -28,6 +29,7 @@ namespace EduQuiz_5P.Models
         {
             ExamName = model.ExamName ?? "";
             ExamTime = model.ExamTime;
+            SubjectName = model.Subject is null ? "" : model.Subject.SubjectName ?? "";
             NumberOfQuestion = model.NumberOfQuestion;
             StartTime = DateTime.UtcNow.ToTimeZone();
             EndTime = DateTime.UtcNow.ToTimeZone().AddMinutes(model.ExamTime + 5);

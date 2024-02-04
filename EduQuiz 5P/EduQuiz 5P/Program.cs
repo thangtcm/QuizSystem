@@ -115,7 +115,7 @@ builder.Services.ConfigureApplicationCookie(options =>
     options.ExpireTimeSpan = TimeSpan.FromDays(1);
     options.Cookie.SameSite = SameSiteMode.None;
     options.LoginPath = "/Account/Login";
-    options.AccessDeniedPath = "/Identity/Account/AccessDenied";
+    options.AccessDeniedPath = "/Home/Error";
     options.SlidingExpiration = true;
 });
 builder.Services.AddHttpClient();

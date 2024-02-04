@@ -688,6 +688,9 @@ namespace EduQuiz_5P.Migrations
                     b.Property<DateTime>("StartTime")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("SubjectName")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<double>("Understanding")
                         .HasColumnType("float");
 

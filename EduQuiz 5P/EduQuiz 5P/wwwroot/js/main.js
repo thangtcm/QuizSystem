@@ -1,5 +1,18 @@
 ﻿(function ($) {
     "use strict";
+
+    // Spinner
+    var spinner = function () {
+        setTimeout(function () {
+            if ($('#spinner').length > 0) {
+                $('#spinner').removeClass('show');
+                $('#spinner').addClass('d-none');
+            }
+        }, 1);
+    };
+    spinner();
+    // Sidebar
+
     const select = (el, all = false) => {
         el = el.trim()
         if (all) {

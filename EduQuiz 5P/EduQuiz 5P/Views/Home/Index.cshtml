@@ -1,4 +1,6 @@
-﻿@{
+﻿@model EduQuiz_5P.ViewModel.StatisticalVM
+
+@{
     ViewData["Title"] = "Trang chủ";
 }
 <section id="home" class="pb-0">
@@ -37,7 +39,7 @@
                             </div>
                         </div>
                         <div class="course-count">
-                            <h3><span class="counter">253,085</span></h3>
+                            <h3><span class="counter">@Model.NumberOfUser.ToString("N0")</span></h3>
                             <p>Người dùng đăng ký</p>
                         </div>
                     </div>
@@ -50,7 +52,7 @@
                             </div>
                         </div>
                         <div class="course-count">
-                            <h3><span class="counter">5</span></h3>
+                            <h3><span class="counter">@Model.NumberOfExam.ToString("N0")</span></h3>
                             <p>Đề thi</p>
                         </div>
                     </div>
@@ -63,7 +65,7 @@
                             </div>
                         </div>
                         <div class="course-count">
-                            <h3><span class="counter">1,200</span></h3>
+                            <h3><span class="counter">@Model.NumberOfQuestion.ToString("N0")</span></h3>
                             <p>Ngân hàng câu hỏi</p>
                         </div>
                     </div>

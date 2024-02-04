@@ -33,7 +33,7 @@ namespace EduQuiz_5P.Models
         [NotMapped]
         public virtual SelectList SelectClass { get; set; }
         [NotMapped]
-        public IFormFile UploadImage { get; set; }
+        public IFormFile? UploadImage { get; set; }
         public virtual ICollection<Chapter>? Chapters { get; set; }
 
         public Subject() { }
